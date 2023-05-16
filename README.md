@@ -13,7 +13,7 @@
 ##### I. Catégorie des faisceaux sur un idéotope
 
 ##### 1. Généralités
-- [ ] Transcription
+- [x] Transcription
 - [ ] Proof-read
 - [ ] Expert review
 
