@@ -101,7 +101,7 @@
 
 ### Issues (to-do)
 
-
+- Make the scan smaller
 
 
 ---
