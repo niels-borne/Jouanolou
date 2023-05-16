@@ -12,6 +12,52 @@
 
 ##### I. Catégorie des faisceaux sur un idéotope
 
+##### 1. Généralités
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 2. Cas où l'objet final de X est quasicompact
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 3. A-faisceaux de type constant, strict ou J-adique
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 4. Opérations externes
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 5. Produit tensoriel
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 6. Foncteurs associés aux homomorphismes
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 7. Catégories dérivées
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
+
+
+##### 8. Changement d'anneau
+- [ ] Transcription
+- [ ] Proof-read
+- [ ] Expert review
 
 
 #### II. Conditions de finitude
