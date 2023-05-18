@@ -8,7 +8,10 @@
 
 ### Description
 
+The thesis was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, J. L. Verdier.
 
+Grothendieck says in Récoltes et Semailles
+> "De toutes façons, c’est aujourd’hui encore le seul texte au monde qui présente la théorie des coefficients $\ell$-adiques, version catégories dérivées — et un texte introuvable par dessus le marché, pour mettre la joie à son comble."
 
 ---
 
