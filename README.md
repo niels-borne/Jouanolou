@@ -113,7 +113,7 @@ Grothendieck says in Récoltes et Semailles
 ### Issues (to-do)
 
 - Make the scan smaller
-
+- Make the difference between \mathbf{\Ld} and \Ld (resp. \mathbf{\Rd} and \Rd) clear.
 
 ---
 
