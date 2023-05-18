@@ -15,12 +15,22 @@ Grothendieck says in Récoltes et Semailles
 
 ---
 
+### Transcription and Edition
+
+This is a project directed by Mateo Carmona with the collaboration of the following volunteers:
+
+- Fan Xuanrui
+
+---
+
 ### State of the transcription
 
-##### I. Catégorie des faisceaux sur un idéotope
+#### [I. Catégorie des faisceaux sur un idéotope](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.tex)
+- [x] Transcription (@carmonamateo)
+- [ ] Proof-read
 
 ##### [1. Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
-- [x] Transcription
+- [x] Transcription (@carmonamateo)
 - [ ] Proof-read
 - [ ] Expert review
 
@@ -67,7 +77,9 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review
 
 
-#### II. Conditions de finitude
+#### [II. Conditions de finitude](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.tex)
+- [x] Transcription (@carmonamateo)
+- [ ] Proof-read
 
 ##### [1. Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
 - [ ] Transcription
@@ -81,11 +93,11 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review
 
 #### [III. Applications aux schémas](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.tex)
-- [x] Transcription
+- [x] Transcription (@carmonamateo)
 - [ ] Proof-read
 
 ##### [1. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
-- [x] Transcription
+- [x] Transcription (@carmonamateo)
 - [ ] Proof-read
 - [ ] Expert review
 
@@ -97,18 +109,9 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [3. Formalisme des fonctions L](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.3.tex)
-- [x] Transcription
+- [x] Transcription (@carmonamateo)
 - [ ] Proof-read
 - [ ] Expert review
-
-
----
-
-### Contributors
-
-- Mateo Carmona
-- Fan Xuanrui
-
 
 ---
 
@@ -119,4 +122,4 @@ Grothendieck says in Récoltes et Semailles
 
 ---
 
-This is a project directed by Mateo Carmona, get in touch mateo.carmona@csg.igrothendieck.org
+mateo.carmona@csg.igrothendieck.org
