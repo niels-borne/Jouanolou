@@ -117,4 +117,4 @@ Grothendieck says in Récoltes et Semailles
 
 ---
 
-mateo.carmona@csg.igrothendieck.org
+This is a project directed by Mateo Carmona, get in touch mateo.carmona@csg.igrothendieck.org
