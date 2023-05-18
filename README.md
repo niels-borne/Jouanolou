@@ -80,10 +80,12 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Proof-read
 - [ ] Expert review
 
-#### III. Applications aux schémas
+#### [III. Applications aux schémas](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.tex)
+- [x] Transcription
+- [ ] Proof-read
 
 ##### [1. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
-- [ ] Transcription
+- [x] Transcription
 - [ ] Proof-read
 - [ ] Expert review
 
