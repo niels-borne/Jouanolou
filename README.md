@@ -17,9 +17,14 @@ Grothendieck says in Récoltes et Semailles
 
 ### Transcription and Edition
 
-This is a project directed by Mateo Carmona with the collaboration of the following volunteers:
+This is a project directed by Mateo Carmona with the collaboration of:
 
+- Niels Borne
+- Bruno Kahn
+- David Michael Roberts
+- Tim Hosgood
 - Fan Xuanrui
+
 
 ---
 
