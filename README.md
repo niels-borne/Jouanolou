@@ -29,7 +29,6 @@ Grothendieck says in Récoltes et Semailles
 
 #### [I. Catégorie des faisceaux sur un idéotope](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.tex)
 - [x] **Transcription**
-- [ ] Proof-read
 
 ##### [1. Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
 - [x] **Transcription**
@@ -81,7 +80,6 @@ Grothendieck says in Récoltes et Semailles
 
 #### [II. Conditions de finitude](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.tex)
 - [x] **Transcription**
-- [ ] Proof-read
 
 ##### [1. Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
 - [ ] Transcription
@@ -97,6 +95,7 @@ Grothendieck says in Récoltes et Semailles
 #### [III. Applications aux schémas](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.tex)
 - [x] **Transcription**
 - [ ] Proof-read
+- [ ] Expert review
 
 ##### [1. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
 - [x] **Transcription**
