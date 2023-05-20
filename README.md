@@ -13,16 +13,13 @@ The thesis was defended on July 3, 1969, at IHP (Paris), in front of a jury chai
 Grothendieck says in Récoltes et Semailles
 > "De toutes façons, c’est aujourd’hui encore le seul texte au monde qui présente la théorie des coefficients $\ell$-adiques, version catégories dérivées — et un texte introuvable par dessus le marché, pour mettre la joie à son comble."
 
----
-
-### Transcription and Edition
-
-This is a project directed by Mateo Carmona with the collaboration of:
+#### Contributors
 
 - Niels Borne
+- Mateo Carmona
+- Tim Hosgood
 - Bruno Kahn
 - David Michael Roberts
-- Tim Hosgood
 - Fan Xuanrui
 
 
@@ -31,11 +28,11 @@ This is a project directed by Mateo Carmona with the collaboration of:
 ### State of the transcription
 
 #### [I. Catégorie des faisceaux sur un idéotope](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.tex)
-- [x] Transcription (@carmonamateo)
+- [x] **Transcription**
 - [ ] Proof-read
 
 ##### [1. Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
-- [x] Transcription (@carmonamateo)
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
@@ -83,7 +80,7 @@ This is a project directed by Mateo Carmona with the collaboration of:
 
 
 #### [II. Conditions de finitude](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.tex)
-- [x] Transcription (@carmonamateo)
+- [x] **Transcription**
 - [ ] Proof-read
 
 ##### [1. Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
@@ -98,11 +95,11 @@ This is a project directed by Mateo Carmona with the collaboration of:
 - [ ] Expert review
 
 #### [III. Applications aux schémas](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.tex)
-- [x] Transcription (@carmonamateo)
+- [x] **Transcription**
 - [ ] Proof-read
 
 ##### [1. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
-- [x] Transcription (@carmonamateo)
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
@@ -114,7 +111,7 @@ This is a project directed by Mateo Carmona with the collaboration of:
 
 
 ##### [3. Formalisme des fonctions L](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.3.tex)
-- [x] Transcription (@carmonamateo)
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
