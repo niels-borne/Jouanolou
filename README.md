@@ -120,7 +120,6 @@ Grothendieck says in Récoltes et Semailles
 ### Issues (to-do)
 
 - [Make the scan smaller](https://github.com/carmonamateo/Jouanolou/issues/1)
-- Make the difference between \mathbf{\Ld} and \Ld (resp. \mathbf{\Rd} and \Rd) clear.
 
 ---
 
