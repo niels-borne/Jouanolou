@@ -120,6 +120,8 @@ Grothendieck says in Récoltes et Semailles
 ### Issues (to-do)
 
 - [Make the scan smaller](https://github.com/carmonamateo/Jouanolou/issues/1)
+- Add labels and hyperlinks
+
 
 ---
 
