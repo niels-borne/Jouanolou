@@ -15,12 +15,7 @@ Grothendieck says in Récoltes et Semailles
 
 #### Contributors
 
-- Niels Borne
-- Mateo Carmona
-- Tim Hosgood
-- Bruno Kahn
-- David Michael Roberts
-- Fan Xuanrui
+- 
 
 
 ---
