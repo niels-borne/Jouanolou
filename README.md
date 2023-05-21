@@ -15,7 +15,13 @@ Grothendieck says in Récoltes et Semailles
 
 #### Contributors
 
-- 
+-  Niels Borne
+-  Mateo Carmona
+-  Tim Hosgood
+-  Bruno Kahn
+-  David Michael Roberts
+-  Fan Xuanrui
+
 
 
 ---
@@ -99,7 +105,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [2. Dualité](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.2.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
