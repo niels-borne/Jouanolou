@@ -1,1 +1,335 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{2. Dualité.}
+\addcontentsline{toc}{subsection}{2. Dualité}
 
+Dans tout ce paragraphe, tous les schémas considérés sont de caractéristique résiduelles premières à $\ell$.
+
+\vskip .3cm
+{\bf 2.1}. Soient $X$ et $Y$ deux schémas noethériens et $f: X \to Y$ un morphisme quasiprojectif. On suppose que $Y$ admet un Module inversible ample et on se propose de définir un morphisme ``trace''
+$$
+\Tr_f: \bRd f_! \bRd f^! \to \id 
+\leqno{(2.1.1)}
+$$
+entre foncteurs de $\D(Y, A)$ dans $\D(Y, A)$.  
+
+Lorsque $f$ est une immersion fermée, on dispose d'un tel morphisme, à savoir le morphisme d'adjonction déduit de (I 7.7.12 (i)).
+
+Lorsque $f$ est un morphisme lisse équidimensionnel de dimension $r$, il s'agit de définir pour tout $F \in \D(Y, A)$ un morphisme fonctoriel
+$$
+\bRd f_! (f^* F \underline{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)[2r]) \to F.
+\leqno{(2.1.2)}
+$$
+Comme $A \underline{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)$ est localement libre constructible, on définit sur le modèle de (1.1.7), mais sans hypothèse de degré sur $F$, un isomorphisme de ``projection''
+$$
+\bRd  f_! (\mathbf{Z}_\ell(r))[2r]\underline{\otimes}_{\mathbf{Z}_\ell} F \isomlong \bRd f_! (f^* F \underline{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r))[2r],
+$$
+ce qui ramène à faire la construction de (2.1.2) dans le cas où $A = \mathbf{Z}_\ell = F$. Dans ce cas, comme $\Rd^i f_! = 0$ pour $i > 2d$ (1.1.8), il s'agit d'exhiber un morphisme ``trace''
+$$
+\Rd^{2r} f_! (\mathbf{Z}_\ell(r)) \to \mathbf{Z}_\ell.
+$$
+On prend le système projectif des morphismes traces ``habituels''
+$$
+\Rd^{2r}f_! (\boldsymbol{\mu}^{\otimes r}_{\ell^{n+1}}) \to \mathbf{Z}/\ell^{n+1}\mathbf{Z}.
+$$
+Dans le cas général, on choisit pour définir (2.1.1) une factorisation $f = p \circ i$ du type (1.2.2). Désignant par
+\[\begin{tikzcd}
+	{u: \bRd i_! \bRd i^!} & \id \\
+	{v: \bRd p_! \bRd p^!} & \id
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\]
+les morphismes traces définis par les méthodes précédentes pour $i$ et $p$ respectivement, on définit $\Tr_f$ par la commutativité du diagramme 
+\[\begin{tikzcd}
+	{\Rd f_! \Rd f^!} && {\Rd p_! \Rd i_! \Rd i^! \Rd p^!} \\
+	\id && {\Rd p_! \Rd p^!} & {.}
+	\arrow["\sim", from=1-1, to=1-3]
+	\arrow["v", from=2-3, to=2-1]
+	\arrow["{\Tr_f}"', from=1-1, to=2-1]
+	\arrow["{\Rd p_! (u \Rd p^!)}", from=1-3, to=2-3]
+\end{tikzcd}\]
+On s'assure ensuite, de a fa\c{c}on habituelle, que le résultat ne dépend pas de la factorisation choisie.
+
+\vskip .3cm
+{\bf 2.2}. Sous les hypothèses précédentes, on se propose maintenant de définir, pour $E \in \D^-(X, A)$ et $F \in \D^+(Y, A)$ un morphisme ``canonique'' fonctoriel
+$$
+\bRd f_* \bRd \underline{\Hom}_A (E, \bRd f^! F) \to \bRd \underline{\Hom}_A(\bRd f_! E, F).
+\leqno{(2.2.1)}
+$$
+Pour cela, nous allons d'abord définir, pour $L \in \D^-(X, A)$ et $M \in \D^+(X, A)$ un morphisme fonctoriel
+$$
+\bRd f_* \bRd \underline{\Hom}_A (L, M) \to \bRd \underline{\Hom}_A (\bRd f_! L, \bRd f_! M).
+\leqno{(2.2.2)}
+$$
+On prendra alors pour (2.2.1) le morphisme composé
+\[\begin{tikzcd}
+	& {\bRd \underline{\Hom}_A(\bRd f_! E, \bRd f_! \bRd f^! F)} \\
+	{\bRd f_* \bRd \underline{\Hom}_A(E, \bRd f^! F)} && {\bRd \underline{\Hom}_A(\bRd f_! E, F)}
+	\arrow["{\bRd \underline{\Hom}_A (\id, \Tr_f)}", from=1-2, to=2-3]
+	\arrow["{(2.2.2)}", from=2-1, to=1-2]
+\end{tikzcd}\]
+Il reste à définir (2.2.2). Lorsqu $f$ est une immersion ouverte, le foncteur $f_!$ commute aux limites inductives filtrantes, et permet donc de définir pour tout couple $(E, F)$ de $A$-faisceaux sur $X$ un morphisme fonctoriel
+$$
+f_! \underline{\Hom}_A (E, F) \to \underline{\Hom}_A (f_! E, f_! F),
+\leqno{(2.2.3)}
+$$
+à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.2) dans ce cas, on peut supposer $L$ quasilibre et $M$ flasque, de sorte que $\underline{\Hom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.3) fournit par fonctorialité un morphisme de complexes
+$$
+f_! \underline{\Hom}^{\bullet}_A (L, M) \to \underline{\Hom}^{\bullet}_A (f_! L, f_! M).
+\leqno{(2.2.4)}
+$$
+Choisissant une résolution quasilibre $P \to f_! L$ et une résolution flasque $f_! M \to Q$, on prend pour (2.2.2) le composé de (2.2.4) et du morphisme canonique
+$$
+\underline{\Hom}^{\bullet}_A(f_! L, f_! M) \to \underline{\Hom}^{\bullet}_A (P, Q).
+$$
+Lorsque $f$ est propre, il s'agit de définir un morphisme
+$$
+\bRd f_* \bRd \underline{\Hom}_A (L, M) \to \bRd \underline{\Hom}_A(\bRd f_* L, \bRd f_* M).
+$$
+La construction que nous allons faire de (2.2.5) vaut plus généralement pour un morphisme quasicompact et quasiséparé. Cette dernière hypothèse implique que le foncteur $f_*$ commute aux limites inductives filtrantes, et permet donc comme précédemment de définir pour tout couple $(E, F)$ de $A$-faisceaux sur $X$ un morphisme fonctoriel 
+$$
+f_* \underline{\Hom}_A (E, F) \to \underline{\Hom}_A (f_* E, f_* F),
+\leqno{(2.2.6)}
+$$
+à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.5), on peut supposer $L$ quasilibre et $M$ flasque, de sorte que $\underline{\Hom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.6) fournit par fonctorialité un morphisme de complexes
+$$
+f_* \underline{\Hom}_A (L, M) \to \underline{\Hom}^{\bullet}_A (f_* L, f_* M).
+\leqno{(2.2.7)}
+$$
+On prend pour (2.2.5) le composé de (2.2.7) et du morphisme
+$$
+\underline{\Hom}^{\bullet}_A (f_* L, f_* M) \to \underline{\Hom}^{\bullet}_A (P, f_* M)
+$$
+déduit d'une résolution quasilibre $P \to f_* L$ de $f^* L$.
+
+Enfin, dans le cas général, on choisit une compactification $f = q \circ i$ de $f$, et on définit (2.2.2) de fa\c{c}on évidente à partir des morphismes déjà définis pour $i$ et $q$ respectivement. Bien, entendu, on s'assure que le résultat ne dépend pas des choix faits, et notamment de la compactification choisie.
+\vskip .3cm
+{
+Proposition {\bf 2.2.8}. --- \it Sous les hypothèses préliminaires de (2.1), soient $E \in \D^-(X, A)$ et $F \in \D^+(Y, A)$. On a des isomorphismes canoniques fonctoriels :
+\begin{itemize}
+    \item[(i)] $\bRd f_* \bRd \underline{\Hom}_A (E, \bRd f^! F) \isomlong \bRd \underline{\Hom}_A (\bRd f_! E, F)$.
+    \item[(ii)] $\bRd \overline{\Hom}_A(E, \bRd f^! F) \isomlong \bRd \overline{\Hom}_A (\bRd f_! E, F)$.
+    \item[(iii)] $\bRd \Hom_A(E, \bRd f^! F) \isomlong \bRd \Hom_A (\bRd f_! E, F)$.
+    \item[(iv)] $\Hom_A(E, \bRd f^! F) \isomlong \Hom_A(\bRd f_! E, F)$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Nous allons voir que (2.2.1) est un isomorphisme. Les autres assertions en résulteront en appliquant aux deux membres les foncteurs respectifs $\bRd \overline{\Gamma}(Y, .)$, $\bRd \Gamma(Y, .)$ (I 7.4.10) et $\Hom_A(A, .)$ d'après (I 7.4.18). Pour voir que (2.2.1) est un isomorphisme, on se ramène par le way-out functor lemma au cas où $E$ et $F$ sont les complexes de degré 0 associés à des $A$-faisceaux notés de même. Les constructions aboutissant à la définition de (2.2.1) peuvent alors être faites au moyen de résolutions flasques ou quasilibres dans $\mathbf{E}(X, J)$ et $\mathbf{E}(Y, J)$. Si $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$, l'assertion résulte alors aussitôt du fait que les morphismes de dualité
+$$
+\bRd f_* \bRd \underline{\Hom}_{A_m}(E_m, \bRd f^! F_n) \to \bRd \underline{\Hom}_{A_m}(\bRd f_! E_m, F_n) \quad (m, n \in \mathbf{N}; m \geq n)
+$$
+sont des isomorphismes, et de ce que les foncteurs $\Rd^i f_*$ $(i \in \mathbf{Z})$ commutent aux limites inductives filtrantes.
+\vskip .3cm
+{\bf 2.3}. A partir de maintenant, on suppose, pour simplifier, que $A = \mathbf{Z}_\ell$ et $J = \ell \mathbf{Z}_\ell$. Étant donné un complexe $K \in \D^+(X, \mathbf{Z}_\ell)$, on pose pour tout $F \in \D^-(X, \mathbf{Z}_\ell)$
+$$
+\D_K(F) = \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(F, K).
+$$
+\vskip .3cm
+{
+Définition {\bf 2.3.1}. --- \it Soit $X$ un schéma noethérien. On dit qu'un complexe $K$ de $\mathbf{Z}_\ell$-faisceaux sur $X$ est \emph{dualisant} si pour tout $F \in \D^b_c(X, \mathbf{Z}_\ell)$, on a $\D_K(F) \in \D^b_c(X, \mathbf{Z}_\ell)$, et si le morphisme ``de Cartan''
+$$
+F \to \D_{K^\circ}\D_K (F)
+\leqno{(2.3.2)}
+$$
+que l'en en déduit est un \emph{isomorphisme}.
+}
+\vskip .3cm
+Explicitons (2.3.2). Comme $D_K(F) \in \D^b_c(X, \mathbf{Z}_\ell)$, le morphisme (I 7.6.5)
+$$
+\Hom_{\mathbf{Z}_\ell}(\D_K (F) \underline{\otimes} F, K) \to \Hom_{\mathbf{Z}_\ell}(\D_K(F), \D_K(F))
+$$
+est un isomorphisme (II 2.6). L'image inverse de l'identité de $\D_K(F)$ définit un morphisme
+$$
+F \underline{\otimes} \D_K(F) \to K.
+$$
+Comme $F \in \D^b_c(X, \mathbf{Z}_\ell)$, une nouvelle application de l'isomorphisme de Cartan permet d'en déduire le morphisme (2.3.2) annoncé.
+\vskip .3cm
+{
+Proposition {\bf 2.3.2} (Formules d'échange). --- \it Soient $X$ et $Y$ deux schémas noethériens de caractéristique résiduelles premières à $\ell$, et $f: X \to Y$ un morphisme quasiprojectif. On suppose que $Y$ admet un Module inversible ample. Étant donné $K_Y \in \D^+(Y, \mathbf{Z}_\ell)$, on pose
+$$
+K_X = \bRd f^!(K_Y), \quad \D_X = \D_{K_X}, \quad \D_Y = \D_{K_Y}.
+$$
+\begin{itemize}
+    \item[a)] Il existe, pour $F \in \D^-(X, \mathbf{Z}_\ell)$, un isomorphisme fonctoriel
+        $$
+        \bRd f_* \D_X(F) \isomlong \D_Y \Rd f_! (F).
+        \leqno{(i)}
+        $$
+        Si $K_X$ et $K_Y$ sont dualisants et $F \in \D^b_c (X, \mathbf{Z}_\ell)$, on a un isomorphisme fonctoriel
+        $$
+        \bRd f_! \D_X (F) \isomlong \D_Y \bRd f_* (F).
+        \leqno{(ii)}
+        $$
+    \item[b)] Il existe, pour $\D^-(Y, \mathbf{Z}_\ell)$, un isomorphisme fonctoriel
+        $$
+        \bRd f^! \D_Y(F) \isomlong \D_X(f^* F).
+        \leqno{(i)}
+        $$
+        Si $K_X$ et $K_Y$ sont dualisants et $F \in \D^b_c (Y, \mathbf{Z}_\ell)$, on a un isomorphisme fonctoriel
+        $$
+        f^* \D_Y (F) \isomlong \D_X \bRd f^! (F).
+        \leqno{(ii)}
+        $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Formellement identique à celle de (SGA5 I 1.12), dont d'ailleurs (2.3.2) n'est qu'une paraphrase.
+\vskip .3cm
+{
+Proposition {\bf 2.3.3}. --- \it Soient $X$ un schéma noethérien de caractéristiques résiduelles premières à $\ell$.
+\begin{itemize}
+    \item[(i)] Si $X$ est régulier, de dimension finie, et satisfait aux conditions de (SGA5 I 3.4.1), le complexe $\mathbf{Z}_\ell$ est dualisant sur $X$.
+    \item[(ii)] Si $X$ est régulier excellent de caractéristique 0, et admet un Module inversible ample, alors pour tout morphisme quasiprojectif $f: T \to Y$, le complexe $\bRd f^!(\mathbf{Z}_\ell)$ est dualisant sur $T$.
+    \item[(iii)] Soient $k$ un corps et $f: X \to S = \Spec(k)$ un morphisme quasiprojectif, avec dim$(X) \leq 2$. Alors $\bRd f^!(\mathbf{Z}_\ell)$ est dualisant sur $X$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons par exemple (ii), les autres assertions se prouvant de fa\c{c}on essentiellement identique, à partir des énoncés correspondants de (SGA5 I). Montrons tout d'abord que si $E \in \D^b_c(T, \mathbf{Z}_\ell)$, alors $\bRd \underline{\Hom}_{\mathbf{Z}_\ell}(E, \bRd f^!(\mathbf{Z}_\ell)) \in \D^b_c(T, \mathbf{Z}_\ell)$.
+\vskip .3cm
+{
+Lemme {\bf 2.3.4}. --- \it Si $F \in \D^+_c(X, \mathbf{Z}_\ell)$, alors $\bRd f^!(F) \in \D^+_c(T, \mathbf{Z}_\ell)$.
+}
+\vskip .3cm
+On se ramène à le voir lorsque $F$ est un $\mathbf{Z}_\ell$-faisceau constructible. Alors cela résulte de la fa\c{c}on habituelle (SGA5 VI) du lemme de Shih, et de l'énoncé analogue pour les $\mathbf{Z}/\ell^{n+1}\mathbf{Z}$-Modules constructibles $(n \in \mathbf{N})$ et pour les $\mathbf{Z}_\ell[T]$-Modules constructibles. 
+Comme les hypothèses de (II 2.5 (iii)) sont réalisées (SGA5 I 3.3.1) il résulte du lemme que 
+$$
+\bRd \underline{\Hom}_{\mathbf{Z}_\ell}(E, \bRd f^! (\mathbf{Z}_\ell)) \in \D^+_c(T, \mathbf{Z}_\ell).
+$$
+Pour voir qu'il est borné, on peut supposer que $E$ est un $\mathbf{Z}_\ell$-faisceau constructible. Alors, on peut prendre une résolution quasilibre (resp. flasque) de $E$ (resp. $\bRd f^! (\mathbf{Z}_\ell)$) ``canonique'' dans $\mathbf{E}(T, \ell \mathbf{Z}_\ell)$, en ce sens que c'est un système projectif de résolutions quasilibres (resp. flasques) des composants. Comme la dimension quasi-injective des $\bRd f^! (\mathbf{Z}/\ell^{n+1}\mathbf{Z})$ est indépendante de $n$ (preuve de SGA5 I 3.4.3), l'assertion en résulte aussitôt. Il reste à voir que, posant
+$$
+K = \bRd f^! (\mathbf{Z}_\ell)
+$$
+le morphisme canonique $E \to \D_K \circ \D_K (E)$ est un isomorphisme. Pour cela, désignant par $u_\circ: \mathbf{Z} \to \mathbf{Z}/\ell \mathbf{Z}$ le morphisme d'anneaux canonique, il suffit (II 8.2.2) de voir que le morphisme correspondant
+$$
+\bLd u^*_\circ (E) \to \bLd u^*_ \circ \D_K \circ \D_K (E)
+\leqno{(2.3.5)}
+$$
+est un isomorphisme. Posant $L = \bRd u^*_\circ (K)$, les différentes compatibilités exposées en (I 8) montrent que (2.3.5) s'identifie au morphisme canonique
+$$
+\bLd u^*_\circ(E) \to \D_L \circ \D_L(\bLd u^*_\circ(E)).
+$$
+Comme $L = \bRd f^! (\mathbf{Z}/\ell \mathbf{Z})$ (1.3.1;2), et $\bLd u^*_\circ(E) \in \D^b_c(X, \mathbf{Z}/\ell \mathbf{Z})$ (II 2.13.1), l'assertion résulte alors de (SGA5 I 3.4.3). On aurait pu également utiliser (II 2.13.9), qui éclaire bien la situation.
+\vskip .3cm
+{
+Proposition {\bf 2.3.6}. --- \it Soient $k$ un corps séparablement clos de caractéristique différente de $\ell$, $S = \Spec(k)$ et $f: X \to S$ et $g: Y \to S$ deux $S$-schémas quasiprojectifs, d'où un diagramme commutatif évident 
+\[\begin{tikzcd}
+	& {X\times_S Y} \\
+	X && Y \\
+	& S && {.}
+	\arrow["h"', from=1-2, to=3-2]
+	\arrow["q", from=1-2, to=2-3]
+	\arrow["p"', from=1-2, to=2-1]
+	\arrow["f"', from=2-1, to=3-2]
+	\arrow["g", from=2-3, to=3-2]
+\end{tikzcd}\]
+On suppose que les schémas de type fini sur $S$ et de dimension $\leq \text{dim}(X) + \text{dim}(Y)$ sont fortement désingularisables (SGA5 3.1.5) ce qui a lieu notamment su car$(k) = 0$, ou si $k$ est parfait et dim$(X \times_S Y) \leq 2$. On pose
+$$
+K_X = \bRd f^! (\mathbf{Z}_\ell), \quad K_Y = \bRd g^! (\mathbf{Z}_\ell), \quad K_{X \times_S Y} = \bRd h^! (\mathbf{Z}_\ell).
+$$
+Ces complexes sont dualisants pour $X, Y$ et $X \times_S Y$ respectivement, et on note $\D_X$, $\D_Y$, $\D_{X \times_S Y}$ les foncteurs dualisants correspondants.
+
+Alors
+\begin{itemize}
+    \item[a)] Il existe un isomorphisme canonique
+    $$
+    p^* K_X \underline{\otimes} q^* K_Y \isomlong K_{X \times_S Y}.
+    $$
+    \item[b)] Pour $F \in \D^b_c(X, \mathbf{Z}_\ell)$ et $G \in \D^b_c(X, \mathbf{Z}_\ell)$, il existe un isomorphisme canonique fonctoriel
+    $$
+    p^* \D_X(F) \underline{\otimes} q^* \D_Y(G) \isomlong D_{X \times_S Y}(p^* F \underline{\otimes}q^* G).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : L'énoncé est une paraphrase de (SGA5 III 3.1). Le fait que $K_X$, $K_Y$ et $K_{X \times_S Y}$ soient dualisants résulte, sur le modèle de la preuve de (2.3.3), de (SGA5 I App.7.5). Utilisant (II 2.13.9), et diverses compatibilités évidentes, les assertions a) et b) résultent par simple passage à la limite des assertions correspondantes (SGA5 III 3.1) pour les $(\mathbf{Z}/\ell^{n+1}\mathbf{Z})$-Modules $(n \in \mathbf{N})$.
+
+Avant d'énoncer la proposition suivante, précisons quelques définitions et notations de (I 8.3). Soit $X$ un schéma noethérien. On définit la catégorie, notée 
+$$
+\mathbf{Q}_\ell-\fsc(X)
+$$
+des \emph{$\mathbf{Q}_\ell$-faisceaux} sur $X$, au moyen de la partie multiplicative $\mathbf{Z}_\ell - 0$ de $\mathbf{Z}_\ell$ (I 8.3). Étant donné $d \in \mathbf{Z}$ le $\mathbf{Z}_\ell$-faisceau $\mathbf{Z}_\ell(d)$ définit un $\mathbf{Q}_\ell$-faisceau, noté de préférence
+$$
+\mathbf{Q}_\ell(d).
+$$
+Comme on l'a indiqué dans (I 8.3), on étend sans peine aux $\mathbf{Q}_\ell$-faisceaux le formalisme développé pour les $\mathbf{Z}_\ell$-faisceaux. Ainsi, on dit qu'un $\mathbf{Q}_\ell$-faisceau $F$ est \emph{constructible} (resp. \emph{constant tordu constructible}) s'il est isomorphe à l'image d'un $\mathbf{Z}_\ell$-faisceau du même type. La sous-catégorie pleine, notée $\mathbf{Q}_\ell-\fscn(X)$ (reps. $\mathbf{Q}_\ell-\fsct(X)$), de $\mathbf{Q}_\ell-\fsc(X)$ engendrée par les $\mathbf{Q}_\ell$-faisceaux constructibles (resp. constants tordus constructibles) est \emph{exacte}. De même, si $K$ est un objet de $\D(X, \mathbf{Q}_\ell)$, on dit que $K$ est à cohomologie constructible (resp. constante tordu constructible) s'il est isomorphe dans $\D(X, \mathbf{Q}_\ell)$ à un complexe de $\mathbf{Z}_\ell$-faisceaux constructible (resp. constant constructible). On note
+$$
+\D_c(X, \mathbf{Q}_\ell) \quad (\text{resp}. \D_t(X, \mathbf{Q}_\ell))
+$$
+la sous-catégorie triangulée pleine de $\D(X, \mathbf{Q}_\ell)$ définie par les complexes à cohomologie constructible (resp. constante tordue constructible).
+\vskip .3cm
+{
+Proposition {\bf 2.3.7} (Dualité locale). --- \it Soient $X$ un schéma quasiprojectif et lisse de dimension $d$ sur un corps séparablement clos, et $x$ un point fermé de $X$. Pour tout $F \in \D^b_c(X, \mathbf{Q}_\ell)$, on a une dualité parfaite entre espaces vectoriels de dimension finie sur $\mathbf{Q}_\ell$
+$$
+\underline{\Ext}^{2d-i}_{\mathbf{Q}_\ell}(F, \mathbf{Q}_\ell(d))_x \times \mathrm{H}^i_x(F) \to \mathbf{Q}_\ell.
+$$
+}
+\vskip .3cm
+{\bf Preuve} : On convient d'identifier, comme on l'a fait dans l'énoncé, un $\mathbf{Q}_\ell$-faisceau constructible ponctuel et le $\mathbf{Q}_\ell$-espace vectoriel de dimension finie correspondant (SGA5 VI 1.4.3). Soit
+$$
+i: x \hookrightarrow X
+$$
+l'immersion fermée canonique. Posons $K_X = \mathbf{Z}_\ell(d)[2d]$ et $K_x = \mathbf{Z}_\ell$; ce sont des complexes dualisants pour $X$ et $x$ respectivement (2.3.3) et l'on a (1.2.3)
+$$
+\bRd i^!(K_X) \isomlong K_x \quad (\text{canoniquement}).
+$$
+Notant $\D_X = \D_{K_X}$, $\D_x = \D_{K_x}$, la formule d'induction complémentaire fournit un isomorphisme (2.3.2 b) (ii))
+$$
+i^* \D_X (F) \isomlong \D_X \bRd i^! (F).
+$$
+Avec des notations évidentes, on a donc
+$$
+\D_X(F)_x \isomlong \bRd \Hom_{\mathbf{Q}_\ell}(\bRd \Gamma_x(F), \mathbf{Q}_\ell).
+$$
+L'assertion en résulte aussitôt, grâce au fait que $\mathbf{Q}_\ell$ est un injectif dans la catégorie des $\mathbf{Q}_\ell$-espaces vectoriels.
+\vskip .3cm
+{\bf Remarque 2.3.8}. Nous avons seulement donné ici la variante la moins technique du théorème de dualité locale, et renvoyons le lecteur à (SGA5 I 4) pour des énoncés plus généraux.
+\vskip .3cm
+{\bf 2.4}. Repla\c{c}ons-nous sous les hypothèses préliminaires de (2.3.6). Nous allons indiquer brièvement comment les constructions de (SGA5 III 3) se transposent dans notre cadre et permettent de démontrer un théorème de \emph{Lefschetz-Verdier}.
+\vskip .3cm
+{
+Proposition {\bf 2.4.1}. --- \it Soient $F \in \D^b_c (X, \mathbf{Z}_\ell)$, $G \in \D^b_c (Y, \mathbf{Z}_\ell)$.
+\begin{itemize}
+    \item[a)] Il existe un isomorphisme canonique fonctoriel
+    $$
+    \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(p^* F, q^* G) \isomlong p^* \D_X(F) \underline{\otimes} q^* G.
+    $$
+    \item[b)] Il existe un accouplement parfait canonique
+    $$
+    \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \times \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(q^* G, \bRd p^! F) \to K_{X \times_S Y}.
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Formellement identique à celle de (SGA5 III 3.2), à partir de (2.3.2) et (2.3.6). On notera que, comme tous les complexes entrant en jeu sont à cohomologie constructible, on dispose sans restriction de l'isomorphisme de Cartan (II 2.6).
+\vskip .3cm
+{
+Proposition {\bf 2.4.2}. --- \it Si $F \in \D^b_c (X, \mathbf{Z}_\ell)$, $G \in \D^b_c (Y, \mathbf{Z}_\ell)$, on a des isomorphismes canoniques 
+\begin{itemize}
+    \item[(i)] $\bRd h_* \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \isomlong \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(\bRd p_! (F), \bRd q_* (G))$. 
+    \item[(ii)] $\Hom_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \isomlong \Hom_{\mathbf{Z}_\ell}(\bRd p_! (F), \bRd q_* (G))$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : La preuve de l'assertion (i) est formellement identique à celle de (SGA5 III 2.2.1). On en déduit (ii) en appliquant aux deux membres le foncteur $\Hom_{\mathbf{Z}_\ell}(\mathbf{Z}_\ell, .)$ (I 7.4.6).
+
+Supposons maintenant que $X$ et $Y$ soient \emph{propres} sur $S$, et soient $F \in \D^b_c(X, \mathbf{Z}_\ell)_{\text{torf}}$, $G \in \D^b_c(X, \mathbf{Z}_\ell)_{\text{torf}}$. Les complexes $\bRd f_* (F)$ et $\bRd g_* (G)$ sont \emph{parfaits} : en effet, (1.1.11 (i) et (ii)), ils appartiennent à $\D^b_c (S, \mathbf{Z}_\ell)_{\text{torf}}$ et, comme le corps $k$ est séparablement clos, $\D_c(S, \mathbf{Z}_\ell) = \D_t(S, \mathbf{Z}_\ell)$.
+
+Donnons-nous de plus deux familles $\phi$ et $\psi$ de supports sur $X \times_S Y$. On construit alors comme suit un diagramme
+\[\begin{tikzcd}
+	& {\mathrm{H}^0_\phi(X \times_S Y, \bRd \underline{\Hom}(p^* F, \bRd q^* G)) \times \mathrm{H}^0_\psi(X \times_S Y, \bRd \underline{\Hom}(q^* G, \bRd p^! F))} \\
+	{\Hom(\bRd f_* F, \bRd g_* G) \times \Hom(\bRd g_* G, \bRd f_* F)} && {\mathrm{H}^0_{\phi \cap \psi}(X \times_S Y, K_{X \times_S Y})} \\
+	& {\mathrm{H}^0(S, \mathbf{Z}_\ell)}
+	\arrow["{(b)}", from=1-2, to=2-3]
+	\arrow["{(d)}", from=2-3, to=3-2]
+	\arrow["{(a)}"', from=1-2, to=2-1]
+	\arrow["{(c)}"', from=2-1, to=3-2]
+\end{tikzcd}\leqno{(2.4.3)}\]
+Compte tenu de l'isomorphisme (2.4.2 (ii)), la flèche (a) n'est autre que la restriction du support. La flèche (b) résulte sans peine de l'accouplement (2.4.1 b)). La flèche (c) est le cup-produit défini en (II 2.11). Enfin, la flèche s'obtient immédiatement à partir du morphisme trace
+$$
+\bRd h_* (K_{X \times_S Y}) \to \mathbf{Z}_\ell.
+$$
+\vskip .3cm
+{
+Théorème {\bf 2.4.4} (Lefschetz-Verdier). --- \it Le diagramme (2.4.3) ci-dessus est commutatif. 
+}
+\vskip .3cm
+{\bf Preuve} : Utilisant les notations de (II 2.13.9), il suffit de voir que pour tout $n \in \mathbf{N}$, le diagramme déduit de (2.4.3) après application du foncteur $\bLd (\alpha_n)^*$ est commutatif. Comme le foncteur $\bLd (\alpha_n)^*$ commute à toutes les opérations usuelles, l'assertion résulte donc de (SGA 5 III 3.3) pour les $(\mathbf{Z}/\ell^{n+1}\mathbf{Z})$-Modules $(n \in \mathbf{N})$.
