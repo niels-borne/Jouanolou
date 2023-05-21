@@ -121,6 +121,8 @@ Grothendieck says in Récoltes et Semailles
 - [Make the scan smaller](https://github.com/carmonamateo/Jouanolou/issues/1)
 - Fix the diagram (III 2.4.3)
 - Add labels and hyperlinks
+- Preface by the contributors
+- Foreword by the expert reviewer
 
 
 ---
