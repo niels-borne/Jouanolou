@@ -8,7 +8,7 @@
 
 ### Description
 
-This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399) was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, J. L. Verdier.
+This thesis was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, J. L. Verdier.
 
 Grothendieck says in Récoltes et Semailles
 > "De toutes façons, c’est aujourd’hui encore le seul texte au monde qui présente la théorie des coefficients $\ell$-adiques, version catégories dérivées — et un texte introuvable par dessus le marché, pour mettre la joie à son comble."
@@ -28,8 +28,7 @@ Grothendieck says in Récoltes et Semailles
 
 ### State of the transcription
 
-#### [I. Catégorie des faisceaux sur un idéotope](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.tex)
-- [x] **Transcription**
+#### I. Catégorie des faisceaux sur un idéotope
 
 ##### [1. Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
 - [x] **Transcription**
@@ -79,8 +78,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review
 
 
-#### [II. Conditions de finitude](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.tex)
-- [x] **Transcription**
+#### II. Conditions de finitude
 
 ##### [1. Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
 - [ ] Transcription
@@ -93,10 +91,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Proof-read
 - [ ] Expert review
 
-#### [III. Applications aux schémas](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.tex)
-- [x] **Transcription**
-- [ ] Proof-read
-- [ ] Expert review
+#### III. Applications aux schémas
 
 ##### [1. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
 - [x] **Transcription**
