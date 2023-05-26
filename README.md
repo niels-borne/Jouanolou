@@ -28,7 +28,7 @@ Grothendieck says in Récoltes et Semailles
 
 ### State of the transcription
 
-#### I. Catégorie des faisceaux sur un idéotope
+#### I. Catégorie des faisceaux sur un idéotope ([discussion](https://github.com/carmonamateo/Jouanolou/issues/5))
 
 ##### [1. Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
 - [x] **Transcription**
@@ -78,7 +78,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review
 
 
-#### II. Conditions de finitude
+#### II. Conditions de finitude ([discussion](https://github.com/carmonamateo/Jouanolou/issues/4))
 
 ##### [1. Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
 - [ ] Transcription
@@ -91,7 +91,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Proof-read
 - [ ] Expert review
 
-#### III. Applications aux schémas
+#### III. Applications aux schémas ([discussion](https://github.com/carmonamateo/Jouanolou/issues/3))
 
 ##### [1. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
 - [x] **Transcription**
@@ -112,13 +112,9 @@ Grothendieck says in Récoltes et Semailles
 
 ---
 
-### Issues (to-do)
+### To-do
 
-- [Make the scan smaller](https://github.com/carmonamateo/Jouanolou/issues/1)
-- Fix the diagram (III 2.4.3)
-- Add labels and hyperlinks
-- Preface by the contributors
-- Foreword by the expert reviewer
+- See [Issues](https://github.com/carmonamateo/Jouanolou/issues)
 
 
 ---
