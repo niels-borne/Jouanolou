@@ -23,17 +23,6 @@ J.-P. Jouanolou redacted the talks (SGA5):
 Grothendieck says in Récoltes et Semailles
 > De toutes façons, c’est aujourd’hui encore le seul texte au monde qui présente la théorie des coefficients $\ell$-adiques, version catégories dérivées — et un texte introuvable par dessus le marché, pour mettre la joie à son comble.
 
-#### Contributors
-
--  Niels Borne
--  Mateo Carmona
--  Tim Hosgood
--  Bruno Kahn
--  David Michael Roberts
--  Fan Xuanrui
-
-
-
 ---
 
 ### State of the transcription
