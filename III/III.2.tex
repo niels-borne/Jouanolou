@@ -52,52 +52,52 @@ On s'assure ensuite, de a fa\c{c}on habituelle, que le résultat ne dépend pas 
 \vskip .3cm
 {\bf 2.2}. Sous les hypothèses précédentes, on se propose maintenant de définir, pour $E \in \D^-(X, A)$ et $F \in \D^+(Y, A)$ un morphisme ``canonique'' fonctoriel
 $$
-\bRd f_* \bRd \underline{\Hom}_A (E, \bRd f^! F) \to \bRd \underline{\Hom}_A(\bRd f_! E, F).
+\bRd f_* \bRd {\cHom}_A (E, \bRd f^! F) \to \bRd {\cHom}_A(\bRd f_! E, F).
 \leqno{(2.2.1)}
 $$
 Pour cela, nous allons d'abord définir, pour $L \in \D^-(X, A)$ et $M \in \D^+(X, A)$ un morphisme fonctoriel
 $$
-\bRd f_* \bRd \underline{\Hom}_A (L, M) \to \bRd \underline{\Hom}_A (\bRd f_! L, \bRd f_! M).
+\bRd f_* \bRd {\cHom}_A (L, M) \to \bRd {\cHom}_A (\bRd f_! L, \bRd f_! M).
 \leqno{(2.2.2)}
 $$
 On prendra alors pour (2.2.1) le morphisme composé
 \[\begin{tikzcd}
-	& {\bRd \underline{\Hom}_A(\bRd f_! E, \bRd f_! \bRd f^! F)} \\
-	{\bRd f_* \bRd \underline{\Hom}_A(E, \bRd f^! F)} && {\bRd \underline{\Hom}_A(\bRd f_! E, F)}
-	\arrow["{\bRd \underline{\Hom}_A (\id, \Tr_f)}", from=1-2, to=2-3]
+	& {\bRd {\cHom}_A(\bRd f_! E, \bRd f_! \bRd f^! F)} \\
+	{\bRd f_* \bRd {\cHom}_A(E, \bRd f^! F)} && {\bRd {\cHom}_A(\bRd f_! E, F)}
+	\arrow["{\bRd {\cHom}_A (\id, \Tr_f)}", from=1-2, to=2-3]
 	\arrow["{(2.2.2)}", from=2-1, to=1-2]
 \end{tikzcd}\]
 Il reste à définir (2.2.2). Lorsqu $f$ est une immersion ouverte, le foncteur $f_!$ commute aux limites inductives filtrantes, et permet donc de définir pour tout couple $(E, F)$ de $A$-faisceaux sur $X$ un morphisme fonctoriel
 $$
-f_! \underline{\Hom}_A (E, F) \to \underline{\Hom}_A (f_! E, f_! F),
+f_! {\cHom}_A (E, F) \to {\cHom}_A (f_! E, f_! F),
 \leqno{(2.2.3)}
 $$
-à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.2) dans ce cas, on peut supposer $L$ quasilibre et $M$ flasque, de sorte que $\underline{\Hom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.3) fournit par fonctorialité un morphisme de complexes
+à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.2) dans ce cas, on peut supposer $L$ quasilibre et $M$ flasque, de sorte que ${\cHom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.3) fournit par fonctorialité un morphisme de complexes
 $$
-f_! \underline{\Hom}^{\bullet}_A (L, M) \to \underline{\Hom}^{\bullet}_A (f_! L, f_! M).
+f_! {\cHom}^{\bullet}_A (L, M) \to {\cHom}^{\bullet}_A (f_! L, f_! M).
 \leqno{(2.2.4)}
 $$
 Choisissant une résolution quasilibre $P \to f_! L$ et une résolution flasque $f_! M \to Q$, on prend pour (2.2.2) le composé de (2.2.4) et du morphisme canonique
 $$
-\underline{\Hom}^{\bullet}_A(f_! L, f_! M) \to \underline{\Hom}^{\bullet}_A (P, Q).
+{\cHom}^{\bullet}_A(f_! L, f_! M) \to {\cHom}^{\bullet}_A (P, Q).
 $$
 Lorsque $f$ est propre, il s'agit de définir un morphisme
 $$
-\bRd f_* \bRd \underline{\Hom}_A (L, M) \to \bRd \underline{\Hom}_A(\bRd f_* L, \bRd f_* M).
+\bRd f_* \bRd {\cHom}_A (L, M) \to \bRd {\cHom}_A(\bRd f_* L, \bRd f_* M).
 $$
 La construction que nous allons faire de (2.2.5) vaut plus généralement pour un morphisme quasicompact et quasiséparé. Cette dernière hypothèse implique que le foncteur $f_*$ commute aux limites inductives filtrantes, et permet donc comme précédemment de définir pour tout couple $(E, F)$ de $A$-faisceaux sur $X$ un morphisme fonctoriel 
 $$
-f_* \underline{\Hom}_A (E, F) \to \underline{\Hom}_A (f_* E, f_* F),
+f_* {\cHom}_A (E, F) \to {\cHom}_A (f_* E, f_* F),
 \leqno{(2.2.6)}
 $$
-à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.5), on peut supposer $L$ quasilibre et $M$ flasque, de sorte que $\underline{\Hom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.6) fournit par fonctorialité un morphisme de complexes
+à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.5), on peut supposer $L$ quasilibre et $M$ flasque, de sorte que ${\cHom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.6) fournit par fonctorialité un morphisme de complexes
 $$
-f_* \underline{\Hom}_A (L, M) \to \underline{\Hom}^{\bullet}_A (f_* L, f_* M).
+f_* {\cHom}_A (L, M) \to {\cHom}^{\bullet}_A (f_* L, f_* M).
 \leqno{(2.2.7)}
 $$
 On prend pour (2.2.5) le composé de (2.2.7) et du morphisme
 $$
-\underline{\Hom}^{\bullet}_A (f_* L, f_* M) \to \underline{\Hom}^{\bullet}_A (P, f_* M)
+{\cHom}^{\bullet}_A (f_* L, f_* M) \to {\cHom}^{\bullet}_A (P, f_* M)
 $$
 déduit d'une résolution quasilibre $P \to f_* L$ de $f^* L$.
 
@@ -106,7 +106,7 @@ Enfin, dans le cas général, on choisit une compactification $f = q \circ i$ de
 {
 Proposition {\bf 2.2.8}. --- \it Sous les hypothèses préliminaires de (2.1), soient $E \in \D^-(X, A)$ et $F \in \D^+(Y, A)$. On a des isomorphismes canoniques fonctoriels :
 \begin{itemize}
-    \item[(i)] $\bRd f_* \bRd \underline{\Hom}_A (E, \bRd f^! F) \isomlong \bRd \underline{\Hom}_A (\bRd f_! E, F)$.
+    \item[(i)] $\bRd f_* \bRd {\cHom}_A (E, \bRd f^! F) \isomlong \bRd {\cHom}_A (\bRd f_! E, F)$.
     \item[(ii)] $\bRd \overline{\Hom}_A(E, \bRd f^! F) \isomlong \bRd \overline{\Hom}_A (\bRd f_! E, F)$.
     \item[(iii)] $\bRd \Hom_A(E, \bRd f^! F) \isomlong \bRd \Hom_A (\bRd f_! E, F)$.
     \item[(iv)] $\Hom_A(E, \bRd f^! F) \isomlong \Hom_A(\bRd f_! E, F)$.
@@ -115,13 +115,13 @@ Proposition {\bf 2.2.8}. --- \it Sous les hypothèses préliminaires de (2.1), s
 \vskip .3cm
 {\bf Preuve} : Nous allons voir que (2.2.1) est un isomorphisme. Les autres assertions en résulteront en appliquant aux deux membres les foncteurs respectifs $\bRd \overline{\Gamma}(Y, .)$, $\bRd \Gamma(Y, .)$ (I 7.4.10) et $\Hom_A(A, .)$ d'après (I 7.4.18). Pour voir que (2.2.1) est un isomorphisme, on se ramène par le way-out functor lemma au cas où $E$ et $F$ sont les complexes de degré 0 associés à des $A$-faisceaux notés de même. Les constructions aboutissant à la définition de (2.2.1) peuvent alors être faites au moyen de résolutions flasques ou quasilibres dans $\mathbf{E}(X, J)$ et $\mathbf{E}(Y, J)$. Si $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$, l'assertion résulte alors aussitôt du fait que les morphismes de dualité
 $$
-\bRd f_* \bRd \underline{\Hom}_{A_m}(E_m, \bRd f^! F_n) \to \bRd \underline{\Hom}_{A_m}(\bRd f_! E_m, F_n) \quad (m, n \in \mathbf{N}; m \geq n)
+\bRd f_* \bRd {\cHom}_{A_m}(E_m, \bRd f^! F_n) \to \bRd {\cHom}_{A_m}(\bRd f_! E_m, F_n) \quad (m, n \in \mathbf{N}; m \geq n)
 $$
 sont des isomorphismes, et de ce que les foncteurs $\Rd^i f_*$ $(i \in \mathbf{Z})$ commutent aux limites inductives filtrantes.
 \vskip .3cm
 {\bf 2.3}. A partir de maintenant, on suppose, pour simplifier, que $A = \mathbf{Z}_\ell$ et $J = \ell \mathbf{Z}_\ell$. Étant donné un complexe $K \in \D^+(X, \mathbf{Z}_\ell)$, on pose pour tout $F \in \D^-(X, \mathbf{Z}_\ell)$
 $$
-\D_K(F) = \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(F, K).
+\D_K(F) = \bRd {\cHom}_{\mathbf{Z}_\ell}(F, K).
 $$
 \vskip .3cm
 {
@@ -183,7 +183,7 @@ Proposition {\bf 2.3.3}. --- \it Soient $X$ un schéma noethérien de caractéri
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : Montrons par exemple (ii), les autres assertions se prouvant de fa\c{c}on essentiellement identique, à partir des énoncés correspondants de (SGA5 I). Montrons tout d'abord que si $E \in \D^b_c(T, \mathbf{Z}_\ell)$, alors $\bRd \underline{\Hom}_{\mathbf{Z}_\ell}(E, \bRd f^!(\mathbf{Z}_\ell)) \in \D^b_c(T, \mathbf{Z}_\ell)$.
+{\bf Preuve} : Montrons par exemple (ii), les autres assertions se prouvant de fa\c{c}on essentiellement identique, à partir des énoncés correspondants de (SGA5 I). Montrons tout d'abord que si $E \in \D^b_c(T, \mathbf{Z}_\ell)$, alors $\bRd {\cHom}_{\mathbf{Z}_\ell}(E, \bRd f^!(\mathbf{Z}_\ell)) \in \D^b_c(T, \mathbf{Z}_\ell)$.
 \vskip .3cm
 {
 Lemme {\bf 2.3.4}. --- \it Si $F \in \D^+_c(X, \mathbf{Z}_\ell)$, alors $\bRd f^!(F) \in \D^+_c(T, \mathbf{Z}_\ell)$.
@@ -192,7 +192,7 @@ Lemme {\bf 2.3.4}. --- \it Si $F \in \D^+_c(X, \mathbf{Z}_\ell)$, alors $\bRd f^
 On se ramène à le voir lorsque $F$ est un $\mathbf{Z}_\ell$-faisceau constructible. Alors cela résulte de la fa\c{c}on habituelle (SGA5 VI) du lemme de Shih, et de l'énoncé analogue pour les $\mathbf{Z}/\ell^{n+1}\mathbf{Z}$-Modules constructibles $(n \in \mathbf{N})$ et pour les $\mathbf{Z}_\ell[T]$-Modules constructibles. 
 Comme les hypothèses de (II 2.5 (iii)) sont réalisées (SGA5 I 3.3.1) il résulte du lemme que 
 $$
-\bRd \underline{\Hom}_{\mathbf{Z}_\ell}(E, \bRd f^! (\mathbf{Z}_\ell)) \in \D^+_c(T, \mathbf{Z}_\ell).
+\bRd {\cHom}_{\mathbf{Z}_\ell}(E, \bRd f^! (\mathbf{Z}_\ell)) \in \D^+_c(T, \mathbf{Z}_\ell).
 $$
 Pour voir qu'il est borné, on peut supposer que $E$ est un $\mathbf{Z}_\ell$-faisceau constructible. Alors, on peut prendre une résolution quasilibre (resp. flasque) de $E$ (resp. $\bRd f^! (\mathbf{Z}_\ell)$) ``canonique'' dans $\mathbf{E}(T, \ell \mathbf{Z}_\ell)$, en ce sens que c'est un système projectif de résolutions quasilibres (resp. flasques) des composants. Comme la dimension quasi-injective des $\bRd f^! (\mathbf{Z}/\ell^{n+1}\mathbf{Z})$ est indépendante de $n$ (preuve de SGA5 I 3.4.3), l'assertion en résulte aussitôt. Il reste à voir que, posant
 $$
@@ -259,7 +259,7 @@ la sous-catégorie triangulée pleine de $\D(X, \mathbf{Q}_\ell)$ définie par l
 {
 Proposition {\bf 2.3.7} (Dualité locale). --- \it Soient $X$ un schéma quasiprojectif et lisse de dimension $d$ sur un corps séparablement clos, et $x$ un point fermé de $X$. Pour tout $F \in \D^b_c(X, \mathbf{Q}_\ell)$, on a une dualité parfaite entre espaces vectoriels de dimension finie sur $\mathbf{Q}_\ell$
 $$
-\underline{\Ext}^{2d-i}_{\mathbf{Q}_\ell}(F, \mathbf{Q}_\ell(d))_x \times \mathrm{H}^i_x(F) \to \mathbf{Q}_\ell.
+\cExt^{2d-i}_{\mathbf{Q}_\ell}(F, \mathbf{Q}_\ell(d))_x \times \mathrm{H}^i_x(F) \to \mathbf{Q}_\ell.
 $$
 }
 \vskip .3cm
@@ -277,7 +277,7 @@ i^* \D_X (F) \isomlong \D_X \bRd i^! (F).
 $$
 Avec des notations évidentes, on a donc
 $$
-\D_X(F)_x \isomlong \bRd \Hom_{\mathbf{Q}_\ell}(\bRd \Gamma_x(F), \mathbf{Q}_\ell).
+\D_X(F)_x \isomlong \bRd \cHom_{\mathbf{Q}_\ell}(\bRd \Gamma_x(F), \mathbf{Q}_\ell).
 $$
 L'assertion en résulte aussitôt, grâce au fait que $\mathbf{Q}_\ell$ est un injectif dans la catégorie des $\mathbf{Q}_\ell$-espaces vectoriels.
 \vskip .3cm
@@ -290,11 +290,11 @@ Proposition {\bf 2.4.1}. --- \it Soient $F \in \D^b_c (X, \mathbf{Z}_\ell)$, $G 
 \begin{itemize}
     \item[a)] Il existe un isomorphisme canonique fonctoriel
     $$
-    \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(p^* F, q^* G) \isomlong p^* \D_X(F) \underline{\otimes} q^* G.
+    \bRd {\cHom}_{\mathbf{Z}_\ell}(p^* F, q^* G) \isomlong p^* \D_X(F) \underline{\otimes} q^* G.
     $$
     \item[b)] Il existe un accouplement parfait canonique
     $$
-    \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \times \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(q^* G, \bRd p^! F) \to K_{X \times_S Y}.
+    \bRd {\cHom}_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \times \bRd {\cHom}_{\mathbf{Z}_\ell}(q^* G, \bRd p^! F) \to K_{X \times_S Y}.
     $$
 \end{itemize}
 }
@@ -304,7 +304,7 @@ Proposition {\bf 2.4.1}. --- \it Soient $F \in \D^b_c (X, \mathbf{Z}_\ell)$, $G 
 {
 Proposition {\bf 2.4.2}. --- \it Si $F \in \D^b_c (X, \mathbf{Z}_\ell)$, $G \in \D^b_c (Y, \mathbf{Z}_\ell)$, on a des isomorphismes canoniques 
 \begin{itemize}
-    \item[(i)] $\bRd h_* \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \isomlong \bRd \underline{\Hom}_{\mathbf{Z}_\ell}(\bRd p_! (F), \bRd q_* (G))$. 
+    \item[(i)] $\bRd h_* \bRd {\cHom}_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \isomlong \bRd {\cHom}_{\mathbf{Z}_\ell}(\bRd p_! (F), \bRd q_* (G))$. 
     \item[(ii)] $\Hom_{\mathbf{Z}_\ell}(p^* F, \bRd q^! G) \isomlong \Hom_{\mathbf{Z}_\ell}(\bRd p_! (F), \bRd q_* (G))$.
 \end{itemize}
 }
@@ -315,7 +315,7 @@ Supposons maintenant que $X$ et $Y$ soient \emph{propres} sur $S$, et soient $F 
 
 Donnons-nous de plus deux familles $\phi$ et $\psi$ de supports sur $X \times_S Y$. On construit alors comme suit un diagramme
 \[\begin{tikzcd}
-	& {\mathrm{H}^0_\phi(X \times_S Y, \bRd \underline{\Hom}(p^* F, \bRd q^* G)) \times \mathrm{H}^0_\psi(X \times_S Y, \bRd \underline{\Hom}(q^* G, \bRd p^! F))} \\
+	& {\mathrm{H}^0_\phi(X \times_S Y, \bRd {\cHom}(p^* F, \bRd q^* G)) \times \mathrm{H}^0_\psi(X \times_S Y, \bRd {\cHom}(q^* G, \bRd p^! F))} \\
 	{\Hom(\bRd f_* F, \bRd g_* G) \times \Hom(\bRd g_* G, \bRd f_* F)} && {\mathrm{H}^0_{\phi \cap \psi}(X \times_S Y, K_{X \times_S Y})} \\
 	& {\mathrm{H}^0(S, \mathbf{Z}_\ell)}
 	\arrow["{(b)}", from=1-2, to=2-3]
