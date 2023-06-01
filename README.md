@@ -80,7 +80,7 @@ Grothendieck says in Récoltes et Semailles
 #### II. Conditions de finitude ([discussion](https://github.com/carmonamateo/Jouanolou/issues/4))
 
 ##### [1. Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
-- [x] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
