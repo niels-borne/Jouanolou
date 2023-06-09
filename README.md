@@ -8,7 +8,7 @@
 
 ### Description
 
-[This thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under Grothendieck, was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, and J. L. Verdier. <br>
+This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under Grothendieck, was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, and J. L. Verdier. <br>
 
 An important precedent of the thesis was the Seminar SGA5 (1965/66), where we can read (Exposé III Intro):
 > Faute de disposer d'une bonne catégorie dérivée de faisceaux $\ell$-adiques (la thèse de Jouanolou n'ayant malheuresement pas été publiée), nous travaillons systématiquemnt avec des coefficients de torsion (première aux caractéristiques résiduelles).
