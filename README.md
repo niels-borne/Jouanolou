@@ -86,7 +86,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [2. Conditions de finitude dans les catégories dérivées](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.2.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
