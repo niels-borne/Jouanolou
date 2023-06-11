@@ -1,1 +1,776 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{2. Conditions de finitude dans les catégories dérivées.}
+\addcontentsline{toc}{subsection}{2. Conditions de finitude dans les catégories dérivées}
 
+Soit $X$ un topos localement noethérien.
+
+\vskip .3cm
+{
+Définition {\bf 2.1}. --- \it On dit qu'un complexe $E$ de $A$-faisceaux sur $X$ est \emph{à cohomologie constructible} (resp. \emph{constante tordue constructible}) si tous ses objets de cohomologie sont des $A$-faisceaux constructibles (resp. constants tordus constructibles). 
+}
+\vskip .3cm
+La sous-catégorie $A-\fscn(X)$ étant exacte dans $A-\fsc(X)$ (1.5.(iii)), les sous-catégories plaines
+$$
+\K^*_c(X, A) \quad \text{et} \quad \D^*_c(X, A) \quad (* = \emptyset, + -~\text{ou}~b)
+$$
+de $\K^*(X, A)$ et $\D^*(X, A)$ respectivement engendrées par les complexes à cohomologie constructible sont des sus-catégories triangulées; de plus, $\D^*_c(X, A)$ s'obtient par inversion des quasi-isomorphismes à partir de $\K^*_c(X, A)$. De même, on définit des catégories triangulées
+$$
+\K^*_t(X, A) \quad \text{et} \quad \D^*_t(X, A) \quad (* = \emptyset, + -~\text{ou}~b)
+$$
+à partir des complexes à cohomologie constants tordue constructible et $\D^*_t(X, A)$ s'obtient à partir de $\K^*_t(X, A)$ en inversant les quasi-isomorphismes.
+\vskip .3cm
+{
+Définition {\bf 2.2}. --- \it On dit qu'un complexe $E$ de $A$-faisceaux sur $X$ est \emph{pseudocohérent} s'il est à cohomologie localement bornée supérieurement et constante tordu constructible. On dit qu'il est \emph{parfait} si de plus il est localement de tor-dimension finie.
+}
+\vskip .3cm
+Comme $A-\fsct(X)$ est une sous-catégorie exacte de $A-\fsc(X)$, il est clair que les sous-catégories pleines
+$$
+\K_{\text{coh}}(X, A) \quad \text{et} \quad \K_{\parf}(X, A)
+$$
+de $\K(X, A)$ engendrées respectivement par les complexes pseudocohérents et parfaits sont des sous-catégories triangulées vérifiant les inclusions 
+$$
+\K_{\parf}(X, A) \subset \K_{\text{coh}}(X, A) \subset \K_t(X, A).
+$$
+On définit de même des catégories triangulées
+$$
+\D_{\text{coh}}(X, A) \quad \text{et} \quad \D_{\parf}(X, A)
+$$
+vérifiant les inclusions 
+$$
+\D_{\parf}(X, A) \subset \D_{\text{coh}}(X, A) \subset \D_t(X, A).
+$$
+De plus la catégorie $\D_{\parf}(X, A)$ (resp. $\D_{\text{coh}}(X, A)$) est obtenue à partir de $\K_{\parf}(X, A)$ (resp. $\K_{\text{coh}}(X, A)$) par inversion des quasi-isomorphismes. Enfin, on utilisera également les notations
+$$
+\D^b_{\parf}(X, A) = (\D^b_t(X, A))_{\text{torf}}
+$$
+$$
+\D^b_{\text{coh}}(X, A) = (\D^b_t(X, A)).
+$$
+Avant de poursuivre, nous allons expliciter certaines de ces notions dan le cas où $X$ est le topos ponctuel. Dans ce cas, le foncteur additif
+$$
+M \mapsto (M/J^{n+1}M)_{n \in \mathbf{N}}
+$$
+de la catégorie des $\hat{A}$--modules de type fini dans $A-\fsc(\pt)$ est exact et permet donc de définir par prolongement aux complexes un foncteur exact
+$$
+\D^b(\hat{A}-\modn) \to \D^b_c(\pt, A).
+\leqno{(2.3.1)}
+$$
+De plus, comme tout complexe parfait de $\hat{A}$--modules est équivalent à un complexe borné de $\hat{A}$--modules projectifs de type fini, le foncteur (2.3.1) induit un foncteur exact
+$$
+\D_{\parf}(\hat{A}-\modn) \to \D_{\parf}(\pt, A).
+\leqno{(2.3.2)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 2.3}. --- \it Les foncteurs 
+$$
+\D^b(\hat{A}-\modn) \to \D^b_c(\pt, A)
+\leqno{(2.3.1)}
+$$
+$$
+\D_{\parf}(\hat{A}-\modn) \to \D_{\parf}(\pt, A)
+\leqno{(2.3.1)}
+$$
+ci-dessus sont des \emph{équivalences de catégories}.
+}
+\vskip .3cm
+{\bf Preuve} : Comme le foncteur (2.3.1) commute évidemment au produit tensoriel et est conservatif, il est clair qu'un complexe dont l'image par (2.3.1) est de tor-dimension finie est lui-même de tor-dimension finie. Il nous suffit donc de montrer que (2.3.1) est une équivalence. Notons pour cela $U$ la sous-catégorie pleine de $\K^b_c(\pt, A)$ engendrée par les complexes bornés à cohomologie constructible et dont les composants sont essentiellement stricts, i.e. vérifiant la condition de Mittag-Leffler. Comme la catégorie $\hat{A}-\modn$ s'identifie à une sous-catégorie pleine de $A-\fsc(\pt)$, il est clair qu'on a une suite de foncteurs d'``inclusion''
+$$
+\K^b(\hat{A}-\modn) \xlongrightarrow{p} U \xlongrightarrow{q} \K^b_c(\pt, A).
+$$
+Nous allons voir successivement que lorsqu'on inverse les quasi-isomorphismes, les foncteurs $p$ et $q$ deviennent des équivalences. Pour le voir pour $p$, il suffit (CD I 4.2.(b)) de montrer qu'étant donné un objet $E$ de $U$, il existe un quasi-isomorphisme
+$$
+M \to E,
+$$
+avec $M$ un objet de $\K^b(\hat{A}-\modn)$. Appliquant (EGA $0_{III}$ 11.9.1), on est ramené à montrer qu'étant donnés un objet $F$ de $A-\fsc(\pt)$ vérifiant la condition de Mittag-Leffler et un épimorphisme de $A$-faisceaux
+$$
+F \xlongrightarrow{u} P \to 0,
+$$
+avec $P$ un $\hat{A}$--module de type fini, il existe un $\hat{A}$--module de type fini $Q$ et un morphisme $v: Q \to F$ tels que le composé $u v$ soit un épimorphisme. Quitte à remplacer $F = (F_n)_{n \in \mathbf{N}}$ par le système projectif strict associé, on peut supposer qu'il est strict. Alors, les morphismes de $\hat{A}$--modules canoniques
+$$
+\varprojlim (F) \to F_n \quad (n \in \mathbf{N})
+$$
+sont des épimorphismes. Choisissons alors un sous-$\hat{A}$--module de type fini $Q$ de $\varprojlim (F)$ tel que la projection $Q \to F_0$ soit un épimorphisme. Alors le morphisme composé $Q \to P$ induit un épimorphisme $Q/JQ \to P/JP$, donc est un épimorphisme d'après le lemme de Nakayama. Montrons maintenant que le foncteur $q$ induit une équivalence après inversion des quasi-isomorphismes. Étant donné un objet $K$ de $\K^b_c(\pt, A)$, on sait (I 6.6.3) qu'il existe un quasi-isomorphisme
+$$
+[?] L
+$$
+où $L$ est un complexe borné inférieurement et dont les composants sont directement stricts, donc vérifient la condition de Mittag-Leffler. Nous allons voir que, quitte à tronquer $L$, on peut le remplacer par un complexe borné et dont les composants vérifient la condition de Mittag-Leffler, ce qui achèvera la démonstration d'après (CD I 4.2. (c) et (d)). Si $p$ est un entier tel que $K^q = 0$ $(q \geq p)$, le morphisme $w_p$ se factorise $\Ker(d^p_L)$, et, quitte à tronquer $L$ au degré $p$, il nous suffit de voir que $\Ker(d^p_L)$ vérifie la condition de Mittag-Leffler, ce qui est immédiat puisqu'il est isomorphe dans $A-\fsc(\pt)$ au système projectif $\text{Im}(L^{p-1})$, lui-même quotient du système projectif strict $L^{p-1}$.
+\vskip .3cm
+{
+Proposition {\bf 2.4}. --- \it Le bifoncteur dérivé du produit tensoriel induit des bifoncteurs
+\begin{itemize}
+    \item[(i)] $\D^-_\lambda(X, A) \times \D^-_\lambda(X, A) \to \D^-_\lambda(X, A)$ \quad $(\lambda = c, \infty, t)$.
+    \item[(ii)] $\D^b_\lambda(X, A)_{\torf} \times \D^+_\lambda(X, A) \to \D^+_\lambda(X, A)$ \quad $(\lambda = c, \infty, t)$.
+    \item[(iii)] $\D_{\coh}(X, A) \times \D_{\coh}(X, A) \to \D_{\coh}(X, A)$.
+    \item[(iv)] $\D_{\parf}(X, A) \times \D_{\parf}(X, A) \to \D_{\parf}(X, A)$.
+\end{itemize}
+Si de plus l'anneau $A$ est local régulier d'idéal maximal $J$, le bifoncteur (I 7.2.4) induit des bifoncteurs
+\begin{itemize}
+    \item[(v)] $\D^*_\lambda (X, A) \times \D^*_\lambda (X, A) \to \D^*_\lambda (X, A)$, avec $* = b$ ou $+$, et $\lambda = c$ ou $t$. 
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Notons respectivement $E$ et $F$ les complexes à droite et à gauche dans le premier membre. Pour (i), (iii) et (v), on se ramène au moyen du ``way-out functor lemma'' (H I 7.1) au cas où $E$ et sont réduits au degré 0, et alors on conclut par (1.24.(i)). Pour (ii), on se ramène par qay-out functor lemma au cas où $F$ est borné et alors, compte tenu de ce que $E$ est detor-dimension finie, l'assertion est conséquence de (i). Enfin, la partie (iv) résulte de (iii) et du fait que le produit tensoriel dérivé de deux complexes de tor-dimension finie est lui-même de tor-dimension finie.
+\vskip .3cm
+{
+Proposition {\bf 2.5}. --- \it Le bifoncteur $\bRd \cHom_A$ induit des bifoncteurs
+\begin{itemize}
+    \item[(i)] $(\D^-_t(X, A))^\bullet \times \D^+_\lambda(X, A) \to \D^+_\lambda(X, A)$ \quad $(\lambda = c$~ou~$t)$.
+\end{itemize}
+Lorsque $A$ est local régulier d'idéal maximal $J$, il induit des bifoncteurs exacts
+\begin{itemize}
+    \item[(ii)] $(\D^b_t(X, A))^\bullet \times \D^b_\lambda(X, A) \to \D^b_\lambda(X, A)$ \quad $(\lambda = \emptyset, c$~ou~$t)$.
+\end{itemize}
+Enfin, supposons que pour toute $A$-algèbre de type fini $B$ annulée par une puissance de $J$, et tout couple $(M, N)$ de $B$--Modules constructibles, les $B$--Modules $\cExt^p_B(M, N)$ $(p \in \mathbf{N})$ soient constructibles. Alors, le bifoncteur $\bRd \cHom_A$ induit un bifoncteur
+\begin{itemize}
+    \item[(iii)] $(\D^-_c(X, A))^\bullet \times \D^+_c(X, A) \to \D^+_c(X, A)$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Soient $E \in \D^-(X, A)$ et $F \in D^+(X, A)$. Pour voir (i), on se ramène par le way-out functor lemma au cas où $E$ et $F$ sont réduits au degré $0$, et alors l'assertion résulte de (1.26. (i) et (ii)). L'assertion (ii) se déduit sans peine de (i) et (1.26.(iii)). Enfin, l'assertion (iii) se voit de même que (i), en utilisant cette fois (1.26.(iv)).
+\vskip .3cm
+{
+Proposition {\bf 2.6}. --- \it Soient $K \in \D^-_c(X, A)$, $L \in \D^-(X, A)$ et $M \in \D^+(X, A)$. Alors, le morphisme de Cartan
+$$
+\bRd \cHom_A(K \underline{\otimes}_A L, M) \to \bRd \cHom_A(K, \bRd \cHom_A(L, M))
+\leqno{(I 7.6.2)}
+$$
+est un \emph{isomorphisme}. Si de plus $X$ est noethérien, les morphismes
+$$
+\bRd \overline{\Hom}_A(K \underline{\otimes}_A L, M) \to \bRd \overline{\Hom}_A(K, \bRd \cHom_A(L, M))
+\leqno{(I 7.6.3)}
+$$
+$$
+\bRd \Hom_A(K \underline{\otimes}_A L, M) \to \bRd \Hom_A(K, \bRd \cHom_A(L, M))
+\leqno{(I 7.6.4)}
+$$
+$$
+\Hom_A(K \underline{\otimes}_A L, M) \to \Hom_A(K, \bRd \cHom_A(L, M))
+\leqno{(I 7.6.5)}
+$$
+sont aussi des \emph{isomorphismes}.
+}
+\vskip .3cm
+{\bf Preuve} : La définition des trois derniers morphismes à partir du premier au moyen de (I 7.4.18) montre qu'il suffit de voir que (I 7.6.2) est un isomorphisme. On peut pour cela supposer $L$ quasilibre et $M$ flasque. Ceci dit, les foncteurs exacts
+$$
+\bRd \cHom_A(K \underline{\otimes}_A L, .) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A(L, .))
+$$
+de $\D^+(X, A)$ dans $\D^+(X, A)$ possèdent la propriété de ``décalage à droite'' ([H] I 7), ce qui permet de se ramener au cas où $M$ est de plus réduit au degré 0. Dans ce cas, fixant $K$ et $M$, les foncteurs exacts
+$$
+\bRd \cHom_A(K \underline{\otimes}_A ., M) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A()., M)
+$$
+possèdent également la propriété de dácalage à droite, ce qui permet de se ramener au cas où de plus $L$ est réduit au degré 0. Enfin, un dernier argument de décalage permet de supposer que $K$ est réduit au degré 0 et que $K^0$ est un $A$-faisceau constructible. Pour montrer l'assertion dans ce dernier cas, on peut, quitte à localiser, supposer $X$ noethérien. Alors, il est immédiat que $K$ est quasi-isomorphe à un complexe quasilibre borné supérieurement, tel que pour tout $n \in \mathbf{Z}$, le $A$-faisceau $K^n$ ait ses composants constructibles. Finalement, on peut supposer $K$ et $L$ réduits au degré 0, quasilibres, que $K^0$ a des composants constructibles et que $L$ est flasque. Alors, il résulte de (I 6.3.8) que le morphisme de complexes (I 7.6.1) est un isomorphisme, d'où l'assertion.
+\vskip .3cm
+{
+Proposition {\bf 2.7}. --- \it Soient $E \in \D^-_{\parf}(X, A)$, $F \in \D^+(X, A)$ et $G \in \D(X, A)$. Le morphisme 
+$$
+m: \bRd \cHom_A(E, F) \underline{\otimes}_A G \to \bRd \cHom_A(E, F \underline{\otimes}_A G)
+\leqno{(I 7.6.9.2)}
+$$
+est un \emph{isomorphisme} dans chacun des cas suivants:
+\begin{itemize}
+    \item[(i)] L'anneau $A$ est local régulier d'idéal maximal $J$, et $G \in \D^+(X, A)$.
+    \item[(ii)] $F \in \D^b_c(X, A)$ et $G \in \D^-_c(X, A)_{\torf}$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Pla\c{c}ons-nous d'abord dans le cas (i). Par dévissage, on se ramène au cas où $F$ et $G$ sont bornés. Alors les deux membres sont à cohomologie bornée supérieurement (2.5.(ii)). Notant alors $u: A \to A/J$ le morphisme d'anneaux canonique, il nous suffit (I 8.2.2) de montrer que $\bLd u^* (m)$ est un isomorphisme. Utilisant (I 8.1.11.(ii) et (iv)), on voit qu'on peut remplacer $A$ par $A/J$. En effet, le complexe $\bLd u^* (E)$ est de tor-dimension finie (I 8.1.11.(i)) et il est immédiat que sa cohomologie est constante tordue constructible (nous reviendrons d'ailleurs plus loin sur ce point). Ceci dit, on peut supposer $X$ quasicompact; alors, l'équivalence (I 8.2.6) permet de se ramener à l'assertion analogue dans la catégorie des $(A/J)$--Modules (SGA6 I 7.6). Dans l'hypothèse (ii), la cohomologie des deux membres est constructible, ce qui (1.12.4) de vérifier l'assertion sur les fibres. Utilisant (I 6.4.2), on est ainsi ramené au cas où $X$ est le topos ponctuel. Mais alors, grâce à (2.3), c'est une conséquence immédiate de l'assertion analogue pour les $\hat{A}$--modules de type fini.  
+
+Pour énoncer le corollaire suivant, on posera pour tout $E$ appartenant à $D^-_{\parf}(X, A)$
+$$
+\check{E} = \bRd \cHom_A(E, A).
+$$
+Il est clair que lorsque $A$ est local régulier d'idéal maximal $J$, on a 
+$$
+E \in \D^+_{\parf}(X, A),
+$$
+mais j'ignore si c'est vrai sans hypothèse sur l'anneau $A$.
+\vskip .3cm
+{
+Corollaire {\bf 2.8}. --- \it Soient $E \in \D^-_{\parf}(X, A)$ et $F \in \D^+(X, A)$. Le morphisme canonique
+$$
+m : [?]
+$$
+est un isomorphisme lorsque $A$ est local régulier d'idéal maximal $J$, ou lorsque $F \in \D^b_c(X, A)_{\torf}$. C'est le cas en particulier lorsque $E \in \D^-_{\parf}(X, A)$ et $F \in \D^b_{\parf}(X, A)$, de sorte que le complexe
+$$
+\bRd \cHom_A(E, F)
+$$
+est \emph{parfait} lorsque de plus $A$ est local régulier d'idéal maximal $J$.
+}
+\vskip .3cm
+{\bf 2.9}. Supposons maintenant pour simplifier que $A$ est local régulier d'idéal maximal $J$. Soient $E, E' \in \D^-(X, A)$ et $F, F' \in D^+(X, A)$. On suppose que $E \in \D^-_c(X, A)$. Nous allons définir un morphisme fonctoriel 
+$$
+\bRd \cHom_A(E, F) \underline{\otimes}_A \bRd \cHom_a(E', F') \to \bRd \cHom_A(E \underline{\otimes}_A E', F \underline{\otimes}_A F').
+\leqno{(2.9.1)}
+$$
+Considérons pour cela le diagramme
+\[\begin{tikzcd}
+	{\bRd \cHom_A(E, F) \underline{\otimes}_A\bRd\cHom_A(E', F')} && {\bRd \cHom_A(E \underline{\otimes}_AE', F\underline{\otimes}_AF') } \\
+	{\bRd \cHom_A(E, F \underline{\otimes}_A\bRd\cHom_A(E', F'))} && {\bRd \cHom_A(E, \bRd \cHom_A(E', F \underline{\otimes}_A F')).}
+	\arrow["{(1)}"', from=1-1, to=2-1]
+	\arrow["{(3)}"', from=1-3, to=2-3]
+	\arrow["{(2)}", from=2-1, to=2-3]
+	\arrow[dashed, from=1-1, to=1-3]
+\end{tikzcd}\]
+La flèche (1) n'est autre que (I 7.6.9.2), qui existe puisque $\bRd\cHom_a(E', F') \in \D^+(X, A)$. La flèche (2) est obtenue en appliquant le foncteur $\bRd \cHom_a(E, .)$ à la flèche (I 7.6.2), pour $E'$, $F'$ et $F$. Enfin, la flèche (3) est le morphisme de Cartan (I 7.6.2). Comme $E \in \D^-_c(X, A)$, cette dernière est un isomorphisme (2.6), ce qui permet de définir (2.9.1) comme l'unique flèche (en pointillé) rendant le diagramme ci-dessus commutatif.
+
+Si maintenant on a aussi $E' \in \D^-_c(X, A)$, on définit, en échangeant les rôles de $E$ et $E'$, et $F$ et $F'$ respectivement, un autre flèche et on vérifie qu'elle coïncide avec le première.
+\vskip .3cm
+{
+Proposition {\bf 2.9.2}. --- \it On suppose que l'anneau $A$ est local régulier d'idéal maximal $J$. Soient $E, E' \in \D^-_{\parf}(X, A)$ et $F, F' \in \D^+(X, A)$. Alors, le morphisme canonique
+$$
+\bRd \cHom_a(E, F) \underline{\otimes}_A \bRd \cHom_a(E', F') \to \bRd \cHom_A(E \underline{\otimes}_A E', F \underline{\otimes}_A F')
+\leqno{(2.9.1)}
+$$
+est un \emph{isomorphisme}.
+}
+\vskip .3cm
+{\bf Preuve} : D'après (2.7), les flèches (1) et (2) du diagramme ci-dessus [?] 
+\vskip .3cm
+{\bf 2.10}. Supposons maintenant le topos $X$ \emph{noethérien}, et que l'anneau $A$ est local régulier d'idéal maximal $J$. Étant donné $E \in \D^b_{\parf}(X, A)$, le complexe $E$ appartient aussi à $\D^b_{\parf}(X, A)$, et le morphisme de Cartan (I 7.6.5)
+$$
+\Hom_A(\check{E} \underline{\otimes}_A E, A) \to \hom_A(\check{E}, \check{E})
+$$
+est une bijection. En particulier, l'identité de $\check{E}$ correspond à un morphisme 
+$$
+E \underline{\otimes}_A \check{E} \to A.
+\leqno{(2.10.1)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 2.10.2}. --- \it Soit $F \in \D^+(X, A)$. Il existe un morphisme fonctoriel en $F$
+$$
+E \underline{\otimes}_A \bRd \cHom_A (E, F) \to F,
+$$
+qui ``coîncide'' avec (2.10.1) lorsque $F = A$. 
+}
+\vskip .3cm
+{\bf Preuve} : En tensorisant par l'identité de $E$ l'isomorphisme (2.8) on obtient un isomorphisme
+$$
+a: E \underline{\otimes}_A \check{E} \underline{\otimes}_A F \isomlong E \underline{\otimes}_A \bRd \cHom_A(E, F).
+$$
+Par ailleurs, on définit, en tensorisant par l'identité de $F$ le morphisme (2.10.1), un morphisme
+$$
+b: E \underline{\otimes}_A \check{E} \underline{\otimes}_A F \to F.
+$$
+Le morphisme annoncé est le composé $b \circ a^{-1}$.
+
+Lorsque $F \in \D^b_c(X, A)$, il en est de même de $\bRd \cHom_A(E, F)$, et le morphisme de Cartan
+$$
+\Hom_A\bRd \cHom_A(E, F) \underline{\otimes}_A E, F) \to \Hom_A(\bRd \cHom_A (E, F), \bRd \cHom_A(E, F))
+$$
+est une bijection. On laisse alors au lecteur le soin de vérifier que le morphisme (2.10.2) correspond à l'identité de $\bRd \cHom_A(E, F)$ dans cette bijection.
+\vskip .3cm
+{
+Proposition {\bf 2.10.3}. --- \it Soit $E \in \D^b_{\parf}(X, A)$. Pour tout $F \in \D^+(X, A)$, il existe un morphisme canonique
+$$
+E \to \bRd \cHom_A(\bRd \cHom_A(E, F), F).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : On prend l'image de (2.10.2) par le morphisme de Cartan
+$$
+\Hom_A(E \underline{\otimes} \bRd \cHom_A(E, F), F) \to \Hom_A(E, \bRd \cHom_A (E, F), F).
+$$
+En particulier, pour $F = A$, on déduit de (2.10.3) un morphisme 
+$$
+E \to (\check{E})~\check{}.
+\leqno{(2.10.4)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 2.10.5}. --- \it Soit $E \in \D^b_{\parf}(X, A)$. Le morphisme
+$$
+E \to (\check{E})~\check{}
+$$
+ci-dessus est un \emph{isomorphisme}.
+}
+\vskip .3cm
+{\bf Preuve} : Comme les deux membres sont à cohomologie constructible, on est ramené à vérifier l'assertion sur les fibres (1.12.4).
+
+Grâce à (I 6.4.2), on peut alors supposer que $X$ est le topos ponctuel. Enfin, la proposition (2.3) montre que dans ce cas, l'assertion (2.10.5) est conséquence de l'assertion analogue pour les complexes parfaits de $\hat{A}$--modules (SGA 6 I 7.2). 
+\vskip .3cm
+{\bf 2.11. Trace et cup-produit}.
+
+On suppose que $A$ est local régulier et que $J$ est son idéal maximal. Étant donné $E \in \D_{\parf}(X, A)$, nous allons définir un morphisme \emph{trace}
+$$
+\tr: \Hom_A(E, E) \to \Gamma(X, A),
+$$
+satisfaisant au formalisme développé dans (SGA6 I 8), à l'exception de l'additivité qui est d'ailleurs énoncée de fa\c{c}on erronée dans (loc.cit.).
+
+Supposons tout d'abord que $X$ soit noethérien. Alors il existe une flèche naturelle
+$$
+\bRd \cHom_A(E, E) \to A,
+\leqno{(2.11.1)}
+$$
+composée de l'isomorphisme inverse de (2.8) $\bRd \cHom_A(E, E) \isomlong \check{E} \underline{\otimes}_A E$ et du morphisme (2.10.1). Appliquant à (2.11.1) le foncteur $\mathrm{H}^\circ(X, .)$, on obtient, compte tenu de l'isomorphisme de Cartan, une application $A$-linéaire $\Hom_A(E, E) \to \Gamma(X, A)$, qui est le morphisme trace annoncé lorsque $X$ est noethérien. Dans le cas général, comme le préfaisceau
+$$
+U \mapsto \mathrm{H}^0(U, A)
+$$
+est un faisceau (I 3.9), les morphismes traces précédemment définis sur les ouverts noethériens de $X$ se recollent pour fournir le morphisme trace annoncé. Il est immédiat de vérifier que, sur les fibres, il induit, compte tenu de l'équivalence (2.3.2), le morphisme trace défini dans (SGA6 I 8).
+
+Plus généralement, étant donnés $E$ et $F \in \D_{\parf}(X, A)$, un accouplement
+$$
+( , ): \Hom_A(E, F) \otimes_{\mathrm{H}^0(X, A)}\Hom_A(F, E) \to \mathrm{H}^0(X, A). 
+$$
+que nous appellerons \emph{cup-produit}. Pour cela, on se ramène comme précédemment à le définir lorsque $X$ est noethérien et les complexes $E$ et $F$ sont bornés. Dans ce cas, on dispose d'un homomorphisme canonique
+$$
+\bRd \cHom_A(E, F) \underline{\otimes}_A \bRd \cHom_A(F, E) \to A,,,
+\leqno{(2.11.2)}
+$$
+que l'on construit comme suit. D'après (2.8), il s'agit de définir un accouplement
+$$
+\check{E} \underline{\otimes}_A F \underline{\otimes}_A \check{F} \underline{\otimes}_A E \to A.
+$$
+On prend le produit tensoriel des accouplements (2.10.1) associés à $E$ et $F$ respectivement. Montrons maintenant comment déduire le cup-produit de (2.11.2). D'après l'isomorphisme de Cartan (2.6), il s'agit, étant donnés deux morphismes
+$$
+u: A \to \bRd \cHom_A(E, F)
+$$
+et
+$$
+v: A \to \bRd \cHom_A(F, E),
+$$
+d'en définir un de $A$ dans $A$. On prend le morphisme composé de (2.11.1) et de $u \underline{\otimes}_A v$. 
+\vskip .3cm
+{
+Proposition {\bf 2.11.3}. --- \it Soient $E$ et $F \in \D_{\parf}(X, A)$.
+\begin{itemize}
+    \item[(i)] Étant donnés deux morphismes $u: E \to F$ et $v: F \to E$, on a 
+    $$
+    (u, v) = (v, u) = \tr(v \circ u) = \tr(u \circ v).
+    $$
+    \item[(ii)] Étant donnés un morphisme $u: E \to E$ et un isomorphisme $s: E \to F$, on a 
+    $$
+    \tr(s \circ u \circ s^{-1}) = \tr(u).
+    $$
+    \item[(iii)] Étant donnés deux morphismes $u: E \to E$ et $v: F \to F$, on a : 
+    $$
+    \tr(u \underline{\otimes} v) = \tr(u) \tr(v).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Il est clair que (i) $\Rightarrow$ (ii). Par passage aux fibres, et compte tenu de l'équivalence (2.3.2), les assertions (i) et (iii) résultent des assertions analogues pour les complexes parfaits de $\hat{A}$--modules (SGA6 I 8.3 et 8.7).
+\vskip .3cm
+{\bf 2.12}. Nous allons maintenant expliciter pour la commodité des références un certain nombre de compatibilités de la notion de constructibilité avec les opérations externes, qui sont pour la plupart évidentes et ont déjà été utilisées librement dans les numéros précédents.
+\vskip .3cm
+{
+Proposition {\bf 2.12.1}. --- \it Soit $f: X \to Y$ un morphisme de topos localement noethériens. 
+\begin{itemize}
+    \item[(i)] Le foncteur $f^*$ transforme $A$-faisceau constructible (resp. constant tordu constructible) en $A$-faisceau constant tordu constructible. 
+    \item[(ii)] Le foncteur $f^*: \D(Y, A) \to \D(X, A)$ induit des foncteurs 
+    $$
+    \D^*_\lambda(T, A) \to \D^*_\lambda(T', A) \quad (* = \emptyset, +, -, b~\text{ou}~= c, t).
+    $$
+    ($A$ rég., $J$ id. max.) $\D_{\parf}(Y, A) \to \D_{\parf}(X, A)$.
+    $$
+    \D_{\coh}(Y, A) \to \D_{\coh}(X, A).
+    $$
+    \item[(iii)] Étant données $E \in \D^-_t(Y, A)$ et $F \in \D^+(Y, A)$, le morphisme canonique (I 7.7.2.(ii))
+    $$
+    f^* \bRd \cHom_A(E, F) \to \bRd \cHom_A(f^* E, f^* F)
+    $$
+    est un \emph{isomorphisme}.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Dans le cas constant tordu constructible, l'assertion (i) a été déjà vue (1.20.4). Dans le cas constructible, on se ramène au cas où $F$ est $J$-adique constructible, où c'est immédiat. L'assertion (ii) résulte immédiatement de (i); pour la perfection, on suppose $A$ régulier d'idéal maximal $J$, car je ne sais pas en général si l'image réciproque d'un $A$-faisceau plat est un $A$-faisceau plat. Enfin, (iii) résulte de (I 6.4.2).  
+\vskip .3cm
+{
+Proposition {\bf 2.12.2}. --- \it Soient $X$ un topos localement noethérien, $T$ et $T'$ deux objets de $X$, et $f: T \to T'$ un morphisme quasicompact.
+\begin{itemize}
+    \item[(i)] Le foncteur (I 7.7.9) $\bRd f_!: \D(T, A) \to \D(T', A)$ induit des foncteurs
+    $$
+    \D^*_c(T, A) \to \D^*_c(T', A) \quad (* = \emptyset, -, +~\text{ou}~b). 
+    $$
+    \item[(ii)] Si $f$ est une immersion ouverte, le foncteur $f^*$ induit un foncteur
+    $$
+    f^*: \D_{\parf}(T', A) \to \D_{\parf}(T, A).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Comme le foncteur $f_!$ est exact et transforme $A$--Module constructible en $A$-Module constructible (SGA4 \quad), il transforme $A$-faisceau $J$-adique constructible en $A$-faisceau $J$-adique constructible, d'où aussitôt (i). L'assertion (ii) provient de ce que l'on sait dans ce cas (I 5.18.5 (ii)) que le foncteur $f^*$ transforme $A$-faisceau plat en $A$-faisceau plat.
+\vskip .3cm
+{
+Proposition {\bf 2.12.3}. --- \it Soient $X$ un topos, $U$ un ouvert de $X$ et $j: Y \to X$ l'immersion fermée complémentaire.
+\begin{itemize}
+    \item[(i)] Le foncteur $\bRd j_*: \D(Y, A) \to \D(X, A)$ induit des foncteurs
+    $$
+    \D^*_c(Y, A) \to \D^*_c(X, A) \quad (* = \emptyset, -, +~\text{ou}~b).
+    $$
+    \item[(ii)] Le foncteur $j^*$ induit un foncteur
+    $$
+    j^*: \D_{\parf}(X, A) \to \D_{\parf}(Y, A).
+    $$
+    \item[(iii)] On suppose que pour toute $A$-algèbre de type fini $B$ annulée par une puissance de $J$, et tout couple $(M, N)$ de $B$--Modules constructibles les $B$--Modules $\cExt^p_B(M, N)$ $(p \in \mathbf{N})$ soient constructibles. Alors le foncteur $\bRd j^!$ (I 7.7.11) induit un foncteur exact
+    $$
+    \bRd j^!: \D^+_c(X, A) \to \D^*_c(Y, A).
+    $$    
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Les assertions (i) et (ii) se voient comme les assertions analogues de (2.12.2), en utilisant (I 5.19.1 (ii)) pour la deuxième.Quant à (iii), elle résulte, compte tenu de l'isomorphisme (I 7.7.13) de (2.5 (iii)).
+
+\vskip .3cm
+{\bf 2.13. Changement d'anneau}. Soient $X$ un topos localement noethérien, $A$ et $B$ deux anneaux commutatifs unifères noethériens, $J$ et $K$ deux idéaux de $A$ et $B$ respectivement et $u: A \to B$ un morphisme d'anneaux unifères, tel que $u(J) \subset K$. On utilise par ailleurs librement les notations de (I 8.1).
+\vskip .3cm
+{
+Proposition {\bf 2.13.1}. --- \it 
+\begin{itemize}
+    \item[(i)] Le foncteur $\bLd u^*: \D^-(X, A) \to \D^-(X, B)$ induit des foncteurs exacts
+    \[\begin{tikzcd}
+	{\D^-_c(X, A)} && {\D^-_c(X, B)} \\
+	{\D^-_t(X, A)} && {\D^-_t(X, B)} \\
+	{\D^-_{\parf}(X, A)} && {\D^-_{\parf}(X, B).}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=3-1, to=3-3]
+    \end{tikzcd}\]
+    Si de plus $A$ est régulier d'idéal maximal $J$, il induit des foncteurs
+    \[\begin{tikzcd}
+	{\D^*_c(X, A)} && {\D^*_c(X, B)} && {(*= \emptyset, +~\text{ou}~b)} \\
+	{\D^*_t(X, A)} && {\D^*_t(X, B)} && {(*= \emptyset, +~\text{ou}~b)} \\
+	{\D^*_{\parf}(X, A)} && {\D^*_{\parf}(X, B)} && {(*= \emptyset, +~\text{ou}~b).}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=3-1, to=3-3]
+    \end{tikzcd}\]
+    \item[(ii)] Si $B$ est une $A$-algèbre finie, le foncteur $u_*: \D(X, B) \to \D(X, A)$ induit des foncteurs exacts
+    \[\begin{tikzcd}
+	{\D_c(X, B)} && {\D_c(X, A)} \\
+	{\D_t(X, B)} && {\D_t(X, A).}
+	\arrow[from=1-1, to=1-3]
+	\arrow[from=2-1, to=2-3]
+    \end{tikzcd}\]
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons (i). L'assertion concernant les complexes parfaits découle de celle concernant les complexes à cohomologie constante tordue constructible et de (I 8.1.11 (i)). Montrons par exemple que si $E \in \D_c(X, A)$, alors $\bLd u^* (E) \in \D_c(X, B)$. Dans chacun des cas envisagés, on est ramené grâce à ([H], I 7.3) au cas où $E$ est réduit au degré 0, associé à un $A$-faisceau constructible noté de même. Il s'agit alors de voir que pour tout $p \in \mathbf{N}$, le $B$-faisceau
+$$
+\cTor^A_p(B, E) = (\cTor^{A_n}_p(B_n, E_n))_{n \in \mathbf{N}} = (F_n)_{n\in \mathbf{N}}
+$$
+est constructible. Pour tout $n \in \mathbf{N}$, le calcul de $F_n$ au moyen d'une résolution plate et constructible de $E_n$ montre que c'est un $B_n$--Module constructible. Il nous suffit donc de voir que $\cTor^A_p(B, E)$ est de type $J$-adique. Pour cela, on se ramène grâce à (1.21) et (1.22) au cas où $E$ est $J$-adique constant tordu constructible. Supposons alors $X$ connexe, et choisissons un point $a$ de $X$; comme le foncteur fibre défini par $a$ est conservatif pour les $B$--Modules localement constants, on est ramené à voir l'assertion pour la fibre de $\cTor^A_p(B, E)$. On peut donc supposer que $X$ est le topos ponctuel. Utilisant alors une résolution libre d type fini du $\check{A}$--module de type fini associé à $E$ (1.20.5), on se ramène au cas où $E$ est localement libre constructible et $J$-adique, et alors l'assertion est immédiate, car
+$$
+\cTor^A_p(B, E) = 0 \quad (p \geq 1) \quad \text{et} \quad B \otimes_A E \isom B^r,
+$$
+pour un $r \in \mathbf{N}$. Montrons (ii), dans le cas constructible par exemple. Si $E$ est un $B$-faisceau $J$-adique constructible, ses composants sont des $A$--Modules constructibles ($B$ est une $A$-algèbre finie), donc il est aussi constructible en tant que $A$-faisceau ; d'où l'assertion.
+
+Dans la suite de numéro, nous noterons pour tout entier $n \geq 0$
+$$
+u_n: A \to (A/J^{n+1})
+$$
+le morphisme d'anneaux canonique. On définit un bifoncteur cohomologique
+$$
+(\widehat{\Ext}^i(. , .))_{i \in \mathbf{Z}}: \D^-(X, A) \times \D^-(X, A) \to \mathcal{E}(\pt, J),
+$$
+en posant pour tout couple $(E, F)$ d'objets de $\D^-(X, A)$ et tout $i \in \mathbf{Z}$
+$$
+\widehat{\Ext}^i(E, F) = (\Ext^i_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F)))_{n \in \mathbf{N}}
+$$
+Lorsque $A$ est régulier, d'idéal maximal $J$, le bifoncteur cohomologique précédent se prolonge en un bifoncteur cohomologique
+$$
+\D(X, A) \times \D(X, A) \to \mathcal{E}(\pt, J),
+$$
+de manière évidente.
+\vskip .3cm
+{
+Théorème {\bf 2.13.2}. --- \it On suppose $A$ régulier d'idéal maximal $J$, que le topos $X$ est noethérien de dimension topologique stricte finie, et qu'il vérifie de plus les deux propriétés suivantes.
+\begin{itemize}
+    \item[(i)] Pour toute $A$-algèbre de type fini $B$ annulée par une puissance de $J$, et tout couple $(M, N)$ de $B$--Modules constructibles, les $B$--Modules $\cExt^p_B(M, N)$ $(p \in \mathbf{N})$ sont constructibles.
+    \item[(ii)] Pour tout $A$-algèbre de type fini $B$ annulées par une puissance de $J$ et tout $B$--Modules constructible $M$, les $B$--modules
+    $$
+    \mathrm{H}^p(X, M) \quad (p \in \mathbf{N})
+    $$
+    sont de type fini.
+\end{itemize}
+Alors, étant données $E \in \D^-_c(X, A)$ et $F \in \D^+_c(X, A)$, les systèmes projectifs
+$$
+\widehat{\Ext}^i_A(E, F) \quad (i \in \mathbf{Z})
+$$
+sont des $A$-faisceaux \emph{constructibles} sur le topos ponctuel, et les applications canoniques évidentes
+$$
+\Ext^i_A(E, F) \to \varprojlim_n \Ext^i_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F))
+$$
+sont des \emph{bijections}. En particulier, les $\hat{A}$--modules
+$$
+\Ext^i_A(E, F)
+$$
+sont \emph{de type fini}.
+}
+\vskip .3cm
+{\bf Preuve} : Les isomorphisme de Cartan (2.6)
+$$
+\mathrm{H}^i(X, \bRd \cHom_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F))) \isomlong \Ext^i_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F))
+$$
+et l'isomorphisme (I 8.1.11 (iv))
+$$
+\bLd u^*_n \bRd \cHom_A(E, F) \isomlong \bRd \cHom_{A_n}(\bLd u^*_n (E), \bLd u^*_n(F)))
+$$
+montrent que 
+$$
+\widehat{\Ext}^i_A(E, F) \isom \widehat{\Ext}^i_A(A, \bRd \cHom_A(E, F)).
+$$
+Or le complexe $\bRd \cHom_A(E, F)$ est à cohomologie constructible (2.5 (iii)) donc, pour voir que $\widehat{\Ext}^i_A(E, F)$ est un $A$-faisceau constructible, on peut supposer que $E = A$. Dans ce cas, la suite spectrale canonique
+$$
+E^{p, q}_2 = \widehat{\Ext}^p_A(A, \mathrm{H}^q(F)) \Rightarrow \widehat{\Ext}^{p+q}_A(E, F),
+$$
+construite de fa\c{c}on habituelle au moyen des couples exacts, permet de se ramener de plus au cas où $F$ est réduit au degré 0 et défini par un $A$-faisceau constructible noté de même. Posant pour simplifier pour tout entier $i$ et tout $A$-faisceau $M$,
+$$
+\hat{\mathrm{H}}^i(M) = \widehat{\Ext}^i_A(A, M),
+$$
+on doit alors prouver le lemme suivant.
+\vskip .3cm
+{
+Lemme {\bf 2.13.3}. --- \it Pour tout $A$-faisceau constructible $M$ sur $X$, les $A$-faisceaux $\hat{\mathrm{H}}^i(M)$ sont constructibles.
+}
+\vskip .3cm
+Avant de le faire, dégageons le résultat préliminaire suivant.
+\vskip .3cm
+{
+Lemme {\bf 2.13.4}. --- \it Désignant par $d$ la dimension topologique stricte de $X$, on a pour tout $A$-faisceau $N$ sur $X$
+$$
+\hat{\mathrm{H}}^i(N) = 0 \quad (i \geq d+1).
+$$
+}
+\vskip .3cm
+En effet, étant donné un entier $p \geq 0$, le complexe $\bLd u^*_p(N)$ a sa cohomologie concentré en degrés $\leq 0$. Comme $\mathrm{H}^i(X, G) = 0$ $(i \geq d+1)$ pour tout $A_p$-faisceau $G$, on a une suite spectrale birégulière 
+$$
+\mathrm{H}^i(X, \Ld u^j_p(N)) \Rightarrow \hat{H}^{i+j}(N)_p
+$$
+qui permet aussitôt de conclure.
+
+Montrons maintenant (2.13.3). Nous allons le voir par récurrence croissante sur l'entier
+$$
+\text{dim}_A(M) =~\text{dim}_A(A/\ann(M)), 
+$$
+appelé dimension de $M$. si dim$_A(M) = 0$, le $A$-faisceau $M$ est annulé par une puissance de $J$, donc il existe un entier $n \geq 0$ tel que $M$ soit défini par un $A_n$--Module constructible. Soit alors $P$ une résolution à guache de $M$ par des $A_n$--Modules de la forme $i_!(A_n)$, où $i: T \to e_X$ désigne l'unique morphisme d'un objet noethérien de $X$ dans l'objet final. Grâce à (2.13.4), on a une suite spectrale birégulière
+$$
+E^{p, q}_1 = \widehat{\Ext}^q_A(A, p^p) \Rightarrow \widehat{\Ext}^{p+q}_A(A, M),
+$$
+qui permet de se ramener au cas où $M$ est de la forme $i_!(A_n)$. Dans ce cas, soit $L$ une résolution à gauche de $A_n$ par des $\hat{A}$--modules libres de type fini. A nouveau, la suite spectrale
+$$
+E^{p, q}_1 = \hat{\mathrm{H}}^q(i_!(L^p)) \Rightarrow \hat{\mathrm{H}}^{p+q}(i_!(A_n)),
+$$
+permet de supposer que $M$ est de la forme $i_!(L^p)$ pour un entier $p$, donc est constructible et \emph{plat}. Il est alors clair que pour tout $i$
+$$
+\hat{\mathrm{H}}^i(M) = (\mathrm{H}^i(X, M_n))_{n \in \mathbf{N}}.
+$$
+Dans ce cas, l'hypothèse (ii) de l'énoncé permet de conclure grâce au lemme de SHIH (SGA5 V 5.3.1). Soit maintenant $r$ un entier $\geq 0$, et supposons l'assertion vraie pour tous les $A$-faisceau constructibles de dimension $\leq 0$. Nous allons voir qu'elle est vraie pour tout $A$-faisceau constructible $M$ de dimension $r+1$. Comme $r+1 > 0$, il existe un élément $a$ de $J$ qui n'appartient à aucun idéal premier minimal dans $\Ass(A/\ann(M))$; on a alors (EGA $0_{IV}$ 16.3.4)
+$$
+\text{dim}_A(A/(\ann(M) + aA)) = r.
+$$
+Comme $M$ est noethérien dans la catégorie des $A$-faisceaux constructibles, la suite croissante des sous-$A$-faisceaux
+$$
+\Ker(a^q: M \to M)
+$$
+de $M$ est stationnaire. Quitte à remplacer $a$ par une puissance de $a$, on peut donc supposer que l'homothétie
+$$
+a: M/\Ker(a) \to M/\Ker(a)
+$$
+est un monomorphisme. La suite exacte
+$$
+0 \to \Ker(a) \to M \to M/\Ker(a) \to 0
+$$
+donne lui à une suite exacte illimitée
+$$
+\dots \hat{\mathrm{H}}^{i-1}(M/\Ker(a)) \to \hat{\mathrm{H}}^i(\Ker(a)) \to \hat{\mathrm{H}}^i(M/\Ker(a)) \to \hat{\mathrm{H}}^{i+1}(\Ker(a)) \dots 
+$$
+Mais $\Ker(a)$ est de dimension $\leq r$ par construction de $a$. Utilisant l'hypothèse de récurrence et le caractère exact de la sous-catégorie des $A$-faisceaux constructibles, on peut donc remplacer $M$ par $M/\Ker(a)$ donc supposer que la multiplication par $a$ définit un monomorphisme sur $M$. Nous allons alors montrer que $\hat{\mathrm{H}}^i(M)$ est constructible par récurrence décroissante sur l'entier $i$, compte tenu de (2.13.4). D'après (loc.cit.), l'assertion est évidente pour $i \leq d+1$. Supposons donné un entier $p$ tel qu'elle soit vraie pour $i \leq p+1$, et montrons qu'elle est vraie pour $p$. Pour tout entier $q$, on a une suite exacte
+$$
+0 \to M \xlongrightarrow{a^q} M \to M/a^qM \to 0,
+$$
+d'où une suite exacte illimitée
+$$
+\dots \to \hat{\mathrm{H}}^p(M) \xlongrightarrow{a^q} \hat{\mathrm{H}}^p(M) \to \hat{\mathrm{H}}^p(M/a^qM) \to \hat{\mathrm{H}}^{p+1}(M) \to \hat{\mathrm{H}}^{p+1}(M) \dots 
+$$
+Comme dim$_A(M/a^qM) \leq r$, l'hypothèse de récurrence sur la dimension et celle sur l'exposant entraînent que pour tout entier $q > 0$, le $A$-faisceau
+$$
+\hat{\mathrm{H}}^p(M)/a^q \hat{\mathrm{H}}^p(M)
+$$
+est constructible. Mais par ailleurs, on a une suite exacte
+$$
+J^q \hat{\mathrm{H}}^p(M) / a^q \hat{\mathrm{H}}^p(M) \to \hat{\mathrm{H}}^p(M)/a^q \hat{\mathrm{H}}^p(M) \to \hat{\mathrm{H}}^p(M)/J^q \hat{\mathrm{H}}^p(M) \to 0
+$$
+d'où résulte, comme le terme de gauche vérifie la condition de Mittag-Leffler (c'est un quotient de $J^q \otimes_A (\hat{\mathrm{H}}^p(M)/a^q \hat{\mathrm{H}}^p(M))$) et celui du milieu est constructible, que pour tout entier $q > 0$, le $A$-faisceau
+$$
+\hat{\mathrm{H}}^p(M) / J^q \hat{\mathrm{H}}^p(M)
+$$
+est constructible (cf. la preuve de SGA5 V 3.2.4 (i)). L'assertion résulte alors de (1.2 (iii)) et (1.6).
+
+Ceci dit, posant pour tout $i \in \mathbf{Z}$
+$$
+\ext^i_A(E, F) = \varprojlim_p \Ext^i_A (\bLd u^*_p (E), \bLd u^*_p(F)),
+$$
+on obtient, grâce à (EGA $0_{III}$ 13.2.2), un bifoncteur cohomologique
+$$
+\D^-_c(X, A) \times \D^+_c(X, A) \to \hat{A}-\modn, 
+$$
+et il reste à voir que le morphisme canonique de bifoncteurs cohomologiques
+$$
+\Ext^i_A(E, F) \to \ext^i_A(E, F)
+$$
+est un isomorphisme. On se ramène comme précédemment au cas où $E = A$.
+
+On dispose alors, par la voie des couples exacts, de deux suites spectrales 
+$$
+\mathbf{E}' \qquad 'E^{p, q}_2 = \Ext^p_A(A, \mathrm{H}^q(F)) \Rightarrow \Ext^p_A(A, F)
+$$
+$$
+\mathbf{E}'' \qquad ''E^{p, q}_2 = \ext^p_A(A, \mathrm{H}^q(F)) \Rightarrow \ext^p_A(A, F)
+$$
+et d'un morphisme naturel $\mathbf{E}' \to \mathbf{E}''$. Ces deux suites spectrales sont birégulières; pour la première, c'est évident (son support est dans un cadran supérieur droit), et pour la seconde cela résulte du lemme ci-dessous.
+\vskip .3cm
+{
+Lemme {\bf 2.13.5}. --- \it Soit $M$ un $A$-faisceau sur $X$. On a 
+$$
+\ext^i_A(A, M) = 0 \quad \text{pour} \quad i < -2~\text{dim}(A).
+$$
+}
+\vskip .3cm
+En effet, pour tout entier $m$, le complexe $\bLd u^*_m(M)$ est acyclique en dimensions $< -2~\text{dim}(A)$, puisque la catégorie des $A$-faisceaux est de tor-dimension $\leq 2~\text{dim}(A)$ (I 5.16).
+
+La comparaison des deux suites spectrales précédentes permet alors de se ramener au cas où $F$ est réduit au degré 0 et défini par un $A$-faisceau constructible noté de même. Nous allons alors encore une fois raisonner sur la dimension de $F$. Lorsque dim$_A(F) = 0$, l'assertion résulte, au moyen des dévissages utilisés pour prouver la constructibilité des $\mathrm{H}^i(F)$, du lemme suivant, appliqué à un $A$-faisceau constructible et plat de la forme $i_!(A)$, où $i: T \to e_X$ est l'unique morphisme d'un objet noethérien de $X$ dans l'objet final.
+\vskip .3cm
+{
+Lemme {\bf 2.13.6}. --- \it Étant donné un $A$-faisceau constructible $M$ sur $X$, l'application canonique
+$$
+\mathrm{H}^i(X, M) \to \varprojlim \overline{\mathrm{H}}^i(X, M) \quad (i \in \mathbf{Z})
+$$
+est une bijection.
+}
+\vskip .3cm
+En effet, le système projectif $\overline{\mathrm{H}}^{i-1}(X, M)$ vérifie la condition de Mittag-Leffler, d'après l'hypothèse (ii) et le lemme de SHIH. Le lemme résulte donc de (I 7.4.16).
+
+Soit maintenant $r$ un entier $\geq 0$, et supposons l'assertion vraie pour tous les $A$-faisceaux constructibles de dimension $\leq r$. Nous allons voir qu'elle est vraie pour tout $A$-faisceau constructible $F$ de dimension $r+1$. On choisit un élément $a$ comme plus haut. Utilisant le lemme des 5, on se ramène à vérifier l'assertion lorsque de plus la multiplication par $a$ définit un monomorphisme de $F$. Nous allons alors montrer l'assertion par récurrence décroissante sur l'entier $i$, en commen\c{c}ant par voir qu'elle est vraie pour les grandes valeurs de $i$. Pour $i \geq d+2$, il résulte de (I 7.4.16) que
+$$
+\mathrm{H}^i(X, F) = 0,
+$$
+et nous allons prouver que $h^i(X, F) = \ext^i_A(A, F)$ est également nul.
+
+Pour cela, la suite exacte
+$$
+0 \to F \xlongrightarrow{a} F \to F/aF \to 0
+\leqno{(2.13.7)}
+$$
+fournit une suite exacte
+$$
+\mathrm{h}^i(X, F) \xlongrightarrow{a} \mathrm{h}^i(X, F) \to \mathrm{h}^i(X, F/aF).
+$$
+L'hypothèse de récurrence sur la dimension montre que 
+$$
+\mathrm{h}^i(X, F/aF) = \mathrm{H}^i(X, F/aF) = 0,
+$$
+la dernière égalité provenant d'une nouvelle application de (I 7.4.16). Par suite $\mathrm{h}^i(X, F) = a \mathrm{h}^i(X, F)$, d'où $\mathrm{h}^i(X, F) = 0$ par le lemme de Nakayama. supposons maintenant donné un entier $p$ tel que le morphisme canonique
+$$
+\mathrm{H}^i(X, F) \to \mathrm{h}^i(X, F)
+$$
+soit un isomorphisme pour $i \geq p+1$, et montrons que c'est un isomorphisme pour $i = p$. La suite exacte (2.13.7) fournit un diagramme commutatif exact
+\[\begin{tikzcd}
+	{\mathrm{H}^p(X, F)} & {\mathrm{H}^p(X, F)} & {\mathrm{H}^p(X, F/aF)} & {\mathrm{H}^{p+1}(X, F)} \\
+	{\mathrm{h}^p(X, F)} & {\mathrm{h}^p(X, F)} & {\mathrm{h}^p(X, F/aF)} & {\mathrm{h}^{p+1}(X, F),}
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["u", from=1-3, to=2-3]
+	\arrow["v", from=1-4, to=2-4]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=1-2, to=1-3]
+	\arrow["a", from=1-1, to=1-2]
+	\arrow["a", from=2-1, to=2-2]
+\end{tikzcd}\]
+dans lequel les flèches verticales sont les flèches canoniques. Par hypothèse de récurrence sur la dimension (resp. sur l'entier $i$), la flèche $u$ (resp. $v$) est un isomorphisme : par suite, la flèche canonique
+$$
+\mathrm{H}^p(X, F)/a\mathrm{H}^p(X, F) \to \mathrm{h}^p(X, F)/a\mathrm{h}^p(X, F)
+$$
+est un isomorphisme de $\hat{A}$--modules. On sait que $\mathrm{h}^p(X, F)$ est un $\hat{A}$--module de type fini, et il résulte du théorème de SHIH (SGA5 V A 3.2) et de (2.13.6) que $\mathrm{H}^p(X, F)$ est également un $\hat{A}$--module de type fini. On conclut alors par le lemme de Nakayama.
+\vskip .3cm
+{\bf Remarques 2.13.7}.
+\begin{itemize}
+    \item[(i)] upposons par exemple que $X$ soit le topos étale d'un schéma de type fini sur un corps séparablement clos ou fini. Il est alors conjecturé que les conditions (i) et (ii) de (2.13.2) sont réalisées dans chacun des cas suivants :
+    \begin{itemize}
+        \item[a)] Les $A_n$ sont des groupes abéliens de torsion, et $X$ est propre sur $K$. 
+        \item[b)] Les $A_n$ sont des groupes abéliens de torsion première à la caractéristique de $k$. 
+    \end{itemize}
+    Elles sont en tout cas démontrées lorsque de plus le corps $k$ est de caractéristique 0, ou bien dim$(X) \leq 2$.
+    \item[(ii)] Lorsque $A$ est un anneau de valuation discrète et $X$ le topos étale d'un schéma noethérien, on peut préciser (2.13.2) en montrant que les systèmes projectifs
+    $$
+    \widehat{\Ext}^i_A(E, F)
+    $$
+    vérifiant la condition de Mittag-Leffler-Artin-Rees (SGA5 V 2.2.1). 
+
+    En effet, reprenant le dévissage utilisé dans la preuve de (2.13.2), on se ramène à le voir pou $E = A$, et $F$ le complexe de degré 0 associé à un $A$-faisceau constructible noté de même. Alors, utilisant (1.29), on se ramène au cas où $F$ est constructible et \emph{plat}, ce qui permet alors de conclure directement grâce au lemme de SHIH (SGA5 V 3.1 et A 3.2) et à l'hypothèse (ii).
+    \item[(iii)] L'hypothèse (i) de (2.13.2) sert uniquement pour montrer que $\bRd \cHom_A (E, F)$ [à cohomologie ?] constructible. Elle est donc en particulier inutile lorsque $E \in \D^-_t(X, A)$, vu (2.5.(i)).
+\end{itemize}
+\vskip .3cm
+{\bf 2.13.8}. Sans hypothèse particulière sur $X$ ou $A$, il résulte de (2.13.1) que 
+$$
+\D^-_c(X, A) \hookrightarrow \D^-_0(X, A) \quad \text{(I 8.2.7).}
+$$
+On en déduit pour tout entier $n \geq 0$ un foncteur exact (8.2.9)
+$$
+\bLd \alpha^*_n : \D^b_c(X, A)_{\torf} \to \D^b_c(A_n-\Mod_X)_{\torf}
+$$
+lorsque $X$ est noethérien.
+
+Si maintenant $A$ est régulier et local d'idéal maximal $J$, on a même une inclusion
+$$
+\D_c(X, A) \hookrightarrow \D_0(X, A),
+$$
+qui permet, lorsque de plus $X$ est noethérien, de définir pour tout entier $n \geq 0$ un foncteur exact (8.2.9.bis)
+$$
+\Ld \alpha^*_n: \D^+_c(X, A) \to \D^+_c(A_n-\Mod_X).
+$$
+\vskip .3cm
+{
+Proposition {\bf 2.13.9}. --- \it Sous les hypothèses de (2.13.2), les applications canoniques 
+$$
+\Ext^i_A(E, F) \to \varprojlim_n \Ext^i_{A_n} ((\bLd \alpha^*_n(E)), \bLd \alpha^*_n(F))
+$$
+sont des isomorphismes de $\hat{A}$--modules.
+}
+\vskip .3cm
+{\bf Preuve} : Par définition des foncteurs $\bLd \alpha^*_n$, on a 
+$$
+\Ext^i_{A_n} (\bLd \alpha^*_n(E), \bLd \alpha^*_n(F)) ``='' \Ext^i_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F)).
+$$
+\vskip .3cm
+{\bf Remarques 2.13.10}. La proposition (2.13.9) ramène en pratique l'étude ces complexes de $A$-faisceaux à cohomologie constructible à celle des complexes de $A_n$--Modules constructibles $(n \geq 0)$, et sera de ce fait un instrument privilégié pour obtenir, à partir d'énoncés sur les $A_n$--Modules, les énoncés correspondants pour les $A$-faisceaux.
+
+La proposition suivante généralise la dernière assertion de (2.13.2).
+\vskip .3cm
+{
+Proposition {\bf 2.14}. --- \it Soit $X$ un topos noethérien. On suppose que 
+\begin{itemize}
+    \item[(i)] Pour tout $A$-algèbre de type fini $B$ annulés par une puissance de $J$, et tout couple $(M, N)$ de $B$--Modules constructibles, les $B$--Modules $\cExt^p_B(M, N)$ soient constructibles. 
+    \item[(ii)] Pour tout $A$-algèbre de type fini $B$ annulée par une puissance de $J$ et tout $B$--Module constructible $M$, les $B$--modules
+    $$
+    \mathrm{H}^p(X, M) \quad (p \in \mathbf{N})
+    $$
+    sont de type fini.
+\end{itemize}
+Alors, étant donnés $B \in \D^-_c(X, A)$ et $F \in \D^+_c(X, A)$, ls systèmes projectifs
+$$
+\overline{\Ext}^i_A(E, F) \quad (i \in \mathbf{Z})
+$$
+(I 6.2.1) son des $A$-faisceaux \emph{constructibles} sur le topos ponctuel et les applications canoniques (I 7.4.16)
+$$
+\Ext^i_A(E, F) \to \varprojlim \overline{\Ext}^i_A(E, F)
+$$
+sont des bijections. En particulier, les $\hat{A}$--modules $\Ext^i_A(E, F)$ sont de \emph{type fini}.
+}
+\vskip .3cm
+{\bf Preuve} : Montrons que les $A$-faisceaux $\overline{\Ext}^i_A(E, F)$ sont constructibles, les autres assertions en découlant sans peine grâce à la suite exacte (I 7.4.16). On a l'isomorphisme de Cartan (2.6)
+$$
+\Rd \overline{\Hom}_A(E, F) \isom \Rd \overline{\Hom}_A(A, \bRd \cHom_A(E, F))
+$$
+qui permet, puisque $\bRd \cHom_A(E, F)$ est à cohomologie constructible (2.5.(iii)), de se ramener au cas où $E = A$. Alors la suite spectrale birégulière canonique
+$$
+E^{p, q}_2 = \overline{\mathrm{H}}^p(X, \mathrm{H}^q(F)) \Rightarrow \overline{\mathrm{H}}^{p+q}(X, F)
+$$
+montre qu'il suffit de voir l'assertion dans le cas où $F$ est le complexe de degré 0 associé à un $A$-faisceau constructible noté de même.
+
+Alors l'hypothèse (ii) et le lemme de SHIH (SGA5 V 3.1) permet de conclure.
+\vskip .3cm
+{\bf Remarques 2.15}. Comme pour (2.13.2), l'hypothèse (i) a servi uniquement pour assurer que le complexe $\bRd \cHom_A(E, F)$ est à cohomologie constructible. Elle est donc inutile en particulier dans la cas où $E \in \D^-_t(X, A)$.
