@@ -36,7 +36,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [2. Cas où l'objet final de X est quasicompact](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.2.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
