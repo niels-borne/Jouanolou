@@ -1,7 +1,7 @@
 ## Catégories Dérivées en Cohomologie $\ell$-adique, J.-P. Jouanolou
 
 <p align="center">
-  <a href="https://github.com/carmonamateo/Jouanolou/raw/main/CDCAJ.pdf" target="_blank">[PDF]</a>, [SCAN]
+  <a href="https://github.com/carmonamateo/Jouanolou/raw/main/CDCAJ.pdf" target="_blank">[PDF]</a>
 </p>
 
 ---
@@ -42,7 +42,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [3. A-faisceaux de type constant, strict ou J-adique](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.3.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
