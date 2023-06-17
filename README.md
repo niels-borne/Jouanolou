@@ -48,7 +48,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [4. Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.4.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
