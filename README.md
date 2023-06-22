@@ -72,7 +72,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [8. Changement d'anneau](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.8.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
