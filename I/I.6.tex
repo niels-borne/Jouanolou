@@ -1,1 +1,704 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{6. Foncteurs associés aux homomorphismes.}
+\addcontentsline{toc}{subsection}{6. Foncteurs associés aux homomorphismes}
 
+\vskip .3cm
+{\bf 6.1}. Soient $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$ deux $A$-faisceaux sur un topos $X$. Pour tout entier $i \in \mathbf{Z}$, on définit comme suit un nouveau $A$-faisceau, noté
+$$
+\cExt^i_A (E, F),
+$$
+la mention de l'anneau $A$ pouvant être éventuellement supprimée s'il n'y a pas de confusion possible. Soient $m' \geq m \geq n$ trois entiers $\geq 0$. En composant le morphisme d'xtension d'anneau (CE VI 4 cas3)
+$$
+\cExt^i_{A_m}(E_m, F_n) \to \cExt^i_{A_{m'}}(E_m, F_n)
+$$
+avec le morphisme 
+$$
+\cExt^i_{A_{m'}}(E_m, F_n) \to \cExt^i_{A_{m'}}(E_{m'}, F_n)
+$$
+déduit du morphisme de transition $E_{m'} \to E_{m'}$ on obtient un morphisme de $(A_n)_X$--Modules
+$$
+\varphi_{m, {m'}}: \cExt^i_{A_m}(E_m, F_n) \to \cExt^i_{A_{m'}}(E_{m'}, F_n).
+$$
+D'où, l'entier $n$ étant fixé, un système inductif dont on note
+$$
+\varinjlim_{m \geq n} \cExt^i_{A_m}(E_m, F_n)
+$$
+la limite inductive. Si maintenant $n' \geq n$ est un autre entier, le morphisme de transition $F_{n'} \to F_n$ définit pour tout entier $m \geq n'$ un morphisme de faisceaux de $A_X$--Modules
+$$
+\cExt^i_{A_m}(E_{m}. F_{n'}) \to \cExt^i_{A_m}(E_m, F_n).
+$$
+Par passage à la limite inductive, on en déduit un morphisme
+$$
+u_{n, n'}: \varinjlim_m \cExt^i_{A_m}(E_m, F_{n'}) \to \varinjlim_m \cExt^i_{A_m}(E_m, F_n)
+$$
+et il est évident que si $n'' \geq n'' \geq n$, on a 
+$$
+u_{n, n''} = u_{n, n'} \circ u_{n', n''}.
+$$
+On définit alors le $A$-faisceau $\cExt^i_A(E, F)$ par la formule
+$$
+(\cExt^i_A (E, F))_n = \varinjlim_m \cExt^i_{A_m}(E_m, F_n) \quad (n \geq 0),
+$$
+les morphismes de transition étant les $u_{n, n'}$.
+
+Si maintenant $u: E' t\to E$ et $v: F \to F'$ sont deux morphismes de $\mathcal{E}(X, J)$, on obtient un $\mathcal{E}(X, J)$-morphisme
+$$
+\cExt^i_A(u, v): \cExt^i_A (E, F) \to \cExt^i_A(E', F')
+$$
+en posant pour tout entier $n \geq 0$
+$$
+\cExt^i_A(u, v)_n = \varinjlim_m \cExt^i_{A_m}(u_m, v_n).
+$$
+Mieux, on peut, grâce à (CE VI 4.4 a) et Remarque), définir des opérateurs bords, composant par composant pour le second argument et par une limite inductive évidente pour le premier. On munit ainsi la collection des $\cExt^i_A$ d'une structure de bifoncteur cohomologique
+$$
+\mathcal{E}(X, J)^\circ \times \mathcal{E}(X, J) \to \mathcal{E}(X, J).
+$$
+Bien entendu, le bifoncteur $\cExt^\circ_A$ sera aussi noté $\cHom_A$. Il est clair qu'il exact à gauche.
+\vskip .3cm
+{
+Proposition {\bf 6.1.1}. --- \it Il existe un unique bifoncteur cohomologique, noté encore $(\cExt^i_A)_{i \in \mathbf{Z}}$,
+$$
+(\cExt^i_A)_{i \in \mathbf{Z}}: (A-\fsc(X))^\circ \times (A-\fsc(X)) \to A-\fsc(X)
+$$
+vérifiant les propriétés suivantes.
+\begin{itemize}
+    \item[a)] Pour tout entier $i \in \mathbf{Z}$, le diagramme
+    \[\begin{tikzcd}
+	{\mathcal{E}(X, J)^\circ \times \mathcal{E}(X, J)} && {\mathcal{E}(X, J)} \\
+	{A-\fsc(X)^\circ \times A-\fsc(X)} && {A-\fsc(X),}
+	\arrow["{\pi^* \pi}", from=1-1, to=2-1]
+	\arrow["\pi", from=1-3, to=2-3]
+	\arrow["{\cExt^i_A}", from=2-1, to=2-3]
+	\arrow["{\cExt^i_A}", from=1-1, to=1-3]
+    \end{tikzcd}\]
+    dans lequel $\pi$ désigne le foncteur de projection canonique, est commutatif.
+    \item[b)] Pour toute suite exacte $0 \to E' \to E \to E'' \to 0$ (resp. $0 \to F' \to F \to F'' \to 0$) de $\mathcal{E}(X, J)$, le foncteur $\pi$ transforme le morphisme bord
+    $$
+    \cExt^i_A(E', F) \to \cExt^{i+1}_A(E'', F)
+    $$
+    $$
+    \text{(resp.} \quad \cExt^i_A(E, F'') \to \cExt^{i+1}_A(E, F') \quad)
+    $$
+    dans $\mathcal{E}(X, J)$ en le morphisme bord correspondant dans $A-\fsc(X)$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : L'unicité se montre comme en (5.2). Pour voir l'existence, on est ramené comme dans loc.cit. à voir que si $E$ ou $F$ est négligeable, alors (dans $\cExt(X, J)$) les $A$-faisceaux $\cExt^i_A(E, F)$ sont négligeables. C'est évident lorsque $F$ est négligeable ; lorsque $E$ est négligeable, on a même, vu la définition des $\cExt^i_A(E, F)_n$,
+$$
+\cExt^i_A(E, F) = 0,
+$$
+comme objet de $\mathcal{E}(X, J)$.
+\vskip .3cm
+{\bf 6.1.2}. On a en particulier $\cExt^i_A = 0$ pour $i < 0$, et le foncteur $\cExt^\circ_A$, aussi noté de plus souvent $\cHom_A$, est exact à gauche.
+\vskip .3cm
+{
+Définition {\bf 6.1.3}. --- \it Si $E$ et $F$ sont deux $A$-faisceaux sur $X$, le $A$-faisceau $\cHom_A(E, F) = \cExt^\circ_A(E, F)$ est appelé \emph{$A$-faisceau des homomorphismes de $E$ dans $F$}.
+}
+\vskip .3cm
+{\bf 6.2}. Soient $X$ un topos \emph{dont l'objet final est quasicompact} et $E$ et $F$ deux $A$-faisceaux sur $X$. On définit comme ne (6.1) des bifoncteurs cohomologiques, notés tous deux $(\overline{\Ext}^i_A)_{i \in \mathbf{Z}}$,
+\[\begin{tikzcd}
+	{\mathcal{E}(X, J)^\circ \times \mathcal{E}(X, J)} & {\mathcal{E}(\pt, J)} \\
+	{A-\fsc(X)^\circ \times A-\fsc(X)} & {A-\fsc(\pt) \subset \Pro(A-\mod)}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\leqno{(6.2.1)}\]
+par les formules 
+$$
+\overline{\Ext}^i_A(E, F)_n = \varinjlim_m \Ext^i_{A_m}(E_m, F_n),
+$$
+avec les morphismes de transition évidentes.
+
+Le bifoncteur $\overline{\Ext}^\circ_A$ est aussi noté $\overline{\Hom}$. Il est exact à gauche.
+
+Supposons maintenant que le topos $X$ soit cohérent (SGA4 VI 2.) Il résulte alors immédiatement du fait que le foncteur $\Gamma(X, .)$ commute aux limites inductives filtrantes que l'on a l'égalité
+$$
+\overline{\Hom}_A(E, F) \isom \overline{\Gamma}(X, \cHom_A(E, F))
+\leqno{(6.2.2)}
+$$
+(voir (4.4) pour la notation $\overline{\Gamma}$).
+
+
+\vskip .3cm
+{\bf 6.3 ``Formules chères à CARTAN''}.
+
+Soient $X$ un topos dont l'objet final est quasicompact, et $E$, $F$ et $G$ trois $A$-faisceaux sur $X$. On définit comme suit un morphisme de $\mathcal{E}(\pt, J)$, donc aussi de $A-\fsc(\pt)$,
+$$
+\overline{\Hom}_A(E \otimes F, G) \to \overline{\Hom}(E, \cHom_A(F, G))
+\leqno{(6.3.1)}
+$$
+fonctoriel en $E, F$ et $G$. Pour tout entier $n \geq 0$, le n$^{\text{ème}}$ composant du premier membre de (6.3.1) est 
+$$
+\varinjlim_q \Hom_A(E_q \otimes_A F_q, G_n).
+$$
+Comme le diagonale est cofinale dans l'ensemble ordonné $\mathbf{N} \times \mathbf{N}$, l'application canonique 
+$$
+\varinjlim_{m, p} \Hom_A (E_m \otimes_A F_p, G_n) \to \varinjlim_q \Hom_A (E_q \otimes_A F_q, G_n)
+$$
+est un isomorphisme. Compte tenu des isomorphismes canoniques
+$$
+\Hom_A(E_m \otimes_A F_p, G_n) \isomlong \Hom_A (E_m, \cHom_A (F_p, G_n)),
+$$
+on en déduit un isomorphisme 
+$$
+\overline{\Hom}_A(E \otimes F, G)_n \isomlong \varinjlim_m \varinjlim_p \Hom_A (E_m, \cHom_A (F_p, G_n)).
+$$
+Enfin, utilisant les morphismes canoniques
+$$
+\varinjlim_p \Hom_A (E_m, \cHom_A (F_p, G_n)) \to \Hom_A (E_m, \varinjlim_p \cHom_A(F_p, G_n))
+\leqno{(6.3.2)}
+$$
+on obtient pour tout entier $n \geq 0$ une application
+$$
+\overline{\Hom}_A (E \otimes F, G)_n \to \overline{\Hom}_A (E, \cHom_A(F, G))_n,
+$$
+et cela de fa\c{c}on compatible avec les morphismes de transition, d'où le morphismes (6.3.1) annoncé.
+
+Passant à la limite projective, on déduit, grâce à (2.8), du morphisme de systèmes projectifs (6.3.1), une application
+$$
+\Hom(E \otimes F, G) \to \Hom(E, \cHom_A(F, G)),
+\leqno{(6.3.3)}
+$$
+fonctorielle en $E$, $F$ et $G$.
+\vskip .3cm
+{
+Proposition {\bf 6.3.4}. --- \it Soient $X$ un topos dont \emph{l'objet final est quasicompact} et $E$, $F$ et $G$ trois $A$-faisceaux sur $X$. On suppose que les composants de $E$ sont des $A$--modules \emph{noethériens}. Alors les morphismes fonctoriels (6.3.1) et (6.3.3) sont des isomorphismes.
+}
+\vskip .3cm
+{\bf Preuve} : Comme $E_m$ est un $A$--Module noethérien, l'application (6.3.2) est une bijection.
+
+Soient maintenant $X$ un topos arbitraire et $E$, $F$ et $G$ trois $A$-faisceaux sur $X$. Nous allons définir un morphisme fonctoriel
+$$
+\cHom_A(E \otimes F, G) \to \cHom_A (E, \cHom_A(F, G))
+\leqno{(6.3.5)}
+$$
+de $\mathcal{E}(X, J)$, donc aussi de $A-\fsc(X)$. Il s'agit de définir pour tout entier $n \geq 0$ un morphisme
+$$
+\cHom_A(E \otimes F, G)n \to \cHom_A(E, \cHom_A(F, G))_n
+\leqno{(6.3.6)}
+$$
+commutant avec les morphismes de transition. Comme précédemment, on voit que le premier membre de (6.3.6) est isomorphe à 
+$$
+\varinjlim_m \varinjlim_p \cHom_A(E_m, \cHom_A (F_p, G_n)).
+\leqno{(6.3.6)}
+$$
+Le morphisme (6.3.6) est obtenu à partir de là en utilisant les morphismes canoniques
+$$
+\varinjlim_p \cHom_A(E_m, \cHom_A (F_p, G_n)) \to \cHom_A (E_m, \varinjlim_p \cHom_A(F_p, G_n)).
+\leqno{(6.3.7)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 6.3.8}. --- \it Soient $X$ un topos localement noethérien et $E$, $F$ et $G$ trois $A$-faisceaux sur $X$. On suppose que les composants de $E$ sont des $A$--Modules \emph{constructibles}. Alors le morphisme (6.3.5) de $\mathcal{E}(X, J)$ est un isomorphisme.
+}
+\vskip .3cm
+{\bf Preuve} : Sous les hypothèses de (6.3.8), il résulte du lemme suivant que le morphisme (6.3.7) est un isomorphisme.
+\vskip .3cm
+{
+Lemme {\bf 6.3.9}. --- \it Soient $X$ un topos localement noethérien, $E$ un $A$--Module constructible sur $X$, et
+$$
+(F_i, u_{i, j})_{(i, j) \in I \times I}
+$$
+un système inductif filtrant de $A$--Modules sur $X$. Le morphisme canonique
+$$
+\varinjlim_i \cHom_A (E, F_i) \to \cHom_A(E, \varinjlim_i (F_i))
+$$
+est un isomorphisme.
+}
+\vskip .3cm
+Il suffit de voir que pour tout objet noethérien $T$ de $X$, le morphisme canonique
+$$
+\Gamma(T, \varinjlim_i \cHom_A (E, F_i)) \to \Gamma (T, \cHom_A(E, \varinjlim_i (F_i)))
+\leqno{(6.3.10)}
+$$
+est un isomorphisme. Comme $T$ est noethérien, le foncteur $\Gamma(T, .)$ commute aux limites inductives filtrantes, de sorte que (6.3.10) est isomorphe au morphisme canonique
+$$
+\varinjlim_i \Hom_A (E|T, F_i|T) \to \Hom_A(E|T, \varinjlim_i (F_i|T)).
+\leqno{(6.3.11)}
+$$
+Mais le $A_T$--Module $E|T$ est constructible, donc noethérien, et par suite (6.3.11) est une bijection, d'où l'assertion.
+\vskip .3cm
+{
+Proposition {\bf 6.3.12}. --- \it Soient $X$ un topos cohérent et $E$ et $F$ deux $A$-faisceaux sur $X$. On a un isomorphisme fonctoriel en $E$ et $F$ :
+$$
+\Hom(E, F) \isom \Hom(A, \cHom_A(E, F)).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Il provient par passage à la limite projective de (6.2.2).
+\vskip .3cm
+{\bf 6.3.13}. Nous allons maintenant généraliser à un topos arbitraire le morphisme (6.3.3). Soient $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$ deux $A$-faisceaux sur un topos $X$. On définit comme suit un morphisme d'``adjonction''
+$$
+E \to \cHom_A(F, E \otimes_A F).
+\leqno{(6.3.13.1)}
+$$
+Pour tout entier $n \geq 0$, on a un morphisme canonique
+$$
+E_n \to \cHom_A(F_n, E_n \otimes_A F_n)
+\leqno{(6.3.13.2)}
+$$
+réalisant l'adjonction entre les foncteurs $\Hom_A(E_n \otimes_A F_n, .)$ et $\Hom_A (E_n, \cHom_A (F_n, .))$. Composant (6.3.13.2) avec le morphisme évident
+$$
+\cHom_A (F_n, E_n \otimes_A F_n) \to \varinjlim_{m \geq n} \cHom_A (F_m, E_n \otimes_A F_n),
+$$
+on obtient un morphisme de $A$--Modules
+$$
+E_n \to \cHom_A (F, E \otimes_A F)_n,
+$$
+et la collection de ces morphismes pour les divers entiers $n$ fournit le morphisme (6.3.13.1) désiré. De (6.3.13.1), on déduit de fa\c{c}on évidente une application
+$$
+\Hom(E \otimes_A F, G) \to \Hom(E, \cHom_A (F, G))
+\leqno{(6.3.13.3)}
+$$
+pour tout $A$-faisceau $G$. On laisse au lecteur le soin de vérifier que lorsque l'objet final de $X$ est quasicompact, les morphismes (6.3.3) et (6.3.13.3) sont égaux.
+
+
+
+\vskip .3cm
+{\bf 6.4. Comportement vis à vis des morphismes}.
+\vskip .3cm
+{\bf 6.4.1}. Soient $f: X \to Y$ un morphisme de topos et $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$ deux $A$-faisceaux sur $Y$. Nous allons définir un morphisme de bifoncters cohomologiques de $\mathcal{E}(X, J)^\circ \times \mathcal{E}(X, J)$ dans $\mathcal{E}(X, J)$ :
+$$
+f^* \cExt^\bullet_A (E, F) \to \cExt^\bullet_A (f^* E, f^* F).
+\leqno{(6.4.1.1)}
+$$
+Soit $i \in \mathbf{Z}$ un entier. L'entier $n \geq 0$ étant fixé, on a pour tout entier $m \geq n$ un morphisme canonique (EGA $0_{III}$ 12.3.4)
+$$
+f^* \cExt^i_{A_m} (E_m, F_n) \to \cExt^i_{A_m}(f^* E_m, f^* F_n),
+\leqno{(6.4.1.2)}
+$$
+d'où un morphisme 
+$$
+\alpha_n: \varinjlim_m f^* \cExt^i_{A_m}(E_m, F_n) \to \varinjlim_m \cExt^i_{A_m}(f^* E_m, f^* F_n).
+$$
+Par ailleurs, comme le fonceur $f^*$ commute aux limites inductives, le morphisme canonique
+$$
+\beta_n: \varinjlim_m f^* \cExt^i_{A_m}(E_m, F_n) \to f^*(\varinjlim_m \cExt^i_{A_m}(E_m, F_n))
+$$
+est un isomorphisme. Ceci permet de définir un morphisme de $A_{nX}$--Modules
+$$
+\mu_n = \alpha_n \circ \beta^{-1}_n: f^* (\cExt^i_A(E, F)_n) \to \cExt^i_A(f^* E, f^* F)_n.
+$$
+On s'assure sans peine que $(\mu_n)_{n \in \mathbf{N}}$ définit un morphisme de systèmes projectifs
+$$
+\mu^i: f^* (\cExt^i_A (E, F)) \to \cExt^i_A (f^* E, f^* F)
+$$
+et que la collection des $\mu^i$ est un morphisme de bifoncteurs cohomologiques.
+
+On en déduit aussitôt un morphisme analogue de bifoncteurs cohomologiques de $A-\fsc(Y)^\circ \times A-\fsc(Y)$ dans $A-\fsc(X)$.
+
+Si $g: Y \to Z$ est un autre morphisme de topos, le morphisme (6.4.1.1) associé au composé $g \circ f$ est le composé des morphismes analogues associés à $g$ et $f$ respectivement.
+\vskip .3cm
+{
+Proposition {\bf 6.4.2}. --- \it On suppose $A$ noethérien. Soient $f: X \to Y$ un morphisme de topos et $E$ et $F$ deux $A$-faisceaux sur $Y$. On suppose que les composants de $E$ sont \emph{localement constants de type fini}. Alors les morphismes 
+$$
+f^* \cExt^i_A (E, F) \to \cExt^i_a (f^* E, f^* F)
+\leqno{(6.4.1.1)}
+$$
+sont des isomorphismes.
+}
+\vskip .3cm
+{\bf Preuve} : Comme pour tout entier $m$, le $A$--Module $E_m$ est localement constant de type fini, les morphismes (6.4.1.2) sont des isomorphismes (EGA $0_{III}$ 12.3.5). L'assertion en résulte sans peine. 
+\vskip .3cm
+{\bf 6.4.3}. Soient $X$ et $Y$ deux topos dont l'objet final est quasicompact et $f: X \to Y$ un morphisme. Soient $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$ deux $A$-faisceaux sur $Y$. On a pour tout triple $(m, n, i)$ d'entiers, avec $m \geq 0$ une application canonique
+$$
+\Ext^i_{A_m}(E_m, F_n) \to \Ext^i_{A_m}(f^* E_m, f^* F_n).
+$$
+On e déduit immédiatement un morphisme de bifoncteurs cohomologiques
+$$
+f^* : \overline{\Ext}^i_A(E, F) \to \overline{\Ext}^i_A(f^* E, f^* F),
+$$
+fonctoriel en $f$.
+\vskip .3cm
+{\bf 6.4.4}. Soient $f: X \to Y$ un morphisme de topos et $E$ et $F$ deux $A$-faisceaux sur $Y$ et $X$ respectivement. On définit comme suit un morphisme de bifoncteur
+$$
+\cHom_A(E, f_* F) \to f_* \cHom_A(f^* E, F).
+\leqno{(6.4.4.1)}
+$$
+Soit $n \geq 0$ un entier. Pour tout entier $m \geq n$, on a un isomorphisme canonique (SGA4 IV 2.2.8)
+$$
+\cHom_A(E_m, f^*(F_n)) \to f_* \cHom_A(f^* E_m, F_n),
+$$
+d'où par passage à la limite suivant $m$, un isomorphisme
+$$
+\gamma_n: \cHom_A(E, f_* F)_n \isomlong \varinjlim_m f_* \cHom_A (f^* E_m, F_n)
+$$
+qui, composé avec le morphisme canonique
+$$
+\delta_n : \varinjlim_m f_* \cHom_A(f^* E_m, F_n) \to f_* (\varinjlim_m \cHom_A (f^* E_m, F_n)),
+$$
+fournit un morphisme de $A$--Modules
+$$
+\delta_n \circ \gamma_n: \cHom_A (E, f_* F)_n \to f_* (\cHom_A (f^* E, F)_n).
+$$
+Il est immédiat que la collection $(\delta_n \circ \gamma_n)_{n \in \mathbf{N}}$ définit un morphisme de $\mathcal{E}(Y, J)$ répondant à la question.
+
+On en déduit aussitôt, lorsque $f$ est \emph{quasicompact}, un morphisme analogue de foncteurs de $A-\fsc(Y)^\circ \times A-\fsc(X)$ dans $A-\fsc(Y)$.
+\vskip .3cm
+{
+Proposition {\bf 6.4.5}. --- \it Soit $f: X \to Y$ un morphisme cohérent de topos (SGA4 VI 3.1). Étant donnés un $A$-faisceau $E$ sur $Y$ et un $A$-faisceau $F$ sur $X$, le morphisme
+$$
+\cHom_A (E, f_* F) \to f_* \cHom_A (f^* E, F)
+\leqno{(6.4.1.1)}
+$$
+est un isomorphisme.
+}
+\vskip .3cm
+{\bf Preuve} : Si $f$ est cohérent, le foncteur $f_*$ commute aux limites inductives filtrantes (SGA4 VI \quad), donc les morphismes $\delta_n$ sont des isomorphismes. L'assertion en résulte aussitôt.
+\vskip .3cm
+{\bf 6.4.6}. Soient $X$ et $Y$ deux topos dont l'objet final est quasicompact et $f: X \to Y$ un morphisme quasicompact. Étant donnés deux $A$-faisceaux $E$ et $F$ sur $Y$ et $X$ respectivement, les morphismes d'adjonction usuels sur les $A$--Modules définissent de fa\c{c}on évidente un isomorphisme de bifoncteurs
+$$
+\overline{\Hom}_A (f^* E, F) \isomlong \overline{\Hom}_A (E, f_* F).
+$$
+\vskip .3cm
+{\bf 6.4.7}. Soient $X$ un topos, $T$ et $T'$ deux objets de $X$ et $f: T \to T'$ un morphisme. On note de même le morphisme de topos
+$$
+X/T \to X/T'
+$$
+correspondant. On définit comme précédemment, à partir du morphisme analogue pour les $A$--Modules, un morphisme de foncteurs de $\mathcal{E}(T, J)^\circ \times \mathcal{E}(T', J)$ dans $\mathcal{E}(T', J)$
+$$
+f^* \cHom_A (E, f^* F) \longleftarrow \cHom_A (f_! E, F).
+\leqno{(6.4.7.1)}
+$$
+Lorsque $f$ est \emph{quasicompact}, le morphisme (6.4.7.1) définit un morphisme de foncteurs de $A-\fsc(T)^\circ \times A-\fsc(T')$ dans $A-\fsc(T')$.
+
+Lorsque $f$ est \emph{cohérent}, le morphisme (6.4.7.1) est un \emph{isomorphisme}.
+
+Supposons maintenant que $T$, $T'$ et $f$ soient qusicompacts, la dernière hypothèse résultant des deux premières si de plus $T'$ est quasiséparé (SGA4 VI 1.14). Alors les morphismes d'adjonction usuels pour les $A$--Modules définissent de fa\c{c}on évidente un isoorphisme de bifoncteurs
+$$
+\overline{\Hom}_A(E, f^* F) \isomlong \overline{\Hom}_A (f_! E, F),
+\leqno{(6.4.7.2)}
+$$
+$E$ désignant un $A$-faisceau sur $T$ et $F$ un $A$-faisceau sur $T'$.
+\vskip .3cm
+{\bf 6.4.8}. Soient $X$ un topos, $U$un ouvert de $X$ et $Y$ le topos ferme complémentaire. On note $j: Y \to X$ le morphisme de topos canonique : on rappelle (SGA4 \quad) que $j$ est \emph{cohérent}. Étant donnés deux $A$-faisceaux $E$ et $F$ sur $Y$ respectivement, on définit comme précédemment un \emph{isomorphisme} de bifoncteurs
+$$
+j_* \cHom_A (E, j^! F) \isomlong \cHom_A (j_* E, F).
+\leqno{(6.4.8.1)}
+$$
+Si de plus l'objet final de $X$ est quasicompact, on a un \emph{isomorphisme} de bifoncteurs
+$$
+\overline{\Hom}_A(E, j^! F) \isomlong \overline{\Hom}_A(j_* E, F)
+\leqno{(6.4.8.2)}
+$$
+obtenu de fa\c{c}on évidente à partir de l'isomorphisme analogue pour les $A$--Modules.
+
+
+
+\vskip .3cm
+{\bf 6.5. Cohomologie à support dans un fermé}.
+
+Soient $X$ un topos, $U$ un ouvert de $X$, $Y$ le topos fermé complémentaire et $j: Y \to X$ le morphisme canonique.
+\vskip .3cm
+{
+Proposition {\bf 6.5.1}. --- \it Soit $F$ un $A$-faisceau sur $X$. On a dans $\mathcal{E}(Y, J)$ et $\mathcal{E}(\pt, J)$ respectivement des isomorphismes fonctoriels en $F$
+$$
+j \cExt^i_A (j_* A, F) \isom (\mathbf{\mathrm{H}}^1_Y(F_n))_{n \in \mathbf{N}}
+\leqno{(6.5.1.1)}
+$$
+$$
+\overline{\Ext}^i_A(j_* A, F) \isom (\overline{\mathrm{H}}^i_Y(X, F_n))_{n \in \mathbf{N}}.
+\leqno{(6.5.1.2)}
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Compte tenu des définitions des seconds membres, il suffit de prouver que si $m$ et $n$ sont deux entiers, avec $m \geq n$, les morphismes canoniques
+$$
+\cExt^i_{A_n}(j_* A_n, F_n) \to \cExt^i_{A_m}(j_* A_m, F_n)
+$$
+et
+$$
+\Ext^i_{A_n}(j_* A_n, F_n) \to \Ext^i_{A_m}(j_* A_m, F_n)
+$$
+sont des isomorphismes. C'est là un fait bien connu, qui résulte aussi du lemme suivant qui nous sera utile dans la suite.
+\vskip .3cm
+{
+Lemme {\bf 6.5.2}. --- \it Soient $X$ un topos, $B$ et $C$ deux Anneaux de $X$ et $u: B \to C$ un morphisme d'Anneaux. Pour tout $B$--Module plat $M$, tout $C$--Module $N$ et tout entier $p$, le morphisme de $C$--Modules (resp. de groupes abéliens)
+\[\begin{tikzcd}
+	{\cExt^p_C(M \otimes_B C, N) \to \cExt^p_B(M, N)} \\
+	{\text{(resp.} \quad \Ext^p_C(M \otimes_B C, N)) \to \Ext^p_B(M, N) \quad )}
+\end{tikzcd}\]
+composé de morphisme d'extension d'Anneau
+\[\begin{tikzcd}
+	{\cExt^p_C(M \otimes_B C, N) \to \cExt^p_B(M \otimes_B C, N)} \\
+	{\text{(resp.} \quad \Ext^p_C(M \otimes_B C, N)) \to \Ext^p_B(M \otimes_B C, N) \quad )}
+\end{tikzcd}\]
+et du morphisme canonique déduit de $\id \otimes u: M \to M \otimes_B C$
+\[\begin{tikzcd}
+	{\cExt^p_B(M \otimes_B C, N) \to \cExt^p_B(M, N)} \\
+	{\text{(resp.} \quad \Ext^p_B(M \otimes_B C, N)) \to \Ext^p_B(M, N) \quad )}
+\end{tikzcd}\]
+est un \emph{isomorphisme}.
+}
+\vskip .3cm
+{\bf Preuve} : Nous montrerons seulement l'assertion non respée, l'assertion respée se prouvant de fa\c{c}on analogue. Fixons $M$. Faisant varier $N$, on obtient un morphisme de foncteurs cohomologiques 
+$$
+\cExt^\bullet_C (M \otimes_B C, .) \to \cExt^\bullet_B (M, .)
+$$
+qui est un isomorphisme en degré zéro et dont la source est effa\c{c}able. Il suffit pour voir le lemme de montrer que si $N$ est un $C$--Module injectif, on a $\cExt^p_B(M, N) = 0$ $(p \geq 1)$. Lorsque $M$ est un $B$--Module libre de base un faisceau d'ensembles, cela résulte du lemme (6.5.3) ci dessous, compte tenu du fait que $N$ est un $C$--Module flasque, donc un $B$--Module flasque. Dans le cas général, on va raisonner par récurrence. Commen\c{c}ons par le cas $p = 1$. Soit
+$$
+0 \to M' \to L \to M \to 0
+\leqno{(S)}
+$$
+une suite exacte de $B$--Modules, avec $L$ un $B$--Module libre. Comme $M$ est plat, la suite obtenue en tensorisant (S) par $C$ est exacte. Puisque $N$ est un $C$--Module injectif, on en déduit que la suite évidente
+$$
+0 \to \cHom_C(M \otimes_B C, N) \to \cHom_C(L \otimes_B C, N) \to \cHom_C(M' \otimes_B C, N) \to 0
+\leqno{(T)}
+$$
+est exacte. Mais (T) est isomorphe à la suite canonique
+$$
+0 \to \cHom_B (M, N) \to \cHom_B (L, N) \to \cHom_B (M', N) \to 0.
+$$
+Comme $\cExt^1_B(L, N) = 0$, on en déduit que $\cExt^1_B(M, N) = 0$. Supposons maintenant établi que pour tout $B$--Module plat $M$ et tout entier $i \in [1, p]$ on a $\cExt^i_B (M, N) = 0$. Considérons à nouveau la suite exacte (S), dans laquelle il est clair que $M'$ est $B$-plat. On déduit de (S) des isomorphismes
+$$
+\cExt^i_B (M, N) \isom \cExt^{i-1}_B(M', N) \quad (i \geq 2)
+$$
+d'où, grâce à l'hypothèse de récurrence appliquée à $M'$,
+$$
+\cExt^i_B(M, N) = 0 \quad (2 \leq i \leq p+1)
+$$
+ce qui achève la démonstration puis que l'on sait déjà cette égalité vraie pour $i = 1$.
+\vskip .3cm
+{
+Lemme {\bf 6.5.3}. --- \it Soit $(X, B)$ un topos annelé. Pour tout $B$--Module libre $L$ et tout $B$--Module flasque $M$, on a 
+$$
+\cExt^p_B (L, M) = 0 \quad (p \geq 1)
+$$
+$$
+\Ext^p_B (L, M) = 0 \quad (p \geq 1).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Soit $H$ un faisceau d'ensembles tel que $L \isom B_H$. On a 
+$$
+\Ext^p_B(L, M) \isom \mathrm{H}^p(H, M),
+$$
+et la deuxième assertion résulte alors de l'acyclicité de $M$ (SGA4 V 3.7). Maintenant le $B$--Module $\cExt^p_B (L, M)$ est associé au préfaisceau
+$$
+T \to \Ext^p_B (L|T, M|T),
+$$
+d'où la première assertion, puisque $L|T$ et $M|T$ sont respectivement libre et flasque.
+\vskip .3cm
+{
+Définition {\bf 6.5.4}. --- \it Soient $X$ un topos, $U$ un ouvert de $X$, $Y$ le topos fermé complémentaire, $j: Y \to X$ le morphisme canonique. Étant donné un $A$-faisceau $F$ sur $X$, on pose pour tout entier $i$
+\[\begin{tikzcd}
+	{\mathbf{\mathrm{H}}^i_Y (F) = \cExt^i_A(j_* A, F) = (\mathbf{\mathrm{H}}^i_Y(F_n))_{n \in \mathbf{N}}.} \\
+	{\overline{\mathrm{H}}^i_Y (X, F) = \overline{\Ext}^i_A(j_* A, F) = (\mathrm{H}^i_Y(F_n))_{n \in \mathbf{N}}.}
+\end{tikzcd}\]
+}
+\vskip .3cm
+{
+Proposition {\bf 6.5.5}. --- \it Soit $F$ un $A$-faisceau sur $X$.
+\begin{itemize}
+    \item[a)] Si l'immersion canonique $i: U \to X$ est quasicompacte, on a une suite exacte, fonctorielle en $F$, de $A-\fsc(X)$
+    $$
+    0 \to \mathbf{\mathrm{H}}^0_Y (F) \to F \to i_* (F|U) \to \mathbf{\mathrm{H}}^1_Y (F) \to 0
+    $$
+    et des isomorphismes fonctoriels en $F$
+    $$
+    \mathbf{\mathrm{H}}^p_Y (F) \isom \Rd^{p-1}i_* (f|u) \quad (p \geq 2).
+    $$
+    \item[b)] Si $U$ et $X$ ont des objets finaux quasicompacts, on a une suite exacte fonctorielle en $F$ de $A-\fsc(\pt)$
+    $$
+    \dots \to \overline{\mathrm{H}}^p_Y (X, F) \to \overline{\mathrm{H}}^p(X, F) \to \overline{\mathrm{H}}^p(U, F|U) \xlongrightarrow{\delta} \overline{\mathrm{H}}^{p+1}_Y (X, F) \to \dots 
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Appliquant l'assertion analogue pour les $A$--Modules aux composants de $F$, on obtient de telles suites exactes dans $\mathcal{E}(X, J)$ (resp. $\mathcal{E}(\pt, J)$).
+
+
+
+
+\vskip .3cm
+{\bf 6.6. Objets injectifs et pseudo-injectifs}.
+
+Soit $(X, A, J)$ un idéotope. 
+\vskip .3cm
+{
+Définition {\bf 6.6.1}. --- \it On dit qu'un $A$-faisceaux $I$ sur $X$ est \emph{pseudo-injectif} si c'est un objet injectif de la catégorie $\mathcal{E}(X, J)$.
+}
+\vskip .3cm
+Le lecteur peut se demander pourquoi considérer cette notion plutôt que la notion d'injectif de $A-\fsc(X)$ ; c'est parce que nous verrons plus loin (au moins lorsque $A = \mathbf{Z}_{\ell}$) que le seul $A$-faisceau injectif est le $A$-faisceau nul.
+
+On vérifie par un raisonnement classique d'adjonction que pour tout objet $T$ de $X$ et tout $A$-faisceau pseudo-injectif $I$ sur $X$, le $A$-faisceau $I | T$ est pseudo-injectif.
+\vskip .3cm
+{
+Définition {\bf 6.6.2}. --- \it Soit $C$ une catégorie abélienne. Un système projectif $E$ d'objets de $C$ est dit \emph{directement strict} si tous ses morphismes de transition sont des épimorphismes directs.
+}
+\vskip .3cm
+{
+Proposition {\bf 6.6.3}. --- \it 
+\begin{itemize}
+    \item[1)] Soit $I = (I_n, u_n)_{n \in \mathbf{N}}$ un $A$-faisceau pseudo-injectif sur $X$. Alors :
+    \begin{itemize}
+        \item[(i)] $I$ est flasque (4.2.3) et directement strict.
+        \item[(ii)] Pour tout entier $n \geq 0$, le $A_n$--Module $\Ker(u_n)$ est injectif.
+        \item[(iii)] Pour tout entier $n \geq 0$, on a un isomorphisme
+        $$
+        I_n \isom \bigoplus_{0 \leq p \leq n} \Ker(u_n).
+        $$
+        (avec la convention $u_0 = 0$).
+    \end{itemize}
+    \item[2)] Pour tout $A$-faisceau $E$ sur $X$, il existe un monomorphisme de $\mathcal{E}(X, J)$
+    $$
+    m: E \to I,
+    $$
+    avec $I$ un $A$-faisceau pseudo-injectif.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Pour montrer 2), on peut référer au résultat général de (Tohoku). Nous allons toutefois donner une preuve directe, qui sera utile pour montrer 1). Soient $n \geq 0$ un entier et $M$ un $A_n$--Module. On définit un $A$-faisceau noté ${}_n\widetilde{M}$ par les formules
+$$
+({}_n\widetilde{M})_p =
+\begin{cases}
+    0 \quad \text{si} \quad p < n \\
+    M \quad \text{si} \quad p \geq n,
+\end{cases}
+$$
+les morphismes de transition étant l'identité en degrés $\geq n$ et 0 ailleurs. Choisissions maintenant pour tout entier $n \geq 0$ un monomorphisme
+$$
+\xi_n: E_n \to I_n,
+$$
+avec $I_n$ un $(A_n)_X$--Module injectif. Le morphisme $\xi_n$ définit de fa\c{c}on évidente un morphisme 
+$$
+\widetilde{\xi_n}: E \to {}_n\widetilde{(I_n)}
+$$
+de $\mathcal{E}(X, J)$. On en déduit un monomorphisme de $\mathcal{E}(X, J)$
+$$
+m = \prod_n \widetilde{(\xi_n)}: E \to \prod_n {}_n\widetilde{I_n} = I,
+$$
+dont on vérifie aisément qu'il répond à la question. De plus, le $A$-faisceau $I$ est par construction flasque et directement strict. Montrons maintenant 1). Si $I$ est pseudo-injectif, il résulte de la partie 2) qu'il est facteur direct (dans $\mathcal{E}(X, J)$) d'un $A$-faisceau flasque et directement strict, d'où aussitôt (i) et (iii). Pour voir que $\Ker(u_n)$ est un $(A_n)_X$--Module injectif, il suffit d'exprimer que le foncteur
+$$
+M \mapsto \Hom_a(M, I)
+$$
+est exact lorsque $M$ parcourt la catégorie des $A$-faisceaux vérifiant $M_p = 0$ pour $p \neq n$. En effet, on a évidemment dans ce cas
+$$
+\Hom_a(M, I) = \Hom_{A_n}(M, \Ker(u_n)).
+$$
+\vskip .3cm
+{
+Proposition {\bf 6.6.4}. --- \it Soit $(X, A, J)$ un idéotope. On suppose que $X$ est localement algébrique (SGA4 VI 2.3), et que $A$ est un anneau de valuation discrète et $J$ son idéal maximal. Alors tout $A$-faisceau injectif sur $X$ est nul.
+}
+\vskip .3cm
+{\bf Preuve} : Soit $F$ un $A$-faisceau injectif. D'après (6.6.3), il existe un monomorphisme $u: F \to P$, avec $P$ un $A$-faisceau directement strict. Comme $F$ est injectif, le morphisme $u$ admet dans $A-\fsc(X)$ une rétraction
+$$
+v: P \to F,
+\leqno{(6.6.5)}
+$$
+qui est un épimorphisme. En particulier, $F$ est de type strict.
+
+Montrons d'abord la proposition lorsque $X$ est le topos ponctuel. Si $s$ désigne une uniformisante locale de $A$, on obtient en écrivant l'exactitude du foncteur $\Hom(P, F)$ pour la suite exacte
+$$
+0 \to A \xlongrightarrow{s} A \to A/J \to 0
+$$
+une suite exacte
+$$
+0 \to \Hom(A/J, F) \to \varprojlim (F) \xlongrightarrow{s} \varprojlim (F) \to 0.
+\leqno{(6.6.6)}
+$$
+Par ailleurs, posant $K = sF$, on a des suites exactes
+\[\begin{tikzcd}
+	0 & {s^F} & F & K & 0 \\
+	0 & K & F & {F/sF} & {0,}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+avec $K$ et $F/sF$ vérifiant la condition de Mittag-Leffler. On en déduit une suite exacte
+$$
+0 \to \varprojlim K \xlongrightarrow{g} \varprojlim F \to \varprojlim (F/sF) \to 0.
+$$
+Le morphisme composé naturel
+$$
+\varprojlim (F) \to \varprojlim (K) \to \varprojlim (F)
+$$
+étant un épimorphisme (6.6.6), il en est de même de $g$, donc
+$$
+\varprojlim (F/sF) = 0.
+$$
+Se ramenant au cas strict, on voit sans peine qu'un système projectif de groupes abéliens vérifiant la condition de Mittag-Leffler etdont la limite projective est nulle, est essentiellement nul. Par suite $F/sF = 0$, et $F = 0$ par le lemme de Nakayama (5.12).
+
+Passons au cas général. Comme il est immédiat par adjonction que la restriction d'un $A$-faisceau injectif à un objet $T$ de $X$ est un $A$-faisceau injectif, on peut supposer que l'objet final de $X$ est quasicompact.
+\vskip .3cm
+{
+Lemme {\bf 6.6.7}. --- \it Soit $U$ un objet quasicompact de $X$. Le système projectif
+$$
+\overline{\mathrm{H}}^0(U, F) = (\mathrm{H}^0(U, F_n))_{n \in \mathbf{N}}
+$$
+est essentiellement nul.
+}
+\vskip .3cm
+En effet, notant $p: U \to \pt$ le morphisme de topos canonique, le foncteur $P_*$ (qui existe puisque $U$ est quasicompact) est adjoint à droite du foncteur exact $p^*$. Il transforme donc $A$-faisceaux injectifs en $A$-faisceaux injectifs, et en particulier
+$$
+p_*(F) = \overline{\mathrm{H}}^0(U, F)
+$$
+est un injectif de $A-\fsc(\pt)$, donc est essentiellement nul d'après ce qui précède.
+\vskip .3cm
+{
+Lemme {\bf 6.6.8}. --- \it Soient $F$ un $A$-faisceau injectif et strict sur $X$, et $\sigma$ une section de $F_n$ $(n \geq 0)$. Il existe un recouvrement $(U_i)_{i \in I}$ de l'objet final de $X$ tel que pour tout $i \in I$, la section $\sigma | U_i$ appartienne à l'image de $\Gamma(U_i, F_{n+r})$ pour tout entier $r \geq 0$.
+}
+\vskip .3cm
+Comme $F$ est strict, il existe une application $\gamma \geq \id: \mathbf{N} \to \mathbf{N}$ telle que le morphism (6.6.5) provienne d'un épimorphisme
+$$
+\chi_\gamma (P) \to F \to 0
+$$
+de $\mathcal{E}(X, J)$, ou encore d'un épimorphisme de systèmes projectifs
+$$
+h_\gamma(P) \to F \to 0,,
+$$
+où $(h_\gamma (P))_p = P_{\gamma(p)}$ pour tout $p \geq 0$. Localement, la section de $F_n$ est l'image d'une section de $P_{(n)}$, donc d'une section de $P_{\gamma(n+r)}$ pour tout entier $r \geq 0$ ($h_\gamma(P)$ est \emph
+directement strict). Le lemme en résulte aussitôt.
+
+Montrons maintenant comment les lemmes précédents impliquent la proposition. Comme $F$ est de type strict, on peut supposer qu'il est strict. Soit $n \geq 0$ un entier et montrons que $F_n = 0$. Soit $\sigma$ une section de $F_n$ au-dessus d'un objet $T$ de $X$ et montrons qu'elle est nulle. Quitte à localiser, on peut supposer que $T$ est quasicompact et que (6.6.8)
+$$
+\sigma \in \text{Im}(\Gamma(U, F_{n+r})) \to \Gamma(U, F_n) \quad \text{pour tout}~r \geq 0.
+$$
+Comme (6.6.7) le système projectif $(\Gamma(U, F_p))_{p \in \mathbf{N}}$ est essentiellement nul, on en déduit bien que $\sigma = 0$.
+
+
+
+
+\vskip .3cm
+{\bf 6.7. Relations d'orthogonalité}.
+\vskip .3cm
+{
+Définition {\bf 6.7.1}. --- \it Soit $(X, A, J)$ un idéotope. n dit qu'un $A$-faisceau sur $X$ est \emph{fortement plat} s'il est isomorphe dans $A-\fsc(X)$ à un $A$-faisceau $F = (F_n)_{n \in \mathbf{N}}$ tel que pour tout $n \in \mathbf{N}$ ele $A_{nX}$--Module $F_n$ soit plat. 
+}
+\vskip .3cm
+Un $A$-faisceau fortement plat est plat (5.6). Un $A$-faisceau quasi-libre est fortement plat.
+\vskip .3cm
+{
+Proposition {\bf 6.7.2}. --- \it Soient $E$ et $F$ deux $A$-faisceaux sur $X$.
+\begin{itemize}
+    \item[(i)] Si $e$ est quasilibre et $F$ flasque, alors
+    \begin{itemize}
+        \item[(a)] $\cExt^i_A(E, F) = 0$ \quad $(i \geq 1)$ \quad dans \quad $\mathscr{E}(X, J)$.
+        \item[(b)] $\overline{\Ext}^i_A(E, F) = 0$ \quad $(i \geq 1)$ \quad dans \quad $\mathscr{E}(\pt, J)$.
+    \end{itemize}
+    \item[(ii)] Si $E$ est fortement plat et $F$ pseudo-injectif, alors
+    \begin{itemize}
+        \item[(a)] $\cExt^i_A(E, F) = 0$ \quad $(i \geq 1)$ \quad dans \quad $A-\fsc(X)$.
+        \item[(b)] $\overline{\Ext}^i_A(E, F) = 0$ \quad $(i \geq 1)$ \quad dans \quad $A-\fsc(\pt)$,
+    \end{itemize}
+    si l'objet final de $X$ est quasicompact.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Les assertions (i) résultent immédiatement des définitions et de (6.5.3). Montrons par exemple la première partie de (ii), la seconde se voyant de fa\c{c}on analogue. On peut supposer que pour tout entier $n \geq 0$ le $n^{\text{ème}}$ composant $E_n$ de $E$ est un $A_n$--Module plat. Si on note $(u_p)_{p \in \mathbf{N}}$ les morphismes de transition de $F$, on a (6.6.3) 
+$$
+F_n \isom \bigoplus_{0 \leq j \leq n} \Ker(u_j)
+$$
+et les $\Ker(u_j)$ sont des $A_j$--Modules injectifs. On est donc ramené à voir que pour tout entier $j \geq 0$ et tout $A_j$--Module injectif $J$, on a 
+$$
+\varinjlim_{q \geq j} \cExt^i_{A_q}(E_q, J) = 0.
+$$
+Mais, comme $E_q$ est un $A_q$--Module plat, on a (6.5.2)
+$$
+\cExt^i_{A_q}(E_q, J) \isom \cExt^i_{A_j}(E_q \otimes_{A_q} A_j, J) = 0,
+$$
+la dernière égalité provenant du fait que $J$ est un $A_j$--Module injectif. D'où le lemme.
