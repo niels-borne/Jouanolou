@@ -60,7 +60,7 @@ Grothendieck says in Récoltes et Semailles
 
 
 ##### [6. Foncteurs associés aux homomorphismes](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.6.tex)
-- [ ] Transcription
+- [x] **Transcription**
 - [ ] Proof-read
 - [ ] Expert review
 
