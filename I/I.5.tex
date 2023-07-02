@@ -1,1 +1,657 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{5. Produit tensoriel.}
+\addcontentsline{toc}{subsection}{5. Produit tensoriel}
 
+On suppose sonné dans ce paragraphe un idéotope $(X, A, J)$, et on convient de poser pour tout entier $n \geq 0$
+$$
+A_n = A/J^{n+1}.
+$$
+\vskip .3cm
+{\bf 5.1}. Soient $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$ deux $A$-faisceaux sur $X$. Pour tout entier $i \in \mathbf{Z}$, on définit comme suit un nouveau $A$-faisceau, noté
+$$
+\cTor^A_i(E, F).
+$$
+Si $n$ est un entier $\geq 0$, le $n^{\text{ème}}$ composant est
+$$
+\cTor^A_i(E, F)_n = \cTor^{A_n}_i(E_n, F_n),
+$$
+est le morphisme de transition
+$$
+\cTor^A_i(E, F)_{n+1} \to \cTor^A_i(E, F)_n
+$$
+est le composé du morphisme canonique
+$$
+\cTor^{A_{n+1}}_i(E_{n+1}, F_{n+1}) \to \cTor^{A_{n+1}}_i(E_n, F_n),
+$$
+déduit des morphismes de transition de $E$ et $F$ respectivement, et du morphisme de changement d'anneau (CE VI 4)
+$$
+\cTor^{A_{n+1}}_i(E_n, F_n) \to \cTor^{A_n}_i(E_n, F_n).
+$$
+Si $u: E \to E'$ et $v: F \to F'$ sont deux morphismes de $\mathcal{E}(X, J)$, on définit un $\mathcal{E}(X, J)$-morphisme
+$$
+\cTor^A_i(u, v): \cTor^A_i (E, F) \to \cTor^A_i(E', F')
+$$
+en posant
+$$
+(\cTor^A_i(u, v))_n = \cTor^{A_n}_i(u_n, v_n).
+$$
+Mieux, on peut, grâce à (CE p.119, Remarque), définit des morphismes bords composant par composant et munir ainsi la collection des $\cTor^A_i$ d'une structure de bifoncteur cohomologique
+$$
+\mathscr{E}(X, J) \times \mathscr{E}(X, J) \to \mathscr{E}(X, J).
+$$
+Bien entendu, le bifoncteur $\cTor^A_0$ sera noté $\otimes_A$ et appelé \emph{produit tensoriel}. Il est clair qu'il est exact à droite, commutatif et associatif. Enfin, on a pour tout entier $i$ un isomorphisme ``canonique'' de bifoncteurs.
+$$
+\cTor^A_i(E, F) \isom \cTor^A_i (F, E).
+\leqno{(5.1.1)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 5.2}. --- \it Il existe un unique bifoncteur cohomologique, noté encore $(\cTor^A_i)_{i \in \mathbf{Z}}$
+$$
+(\cTor^A_i)_{i \in \mathbf{Z}}: A-\fsc(X) \times A-\fsc(X) \to A-\fsc(X)
+$$
+vérifiant les propriétés suivantes.
+\begin{itemize}
+    \item[(a)] Pour tout entier $i \in \mathbf{Z}$, le diagramme
+    \[\begin{tikzcd}
+	{\mathscr{E}(X, J) \times \mathscr{E}(X, J)} && {\mathscr{E}(X, J)} \\
+	{A-\fsc(X) \times A-\fsc(X)} && {A-\fsc(X)}
+	\arrow["{\pi \times \pi}", from=1-1, to=2-1]
+	\arrow["\pi", from=1-3, to=2-3]
+	\arrow["{\cTor^A_i}", from=2-1, to=2-3]
+	\arrow["{\cTor^A_i}", from=1-1, to=1-3]
+    \end{tikzcd}\]
+    dans lequel $\pi$ désigne le foncteur canonique, est commutatif.
+    \item[(b)] Pour tout suite exacte $0 \to E' \to E \to E'' \to 0$ (resp. $0 \to F' \to F \to F'' \to 0$) de $\mathcal{E}$, le foncteur $\pi$ transforme les morphismes bords
+    $$
+    \cTor^A_{i+1}(E'', F) \to \cTor^A_i(E', F)
+    $$
+    $$
+    \text{(resp.} \quad \cTor^A_{i+1}(E, F'') \to \cTor^A_i(E, F') \quad )
+    $$
+    de $\mathscr{E}(X, J)$ en les morphismes bords correspondants dans $A-\fsc(X)$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Comme toute flèche de $A-\fsc(X)$ peut se mettre sous la forme $\pi(u) \circ \pi(s)^{-1}$, où $u$ et $s$ sont deux flèches de $\mathscr{E}(X, J)$, l'unicité est immédiate en ce qui concerne les bifoncteurs $\cTor^A_i$. Pour ce qui est des opérateurs bords, elle résulte de ce que toute suite exacte de $A-\fsc(X)$ est, d'après les propriétés générales des catégories abéliennes quotients, isomorphe à l'image par $\pi$ d'une suite exacte de $\mathscr{E}(X, J)$. Quant à l'existence, on est essentiellement réduit à montrer que si $u: E \to E'$ est un morphisme de $\mathscr{E}(X, J)$ dont le noyau et le conoyau sont négligeables, alors il en est de même pour tout entier $i$ et tout $A$-faisceau $F$ des morphismes
+$$
+\cTor^A_i(u, \id_F): \cTor^A_i(E, F) \to \cTor^A_i(E', F).
+$$
+Compte tenu du fait que les $\cTor^A_i$ sont munis d'une structure de foncteur cohomologique sur $\mathscr{E}(X, J)$, on est ramené à voir qu'ils transforment $A$-faisceau négligeable en $A$-faisceau négligeable, ce qui est évident. 
+\vskip .3cm
+{
+Définition {\bf 5.3}. --- \it Le bifoncteur $\cTor^A_0$ est appelé \emph{produit tensoriel} et noté $\otimes_A$.
+}
+\vskip .3cm
+Le bifoncteur produit tensoriel est évidemment exact à droite, commutatif et associatif. De plus on a pour tout entier $i$ des isomorphismes fonctoriels
+$$
+\cTor^A_i(E, F) \isomlong \cTor^A_i (F, E).
+$$
+\vskip .3cm
+{\bf Convention 5.4}. Comme l'anneau $A$ est fixé dans tout le paragraphe, on le supprime à partir de maintenant des notations, afin d'alléger le texte.
+\vskip .3cm
+{
+Définition {\bf 5.5}. --- \it Soit $E$ un $A$-faisceau sur $X$. On dit que $E$ est \emph{plat} si pour toute suite exacte
+$$
+0 \to F' \xlongrightarrow{u} F \xlongrightarrow{v} F'' \to 0
+$$
+de $A-\fsc(X)$, la suite correspondante
+$$
+0 \to E \times F' \xlongrightarrow{\id_E \otimes u} E \otimes F \xlongrightarrow{\id_E \otimes v} E \otimes F'' \to 0
+$$
+est exacte.
+}
+\vskip .3cm
+On voit immédiatement que le produit tensoriel de deux $A$-faisceaux plats est un $A$-faisceau plat.
+\vskip .3cm
+{
+Lemme {\bf 5.6}. --- \it Soit $E$ un $A$-faisceau. On suppose que pour toute suite exacte de $\mathcal{E}(X, J)$
+$$
+0 \to F' \xlongrightarrow{u} F \xlongrightarrow{v} F'' \to 0
+$$
+la suite correspondante
+$$
+0 \to E \times F' \xlongrightarrow{\id_E \otimes u} E \otimes F \xlongrightarrow{\id_E \otimes v} E \otimes F'' \to 0
+$$
+de $\mathcal{E}(X, J)$ soit exacte. Alors $E$ est un $A$-faisceau plat.
+}
+\vskip .3cm
+{\bf Preuve} : On utilise le fait que toute suite exacte de $A-\fsc(X)$ est l'image d'une suite exacte de $\mathscr{E}(X, J)$.
+
+En particulier, un $A$-faisceau $E = (E_n)_{n \in \mathbf{N}}$, dont pour tout entier $n \geq 0$ le composant $E_n$ est un $A_n$--Module plat, est plat.
+\vskip .3cm
+{
+Définition {\bf 5.7}. --- \it Soit $X$ un topos. Étant donné un système projectif indexé par $\mathbf{N}$ d'objets de $X$
+$$
+H = (H_n)_{n \in \mathbf{N}},
+$$
+on appelle $A$-faisceau \emph{quasilibre engendré par $H$}, et on note $A_H$, le $A$-faisceau
+$$
+A_H = ((A_n)_{H_n})_{n \in \mathbf{N}},
+$$
+dans lequel les morphismes de transition sont ceux déduits des morphismes de transition de $H$. On dit qu'un $A$-faisceau est \emph{quasilibre} s'il est isomorphe dans $\mathscr{E}(X, J)$  à un $A$-faisceau de la forme $A_H$.
+}
+\vskip .3cm
+D'après 5.6, un \emph{$A$-faisceau quasilibre est plat}.
+\vskip .3cm
+{
+Proposition {\bf 5.8}. --- \it  
+\begin{itemize}
+    \item[(a)] Soient $H$ un système projectif indexé par $\mathbf{N}$ d'objets de $X$, et $E$ un $A$-faisceau sur $X$. On a un isomorphisme fonctoriel en $E$
+    $$
+    \Hom(A_H, E) \isomlong \Pro \Hom(H, E).
+    $$
+    \item[(b)] Si $H$ et $K$ sont deux systèmes projectifs indexés par $N$ d'objets de $X$, on a un isomorphisme canonique
+    $$
+    A_{H \times K} \isomlong A_H \otimes_A A_K
+    $$
+    \item[(c)] Si $E$ est un $A$-faisceau sur $X$, on a dans $\mathscr{E}(X, J)$, donc aussi dans $A-\fsc(X)$, un épimorphisme fonctoriel en $E$
+    $$
+    A_E \to E \to 0. 
+    $$
+    En particulier, tout $A$-faisceau est quotient d'un $A$-faisceau plat.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons d'abord a). Si l'objet final de $X$ est quasicompact, le premier s'identifie à l'ensemble de morphismes de $A_H$ dans $E$ dans la catégorie $\Pro(A-\Mod_X)$ (2.8). On en déduit le résultat grâce à (SGA4 IV 2.13 1) a)). L'isomorphisme de b) est la collection des isomorphismes canoniques sur les composants (SGA4 IV 2.13. 1) b)). Enfin l'épimorphisme de c) est la collection des épimorphismes canoniques (d'adjonction)
+$$
+(A_n)_{E_n} \to E_n.
+$$
+\vskip .3cm
+{
+Proposition {\bf 5.9}. --- \it Soit $F$ un $A$-faisceau sur $X$. Les assertions suivantes sont équivalentes : 
+\begin{itemize}
+    \item[(i)] $F$ est plat.
+    \item[(ii)] Pour toute suite exacte de $A$-faisceau
+    $$
+    0 \to G \xlongrightarrow{u} H \xlongrightarrow{v} F \to 0
+    $$
+    et tout $A$-faisceau $E$, la suite
+    $$
+    0 \to E \otimes G \xlongrightarrow{\id_E \otimes u} E \otimes H \xlongrightarrow{\id_E \otimes v} E \otimes F \to 0
+    $$
+    est exacte.
+    \item[(iii)] Pour tout $A$-faisceau $G$, on a :
+    $$
+    \cTor_1(F, G) = 0.
+    $$
+    \item[(iv)] Pour tout $A$-faisceau $G$, on a 
+    $$
+    \cTor_i (G, F) = 0 \quad (i \geq 1).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : (i) $\Rightarrow$ (ii). Soit $0 \to R \to L \to E \to 0$ une suite exacte, avec $L$ plat (par exemple quasilibre). On en déduit de fa\c{c}on évidente un diagramme commutatif exact
+\[\begin{tikzcd}
+	{G \otimes R} & {H \otimes R} & {F \otimes R} & 0 \\
+	{G \otimes L} & {H \otimes L} & {F \otimes L} & 0 \\
+	{G \otimes E} & {H \otimes E} \\
+	0 & 0 && {.}
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=3-1]
+	\arrow[from=3-1, to=4-1]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=2-2, to=3-2]
+	\arrow["{u \otimes \id_E}", from=3-1, to=3-2]
+	\arrow["\alpha", from=2-1, to=2-2]
+	\arrow["\beta", from=1-3, to=2-3]
+\end{tikzcd}\]
+Comme $L$ est plat, la flèche $\alpha$ est un monomorphisme. On peut donc appliquer le lemme du serpent au diagramme délimité par les deux lignes du haut. Il fournit une suite exacte
+$$
+\Ker(\beta) \to G \otimes E \xlongrightarrow{u \otimes \id_E} H \otimes E.
+$$
+Comme $F$ est plat, $\Ker(\beta) = 0$, donc $u \otimes \id_E$ est un monomorphisme, ce qui prouve (ii). Montrons (ii) $\Rightarrow$ (iii). Soit
+$$
+0 \to K \to L \to F \to 0
+$$
+une suite exacte, avec $L$ un $A$-faisceau quasilibre. On en déduit une suite exacte
+$$
+\cTor_1(G, L) \to \cTor_1(G, F) \to G \otimes K \to G \otimes L \to G \otimes F \to 0,
+$$
+d'où d'après (ii) un épimorphisme
+$$
+\cTor_1(G, L) \to \cTor_1(G, F) \to 0.
+$$
+Nous aurons donc montré que $\cTor_1(G, F) = 0$ si nous prouvons le lemme suivant.
+\vskip .3cm
+{
+Lemme {\bf 5.9.1}. --- \it Soit $L$ un $A$-faisceau quasilibre. Pour tout $A$-faisceau $G$, on a 
+$$
+\cTor_i(L, G) = 0 \quad (i \geq 1), \quad \text{dans} \quad \mathscr{E}(X, J).
+$$
+}
+\vskip .3cm
+En effet, comme pour tout entier $n \geq 0$, $L_n$ est un $A_n$--Module plat, il est évident que $\cTor^{A_n}_i(L_n, G_n) = 0$, d'où l'assertion.
+
+Montrons que (iii) $\Rightarrow$ (iv). Nous allons le voir par récurrence croissante sur l'entier $i \geq 1$. Supposons donc prouvé que pour tout $A$-faisceau $H$, on ait $\cTor_i (F, H) = 0$, et soit $G$ un $A$-faisceau. Choisissons une suite exacte
+$$
+0 \to H \to L \to G \to 0,
+$$
+avec $L$ quasilibre. On en déduit une suite exacte
+$$
+\cTor_{i+1}(F, L) \to \cTor_{i + 1}(F, G) \to \cTor_i(F, H) \to \cTor_i(F, L),
+$$
+dans laquelle les termes extrêmes sont nuls d'après (5.9.1). L'hypothèse de récurrence appliquée à $H$ montre alors que
+$$
+\cTor_{i + 1}(F, G) \isom \cTor_i(F, H) = 0.
+$$
+Montrons que (iv) $\Rightarrow$ (i). soit $0 \to E' \xlongrightarrow{u} E \xlongrightarrow{v} E'' \to 0$ une suite exacte de $A$-faisceaux et montrons que $\id_F \otimes u$ est un monomorphisme. Comme $\cTor_1(F, E'') = 0$ par hypothèse, l'assertion résulte de la suite exacte canonique
+$$
+\cTor_1(F, E'') \to F \otimes E' \xlongrightarrow{\id_F \otimes u} F \otimes E \xlongrightarrow{\id_F \otimes v} F \otimes E'' \to 0.
+$$
+\vskip .3cm
+{
+Corollaire {\bf 5.9.2}. --- \it Soit $0 \to F' \to F \to F'' \to 0$ une suite exacte de $A$-faisceaux.
+\begin{itemize}
+    \item[(i)] Si $F'$ et $F''$ sont plats, alors $F$ est plat.
+    \item[(ii)] Si $F$ et $F''$ sont plats, alors $F'$ est plat.
+\end{itemize}
+}
+\vskip .3cm
+{
+Corollaire {\bf 5.9.3}. --- \it La propriété pour un $A$-faisceau $F$ d'être plat est de nature locale.
+}
+\vskip .3cm
+{\bf Preuve} : Soit $G$ un autre $A$-faisceau. L'assertion $\cTor_1(G, F) = 0$ est de nature locale (1.7 (i)). Par ailleurs il est immédiat (cf. aussi (5.17)) que si $T$ est un objet de $X$, on a
+$$
+\cTor_1(G, F)|T \isom \cTor_1(G|T, F|T).
+$$
+\vskip .3cm
+{\bf 5.10}. Soient $E, F, G$ trois $A$-faisceaux. Étant données trois résolutions plates $L, M, N$ de $E, F, G$ respectivement, on pose
+$$
+\cTor_i(E, F, G) = \mathrm{H}_i(L \otimes M \otimes N).
+$$
+Les propriétés (5.9) et (5.9.2) des $A$-faisceaux plats impliquent de fa\c{c}on classique que la définition précédente ne dépend pas des résolutions plates choisies.
+\vskip .3cm
+{
+Proposition {\bf 5.11}. --- \it Soient $E, F, G$ trois $A$-faisceaux et $L, M, N$ des résolutions plates de $E, F, G$ respectivement.
+\begin{itemize}
+    \item[(i)] On a des isomorphismes canoniques   
+    $$
+    \cTor_i(E, F) \isom \mathrm{H}_i(L \otimes F) \isom \mathrm{H}_i(E \otimes M) \isom \mathrm{H}_i(L \otimes M).
+    $$
+    \item[(ii)] On a trois suites spectrales birégulières
+    \[\begin{tikzcd}
+	{\cTor_i(E, \cTor_j(F, G))} & {\cTor_{i+j}(E, F, G)} \\
+	{\cTor_i(F, \cTor_j(G, E))} & {\cTor_{i+j}(E, F, G)} \\
+	{\cTor_i(G, \cTor_j(E, F))} & {\cTor_{i+j}(E, F, G).}
+	\arrow[Rightarrow, from=1-1, to=1-2]
+	\arrow[Rightarrow, from=2-1, to=2-2]
+	\arrow[Rightarrow, from=3-1, to=3-2]
+    \end{tikzcd}\]
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Classique à partir des propriétés énoncées des $A$-faisceaux plats (voir thèse de VERDIER). En ce qui concerne les suites spectrales, on fera une démonstration analogue en (\quad).
+\vskip .3cm
+{
+Proposition {\bf 5.12} (Lemme de NAKAYAMA). --- \it Soit $F$ un $A$-faisceau. Les assertions suivantes sont équivalentes : 
+\begin{itemize}
+    \item[(i)] $F/JF = 0$.
+    \item[(ii)] $F = 0$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : On a seulement à voir que (i) entraîne (ii). Quitte à localiser, on peut supposer le système projectif
+$$
+F/FJ = (F_n/JF_n)_{n \in \mathbf{N}}
+$$
+essentiellement nul. Alors il existe une application croissante $\gamma \geq \id: \mathbf{N} \to \mathbf{N}$ telle que pour tout entier $n \geq 1$ le morphisme canonique $F_{\gamma(n)}/JF_{\gamma(n)} \to F_n/JF_n$ soit nul. Autrement dit, l'image de $F_{\gamma(n)}$ par le morphisme canonique
+$$
+F_{\gamma(n)} \to F_n
+$$
+est contenue dans $JF_n$. On en déduit par récurrence que pour tout entier $r \geq 1$, l'image du morphisme canonique 
+$$
+F_{\gamma^{n+1}(n)} \to F_n
+$$
+est nul, donc $F$ est essentiellement nul.
+
+À partir de maintenant et jusqu'à mention expresse du contraire nous allons supposer que $A$ est \emph{noethérien} et que $J$ est un idéal \emph{maximal} de $A$.
+\vskip .3cm
+{
+Proposition {\bf 5.13}. --- \it Soit $(X, A, J)$ un idéotope, avec $A$ un anneau noethérien et $J$ un idéal maximal de $A$. Les assertions suivantes pour un $A$-faisceau $F$ sont équivalentes :
+\begin{itemize}
+    \item[(i)] $\cTor_1(A/J, F) = 0$. 
+    \item[(ii)] Pour tout $A$--module de type fini $M$, on a 
+    $$
+    \cTor_i(M, F) = 0 \quad (i \geq 1).
+    $$
+    \item[(iii)] Pour tout $A$-faisceau $G$ annulé par une puissance de $J$, on a 
+    $$
+    \cTor_i(F, G) = 0 \quad (i \geq 1).
+    $$
+    (Les notations de l'énoncé sont celles de 4.1.4).
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : La catégorie des $A$-faisceaux ne changeant pas si on remplace $A$ par $A_j$, nous pouvons supposer $A$ local d'idéal maximal $J$.
+
+Il est clair que (ii) et (iii) impliquent chacun (i). Montrons que (i) $\Rightarrow$ (ii). Tout d'abord, utilisant une résolution de $M$ par des $A$--modules libres de type fini, on voit par récurrence qu'il suffit de montrer que $\cTor_1(M, F) =  0$, pour tout $A$--module de type fini $M$. Nous allons voir ce dernier point par récurrence croissante sur la dimension de $M$. Si dim$(M) = 0$, alors $M$ admet une filtration finie par des $A$--modules isomorphes à $A/J$ et l'assertion résulte de (i) par récurrence sur la longueur, grâce à la suite exacte des $\cTor$. Dans le cas général, $M$ admet (Bourbaki Alg. Comm. IV 4.1) une filtration finie dont les quotients consécutifs sont isomorphes à des $A$--modules de la forme $A/P$, où $P$ est un idéal premier de $A$, de sorte que l'on peut supposer que $M$ est de cette forme. Si $P = J$, c'est terminé. Sinon, il existe un élément $a$ non nul de $P/J$, d'où une suite exacte
+$$
+0 \to A/P \xlongrightarrow{a} A/P \to A/P+aA \to 0.
+$$
+Comme $\cTor_1(A/P+aA, F) = 0$ par récurrence, on déduit de cette suite exacte que la multiplication par $a$
+$$
+\cTor_1(A/P, F) \xlongrightarrow{a} \cTor_1(A/P, F)
+$$
+est un épimorphisme. On conclut alors par le lemme de Nakayama 5.12.
+
+Montrons enfin que (i) $\Rightarrow$ (iii). Le $A$-faisceau $G$ admet une filtration finie dont les quotients consécutifs sont annulés par $J$, de sorte qu'on peut supposer que $G$ lui-même est annulé par $J$.
+\vskip .3cm
+{
+Lemme {\bf 5.13.1}. --- \it Soit (S) $0 \to E' \xlongrightarrow{u} E \xlongrightarrow{v} E'' \to 0$ une suite exacte de $A$-faisceaux, avec $JE = 0$. Pour tout $A$-faisceau $P$, la suite correspondante
+$$
+0 \to P \otimes E' \to P \otimes E \to P \otimes E'' \to 0
+$$
+est exacte.
+}
+\vskip .3cm
+On se ramène immédiatement au cas où les morphismes $u$ et $v$ sont images de morphismes de $\mathcal{E}(X, J)$. De plus, on peut remplacer $E$, $E''$ et $E'$ respectivement par $E/JE$, $E''/JE''$ et $\text{Im}(E'/JE' \to E/JE)$, ces expressions étant entendues au sens de $\mathcal{E}(X, J)$ ; dans ce cas, on a pour tout entier $n \geq 1$ 
+$$
+JE'_n = J E_n = JE''_n = 0.
+$$
+Il suffit alors pour voir le lemme de prouver que les suites évidentes
+$$
+0 \to P_n \otimes_{A_n} E'_n \to P_n \otimes_{A_n} E_n \to P_n \otimes_{A_n} E''_n \to 0
+$$
+sont exactes. Or on peut pour le voir remplacer $P_n$ par $P_n/JP_n$, et alors c'est évident car on a affaire à des faisceaux de $A/J$-espaces vectoriels.
+\vskip .3cm
+{
+Lemme {\bf 5.13.2}. --- \it Soient $F$ et $G$ deux $A$-faisceaux. On suppose que $F$ vérifie (i) et que $JG = 0$. Alors $\cTor_1(F, G) = 0$. 
+}
+\vskip .3cm
+Soit $0 \to M \to L \to G \to 0$ une suite exacte de $A$-faisceaux, avec $L$ plat. Il est clair que $JL \to M$. On en déduit un diagramme commutatif et exact :
+\[\begin{tikzcd}
+	& 0 & 0 \\
+	& JL & JL \\
+	0 & M & L & G & 0 \\
+	0 & {M/JL} & {L/JL} & G & 0 \\
+	& 0 & 0
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=4-2, to=5-2]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=4-1, to=4-2]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=4-3, to=4-4]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=4-3, to=5-3]
+	\arrow[from=3-4, to=4-4]
+	\arrow[from=3-4, to=3-5]
+	\arrow[from=4-4, to=4-5]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\leqno{(D)}\]
+En tensorisant par $F$, on en déduit un diagramme commutatif et exact
+\[\begin{tikzcd}
+	& 0 \\
+	{F \otimes JL} & {F \otimes JL} & 0 \\
+	{F \otimes M} & {F \otimes L} & {F \otimes G} & 0 \\
+	{F \otimes (M/JM)} & {F \otimes (L/JL)} & {F \otimes G} & 0 \\
+	0 & 0 &&& {.}
+	\arrow[from=1-2, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=3-2, to=3-3]
+	\arrow[from=2-2, to=3-2]
+	\arrow[from=3-2, to=4-2]
+	\arrow[from=4-2, to=4-3]
+	\arrow[from=4-2, to=5-2]
+	\arrow[from=4-1, to=5-1]
+	\arrow[from=4-1, to=4-2]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-1]
+	\arrow[from=3-1, to=4-1]
+	\arrow[from=3-3, to=4-3]
+	\arrow[from=3-3, to=3-4]
+	\arrow[from=4-3, to=4-4]
+\end{tikzcd}\leqno{(D')}\]
+En effet, comme $F$ vérifie (i), la suite canonique
+$$
+0 \to F \otimes J \to F \to F/JF \to 0
+\leqno{(U)}
+$$
+est exacte, et il en est de même de la colonne centrale de (D') qui se déduit de (U) par tensorisation par le $A$-faisceau plat $L$. Par ailleurs, la ligne du bas de (D') est exacte d'après le lemme (5.13.1) appliqué à la ligne correspondante de (D). L'assertion (5.13.2) résulte alors de (D') en appliquant le lemme du serpent au diagramme défini par la colonne de gauche et celle du centre : on obtient ainsi que la suite canonique 
+$$
+0 \to F \otimes M \to F \otimes L \to F \otimes G \to 0
+$$
+est exacte, d'où l'assertion par la suite exacte des $\cTor$.
+
+On achève la preuve de (iii) comme suit. Il est clair que $G$ admet une résolution gauche par des $A$-faisceaux de la forme $L/JL$, avec $L$ un $A$-faisceau plat. L'assertion se verra par récurrence croissante sur l'entier $i$ à partir du cas $i = 1$ si on montre que
+$$
+\cTor_i(F, L/JL) = 0 \quad  (i \geq 1)
+$$
+pour tout $A$-faisceau plat. Or la considération des deux suites spectrales (5.11)
+\[\begin{tikzcd}
+	{\cTor_i(F, \cTor_j(A/J, L))} & {\cTor_{i+j}(F, A/J, L)} \\
+	{\cTor_i(L, \cTor_j(A/J, F))} & {\cTor_{i+j}(F, A/J, L)}
+	\arrow[Rightarrow, from=1-1, to=1-2]
+	\arrow[Rightarrow, from=2-1, to=2-2]
+\end{tikzcd}\]
+montre, compte tenu du fait que $L$ est plat, que l'on a un isomorphisme
+$$
+\cTor_i (F, L/JL) \isom L \otimes \cTor_i (A/J, F),
+$$
+d'où le résultat désiré grâce à l'implication (i) $\Rightarrow$ (ii).
+\vskip .3cm
+{
+Définition {\bf 5.14}. --- \it Un $A$-faisceau vérifiant les conditions équivalentes de (5.13) sera dit \emph{presque plat}.
+}
+\vskip .3cm
+{\bf Remarque 5.15}. Lorsque $A$ est un anneau de valuation discrète d'idéal maximal $J$, alors, désignant par $u$ une uniformisante locale de $A$, on voit facilement, par application de la suite exacte des or à la suite exacte canonique $0 \to A \xlongrightarrow{xu} A \to A/J \to 0$ que les $A$-faisceaux presque plats sont ceux qui sont \emph{sans torsion}, i.e. ceux pour lesquels la multiplication par un élément de $A$ est un monomorphisme.
+\vskip .3cm
+{
+Proposition {\bf 5.15}. --- \it 
+\begin{itemize}
+    \item[1)] Soit $0 \to F' \to F \to F'' \to 0$ une suite exacte de $A$-faisceaux. Si $F'$ et $F''$ (resp. $F$ et $F''$) sont presque plats, alors il en est de même pour $F$ (resp. $F'$). 
+    \item[2)] Si $E$ et $F$ sont deux $A$-faisceaux presque plats, alors $E \otimes_A F$ est presque plat et l'on a
+    $$
+    \cTor_i(E, F) = 0 \quad (i \geq 1).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : L'assertion (1) se voit de fa\c{c}on classique en utilisant la suite exacte des $\cTor$. Montrons (2). Compte tenu de (5.13 (iii)), la suite spectrale
+$$
+\cTor_i(F, \cTor_j(A/J, E)) \Rightarrow \cTor_{i+j}(F, A/J, E)
+\leqno{(5.15.1)}
+$$
+montre que
+$$
+\cTor_p(F, A/J, E) = 0 \quad (p \geq 1).
+$$
+Utilisant ce résultat, on déduit de la suite spectrale
+$$
+\cTor_i(A/J, \cTor_j(E, F)) \Rightarrow \cTor_{i+j}(A/J, E, F)
+\leqno{(5.15.2)}
+$$
+l'égalité
+$$
+\cTor_1(A/J, E \otimes F) = 0,
+$$
+donc que $E \otimes F$ est presque plat. Mais alors (5.13), on a 
+$$
+\cTor_i(A/J, E \otimes F) = 0 \quad (i \geq 1)
+$$
+et un nouvel examen de (5.15.2) montre que 
+$$
+(A/J) \otimes \cTor_1(E, F) = 0,
+$$
+d'où $\cTor_1(E, F) = 0$ par le lemme de Nakayama. Nous allons maintenant voir le fait que $\cTor_i(E, f) = 0$ $(i \geq 1)$ par récurrence croissante sur l'entier $i \geq 1$. Supposons donc la vraie pour $i$ et montrons qu'elle est vraie pour $i + 1$. Soit pour cela
+$$
+0 \to F' \to L \to F \to 0
+\leqno{(S)}
+$$
+une suite exacte de $A$-faisceaux, avec $L$ plat. D'après (1), $F'$ est presque plat, d'où $\cTor_i (E, F') = 0$ par hypothèse de récurrence. On conclut par la suite exacte des $\cTor_i(E, .)$ appliquée à la suite (S).
+\vskip .3cm
+{
+Proposition {\bf 5.16}. --- \it Soit $(X, A, J)$ un idéotope, avec $A$ un anneau local \emph{régulier de dimension $r$} et $J$ son idéal maximal. Étant donnés deux $A$-faisceaux $E$ et $F$ sur $X$, on a 
+$$
+\cTor_i (E, F) = 0 \quad (i \geq 2r+1)
+$$
+Si de plus $F$ est presque plat, alors
+$$
+\cTor_i(E, F) = 0 \quad (i \geq r+1)
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Nous utiliserons le lemme suivant, qui peut-être utile en soi.
+\vskip .3cm
+{
+Lemme {\bf 5.16.1}. --- \it Pour tout $A$-faisceau $G$ et tout $A$-module de type fini $M$, on a 
+$$
+\cTor_i(M, G) = 0 \quad (i > \text{dp}_A(M)).
+$$
+}
+\vskip .3cm
+Pour le voir, on utilise (5.11), en prenant une résolution plate de $M$ définie par une résolution de longueur $\text{dp}_A(M)$ du $M$--module $M$ par des $A$--modules libres de type fini.
+
+Le lemme montre que pour tout $A$-faisceau $F$ et toute suite exact
+$$
+0\to Z_r \to L_{r-1} \to L_{r-2} \to \dots \to L_1 \to L_0 \to F \to 0,
+$$
+avec les $L_i$ des $A$-faisceaux plats, le $A$-faisceau $Z_r$ est presque plat. Faisant de même pour $E$, ce qui fournit un $A$-faisceau presque plat $Y_r$, on a de fa\c{c}on classique des isomorphismes
+$$
+\cTor_{i+2r}(E, F) \isom \cTor_i(Y_r, Z_r) \quad (i \geq 1)
+$$
+d'où le fait que 
+$$
+\cTor_i(E, F) = 0 \quad (i \geq 2r+1)
+$$
+grâce à (5.15.2). L'assertion analogue lorsque $F$ est presque plat se voit de même.
+
+\vskip .3cm
+{
+Corollaire {\bf 5.16.1}. --- \it Sous les hypothèses de (5.16), il existe pour tout $A$-faisceau $F$ sur $X$ une suite exacte
+$$
+0 \to P_{2r} \to P_{2r-1} \to \dots \to P_{1} P_{0} \to F \to 0
+$$
+de $A$-faisceaux, avec $P_i$ plat sur $i \in [0, 2r]$.
+}
+\vskip .3cm
+
+\emph{A partir de maintenant, l'anneau $A$ et l'idéal $J$ sont de nouveau quelconques}. 
+\vskip .3cm
+{\bf 5.17}. Soient $X$ et $Y$ deux topos et $f: X \to Y$ un morphisme de topos. Choisissons un foncteur image réciproque
+$$
+f^*: A-\Mod_Y \to A-\Mod_X.
+$$
+On rappelle qu'on en déduit pour tout couple $(P, Q)$ de $A_{nY}$--Modules ($i$ entier $\geq 0$) et tout entier $i \geq 0$ un isomorphisme fonctoriel
+$$
+\alpha_i: \cTor^{A_n}_i(f^* P, f^* Q) \isomlong f^* \cTor^{A_n}_i(P, Q),
+$$
+et que la collection des $\alpha_i$ définit un isomorphisme de foncteurs cohomologiques de $A_n-\Mod_X$. Appliquant ces isomorphismes aux composants des systèmes projectifs, on en déduit sans peine un isomorphisme analogue de bifoncteurs cohomologiques de $\mathcal{E}(Y, J)$ dans $\mathcal{E}(X, J)$. Enfin, un passage au quotient immédiat fournit un \emph{isomorphisme de bifoncteurs cohomologiques} de $A-\fsc(Y)$ dans $A-\fsc(X)$ :
+$$
+(\cTor_i(f^*E, f^* F) \isomlong f^* \cTor_i(E, F))_{i \in \mathbf{N}}.
+\leqno{(5.17.1)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 5.17.2}. --- \it Pour tout $A$-faisceau quasilibre (5.7) $L$ sur $Y$, le $A$-faisceau $f^*(L)$ est quasilibre.
+}
+\vskip .3cm
+{\bf Preuve} : L'assertion résultera du fait, appliqué aux composants de $L$, que si $B$ est un anneau et $H$ un faisceau d'ensembles sur $Y$, alors $f^*(B_H) \isom G_{f^* (H)}$. Faute de référence, montrons comment on voit ce dernier point. Si $M$ est un $B_X$--Module, on a la suite d'isomorphismes
+\[\begin{tikzcd}
+	{(1)} && {\Hom_B(f^*(B_H), M) \isom \Hom_B(B_H, f_*(M))} \\
+	{(2)} && {\Hom_B(B_H, f_*(M)) \isom \Hom_{\Ens}(H, f_*(M))} \\
+	{(3)} && {\Hom_{\Ens}(H, f_*(M)) \isom \Hom_{\Ens}(f_*(H), M)} \\
+	{(4)} && {\Hom_{\Ens}(f^*(H), M) \isom \Hom_B(B_{f_*(H)}, M),}
+\end{tikzcd}\]
+les isomorphismes d'ordre impair provenant de la formule d'adjonction entre $f_*$ et $f^*$, et ceux d'ordre pair traduisant les définitions respectives de $B_H$ et $B_{f^*(H)}$. L'égalité annoncée en résulte aussitôt. 
+\vskip .3cm
+{\bf 5.18}. Soient $X$ un topos, $T$ et $T'$ deux objets de $X$ et $i: T \to T'$ un morphisme \emph{quasicompact}. On note de même le morphisme de topos
+$$
+i: X/T \to X/T'
+$$
+correspondant. Si $E = (E_n)_{n \in \mathbf{N}}$ et $F = (F_n)_{n \in \mathbf{N}}$ sont respectivement un $A$-faisceau sur $T$ et un $A$-faisceau sur $T'$, les isomorphismes de projection (SGA4 IV 2.13)
+$$
+i_!(E_n \otimes_A i^* (F_n)) \isomlong i_!(E_n) \otimes_A F_n
+$$
+définissent un morphisme de $\mathcal{E}(T', J)$
+$$
+i_!(E \otimes i^* (F)) \isomlong i_!(E) \otimes F,
+\leqno{(5.18.1)}
+$$
+d'où un isomorphisme bifonctoriel de $A-\fsc(T')$.
+
+En particulier, on en déduit pour tout $A$-faisceau $F$ sur $T'$ un isomorphisme fonctoriel en $F$
+$$
+F \otimes i_!(A) \isom i_! i^* (F).
+\leqno{(5.18.2)}
+$$
+De cette dernière formule, on déduit pour tout  couple $(F, G)$ de $A$-faisceaux sur $T'$ un isomorphisme fonctoriel
+$$
+i_! i^*(F \otimes G) \isom (i_! i^* F) \otimes G.
+\leqno{(5.18.3)}
+$$
+Supposons maintenant que $i$ soit un monomorphisme, autrement dit que $T$ définisse un ouvert de $X/T'$, auquel cas nous dirons que $i$ est une \emph{immersion ouverte}. Alors on définit comme suit pour tout couple $(F, F')$ de $A$-faisceaux sur $T$ un isomorphisme fonctoriel
+$$
+i_!(F \otimes F') \isom i_!(F) \otimes i_!(F').
+\leqno{(5.18.4)}
+$$
+L'isomorphisme évident $i^* i_! \isom \id$ fournit un isomorphisme
+$$
+i_!(F \otimes F') \isom i_!(F \otimes i^* i_! F')
+$$
+qui, composé avec l'isomorphisme de projection (5.18.1)
+$$
+i_!(F \otimes i^* i_! F') \isom i_!(F) \otimes i_!(F'),
+$$
+donne l'isomorphisme désiré.
+\vskip .3cm
+{
+Proposition {\bf 5.18.5}. --- \it Soient $X$ un topos et $i: T \to T'$ un morphisme quasicompact d'objets de $X$.
+\begin{itemize}
+    \item[(i)] Pour tout $A$-faisceau quasilibre (resp. plat) $L$ sur $T$, le $A$-faisceau $i_!(L)$ est quasilibre (resp. plat). 
+    \item[(ii)] Si de plus $i$ est une immersion ouverte, alors pour tout $A$-faisceau plat $P$ sur $T'$, le $A$-faisceau $i^* (P)$ est plat.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : (i) Supposons d'abord $L$ quasilibre. Pour voir que $i_! L$ l'est également, il suffit de montrer que pour tout anneau $B$ et tout objet $u: H \to T$ de $X/T$, on a un isomorphisme
+$$
+i_!(B_u) \isom B_{i \circ u},
+$$
+ce qui se voit comme en (5.17.2), en utilisant cette fois l'adjonction entre $i_!$ et $i^*$. Montrons maintenant que si $L$ est plat, alors $i_!(L)$ l'est aussi.
+
+Par (5.18.1), le foncteur $M \mapsto i_!(L) \otimes M$ est isomorphe au foncteur $M \mapsto i_!(L \otimes i^*(M))$. Or ce dernier est exact, puisque $i_!$, $i^*$ et le foncteur $P \to L \otimes P$ sont exacts. D'où l'assertion. (ii) Il s'agit de voir que si $u: L \to M$ est un monomorphisme de $A$-faisceaux sur $T'$, le morphisme
+$$
+L \otimes i^*(P) \xlongrightarrow{u \otimes \id} M \otimes i^*(P)
+$$
+est un monomorphisme. Comme $i^* i_! \isom \id$, il suffit de voir que le morphisme $i_!(u \otimes \id)$ est un monomorphisme. Or celui-ci est isomorphe d'après (5.18.1) au morphisme
+$$
+i_!(L) \otimes P \xlongrightarrow{i_! (u) \otimes \id} i_! (M) \otimes P,
+$$
+qui est un monomorphisme puisque $i_!$ est exact à gauche et $P$ plat.
+
+
+
+\vskip .3cm
+{\bf 5.19}. Soient $X$ un topos, $U$ un ouvert de $X$ et $Y$ le topos fermé complémentaire. On note
+$$
+j: Y \to X
+$$
+le morphisme canonique. Dans ces conditions, mutatis mutandis, le formulaire (5.18.1) à (5.18.4) reste valable, à condition d'y remplacer le formule $i_!$ par le foncteur $j_*$ et $i^*$ par $j^*$. (Preuves identiques).
+
+De même on a l'énoncé suivant.
+\vskip .3cm
+{
+Proposition {\bf 5.19.1}. --- \it  
+\begin{itemize}
+    \item[(i)] Si $L$ est un $A$-faisceau plat sur $Y$, le $A$-faisceau $j_*(L)$ est plat. 
+    \item[(ii)] Si $P$ est un $A$-faisceau plat sur $X$, le $A$-faisceau $j^*(P)$ est plat.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Analogue à celle de (5.18.5), à condition encore de remplacer $i_!$ par $j_*$.
