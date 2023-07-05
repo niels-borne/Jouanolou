@@ -31,7 +31,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review
 - [ ] Prepublication
       
-#### I. Catégorie des faisceaux sur un idéotope ([discussion](https://github.com/carmonamateo/Jouanolou/issues/5))
+#### I. Catégorie des faisceaux sur un idéotope
   ##### 1. [Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
   ##### 2. [Cas où l'objet final de X est quasicompact](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.2.tex)
   ##### 3. [A-faisceaux de type constant, strict ou J-adique](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.3.tex)
@@ -42,12 +42,12 @@ Grothendieck says in Récoltes et Semailles
   ##### 8. [Changement d'anneau](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.8.tex)
 
 
-#### II. Conditions de finitude ([discussion](https://github.com/carmonamateo/Jouanolou/issues/4))
+#### II. Conditions de finitude
   ##### 1. [Catégorie des A-faisceaux constructibles](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.1.tex)
   ##### 2. [Conditions de finitude dans les catégories dérivées](https://github.com/carmonamateo/Jouanolou/blob/main/II/II.2.tex)
 
 
-#### III. Applications aux schémas ([discussion](https://github.com/carmonamateo/Jouanolou/issues/3))  
+#### III. Applications aux schémas
   ##### 1. [Opérations externes](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.1.tex)
   ##### 2. [Dualité](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.2.tex)
   ##### 3. [Formalisme des fonctions L](https://github.com/carmonamateo/Jouanolou/blob/main/III/III.3.tex)
