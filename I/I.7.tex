@@ -1,1 +1,1403 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{7. Catégories dérivées.}
+\addcontentsline{toc}{subsection}{7. Catégories dérivées}
 
+\vskip .3cm
+{\bf 7.1}. Soit $(X, A, J)$ un idéotope. On convient de poser, désignant l'un des symboles $+, -, b$ ou ``vide''
+$$
+\K^*(X, A) = \K^*(A-\fsc(X))
+$$
+$$
+\D^*(X, A) = \D^*(A-\fsc(X)).
+$$
+On prendre garde de ne pas confondre ces catégories avec les catégories $\K^*(A-\Mod_X)$ et $\D^*(A-\Mod_X)$, pour lesquelles on fait d'habitude des conventions analogues.
+
+Reprenant les notations de (3.5), le foncteur canonique (3.5.1)
+$$
+\mathscr{E}_X: J-\Mod_X \to A-\fsc(X)
+$$
+est exact et induit donc des foncteurs exacts
+$$
+\D^*(\mathscr{E}_X): \D^*(J-\Mod_X) \to \D^*(X, A).
+\leqno{(7.1.1)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.1.2}. --- \it On suppose que l'objet final de $X$ est quasicompact. Alors le foncteur (7.1.1)
+$$
+\D^+(\mathscr{E}_X): \D^+(J-\Mod_X) \to \D^+(X, A)
+$$
+$$
+\text{(resp.} \quad \D^b(\mathscr{E}_X): \D^b(J-\Mod_X) \to \D^b(X, A) \quad )
+$$
+est pleinement fidèle et induit une équivalence avec la sous-catégorie, triangulée, pleine de $\D^+(X, A)$ (resp. $\D^b(X, A)$) engendrée par les complexes dont la cohomologie appartient à $\TC(X, J)$ (3.6).
+}
+\vskip .3cm
+{\bf Preuve} : Comme $\TC(X, J)$ est une sous-catégorie exacte de $A-\fsc(X)$ les sous-catégories plaines engendrés par les complexes à cohomologie dans $\TC(X, J)$ sont des sous-catégories triangulées de $\D^+(X, A)$ et $\D^b(X, A)$ respectivement. Pour montrer la proposition il suffit de voir que les objets de $\TC(X, J)$ vérifient relativement aux $A$-faisceaux les conditions duales de EGA $0_{III}$ II.9.I).
+\vskip .3cm
+{
+Lemme {\bf 7.1.3}. --- \it Pour tout monomorphisme $u: F \to G$ de $A-\fsc(X)$ avec $F$ un objet de $\TC(X, J)$, il existe un morphisme $v: G \to K$, avec $K$ un objet de $\TC(X, J)$ tel que le morphisme composé $v \circ u$ soit un monomorphisme.  
+}
+\vskip .3cm
+On peut supposer $F$ de la forme $\mathcal{E}_X (M)$, avec $M$ un $A_X$--Module annulé par une puissance de $J$. Alors (3.9), le morphisme $u$ est l'image d'un morphisme de $\mathcal{E}(X, J)$, qu'on notera de même. Dans $\mathcal{E}(X, J)$, le $A$-faisceau $\Ker(u)$ est négligeable, donc essentiellement nul puisque l'objet final de $X$ est quasicompact. Comme $\mathcal{E}_X(M)$ est essentiellement constant, il existe donc un entier $p$ tel que 
+$$
+\Ker(u)_n = 0 \quad \text{pour} \quad n \geq p.
+$$
+Soit alors $K$ le $A$-faisceau défini par 
+$$
+K_n = 
+\begin{cases}
+    G_p \quad n \geq p \\
+    0 \quad n < p
+\end{cases}
+$$
+avec pour morphismes de transition l'identité en degrés $\geq p$ et $0$ ailleurs. Les morphismes de transition de $G$ définissent de fa\c{c}on évidente dans $\mathcal{E}(X, J)$ un morphisme
+$$
+v: G \to K,
+$$
+tel que le composé $v \circ u$ définisse un monomorphisme de $A-\fsc(X)$. Par ailleurs $K = \mathcal{E}_X(G_p)$ dans $A-\fsc(X)$, d'où le lemme.
+\vskip .3cm
+{\bf 7.2}. Les propriétés générales des $A$-faisceaux plats (5.9) et (5.9.1) permettent de leur appliquer les arguments de ((CD) p.41 th.2.2.) et ((H) II 4). Ainsi, on peut définir au moyen des résolutions plates un bifoncteur dérivé du produit tensoriel
+$$
+\underline{\otimes}: \D^-(X, A) \times \D^-(X, A) \to \D^-(X, A),
+\leqno{(7.2.1)}
+$$
+vérifiant les propriétés de commutativité et d'associativité habituelles.
+\vskip .3cm
+{\bf 7.2.2}. Soit $K$ un complexe borné supérieurement de $A$-faisceaux. On dit que $K$ est \emph{de tor-dimension finie} s'il vérifie l'une des propriétés équivalentes suivantes : 
+\begin{itemize}
+    \item[(i)] Il existe deux entiers $m$ et $n$ tels que l'on ait
+    $$
+    \mathrm{H}^i(K \underline{\otimes} E) = 0 \quad \text{pour} \quad i \notin [m, n]
+    $$
+    et pour tout $A$-faisceau $E$.
+    \item[(ii)] Il existe un quasi-isomorphisme $u: L \to K$, avec $L$ un complexe borné et à composants plats.
+\end{itemize}
+L'équivalence se montre en paraphrasant la preuve de (SGA4 \quad). La sous-catégorie plaine de $\D^-(X, A)$ engendrée par les complexes de tor-dimension finie est une sous-catégorie triangulée, notée 
+$$
+\D^-(X, A)_{\torf}.
+$$
+Utilisant des résolutions plates bornées pour le composant de gauche, on définit un bifoncteur dérivé du produit tensoriel
+$$
+\underline{\otimes}: \D^-(X, A)_{\torf} \times \D (X, A) \to \D(X, A)
+\leqno{(7.2.3)}
+$$
+coïncidant avec (7.2.1) sur leur domaine commun de définition.
+\vskip .3cm
+{\bf 7.2.4}. Supposons maintenant que $A$ soit un anneau local régulier et $J$ son idéal maximal. Il résulte alors de (5.16.1) et de ((CD) p.25 lemme 1) que pour tout complexe $K$ de $A$-faisceaux sur $X$, il existe un complexe $P$ de $A$-faisceaux plats et un quasi-isomorphisme
+$$
+P \to K,
+$$
+le complexe $P$ pouvant être pris borné (resp. borné inférieurement, resp. borné supérieurement) si $K$ l'est. En particulier, les complexes parfaits s'identifient à isomorphisme près aux complexes bornés. A partir de là, les arguments de ((CD) p.41 th.2.2) et de ((H) II 4) permettent de définir au moyen d'une résolution plate du terme de gauche, des bifoncteurs dérivés du produit tensoriel
+\[\begin{tikzcd}
+	{\D^+(X, A) \times \D^+(X, A)} & {\D^+(X, A)} \\
+	{\D^b(X, A) \times \D^*(X, A)} & {\D^*(X, A),}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+\end{tikzcd}\leqno{\underline{\otimes}}\]
+coïncidant avec (7.2.1) sur leur domaine commun de définition, et vérifiant les propriétés de commutativité et d'associativité habituelles.
+\vskip .3cm
+{\bf 7.2.5}. Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. Dans chacun des cas où nous avons défini $K \otimes L$, nous poserons
+$$
+\cTor^A_i(K, L) = \mathrm{H}^{-i}(K \underline{\otimes} L) \quad (i \in \mathbf{Z}).
+$$
+Si $E$ et $F$ sont deux $A$-faisceaux, alors, notant de même les complexes de degré zéro associés, on retrouve à isomorphisme près (5.11) les bifoncteurs $\cTor^A_i(E, F)$ définis en (5.1).
+\vskip .3cm
+{\bf 7.3}. Soient $K$ et $L$ deux complexes de $A$-faisceaux. On suppose que 
+\begin{itemize}
+    \item ou bien $K$ est borné supérieurement et $L$ borné inférieurement. 
+    \item ou bien $K$ est borné inférieurement et $L$ borné supérieurement.
+    \item ou bien l'un des deux est borné.
+\end{itemize}
+On définit alors un nouveau complexe
+$$
+\cHom^\bullet_A (K, L)
+$$
+comme suit. Pour tout $n \in \mathbf{Z}$, son $n^{\text{ème}}$ terme est 
+$$
+(\cHom^\bullet_A (K, L))^n = \bigoplus_{p \in \mathbf{Z}} \cHom_A (K^p, L^{p+n})
+$$
+(somme directe finie), et sa différentielle de degré $n$ est donnée de fa\c{c}on claire par la formule
+$$
+d^n_{\cHom^\bullet_A(K, L)} = \cHom_A (d_K, \id_L) + (-1)^{n+1}\cHom_A (\id_K, d_L).
+$$
+Comme d'habitude, on en déduit des bifoncteurs exacts, notés $\cHom^\bullet_A:$
+\[\begin{tikzcd}
+	{\K^+(X, A)^\circ \times \K^-(X, A)} & {\K^-(X, A),} \\
+	{\K^-(X, A)^\circ \times \K^+(X, A)} & {\K^+(X, A),} \\
+	{\K^b(X, A)^\circ \times \K(X, A)} & {\K(X, A),} \\
+	{\K(X, A)^\circ \times \K^b(X, A)} & {\K(X, A),}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=4-1, to=4-2]
+\end{tikzcd}\]
+qui coïncident sur leurs domaines communs de définition.
+
+Soit $\K^-(X, A)_{\ql}$ la sous-catégorie triangulée plaine de $\K^-(K, A)$ engendrée par les complexes bornés supérieurement et quasilibres en tout degré, et $\D^-(X, A)_{\ql}$ la catégorie triangulée obtenue à partir de $\K^-(X, A)_{ql}$ en inversant les quasi-isomorphismes. Comme il y a suffisamment de $A$-faisceaux quasilibres, le foncteur canonique
+$$
+\D^-(X, A)_{\ql} \to \D^-(X, A)
+\leqno{(7.3.1)}
+$$
+est une équivalence de catégories ((CD) cor.2 p.43).
+
+De même, notons $\K^+(X, A)_{\fl}$ la sous-catégorie triangulée pleine de $\K^+(X, A)$ engendrée par les complexes bornés inférieurement et flasques en tout degré et $\D^+(X, A)_{\fl}$ la catégorie triangulée que l'on en déduit en inversant les quasi-isomorphismes. Comme il y a suffisamment de $A$-faisceaux flasques, le foncteur canonique
+$$
+\D^+(X, A)_{\fl} \to \D^+(X, A)
+\leqno{(7.3.2)}
+$$
+est une équivalence de catégories.
+\vskip .3cm
+{
+Lemme {\bf 7.3.3}. --- \it Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$, avec $K$ borné supérieurement et flasque, et $L$ borné inférieurement et flasque. Si l'un d'eux est acyclique, alors le complexe $\cHom^\bullet_A (K, L)$ est acyclique. 
+}
+\vskip .3cm
+{\bf Preuve} : Montrons-le lorsque $L$ est acyclique, le cas où $K$ est acyclique se traitant de fa\c{c}on analogue. Lorsque $K$ est ``réduit au degré zéro'', on le voit par un argument de récurrence classique à partir de (6.7.2.(i)). Soit maintenant $M^{\bullet \bullet}$ le double complexe de terme général
+$$
+M^{p, q} = \cHom_A (K^{-p}, L^q),
+$$
+et dont les deux différentielles sont déduites de fa\c{c}on évidente de celles de $K$ et $L$ respectivement. Rappelant que $\cHom^\bullet_A (K, L)$ est le complexe simple associé à $M^{\bullet \bullet}$, l'assertion résulte dans le cas général de la suite spectrale birégulière
+$$
+\mathrm{H}^p_I \mathrm{H}^{q}_{II} (M^{\bullet \bullet}) \Rightarrow \mathrm{H}^{p+q}(\cHom^\bullet_A(k, L)).
+$$
+Le lemme (7.3.3) permet par passage au quotient de définir un bifoncteur exact
+$$
+\D^-(X, A)^\circ_{\ql} \times \D^+(X, A)_{\fl} \to \D^+(X, A),
+$$
+d'où, compte tenu des équivalences (7.3.1) et (7.3.2), un bifoncteur exact : 
+$$
+\bRd \cHom_A : \D^-(X, A)^\circ \times \D^+(X, A) \to \D^+(X, A).
+\leqno{(7.3.4)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.3.5}. --- \it Étant donnés deux $A$-faisceaux $E$ et $F$ sur $X$, on a pour tout $i \in \mathbf{Z}$ un isomorphisme fonctoriel
+$$
+\cExt^i_A(E, F) \isomlong \mathrm{H}^i(\bRd \cHom_A (E, F)).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Soit, dans $\mathcal{E}(X, J)$, $U^\bullet$ (resp. $V^\bullet$) une résolution quasilibre (resp. flasque) de $E$ (resp. $F$). Par définition, la deuxième membre est isomorphe à 
+$$
+\mathrm{H}^i(\cHom^\bullet_A (U^\bullet, V^\bullet)),
+$$
+soit, comme les limites inductives filtrantes de faisceaux abéliens commutent aux suites exactes, au $A$-faisceau
+$$
+(\varinjlim_m \mathrm{H}^i \cHom^\bullet_A ((U^\bullet)_m , (V^\bullet)_n))_{n \in \mathbf{N}}.
+$$
+A des vérifications immédiates de commutativité de diagrammes près, on est ramené à voir que 
+$$
+\mathrm{H}^i(\cHom^\bullet_A ((U^\bullet)_m , (V^\bullet)_n)) = \cExt^i_{A_m}(E_m, F_n).
+$$
+Utilisant (6.5.3), on voit que le premier membre ne change pas si on y remplace $(V^\bullet)_n$ par une résolution $A_m$-injective de $F_{n}$, d'où l'assertion.
+
+Soient $K \in \D^-(X, A)$ et $L \in \D^+(X, A)$. La proposition (7.3.5) permet de poser sans ambiguïté
+$$
+\cExt^i_A(K, L) = \mathrm{H}^i (\bRd \cHom_A (K, L)).
+\leqno{(7.3.6)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.3.7}. --- \it Soient $K \in \D^-(X, A)$ et $L \in \D^+(X, A)$. On a des suites spectrales birégulières :  
+$$
+E^{p, q}_1 = \cExt^q_A (K, L^p) \Rightarrow \cExt^{p+q}_A (K, J).
+\leqno{(7.3.7.1)}
+$$
+$$
+E^{p, q}_2 = \cExt^p_A (K, \mathrm{H}^q(L)) \Rightarrow \cExt^{p+q}_A (K, J).
+\leqno{(7.3.7.2)}
+$$
+$$
+E^{p, q}_1 = \cExt^q_A (K^{-p}, L) \Rightarrow \cExt^{p+q}_A (K, J).
+\leqno{(7.3.7.3)}
+$$
+$$
+E^{p, q}_2 = \cExt^p_A (\mathrm{H}^{-q}(K), L) \Rightarrow \cExt^{p+q}_A (K, J).
+\leqno{(7.3.7.4)}
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Nous montrerons les deux premières, les deux autres se montrant de fa\c{c}on duale. Nous nous appuierons sur le lemme suivant, bien connu lorsque le foncteur cohomologique en question est la cohomologie des complexes, et qui se démontre par la méthode des couples exacts.
+\vskip .3cm
+{
+Lemme {\bf 7.3.8}. --- \it Soient $C$ une catégorie abélienne, et $(T^i)_{i \in \mathbf{Z}}$ un foncteur cohomologique de $C$ dans une catégorie abélienne $D$. Soit $K$ un objet de $C$ muni d'une filtration décroissante $(F^p K)_{p \in \mathbf{Z}}$. On suppose que : 
+\begin{itemize}
+    \item[(i)] Pour tout $n \in \mathbf{Z}$, il existe un $p(n) \in \mathbf{Z}$ tel que le morphisme 
+    $$
+    T^n(F^{p(n)} K) \to T^n(K)
+    $$
+    déduit de l'inclusion soit un isomorphisme.
+    \item[(ii)] Pour tout $n \in \mathbf{Z}$, il existe un $q(n) \in \mathbf{Z}$ tel que
+    $$
+    T^n(F^p K) = 0 \quad \text{pour} \quad p \geq q(n).
+    $$
+    Alors, il existe une suite spectrale birégulière
+    $$
+    E^{p, q}_1 = T^{p+q}(F^p K / F^{p+1}K) \Rightarrow T^{p+q}(K).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+Montrons (7.3.7.1). On prend pour catégorie $C$ la catégorie $C^+(A-\fsc(X))$ des complexes bornés inférieurement de $A$-faisceaux, comme foncteur cohomologique $(\cExt^i_A(K, .))_{i \in \mathbf{Z}}$ et on munit $L$ de la filtration
+$$
+F^p(L) = \dots \to 0 \to 0 \to \dots \to 0 \to L^p \to L^{p+1} \to \dots \to L^i \to \dots 
+$$
+Alors, $L/F^p(L) = \dots \to L^i \to \dots \to L^{p-1} \to 0 \to 0 \to 0 \dots$. Étant donné un entier $r$, on voit sans peine, pour des raisons de degrés, que $T^r(L/F^p L) = 0$ pour $p$ assez petit. D'où l'assertion (i) dans ce cas. L'assertion (ii) se voit de même. On en déduit donc une suite spectrale birégulière
+$$
+E^{p, q}_1 = \cExt^{p+q}_A (K, F^p L / F^{p+1} L) \Rightarrow \cExt^{p+q}_A (K, L),
+$$
+d'où l'assertion car $F^p L / F^{p+1} L \isom L^p (-p)$.
+
+Montrons (7.3.7.2). On prend le même foncteur cohomologique et on munit cette fois $L$ de la filtration 
+$$
+F^p (L) = \dots \to K^i \to \dots \to K^{-p-1} \to \Ker(d^{-p}) \to 0 \to 0 \dots 
+$$
+de sorte que $F^pL/F^{p+1} L \isom \mathrm{H}^{-p}(L)(p)$. On vérifie sans peine que les conditions du lemme sont encore vérifiées dans ce cas, d'où une suite spectrale birégulière
+$$
+\overline{E}^{p, q}_1 = \cExt^{2p+q}_A (K, \mathrm{H}^{-q}(L)) \Rightarrow \cExt^{p+q}_A (K, L) = \overline{E}^{p+q}.
+$$
+On en déduit la suite spectrale annoncée en posant
+$$
+E^n = \overline{E}^n \quad (n \in \mathbf{Z}).
+$$
+$$
+F^p E^n = F^{p-n}(\overline{E}^n)
+$$
+$$
+E^{p, q}_r = \overline{E}^{-q, p+2q}_{r-1} \quad (r \geq 2),
+$$
+sans changer les différentielles.
+
+Nous allons maintenant indiquer, surtout à titre d'exercice, un autre cas où, étant donnés deux complexes de $A$-faisceaux sur $X$, on peut définir $\bRd \cHom_A (K, L)$.
+\vskip .3cm
+{
+Définition {\bf 7.3.8}. --- \it On dit qu'un $A$-faisceaux $E = (E_n)_{n \in \mathbf{N}}$ sur $X$ est \emph{pesudolibre} si pour tout $n \in \mathbf{N}$, le $A_n$--Module $E_n$ est localement libre de type fini.
+}
+\vskip .3cm
+{
+Lemme {\bf 7.3.9}. --- \it Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$, dont l'un est acyclique. On suppose que $K$ est borné (resp. borné supérieurement) et à composants pseudolibres, et que $L$ est arbitraire (resp. borné supérieurement). Alors le complexe $\cHom^\bullet_A(K, L)$ est acyclique.
+}
+\vskip .3cm
+{\bf Preuve} : Analogue à celle de (7.3.3), compte tenu du fait, évident sur les définitions, que si $E$ et $F$ sont deux $A$-faisceaux sur $X$, avec $E$ pseudolibre, alors on a 
+$$
+\cExt^i_A (E, F) = 0 \quad (i \geq 1).
+$$
+On déduit du lemme que, étant donné un complexe de $A$-faisceaux $K$ borné (resp. borné supérieurement) à composants des $A$-faisceaux pseudolibres, le foncteur $\cHom^\bullet_A$ est dérivable, d'où un foncteur exact
+$$
+\bRd \cHom_A (K, .) : \D(X, A) \to \D(X, A)
+\leqno{(7.3.10)}
+$$
+$$
+\text{(resp.} \quad \D^+(X, A) \to \D^+(X, A)).
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.3.11}. --- \it Soit $K$ un complexe borné supérieurement à composants des $A$-faisceaux pseudolibres sur $X$. Les deux foncteurs exacts
+$$
+\bRd \cHom_A (K, .) : \D^+(X, A) \to \D^+(X, A)
+$$
+induits par (7.3.4) et (7.3.10) respectivement, sont égaux.
+}
+\vskip .3cm
+{\bf Preuve} : Soit $L$ un complexe borné supérieurement, et soient $u: P \to K$ et $v: L \to F$ respectivement une résolution quasilibre de $K$ et une résolution flasque de $L$. Nous allons voir que le morphisme de complexes
+$$
+\cHom^\bullet_A (u, v): \cHom^\bullet_A (K, L) \to \cHom^\bullet_A(P, F)
+$$
+est un quasi-isomorphisme. De (7.3.9) résulte que le foncteur $\cHom^\bullet_A(K, .)$ transforme quasi-isomorphismes en quasi-isomorphismes, de sorte que l'on peut supposer que $L = F$. Utilisant alors le mapping-cylinder de $u$, on est ramené à prouver le lemme suivant, qui est une légère amélioration de (7.3.3).
+\vskip .3cm
+{
+Lemme {\bf 7.3.12}. --- \it Soient $K$ un complexe borné supérieurement et acyclique et $L$ un complexe flasque et borné inférieurement. On suppose que pour tout $n \in \mathbf{N}$, les composants du $A$-faisceau $K^n$ sont localement libres (de base un faisceau d'ensembles). Alors le complexe $\cHom^\bullet_A (K, L)$ est acyclique.
+}
+\vskip .3cm
+Montrons le lemme. Comme dans la preuve de (7.3.3), on est ramené à voir que si $Q$ est un $A$-faisceau flasque, alors pour tout $n \in \mathbf{Z}$
+$$
+\cExt^i_A (K^n, Q) = 0 \quad (i \geq 1).
+$$
+Or cela résulte sans peine de la définition (6.1) et de (6.5.3).
+\vskip .3cm
+{
+Corollaire {\bf 7.3.13}. --- \it Pour tout complexe de $A$-faisceaux $L$ sur $X$, on a un isomorphisme fonctoriel en $L$
+$$
+L \isom \bRd \cHom_A (A, L).
+$$
+}
+\vskip .3cm
+{\bf 7.3.14}. Bien entendu, on étend dans le nouveau contexte la définition (7.3.6). On laisse au lecteur le soin d'adapter (7.3.7).
+\vskip .3cm
+{\bf 7.4}. Soit $X$ un topos dont \emph{l'objet  final est quasicompact}.
+\vskip .3cm
+{\bf 7.4.1}. Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$, satisfaisant à l'une des hypothèses suivantes sur les degrés.
+\[\begin{tikzcd}
+	K & {-} & {+} & 0 & b \\
+	L & {+} & {-} & b & 0 & {.}
+\end{tikzcd}\]
+On définit alors comme suit un complexe, noté $\overline{\Hom}^\bullet_A (K, L)$, d'objets de $A-\fsc(\pt)$. Pour tout $n \in \mathbf{Z}$, son $n^{\text{ème}}$ terme est
+$$
+(\overline{\Hom}^\bullet_A (K, L))^n = \bigoplus_{p \in \mathbf{Z}} \overline{\Hom}_A (\id_K, d_L).
+$$
+On en déduit comme d'habitude des bifoncteurs exacts, notés $\overline{\Hom}_A$,
+\[\begin{tikzcd}
+	{\K^+(X, A)^\circ \times \K^-(X, A)} & {\K^-(\pt, A)} \\
+	{\K^-(X, A)^\circ \times \K^+(X, A)} & {\K^+(\pt, A)} \\
+	{\K^b(X, A)^\circ \times \K(X, A)} & {\K(\pt, A)} \\
+	{\K(X, A)^\circ \times \K^b(X, A)} & {\K(\pt, A).}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=3-1, to=3-2]
+	\arrow[from=4-1, to=4-2]
+\end{tikzcd}\]
+\vskip .3cm
+{
+Lemme {\bf 7.4.2}. --- \it Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. On suppose que 
+\begin{itemize}
+    \item[a)] $K \in \K^-(X, A)$ et est à composants quasilibres. 
+    \item[b)] $L \in \K^+(X, A)$ et est à composants flasques.
+\end{itemize}
+Alors si l'un des deux est acyclique, le complexe $\overline{\Hom}^\bullet_A(K, L)$ est acyclique.
+}
+\vskip .3cm
+{\bf Preuve} : Analogue à celle de (7.3.3), en utilisant cette fois (6.4.2. (i) b)) au lieu de (6.7.2. (i) a)).
+
+Le lemme (7.4.2) permet de définir, exactement comme dans (7.3) un bifoncteur exact
+$$
+\bRd \overline{\Hom}_A : \D^-(X, A)^\circ \times \D^+(X, A) \to \D^+(\pt, A).
+\leqno{(7.4.3)}
+$$
+\vskip .3cm
+{
+Lemme {\bf 7.4.4}. --- \it Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. On suppose que :
+\begin{itemize}
+    \item[a)] $K \in \K^-(X, A)$ et est à composants quasilibres. 
+    \item[b)] $L \in \K^+(X, A)$ et est à composants flasques et directement stricts.
+\end{itemize}
+Alors si $K$ ou $L$ est acyclique, le complexe $\Hom^\bullet_A (K, L)$ est acyclique.
+}
+\vskip .3cm
+{\bf Preuve} : D'après (2.8), le complexe $\Hom^\bullet_A (K, L)$ est obtenu en appliquant le foncteur $\varinjlim_{n \in \mathbf{N}}$ au complexe $\overline{\Hom}^\bullet_A(K, L)$. Or ce dernier est acyclique (7.4.2) et l'hypothèse sur $L$ implique que ses composants sont directement stricts. On conclut grâce à (EGA $0_{III}$ 13.2.2). 
+
+Comme précédemment, compte tenu de (6.6.3), le lemme (7.4.4) permet de définir un bifoncteur exact
+$$
+\bRd \Hom_A : \D^-(X, A)^\circ \times \D^+(X, A) \to \D^+(A-\mod). 
+\leqno{(7.4.5)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.4.6}. --- \it  
+\begin{itemize}
+    \item[(i)] Soient $E$ et $F$ deux $A$-faisceaux sur $X$. On a un isomorphisme de foncteurs cohomologiques
+    $$
+    \overline{\Ext}^i_A (E, F) \isomlong \mathrm{H}^i(\bRd \overline{\Hom}_A (E, F)) \quad (i \in \mathbf{Z}).
+    $$
+    \item[(ii)] Soient $K \in \K^-(X, A)$ et $L \in \K^+(X, A)$. On a un isomorphisme de foncteurs cohomologiques
+    $$
+    \Ext^i_A (K, L) \isomlong \mathrm{H}^i(\bRd \Hom_A (K, L)) \quad (i \in \mathbf{Z}).
+    $$
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Précisons tout d'abord que l'on a posé
+$$
+\Ext^i_A (K, L) \isom \Ext^i (K, L)
+$$
+pour uniformiser les notations. La preuve de (i), semblable à celle de (7.3.5), est laissé au lecteur. Montrons (ii) dans le cas $i = 0$, le cas général s'en déduisant aussitôt. On peut supposer $K$ quasilibre et $L$ à composants flasques et directement stricts. Alors, notant $\Hom_{ht}(K, L)$ les morphismes de $K$ dans $L$ dans la catégories $\K(X, A)$, on est ramené à prouver le corollaire suivant : 
+\vskip .3cm
+{
+Corollaire {\bf 7.4.7}. --- \it Soient $K \in \K^-(X, A)$ et $L \in \K^+(X, A)$. On suppose que $K$ est à composants quasilibres et $L$ à composants flasques et directement stricts. Alors l'application canonique
+$$
+\Hom_{\text{ht}}(K, L) \to \Hom_A (K, L)
+$$ 
+est une bijection.
+}
+\vskip .3cm
+Par définition, le deuxième membre est égal à 
+$$
+\varprojlim_{\delta : K' \to K} \Hom_{\text{ht}}(K', L),
+$$
+où $\delta$ parcourt les quasi-isomorphismes de but $K$. Comme parmi ces quasi-isomorphismes, ceux de source un complexe borné supérieurement et à composants quasilibres forment une famille cofinale, on est ramené à voir que pour tout quasi-isomorphisme $u: K' \to K$, avec un $K'$ borné supérieurement et quasilibre, le morphisme correspondant
+$$
+\Hom_{\text{ht}}(K, L) \to \Hom_{\text{ht}}(K', L)
+$$
+est une bijection. Désignant par $M$ le mapping-cylinder de $u$, on a un triangle exact de $\K(A-\mod)$ : 
+\[\begin{tikzcd}
+	& {\Hom^\bullet_A (M, L)(-1)} \\
+	{\Hom^\bullet_A (K, L)} && {\Hom^\bullet_A (K', L),}
+	\arrow[from=2-3, to=1-2]
+	\arrow["{d^\bullet_1}"', dashed, from=1-2, to=2-1]
+	\arrow["\alpha"', from=2-1, to=2-3]
+	\arrow["{\Hom^\bullet_A(u, \id)}", from=2-1, to=2-3]
+\end{tikzcd}\]
+et il s'agit de voir que $\mathrm{H}^0(\alpha)$ est un isomorphisme. Or $M$ est quasilibre et acyclique, donc (7.4.4) $\Hom^\bullet_A (M, L)$ est acyclique, d'où l'assertion.
+\vskip .3cm
+{
+Corollaire {\bf 7.4.8}. --- \it Soient $E$ et $F$ deux $A$-faisceaux sur $X$. On suppose que l'on est dans l'un des cas suivants : 
+\begin{itemize}
+    \item[(i)] $E$ est quasilibre et $F$ est flasque et directement strict. 
+    \item[(ii)] $E$ est fortement plat (6.7.1) et $F$ pseudo-injectif (6.6.1).
+\end{itemize}
+Alors on a 
+$$
+\Ext^i_A (E, F) = 0 \quad (i \geq 1).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Dans le premier cas, $\Rd \Hom_A (E, F) = \Hom_A (E, F)$ est réduit au degré 0. Dans le deuxième cas, soit $L^\bullet \to E$ une résolution quasilibre de $E$. De (6.7.2 (ii)) résulte que le complexe
+$$
+P = \overline{\Hom}^\bullet_A (L^\bullet, F)
+$$
+est acyclique en degrés $\geq 1$, et il s'agit de voir qu'il en est de même pour le complexe déduit de celui-ci en appliquant le foncteur $\varprojlim_{n \in \mathbf{N}}$. Comme les composants de $P$ sont directement stricts ainsi que $\mathrm{H}^0(P) = \overline{\Hom}_A (E, F)$, l'assertion résulte de (EGA $0_{III}$ 13.2.2)
+\vskip .3cm
+{
+Définition {\bf 7.4.9}. --- \it Soient $K \in \K^-(X, A)$ et $L \in \K^+(X, A)$. Pour tout $i \in \mathbf{Z}$ on pose
+$$
+\overline{\Ext}^i(K, L) = \mathrm{H}^i(\bRd \overline{\Hom}_A (K, L)).
+$$
+}
+\vskip .3cm
+Il résulte de (7.4.6 (i)) que cela ne prête pas à confusion.
+\vskip .3cm
+{
+Définition {\bf 7.4.10}. --- \it On note 
+$$
+\Rd \Gamma : \D^+(X, A) \to \D^+(A-\mod)
+$$
+$$
+\text{(resp.} \quad \Rd \overline{\Gamma} : \D^+(X, A) \to \D^+(\pt, A) \quad )
+$$
+le foncteur exact
+$$
+K \mapsto \bRd \Hom_A (A, K) = \bRd \Gamma (K) = \bRd \Gamma (X, K).
+$$
+$$
+\text{(resp.} \quad K \mapsto \bRd \overline{\Hom}_A (A, K) = \bRd \overline{\Gamma} (K) = \bRd \overline{\Gamma} (X, K). \quad )
+$$
+}
+\vskip .3cm
+Soit $E$ un $A$-faisceau sur $X$. Il résulte de (7.4.6 (i)) et (6.5.4) que l'on a des isomorphismes canoniques
+$$
+\overline{\mathrm{H}}^i(X, E) \isom \mathrm{H}^i(\bRd \overline{\Gamma}(E)) \quad (i \in \mathbf{Z}).
+$$
+Ceci permet de poser sans ambiguïté pour tout complexe borné inférieurement $K$
+$$
+\overline{\mathrm{H}}^i(X, K) = \mathrm{H}^i(\bRd \overline{\Gamma}(K)) \quad (i \in \mathbf{Z}).
+\leqno{(7.4.11)}
+$$
+Enfin, on posera de même
+$$
+\mathrm{H}^i(X, K) = \mathrm{H}^i(\bRd \Gamma(K)) \quad (i \in \mathbf{Z}).
+\leqno{(7.4.12)}
+$$
+\vskip .3cm
+{\bf 7.4.13}. On sait que la catégorie $\Pro(A-\mod)$ est abélienne et possède suffisamment d'objets $\varprojlim$ acycliques, ce qui permet de définir les foncteurs dérivés
+$$
+\varprojlim^{(i)}_A : \Pro(A-\mod) \to A-\mod 
+$$
+du foncteur limite projective. Plus précisément, on définit un foncteur dérivé
+$$
+\bRd (\varprojlim_A) : \D^+(\Pro(A-\mod)) \to \D^+(A-\mod)
+$$
+et pour tout pro-$A$-module $E$, on a 
+$$
+\varprojlim^{(i)}_A (E) \isom \mathrm{H}^i (\bRd \varprojlim_A (E)) \quad (i \in \mathbf{Z}).
+$$
+On rappelle que la structure de groupe abélien sous-jacente à $\varprojlim^{(i)}_A (E)$ ne dépend que de la structure de pro-groupe abélien sous-jacente à $E$. Si l'ensemble indexant $E$ est $\mathbf{N}$, on a 
+$$
+\varprojlim^{(i)}_A (E) = 0 \quad (i \geq 2),
+$$
+et même 
+$$
+\varprojlim^{(i)}_A (E) = 0 \quad (i \geq 1)
+$$
+lorsque $E$ vérifie la condition de Mittag-Leffler. On en déduit en particulier que lorsque $E$ est indexé par $\mathbf{N}$, on peut calculer les $\varprojlim^{(i)}_A (E)$ au moyen d'une résolution de $E$ par des pro-$A$-modules indexés par $\mathbf{N}$ et vérifiant la condition de Mittag-Leffler. Il résulte de là que le diagramme
+\[\begin{tikzcd}
+	{\D^+(\pt, A)} && {\D^+(\Pro(A-\mod))} \\
+	& {\D^+(A-\mod)}
+	\arrow["{\bRd \Gamma}"', from=1-1, to=2-2]
+	\arrow["{\bRd (\varprojlim_A)}", from=1-3, to=2-2]
+	\arrow["{\D^+(c)}", from=1-1, to=1-3]
+\end{tikzcd}\]
+dans lequel $C$ désigne l'inclusion canonique, est ommutatif. Ceci nous permettra dans ce cas d'identifier le plus souvent le foncteur $\bRd \Gamma$ (resp. $\mathrm{H}^i(\pt, .)$ et le foncteur $\bRd \varprojlim_A$ (resp. $\varprojlim^{(i)}_A$). 
+\vskip .3cm
+{
+Proposition {\bf 7.4.14}. --- \it Soient $K \in \D^-(X, A)$ et $L \in \D^+(X, A)$. On a un isomorphisme canonique
+$$
+\bRd \Hom_A (K, L) \isomlong \bRd (\varprojlim) \circ \Rd \overline{\Hom}_A (K, L).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : On peut supposer $K$ quasilibre et $L$ à composants flasques et directement stricts. Alors la formule résulte de l'isomorphisme 
+$$
+\Hom^\bullet_A (K, L) \isom \varprojlim_{n \in \mathbf{N}}\overline{\Hom}^\bullet_A (K, L)
+\leqno{(2.8)}
+$$
+et du fait que les composants de $\overline{\Hom}^\bullet_A (K, L)$ sont directement stricts.
+\vskip .3cm
+{
+Corollaire {\bf 7.4.15}. --- \it Soit $K \in \D^+(X, A)$. On a un isomorphisme fonctoriel
+$$
+\bRd \Gamma \isom \Rd (\varprojlim) \circ \Rd \overline{\Gamma}(K).
+$$
+}
+\vskip .3cm
+{
+Corollaire {\bf 7.4.16}. --- \it Soient $K \in \D^-(X, A)$ et $L \in \D^+(X, A)$. On a pour tout $i \in \mathbf{Z}$ des suites exactes de $A$--modules
+\begin{itemize}
+    \item[a)] $0 \to \varprojlim^{(1)}_A \overline{\Ext}^{i-1}_A (K, L) \to \Ext^i_A(K, L) \to \varprojlim_A \overline{\Ext}^i_A (K, L) \to 0$ 
+    \item[b)] $0 \to \varprojlim^{(1)}_A \overline{\mathrm{H}}^{i-1} (X, L) \to \mathrm{H}^i(X, L) \to \varprojlim_A \overline{\mathrm{H}}^i (X, L) \to 0$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : La suite exacte b) étant un cas particulier de a), nous avons seulement à montrer cette dernière. L'isomorphisme (7.4.14) donne lieu par la méthode des couples exacts (cf. thèse Verdier ou la preuve de 7.3.7) à une suite spectrale birégulière
+$$
+E^{i, j}_2 = \varprojlim^{(i)}_A \overline{\Ext}^j_A (K, L) \Rightarrow \Ext^{i+j}_A (K, L).
+$$
+Comme les systèmes projectifs considérés sont indexés par $\mathbf{N}$, on a $E^{i, j}_2 = 0$ pour $i \geq 2$, d'où aussitôt la suite exacte annoncée.
+\vskip .3cm
+{
+Corollaire {\bf 7.4.17}. --- \it Soient $E$ et $F$ deux $A$-faisceaux sur $X$, avec $F$ directement strict. Pour tout $i \in \mathbf{Z}$, le morphisme canonique
+$$
+\Ext^{i}_A(E, F) \to \varprojlim \overline{\Ext}^i_A(E, F)
+$$
+est un isomorphisme. En particulier, les morphismes canoniques
+$$
+\mathrm{H}^i(X, F) \to \varprojlim \overline{\mathrm{H}}^i(X, F)
+$$
+sont des isomorphismes.
+}
+\vskip .3cm
+{\bf Preuve} : L'hypothèse sur $F$ entraîne que pour tout $i \in \mathbf{Z}$, le système projectif $\overline{\Ext}^i_A (E, F)$ vérifie la condition de Mittag-Leffler, donc annule les foncteurs $\varprojlim^{(p)}_A$ pour $p \geq 1$. L'assertion résulte alors immédiatement de (7.4.16).
+\vskip .3cm
+{
+Proposition {\bf 7.4.18}. --- \it On suppose le topos $X$ et l'anneau $A$ \emph{noethériens}. Soient $K \in \D^-(X, A)$ et $L \in \D^+(X, A)$. On a des isomorphismes fonctoriels : 
+\begin{itemize}
+    \item[(i)] $\Rd \overline{\Hom}_A (K, L) \isom \bRd \overline{\Gamma}(X, \bRd \cHom_A (K, L))$.
+    \item[(ii)] $\bRd \Hom_A (K, L) \isom \bRd \Gamma(X, \bRd \cHom_A (K, L))$.
+    \item[(iii)] $\Hom_A (K, L) \isom \Hom_A(A, \bRd \cHom_A (K, L))$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : On peut supposer que les composants de $K$ sont quasilibres et ceux de $L$ pseudo-injectifs (6.6.1), donc directement stricts (6.6.3). Dans ce cas, les composants de $\cHom^\bullet_A (K, L)$ sont directement stricts et le lemme (7.4.19) ci-dessous montre qu'ils sont flasques. Alors les assertions (i) et (ii) proviennent de (6.2.2) et (6.3.12) respectivement. Grâce à (7.4.6 (ii)), on déduit (iii) de (ii) en appliquant le foncteur $\mathrm{H}^0$ aux deux membres.
+\vskip .3cm
+{
+Lemme {\bf 7.4.19}. --- \it Soient $T$ un topos localement noethérien, $A$ un anneau noethérien et $J$ un idéal de $A$. Étant donnés un $A$-faisceau quasilibre $E$ et un $A$-faisceau pseudo-injectif $F$ sur $T$, le $A$-faisceau
+$$
+\mathrm{H} = \cHom_A (E, F)
+$$
+est flasque.
+}
+\vskip .3cm
+Soit $n$ un entier $\geq 0$. D'après (6.6.3), le $n^{\text{ème}}$ composant de $H$ est de la forme
+$$
+\varinjlim_{p \geq n} \cHom_A (E_p , \bigoplus_{q \leq n} I_q)
+$$
+où pour tout $q$, $I_q$ est un $A_q$--Moule injectif. L'entier $q \geq n$ étant fixé, pour tout entier $p \geq n$, le $A_q$--Module $E_p/J^{q+1}E_p$ est plat, donc $\cHom_A (E_p, I_q)$ est un $A_q$--Module injectif. Les hypothèses sur $T$ et $A$ impliquent que la catégorie $A_q-\Mod_T$ est localement noethérienne, et par suite qu'une limite filtrante de $A_q$--Modules injectifs est un $A_q$--Module injectif. En particulier
+$$
+\varinjlim_{p \geq n} \cHom_A (E_p, I_q)
+$$
+est un $A_q$--Module injectif, donc flasque. L'assertion en résulte aussitôt.
+\vskip .3cm
+{\bf 7.4.20}. Soit $F = (F_n, u_n)_{n \in \mathbf{N}}$ un $A$-faisceau flasque et strict. On suppose que pour tout $n \geq 0$, le $A$--Module $\Ker(u_n)$ est flasque. Alors $\overline{\mathrm{H}}^i(X, F) = 0$ pour $i \geq 1$ et $\overline{\mathrm{H}}^0(X, F)$ est strict. Par (7.4.16), on en déduit que 
+$$
+\mathrm{H}^i(X, F) = 0 \quad (i \geq 1).
+$$
+Supposons maintenant que le topos $X$ possède suffisamment de points. Alors on voit, en utilisant ce qui précède et en se ramenant au cas où $F$ est strict, que pour tout $A$-faisceau $F$ vérifiant la condition de Mittag-Leffler, on a 
+$$
+\bRd \Gamma (X, F) \isom \Hom^\bullet_A (A, C^\bullet(F)),
+$$
+où $C^\bullet(F)$ désigne la résolution de Godement de $F$.
+\vskip .3cm
+{\bf 7.5}. Soit $(X, A, J)$ un idéotope. On rappelle que la catégorie $\Pro(A-\Mod_X)$ est abélienne et possède suffisamment d'objets $\varprojlim$ acycliques, ce qui permet de définir les foncteurs dérivés
+$$
+\varprojlim^{(i)}_A : \Pro(A-\Mod_X) \to A-\Mod_X \quad (i \geq 0)
+$$
+du foncteur limite projective. Plus précisément, on définit un foncteur dérivé à droite
+$$
+\bRd (\varprojlim_A): \D^+(\Pro(A-\Mod_X)) \to \D^+(A-\Mod_X),
+$$
+et pour tout $A$-faisceau $F$, on a 
+$$
+\varprojlim^{(i)}_A (F) = \mathrm{H}^i(\bRd \varprojlim_A (F)) \quad (i \in \mathbf{N}).
+$$
+\vskip .3cm
+{
+Lemme {\bf 7.5.1}. --- \it Soit $F = (F_n, u_n)_{n \in \mathbf{N}}$ un système projectif strict de $A$--Modules, dont les composants sont flasques. On suppose que pour tout $n$, de $A$--Module $\Ker(u_n)$ soit flasque. Alors on a :
+$$
+\varprojlim^{(i)}_A (F) = 0 \quad (i \geq 1).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Nous allons le voir par récurrence croissante sur l'entier $i$. Choisissons pour tout $n \geq 0$ un monomorphisme $F_n \to I_n$, avec $I_n$ un $A$--Module injectif. Posant pour tout $n \geq 0$
+$$
+G_n = \bigoplus_{i \neq n} I_i,
+$$
+on définit, avec les morphismes de transition évidents, un système projectif $G \varinjlim_A$-acyclique et un monomorphisme de $\underline{\Hom}(\mathbf{N}^0, A-\Mod_X)$
+$$
+v: F \to G.
+$$
+Notant $K$ le conoyau de $v$ dans $\underline{\Hom}(\mathbf{N}^0, A-\Mod_X)$, nous allons voir que la suite canonique
+$$
+0 \to \varprojlim_A (F) \to \varprojlim_A (G) \to \varprojlim_A (K) \to 0
+\leqno{(S)}
+$$
+est exacte, ce qui prouvera le lemme lorsque $i = 1$. Comme $F$ est à composants flasques, pour tout objet $T$ de $X$ la suite canonique 
+$$
+0 \to \overline{\Gamma}(T, F) \to \overline{\Gamma}(T, G) \to \overline{\Gamma}(T, K) \to 0
+\leqno{(T)}
+$$
+est exacte. Comme les noyaux des morphismes de transition de $F$ sont flasques, le système projectif de $A$--modules $\overline{\Gamma}(T, F)$ est strict ; par suite (EGA $0_{III}$ 13.2.2), la suite obtenue à partir de (T) en passant à la limite projective est encore exacte. Autrement dit, la suite canonique
+$$
+0 \to \Gamma(T, \varprojlim_A (F)) \to \Gamma (T, \varprojlim_A (G)) \to \Gamma(T, \varprojlim_A (K)) \to 0
+$$
+est exacte, d'où aussitôt l'exactitude de (S). On termine par récurrence en remarquant que $K$ vérifie les conditions du lemme et que l'on a des isomorphismes 
+$$
+\varprojlim^{(i)}_A (F) \isom \varprojlim^{(i-1)}_A (K) \quad (i \geq 2).
+$$
+Les conditions du lemme (7.5.1) étant satisfaites en particulier par les $A$-faisceaux pseudo-injectifs, on peut, en utilisant des résolutions pseudo-injectifs, définir un foncteur dérivé
+$$
+\bRd \varprojlim_A : \D^+(X, A) \to \D^+(A-\Mod_A),
+\leqno{(7.5.2)}
+$$
+et le diagramme
+\[\begin{tikzcd}
+	{\D^+(X, A)} && {\D^+(\Pro(A-\Mod_X))} \\
+	& {\D^+(A-\Mod_X)}
+	\arrow["{\D^+(c)}", from=1-1, to=1-3]
+	\arrow["{\bRd \varprojlim_A}"', from=1-1, to=2-2]
+	\arrow["{\bRd \varprojlim_A}", from=1-3, to=2-2]
+\end{tikzcd}\]
+dans lequel $c$ désigne le foncteur canonique $A-\fsc(X) \to \Pro(A-\Mod_X)$ est commutatif.
+\vskip .3cm
+{
+Proposition {\bf 7.5.3}. --- \it On suppose qu'il existe une sous-catégorie plaine génératrice de $X$, formée d'objets quasicompacts (par exemple que $X$ est \emph{localement algébrique}). Pour tout $A$-faisceau $F$ sur $X$ et tout $i \in \mathbf{N}$ le $A$--Module $\varprojlim^{(i)}_A(F)$ est le foncteur associé au préfaisceau
+$$
+T \mapsto \mathrm{H}^i(T, F)
+$$
+sur la famille génératrice des objets quasicompacts de $X$.
+}
+\vskip .3cm
+{\bf Preuve} : Soit $J^\bullet$ une résolution pseudo-injective de $F$. Le $A$--Module $\varprojlim^{(i)}_A(F) = \mathrm{H}^i(\varprojlim_A J^\bullet)$ est le faisceau associé au préfaisceau
+$$
+T \mapsto \mathrm{H}^i\Gamma (T, \varprojlim_A J^\bullet).
+$$
+Lorsque $T$ est quasicompact, il est clair que
+$$
+\Gamma (T, \varprojlim_A J^\bullet) \isom \Gamma(T, J^\bullet)
+$$
+d'où, comme la propriété pour un $A$-faisceau d'être pseudo-injectif est stable par restriction à un objet du topos,
+$$
+\mathrm{H}^i (T, \varprojlim_A J^\bullet) = \mathrm{H}^i(T, F|T),
+$$
+ce qui entraîne manifestement le résultat.
+\vskip .3cm
+{
+Corollaire {\bf 7.5.4}. --- \it Soit $F$ un $A$-faisceau flasque sur un topos $X$ engendré par ses objets quasicompacts. On a 
+$$
+\varprojlim^{(i)}_A (F) = 0 \quad (i \geq 2).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Il résulte sans peine de (7.4.16) que l'on a $\mathrm{H}^i(T, F) = 0$ $(i \geq 2)$ pour tout objet quasicompact $T$ de $X$.
+\vskip .3cm
+{
+Proposition {\bf 7.5.5}. --- \it Soit $X$ un topos dont l'objet final est quasicompact. On a pour tut objet $K$ de $\D^+(X, A)$ un isomorphisme fonctoriel en $K$ :
+$$
+\bRd \Gamma (X, \bRd \varprojlim_A (K)) \isomlong \bRd \Gamma (X, K).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : On peut supposer que les composants de $K$ sont pseudo-injectifs, et alors l'assertion a été vue dans la preuve de (7.5.3).
+\vskip .3cm
+{
+Corollaire {\bf 7.5.6}. --- \it Soit $X$ un topos dont l'objet final est quasicompact. Pour tout $A$-faisceau $F$ sur $X$, on a une suite spectrale birégulière
+$$
+E^{p, q}_2 = \mathrm{H}^p(X, \varprojlim^{(q)})_A (F) \Rightarrow \mathrm{H}^{p+q}(X, F).
+$$
+}
+\vskip .3cm
+Nous allons maintenant nous intéresser aux \emph{théorèmes $\check{C}$echistes de la cohomologie} sur un topos $X$ dont l'objet final est quasicompact.
+\vskip .3cm
+{
+Définition {\bf 7.5.7}. --- \it Soit $X$ un topos. On appelle \emph{$A$-préfaisceau sur $X$} un système projectif indexé par $\mathbf{N}$, $F = (F_n){n \in \mathbf{N}}$ de préfaisceaux de $A$--Modules vérifiant les relations
+$$
+J^{n+1}F_n = 0 \quad (n \geq 0).
+$$
+}
+\vskip .3cm
+Dans ce qui suit, nous noterons
+$$
+\pre-\mathscr{E}(X, J)
+$$
+la sous-catégorie, exacte, plaine de $\underline{\Hom}(\mathbf{N}^\circ, \pre-A-\Mod_X)$ engendrée par les $A$-préfaisceaux. Comme pour les $A$-faisceaux, on définit la notion de $A$-préfaisceau essentiellement nul (resp. négligeable), et on appelle catégorie des $A$-préfaisceau et on note
+$$
+A-\prefsc(X)
+$$
+la catégorie abélienne quotient de $\pre-\mathscr{E}(X, J)$ par la sous-catégorie abélienne épaisse engendrée par les $A$-faisceaux négligeables.
+
+On définit, composant par composant, la notion de $A$-faisceau associé à un $A$-préfaisceau. Il est clair que le $A$-faisceau associé à un $A$-préfaisceau négligeable est négligeable, ce qui permet de définir un foncteur \emph{exact}, appelé foncteur faisceau associé : 
+$$
+a: A-\prefsc(X) \to A-\fsc(X).
+$$
+D'autre part, le foncteur inclusion $i: A-\Mod_X \to \pre-A-\Mod_X$ définit, composant par composant, un foncteur noté de même
+$$
+i : \mathscr{E}(X, J) \to \pre-\mathscr{E}(X, J).
+$$
+Plus généralement, on définit un foncteur cohomologique $(\Rd^p i)_{p \in \mathbf{Z}}$ en posant pour tout $A$-faisceau $F$ et tout entier $p$
+$$
+\Rd^p i(F) = (\Rd^p i(F_n))_{n \in \mathbf{N}}.
+$$
+Il est immédiat que pour tout morphisme $u: E \to F$ de $\mathscr{E}(X, J)$ dont le noyau et le conoyau sont négligeables, le noyau et le noyau des morphismes $\Rd^p i(u)$ sont négligeables. Ceci permet de définir un foncteur cohomologique, noté de même
+$$
+(\Rd^p i)_{p \in \mathbf{Z}}: A-\fsc(X) \to A-\prefsc(X).
+$$
+Bien entendu, $\Rd^p i = 0$ pour $p < 0$, et on note $i$ le foncteur exact à gauche $\Rd^0 i$.
+\vskip .3cm
+{
+Lemme {\bf 7.5.8}. --- \it Pour tout $A$-faisceau flasque $F$, on a : 
+$$
+\Rd^p i (F) = 0 \quad (p \geq 1).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : On rappelle que si $M$ est un $A$--Module, $\Rd^p i (M)$ est le faisceau associé au préfaisceau $T \mapsto \mathrm{H}^p(T, M)$ ; en particulier, $\Rd^p i(M) = 0$ $(p \geq 1)$ lorsque $M$ est flasque. D'où le lemme, en appliquant ce résultat aux composants de $F$.
+
+Ce lemme permet, en utilisant des résolutions flasques, de dériver le foncteur $i$ en un foncteur exact
+$$
+\bRd i: \D^+(X, A) \to \D^+(A-\prefsc(X)),
+$$
+et pour tout $A$-faisceau $F$, on a des isomorphismes
+$$
+\Rd^p i(F) \isom \mathrm{H}^p(\bRd i (F)) \quad (p \in \mathbf{Z}).
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.5.9}. --- \it Soient $K \in \D(A-\prefsc(X))$ et $L \in \D^+(X, A)$. On a un isomorphisme fonctoriel
+$$
+\Hom(aK, L) \isomlong \Hom(K, \Rd i (L)).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Tout d'abord, étant donnés un $A$-préfaisceau $E$ et un $A$-faisceau $F$, on définit, au moyen des morphismes d'adjonction usuels sur les composants, des morphismes ``d'adjonction''
+$$
+u_E: E \to i \circ a(E).
+\leqno{(1)}
+$$
+$$
+v_F: a \circ i(F) \to F.
+\leqno{(2)}
+$$
+Se ramenant au cas où $L$ est flasque, on définit en appliquant le morphisme (2) aux composants du complexe $L$ un morphisme ``d'adjonction'' fonctoriel
+$$
+v_L: a \circ \bRd i (L) \to L.
+\leqno{(2\text{bis})}
+$$
+D'autre part, lorsque $K$ est \emph{borné inférieurement}, le morphisme (1) appliqué aux composants de $K$, composé avec $i(r)$, où $r$ désigne une résolution flasque de $a(K)$, fournit un morphisme ``d'adjonction'' fonctoriel
+$$
+u_K: K \to \bRd i (aK).
+\leqno{(a\text{bis})}
+$$
+Le morphisme (2bis) définit de fa\c{c}on claire un morphisme de bifoncteurs cohomologiques
+$$
+\Hom(K, \bRd i (L)) \to \Hom(aK, L),
+\leqno{(3)}
+$$
+et nous allons voir que c'est un isomorphisme. Quitte à décomposer $K$ en parties positive et négative, on est ramené à le voir lorsque $K$ appartient respectivement à $\D+(A-\prefsc(X))$ et $\D^-(A-\prefsc(X))$. Dans ce dernier cas, on se ramène grâce à la suite spectrale
+$$
+E^{p, q}_1 = \Ext^q(U^{-p}, V) \Rightarrow \Ext^{p, q}(U, V),
+$$
+qui se montre comme (7.3.7.3) en utilisant le lemme (7.3.8), au cas où $K$ a un seul composant non nul. Finalement, on peut supposer que $K \in \D^+(A-\prefsc(X))$. Alors le morphisme (1bis) permet de définir un nouveau morphisme de bifoncteurs cohomologiques
+$$
+\Hom(aK, L) \to \Hom(K, \bRd i (L)),
+\leqno{(4)}
+$$
+dont nous allons voir qu'il est inverse de (3). Pour cela, il suffit (Sém. CARTAN 11 Exp. 7) de montrer que les morphismes cohomologiques
+$$
+\bRd i (L) \xlongrightarrow{u_{\bRd i (L)}} \bRd i \circ a \circ \bRd i (L) \xlongrightarrow{\bRd i (v_L)} \bRd i (L)
+$$
+$$
+a(K) \xlongrightarrow{a(u_K)} a \circ \bRd i \circ a(K) \xlongrightarrow{v_{a(K)}} a(K)
+$$
+sont respectivement l'identité de $\bRd i (L)$ et celle de $a(K)$. Pour cela, à des commutations de diagrammes près, il suffit de voir qu'étant donnés un $A$-préfaisceau $E$ et un $A$-faisceau $F$, les morphismes composés
+$$
+i(F) \xlongrightarrow{u_i(F)} i \circ a \circ i (F) \xlongrightarrow{i(v_F)} i (F)
+$$
+$$
+a(F) \xlongrightarrow{a(u_E)} a \circ i \circ a(E) \xlongrightarrow{v_{a(E)}} a(E)
+$$
+sont respectivement l'identité de $i(F)$ et celle de $a(F)$. Or cela est vrai au stade des composants, d'où l'assertion
+\vskip .3cm
+{
+Définition {\bf 7.5.10}. --- \it On dit qu'un $A$-préfaisceau $F$ sur $X$ est \emph{pseudo-injectif} si c'est un objet injectif de $\pre-\mathscr{E}(X, J)$.
+}
+\vskip .3cm
+Paraphrasant la preuve de (6.6.3), on voit que si $F = (F_n, u_n)_{n \in \mathbf{N}}$ est un $A$-préfaisceau pseudo-injectif, alors pour tout entier $n \geq 0$, le $\pre-A$--Module $\Ker(u_n)$ est injectif et on a un isomorphisme
+$$
+F_n = \bigoplus_{0 \leq p \leq n} \Ker(u_n).
+$$
+De plus, il y a suffisamment de $A$-préfaisceaux pseudo-injectifs. Enfin, on voit facilement par adjonction, compte tenu du fait que le foncteur faisceau associé $\pre-\mathscr{E}(X, J) \to \mathscr{E}(X, J)$ est exact, que tout $A$-faisceau pseudo-injectif est également pseudo-injectif en tant que $A$-préfaisceau.
+
+Supposons maintenant que l'\emph{objet final de $X$ soit quasicompact}. On définit alors par les arguments habituels un foncteur cohomologique
+$$
+(\overline{\check{\mathrm{H}}}^p(X, .))_{p \in \mathbf{Z}}: A-\prefsc(X) \to A-\fsc(\pt)
+$$
+en posant pour tout $A$-préfaisceau $F = (F_n)_{n \in \mathbf{N}}$ et tout entier $p$
+$$
+\overline{\check{\mathrm{H}}}^p(X, F) = (\check{\mathrm{H}}^p(X, F_n))_{n \in \mathbf{N}},
+$$
+avec les morphismes de transition évidents. On a bien sûr
+$$
+\overline{\check{\mathrm{H}}}^p(X, .) = 0 \quad (p < 0)
+$$
+et on pose 
+$$
+\overline{\check{\mathrm{H}}}^p(X, .) = \overline{\check{\Gamma}}(X, .).
+$$
+\vskip .3cm
+{
+Lemme {\bf 7.5.11}. --- \it Si $F$ est un $A$-préfaisceau pseudo-injectif, alors 
+$$
+\overline{\check{\mathrm{H}}}^p(X, F) = 0 \quad (p \geq 1).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Vu la structure des composants des $A$-préfaisceaux pseudo-injectifs, on est ramené à voir que si $M$ est un $\pre-A_n$--Module injectif, alors $\check{\mathrm{H}}^p(X, M) = 0$ $(p \geq 1)$. Or il résulte de (SGA4 V 2.1 formule (15)) que les foncteurs $\check{\mathrm{H}}^p(X, .)$ dépendent seulement de la structure de préfaisceau abélien, de sorte que les $\check{\mathrm{H}}^p(X, M)$ sont aussi les dérivés de $\check{\mathrm{H}}^0(X, .)$ dans la catégorie des $\pre-A_n$--Modules. D'où l'assertion.
+
+Le lemme (7.5.11) permet de dériver le foncteur $\overline{\check{\Gamma}}(X, .)$, au moyen de résolutions pseudo-injectives, en un foncteur exact
+$$
+\bRd \overline{\check{\Gamma}}(X, .): \D^+(A-\prefsc(X)) \to \D^+(\pt, A).
+$$
+Si $F$ est un $A$-préfaisceau, on a 
+$$
+\overline{\check{\mathrm{H}}}^p(X, F) = \mathrm{H}^p(\bRd \overline{\check{\Gamma}}(X, F)) \quad (p \in \mathbf{Z}).
+$$
+Pour tout $A$-faisceau $F$, on convient de poser par définition 
+$$
+\overline{\check{\mathrm{H}}}^p(X, F) = \overline{\check{\mathrm{H}}}^p(X, i(F)) \quad (p \in \mathbf{Z}).
+$$
+On prendra garde que l'on n'obtient pas ainsi un foncteur cohomologique sur la catégorie des $A$-faisceaux.
+
+Étant donné un $A$-préfaisceau pseudo-injectif, le système projectif $\overline{\check{\Gamma}}(X, I)$ est directement strict. Par suite, le foncteur $\varprojlim \circ \overline{\check{\Gamma}} (X, .)$ est dérivable en un foncteur exact
+$$
+\bRd \check{\Gamma}(X, .) : \D^+(A-\prefsc(X)) \to \D^+(A-\mod),
+$$
+et on a un isomorphisme de foncteurs composés
+$$
+\bRd \check{\Gamma}(X, .) \isom \bRd \varprojlim \circ \bRd \overline{\check{\Gamma}} (X, .).
+$$
+Étant donné un objet $K$ de $\D^+(A-\prefsc(X))$, on pose
+$$
+\check{\mathrm{H}}^p(X, K) = \mathrm{H}^p(\bRd \check{\Gamma} (X, K)),
+$$
+et 
+$$
+\check{\mathrm{H}}^0 = \check{\Gamma}.
+$$
+Il est clair que lorsque $F$ parcourt la catégorie des $A$-préfaisceaux, le foncteur 
+$$
+F \mapsto \check{\mathrm{H}}^0(X, F) = \check{\Gamma}(X, F)
+$$
+est exact à gauche et $\check{\mathrm{H}}^p(X, F) = 0$ $(p < 0)$.
+\vskip .3cm
+{
+Proposition {\bf 7.5.12}. --- \it Soit $X$ un topos dont l'objet final est quasicompact. Pour tout $K \in \D^+(X, A)$, on a des isomorphismes fonctoriels
+$$
+\bRd \overline{\Gamma}(X, K) \isom \bRd \overline{\check{\Gamma}}(X, \bRd i (K))
+\leqno{(A)}
+$$
+$$
+\bRd \Gamma(X, K) \isom \bRd \check{\Gamma}(X, \bRd i (K)).
+\leqno{(B)}
+$$
+En particulier, on a pour tout $A$-faisceau $F$ des suites spectrales
+$$
+E^{p, q}_2 = \overline{\check{\mathrm{H}}}^p(X, \Rd^q i (F)) \Rightarrow \overline{\mathrm{H}}^{p+q}(X, F)
+\leqno{(1)}
+$$
+$$
+E^{p, q}_2 = \check{\mathrm{H}}^p(X, \Rd^q i (F)) \Rightarrow \mathrm{H}^{p+q}(X, F).
+\leqno{(2)}
+$$
+Les morphismes canoniques $\overline{\check{\mathrm{H}}}^1(X, F) \to \overline{\mathrm{H}}^1(X, F)$ et $\check{\mathrm{H}}^1(X, F) \to \mathrm{H}^1(X, F)$ (resp. $\overline{\check{\mathrm{H}}}^2(X, F) \to \overline{\mathrm{H}}^2(X, F)$ et $\check{\mathrm{H}}^2(X, F) \to \mathrm{H}^2(X, F)$) déduits des suites spectrales (1) et (2) sont des isomorphismes (resp. des monomorphismes).
+}
+\vskip .3cm
+{\bf Preuve} : L'isomorphisme (B) se déduit de (A) en appliquant le foncteur $\bRd \varprojlim$ aux deux membres. Pour voir (A), on peut supposer que $K$ est pseudo-injectif, donc que $i(K) = \bRd i(K)$ l'est également. Alors (A) se voit en appliquant l'égalité évidente
+$$
+\overline{\mathrm{H}}^0(X, F) = \overline{\check{\mathrm{H}}}^0(X, F),
+$$
+valable pour tout $A$-faisceau $F$, aux composants de $K$. Les suites spectrales (1) et (2) se déduisent de (A) et (B) respectivement par des arguments standards. Si maintenant $F$ est un $A$-faisceau, on voit en appliquant (SGA4 V (2.2)) et formule 23) aux composants de $F$ que
+$$
+\overline{\check{\mathrm{H}}}^0(X, \Rd^q i (F)) = 0 \quad (q \geq 1),
+$$
+d'où aussitôt 
+$$
+\check{\mathrm{H}}^0(X, \Rd^q i (F)) = 0 \quad (q \geq 1). 
+$$
+La dernière assertion de (7.4.12) en résulte aussitôt.
+
+On peut introduire une autre notion de cohomologie de $\check{C}$ech de la manière suivante. Étant donné un topos $X$, la catégorie
+$$
+P = \underline{\Hom}(\mathbf{N}^\circ, X)
+$$
+est un topos, et le système projectif
+$$
+\mathbf{A} = (A/J^{n+1})_{n \in \mathbf{N}} = (A_n)_{n \in \mathbf{N}}
+$$
+est un Anneau de $P$. On définit sans peine un isomorphisme
+$$
+\pre-\mathbf{A}-\Mod_P \to \pre-\mathscr{E}(X, J),
+$$
+d'où un foncteur cohomologie de $\check{C}$ech
+$$
+\bRd \check{\Gamma}: \D^+(\pre-\mathscr{E}(X, J)) \to \D^+(A-\mod),
+\leqno{(7.5.14)}
+$$
+défini sans hypothèse de quasicompacité sur l'objet final de $X$ 
+\vskip .3cm
+{
+Proposition {\bf 7.5.14}. --- \it On suppose que l'objet final de $X$ est quasicompact. Alors le diagramme
+\[\begin{tikzcd}
+	{\D^+(\pre-\mathscr{E}(X, J))} && {\D^+(A-\prefsc(X)))} \\
+	& {\D^+(A-\mod)}
+	\arrow["{\D^+(p)}", from=1-1, to=1-3]
+	\arrow["{(7.5.13)}"', from=1-1, to=2-2]
+	\arrow["{\bRd \check{\Gamma}}", from=1-3, to=2-2]
+\end{tikzcd}\]
+dans lequel $p: \pre-\mathscr{E}(X, J) \to A-\prefsc(X)$ désigne le foncteur quotient canonique, est commutatif.
+}
+\vskip .3cm
+{\bf Preuve} : Évident, car il y a identité entre $\mathbf{A}$--Modules injectifs et $A$-préfaisceaux pseudo-injectifs.
+
+
+
+
+
+\vskip .3cm
+{\bf 7.6. Morphismes de CARTAN}.
+
+Soient $K, L, M$ trois complexes de $A$-faisceaux sur un topos $X$. On suppose que l'une des conditions suivantes est réalisée pour les degrés :
+\[\begin{tikzcd}
+	K & L & M \\
+	{-} & {-} & {+} \\
+	b & b & \emptyset \\
+	b & \emptyset & b & {.}
+\end{tikzcd}\]
+Alors, les morphismes (6.3.5) pour les composants permettent de définir de la fa\c{c}on habituelle un morphisme de $\K(X, A)$ : 
+$$
+\cHom^\bullet_A(K \otimes_A L, M) \to \cHom^\bullet_A(K, \cHom^\bullet_A(L, M)).
+\leqno{(7.6.1)}
+$$
+Soient maintenant $K \in \D^-(X, A)$, $L \in \D^-(X, A)$ et $M \in \D^+(X, A)$, et choisissons des résolutions quasilibres $P$ et $Q$ de $K$ et $L$ respectivement, et une résolution flasque $R$ de $M$. Comme $P \otimes_A Q$ est quasilibre (5.8), le morphisme (7.6.1)
+$$
+\cHom^\bullet_A(P \otimes_A Q, R) \to \cHom^\bullet_A (P, \cHom_A(L, M)),
+$$
+s'interprète comme un morphisme de $\D(X, A)$
+$$
+\bRd \cHom_A(K \underline{\otimes} L, M) \to \bRd \cHom_A(K, \bRd \cHom_A(L,M)), 
+\leqno{(7.6.2)}
+$$
+et on vérifie facilement que (7.6.2) ne dépend pas des résolutions choisies, et dépend fonctoriellement de $K, L$ et $M$. Contrairement à ce qui se passe pour les faisceaux de $A$--modules, le morphisme (7.6.2) \emph{n'est pas en général un isomorphisme} ; nous verrons toute-fois plus loin que c'est le cas si l'on fait des hypothèses de finitude convenables.
+
+Supposons que le topos $X$ et l'anneau $A$ soient \emph{noethériens}. Alors on déduit de (7.6.2) des morphismes fonctorieles canoniques 
+$$
+\bRd \overline{\Hom}_A(K \underline{\otimes}L, M) \to \Rd \overline{\Hom}_A(K, \bRd \cHom_A(L, M)).
+\leqno{(7.6.3)}
+$$
+$$
+\bRd \Hom_A(K \underline{\otimes}L, M) \to \Rd \Hom_A(K, \bRd \cHom_A(L, M)).
+\leqno{(7.6.4)}
+$$
+$$
+\Hom_A(K \underline{\otimes}L, M) \to \Hom_A(K, \bRd \cHom_A(L, M)).
+\leqno{(7.6.5)}
+$$
+Utilisant (7.4.18), on les obtient en appliquant respectivement les foncteurs $\bRd \overline{\Gamma}$, $\bRd \Gamma$, $\Hom_A(A, .)$ aux deux membres de (7.6.2).
+
+Nous allons maintenant essayer de définir le morphisme (7.6.5) sans hypothèse de finitude sur $A$ ou $X$. Étant donnés deux complexes de $A$-faisceaux $K \in \K^+(X, A)$ et $L \in \K^b(X, A)$, le morphisme (6.3.13.1) permet de définir pour tout entier $n$ un morphisme de $A$-faisceaux
+$$
+K^n \to \bigoplus_p \cHom_A(L^p, K^n \otimes_A L^p) \subset \cHom^n_A(L, K \otimes_A L),
+$$
+d'où un morphisme de complexes 
+$$
+K \to \cHom^\bullet_A (L, K \otimes_A L).
+\leqno{(7.6.6)}
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.6.7}. --- \it Soient $K \in \D^+(X, A)$ et $L \in \D^-(X, A)_{\torf}$. On a un morphisme fonctoriel canonique
+$$
+K \to \bRd \cHom_A (L, K \underline{\otimes} L)
+$$
+qui ``coïncide'' avec l'identité de $K$ lorsque $L = A$.
+}
+\vskip .3cm
+{\bf Preuve} : On peut supposer $L$ plat et borné. Choisissant alors une résolution quasilibre $L'$ de $L$ et une résolution flasque $F$ de $L \otimes L = K \underline{\otimes} L$, le morphisme annoncé est le composé de (7.6.6) et du morphisme canonique $\cHom^\bullet_A(L, K \otimes L) \to \cHom^\bullet_A(L', I)$. On laisse au lecteur le soin de voir que cela ne dépend pas des choix faits.
+\vskip .3cm
+{
+Corollaire {\bf 7.6.8}. --- \it Soient $K \in \D^+(X, A)$, $L \in \D^-(X, A)_{\torf}$ et $M \in \D^+(X, A)$. On a un morphisme fonctoriel
+$$
+\Hom_A(K \underline{\otimes}L, M) \to \Hom_A(K, \bRd \cHom_A(L, M)).
+$$
+En particulier, on a un morphisme fonctoriel
+$$
+\Hom_A(K, M) \to \Hom_A (A, \bRd \cHom_A (K, M)).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Soit $u: K \underline{\otimes} L \to M$. On obtient un morphisme $K \to \bRd \cHom_A (L, M)$ en composant $\bRd \cHom_A(\id_L, u)$ avec (7.6.7).
+\vskip .3cm
+{\bf 7.6.9}. Soient $E, F, G$ trois complexes de $A$-faisceaux sur $X$. On suppose que les degrés vérifient l'une des conditions suivantes : 
+\[\begin{tikzcd}
+	E & {+} & {-} & b & \emptyset & b \\
+	F & {-} & {+} & \emptyset & b & b \\
+	G & {-} & {+} & b & b & \emptyset & {.}
+\end{tikzcd}\]
+Nous allons alors définir un morphisme de complexes fonctoriel
+$$
+\cHom^\bullet_A (E, F) \otimes_A G \to \cHom^\bullet_A(E, F \otimes_A G).
+\leqno{(7.6.9.1)}
+$$
+Il est clair qu'il suffit de le définir pour les $A$-faisceaux, car alors on disposera pour tout triplet $(p, q, r)$ d'entiers d'un morphisme de $A$-faisceaux
+$$
+\cHom_A(E^p, F^q) \otimes_A G^r \to \cHom_A (E^p, F^q \otimes_A G^r),
+$$
+ce qui permet de définir de fa\c{c}on évidente le morphisme annoncé. Pla\c{c}ons-nous donc dans ce cas. Si $m$ et $n$ sont deux entiers, avec $m \geq n \geq 0$, on a un morphisme canonique de $A_n$--Modules
+$$
+\cHom_A(E_m, F_n) \otimes_A G_n \to \cHom_A(E_m, F_n \otimes_A G_n).
+$$
+Par passage à la limite inductive suivant $m$, on en déduit un morphisme de $A_n$--Modules
+$$
+\cHom_A(E, F)_n \otimes_A G_n \to \cHom_A (E, F \otimes_A G)_n,
+$$
+et la collection de ces morphismes pour les différents entiers $n$ définit le morphisme de $A$-faisceaux désiré (c'est même un morphisme de $\mathcal{E}(X, J)$).
+
+Soient maintenant $E \in \D^-(X, A)$, $F \in \D^+(X, A)$, et $G \in \D(X, A)$. On se place dans l'un des cas suivants :
+\begin{itemize}
+    \item[(i)] $G \in \D^-(X, A)_{\torf}$.
+    \item[(ii)] L'anneau $A$ est local régulier, $J$ est son idéal maximal et $G \in \D^+(X, A)$.
+\end{itemize}
+Nous allons alors définir un morphisme fonctoriel
+$$
+\bRd \cHom_A(E, F) \underline{\otimes}G \to \bRd \cHom_A(E, F \underline{\otimes} G).
+\leqno{(7.6.9.2)}
+$$
+Dans chacun des cas envisagés, le complexe $G$ admet une résolution plate et bornée inférieurement $N$. Étant donnés une résolution quasilibre $L$ de $E$ et une résolution flasque $M$ de $F$, on a (7.6.9.1) un morphisme de complexes 
+$$
+\cHom^\bullet_A (L, M) \otimes_A N \to \cHom^\bullet_A (L, M \otimes_A N).
+$$
+Choisissant alors une résolution flasque $P$ de $M \otimes_A N$, on en déduit un morphisme de complexes
+$$
+\cHom^\bullet_A (L, M) \otimes_A N \to \cHom^\bullet_A (L, P),
+$$
+qui ne dépend pas, isomorphisme près dans $\D^+(X, A)$, des choix que l'on a faits. C'est celui-là que l'on prend.
+
+
+
+
+\vskip .3cm
+{\bf 7.7. Opérations externes}.
+
+On suppose toujours fixés l'anneau $A$ et l'idéal $J$.
+\vskip .3cm
+{\bf 7.7.1}. Soit $f X \to Y$ un morphisme de topos. Le foncteur image réciproque $f^*: A-\fsc(Y) \to A-\fsc(X)$, étant exact, admet un foncteur dérivé noté de même
+$$
+f^*: \D(Y, A) \to \D(X, A)
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.7.2}. --- \it Soient $E$ et $F \in \D(Y, A)$. 
+\begin{itemize}
+    \item[(i)] Lorsque $E$ et $F \in \D^-(Y, A)$, ou lorsque $A$ est un anneau local régulier et $J$ son idéal maximal, il existe un \emph{isomorphisme} canonique fonctoriel
+    $$
+    f^* (E) \underline{\otimes}_A f^* (F) \isomlong f^*(E \underline{\otimes}_A F),
+    $$
+    induisant, lorsque $E$ et $F$ sont des $A$-faisceaux, les morphismes (5.17.1) sur les objets de cohomologie.
+    \item[(ii)] Lorsque $E \in \D^-(Y, A)$ et $F \in \D^+(Y, A)$, il existe un morphisme canonique fonctoriel
+    $$
+    f^* \bRd \cHom_A (E, F) \to \bRd \cHom_A (f^* E, f^* F),
+    $$
+    induisant, lorsque $E$ et $F$ sont des $A$-faisceaux, les morphismes (6.4.1.1) sur les objets de cohomologie.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons (i). On peut supposer $E$ et $F$ quasilibres, de sorte que (5.17.2) $f^* E$ et $f^* F$ le sont également. Par ailleurs, l'isomorphisme (5.17.1) (pour $i = 0$) permet de définir de fa\c{c}on classique un isomorphisme de complexes $f^* E \otimes_A f^* F \to f^*(E \otimes_A F)$, dont n vérifie sans peine qu'il répond à la question. Pour la partie (ii) on peut supposer que $E$ est quasilibre et $F$ flasque. Alors le morphisme (6.4.1.1) permet de définir, composant par composant, un morphisme de complexes
+$$
+f^* \cHom^\bullet_A(E, F) \to \cHom^\bullet_A (f^* E, f^* F).
+$$
+Choisissant alors une résolution flasque $L$ de $f^* F$, on en déduit un morphisme de complexes
+$$
+f^* \cHom^\bullet_A(E, F) \to \cHom^\bullet_A (f^* E, L)
+$$
+ne dépendant pas de $L$, à isomorphisme près dans $\D^+(X, A)$. Compte tenu du fait que $f^* E$ est quasilibre (5.17.2), on vérifie aussitôt qu'il répond à la question.
+\vskip .3cm
+{\bf 7.7.3}. Soit $f: X \to Y$ un morphisme \emph{quasicompact} de topos. Utilisant (4.2.4), on voit, à l'aide de résolutions flasques, que le foncteur $f_*: A-\fsc(X) \to A-\fsc(Y)$ est dérivable en un foncteur exact
+$$
+\bRd f_* = \bRd{}^* f_*: \D^+(X, A) \to \D^+(Y, A).
+$$
+Il peut être utile de savoir prolonger ce foncteur à $\D(X, A)$. Pour cela, introduisons la définition suivante (cf. Séminaire Strasbourg-Heidelberg 66-67 Exp.2 2.5).
+\vskip .3cm
+{
+Définition {\bf 7.7.4}. --- \it Soient $X$ un topos et $q$ un entier $\geq 0$. On dit que $X$ est de dimension topologique stricte $\leq q$ s'il vérifie les relations équivalentes suivantes.
+\begin{itemize}
+    \item[(i)] Tout faisceau abélien $F$ sur $X$ admet une résolution flasque de longueur $\geq q$.
+    \item[(ii)] Por tout objet $T$ de $X$, tout fermé $Z$ de $X/T$, et tout faisceau abélien $F$ sur $X$, on a 
+    $$
+    \mathrm{H}^{q+1}_Z(T, F|T) = 0.
+    $$
+    On appelle \emph{dimension topologique stricte} de $X$, et on note 
+    $$
+    \dimtops(X)
+    $$
+    la borne inférieure (éventuellement infinie) des entiers $q$ satisfaisant aux conditions (i) et (ii).
+\end{itemize}
+}
+\vskip .3cm
+Lorsque le topos $X$ est de dimension topologique stricte finie, tout complexe de $A$-faisceaux admet une résolution flasque, de sorte qu'on définit un foncteur dérivé droit
+$$
+\bRd f_*: \D(X, A) \to \D(Y, A),
+$$
+prolongeant le précédent, en utilisant ([H], I 5.3 $\gamma$).
+
+Soit maintenant un autre morphisme quasicompact $g: Y \to Z$. Comme le foncteur $f_*$ transforme $A$-faisceau flasque en $A$-faisceau flasque, on a un isomorphisme
+$$
+\bRd{}^* (g \circ f)_* \isomlong \bRd{}^* g_* \circ \bRd{}^* f_*,
+\leqno{(7.7.5)}
+$$
+avec la condition de cocycles habituelle. Si de plus $X$ et $Y$ sont de dimension topologique stricte finie, cet isomorphisme se prolonge en un isomorphisme
+$$
+\bRd (g \circ f)_* \isomlong \bRd g_* \circ \bRd f_*.
+\leqno{(7.7.5~\text{bis})}
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.7.6}. --- \it Soit $f: X \to Y$ un morphisme de topos quasicompact. Étant donnés $E \in \D(Y, A)$ et $F \in \D^+(X, A)$, on a un \emph{isomorphisme} fonctoriel
+$$
+\Hom_A(f^* E, F) \isomlong \Hom_E (E, \bRd f_* (F)).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Analogue à celle de (7.5.9). Se ramenant au cas où $F$ est borné inférieurement et flasque, on définit, grâce à (4.3.2), un morphisme d'``adjonction''
+$$
+f^* \bRd f_* (F) \to F,
+$$
+d'où un morphisme de bifoncteurs cohomologiques
+$$
+\Hom_A (E, \bRd f_* (F)) \to \Hom_A (f^* E, F), 
+$$
+dont on veut prouver que c'est un isomorphisme. Par le way-out functor lemma, on peut pour cela supposer que $e \in \D^+(Y, A)$. Dans ce cas, on déduit de (4.3.1) un morphisme d'``adjonction''
+$$
+E \to \bRd f_* (f^* E),
+$$
+et on conclut en vérifiant que les composés canoniques sont les identités.
+\vskip .3cm
+{\bf 7.7.7}. Soient $f: X \to Y$ un morphisme quasicompact de topos, $E \in \D^-(Y, A)$ et $F \in \D^+(X, A)$. Nous allons définit un morphisme canonique fonctoriel
+$$
+\bRd \cHom_A (E, \bRd f_* (F)) \to \bRd f_* \bRd \cHom_A (f^*E, F).
+$$
+Pour cela, on peut supposer que $E$ est borné supérieurement et quasilibre, et que $F$ est borné inférieurement et flasque. Alors, on définit grâce à (6.4.4.1) un morphisme fonctoriel de complexes
+$$
+s: \cHom^\bullet_A (E, f_* (F)) \to f_* \cHom^\bullet_A (f^* E, F).
+$$
+Comme $f^* (E)$ est quasilibre (5.17.2), le complexe $\cHom^\bullet_A (f^* E, F)$ s'identifie à $\bRd \cHom_A (f^* E, F)$. Choisissant alors une résolution flasque
+$$
+u: \cHom^\bullet_A (f^* E, F) \to L,
+$$
+le morphisme désiré est le composé $f_*(u) \circ s$.
+\vskip .3cm
+{
+Proposition {\bf 7.7.8}. --- \it On suppose $A$ noethérien. Soit $f: X \to Y$ un morphisme cohérent de topos, avec $X$ localement noethérien. (SGA4 VI 2.11). On a un \emph{isomorphisme} canonique fonctoriel
+$$
+\bRd f_* \bRd \cHom_A (f^* E, F) \isomlong \bRd \cHom_A (E, \bRd f_* (F)).
+\leqno{(1)}
+$$
+Si de plus $X$ et $Y$ ont des objets finaux quasicompacts, on a des isomorphismes canoniques fonctoriels
+$$
+\bRd \overline{\Hom}_A (f^* E, F) \isomlong \bRd \overline{\Hom}_A (E, \bRd f_* (F)).
+\leqno{(2)}
+$$
+$$
+\bRd \Hom_A (f^* E, F) \isomlong \bRd \Hom_A (E, \bRd f_* (F)).
+\leqno{(3)}
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Pour définir (1), on peut supposer $E$ borné supérieurement et quasilibre, et $F$ borné inférieurement et psuedo-injectif. Comme $f$ est cohérent, il résulte de (6.4.5) que le morphisme de complexes $s$ de (7.7.7) est un isomorphisme. Par ailleurs, il résulte du lemme (7.4.19) que $\cHom^\bullet_A (f^* E, F)$ est flasque, d'où aussitôt l'assertion. 
+
+Les isomorphismes (2) et (3) se déduisent de (1) en appliquant respectivement les foncteurs $\bRd \overline{\Gamma}(Y, .)$ aux deux membres de (1) et en utilisant (7.4.18).
+\vskip .3cm
+{\bf 7.7.9}. Soient $X$ un topos et $i: T \to T'$ un morphisme quasicompact (SGA4 VI 1.7) de $X$. Le foncteur (4.5.3)
+$$
+i_! : A-\fsc(T) \to A-\fsc(T').
+$$
+étant exact, est évidemment dérivable en un foncteur exact
+$$
+\bRd i_!: \D(T, A) \to \D(T', A).
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.7.10}. --- \it Soient $E \in \D(T, A)$ et $F \in \D(T', A)$.
+\begin{itemize}
+    \item[(i)] On a un \emph{isomorphisme} fonctoriel
+    $$
+    \Hom_A (\bRd i_!(E), F) \isomlong \Hom_A (E, i^* (F)).
+    $$
+    \item[(ii)] Lorsque $E \in \D^-(T, A)$ et $F \in \D^+(T', A)$, il existe un morphisme fonctoriel
+    $$
+    \bRd \cHom_A (\bRd i_! (E), F) \to \bRd i_* \bRd \cHom_A (E, i^* F),
+    $$
+    qui est un \emph{isomorphisme} lorsque $i$ est cohérent en $X/T$ localement noethérien.
+    \item[(iii)] Si $T$ et $T'$ sont quasicompacts, on a des \emph{isomorphismes} fonctoriels
+    $$
+    \bRd \overline{\Hom}_A (\bRd i_! (E), F) \isomlong \bRd \overline{\Hom}_A (E, i^* F)
+    $$
+    $$
+    \bRd \Hom_A (\bRd i_! (E), F) \isomlong \bRd \Hom_A (E, i^* F).
+    $$
+    \item[(iv)] On a un \emph{isomorphisme} fonctoriel
+    $$
+    \bRd i_! (E \underline{\otimes} i^* (F)) \isomlong \bRd i_! (E) \underline{\otimes} F
+    $$
+    dans chacun des cas suivants : 
+    \begin{itemize}
+        \item[a)] $E \in \D^{-}(T, A)$ et $F \in \D^-(T', A)$.
+        \item[b)] $E \in \D^{-}_{\torf}(T, A)$ et $F \in \D (T, A)$.
+        \item[c)] L'anneau $A$ est local régulier, $J$ est son idéal maximal, $E \in \D^+(T, A)$ et $F \in \D^+(T', A)$.
+    \end{itemize}
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Pour (i), on définit composant par composant, à partir de (4.5.5), des morphismes d'adjonction
+$$
+i_! i^* (F) \to F
+$$
+$$
+E \to i^* i_! (E),
+$$
+et il est immédiat, composant par composant ; que les composés canoniques (cf. la preuve de (4.3.5)) sont des identités. Montrons (ii).
+
+Pour définir le morphisme désiré, on peut supposer $E$ quasilibre et borné supérieurement, et $F$ flasque et borné inférieurement. Alors, on définit grâce  (6.4.7.1) un morphisme de complexes
+$$
+w: \cHom^\bullet_A (i_!(E), F) \to i_* \cHom^\bullet_A (E, i^* F).
+$$
+Comme $i_!(E)$ est quasilibre (5.18.5) et $i^* (F)$ flasque, on obtient   le morphisme annoncé en choisissant une résolution flasque $u$ de $\cHom^\bullet_A (E, i^* F)$ et en prenant le morphisme composé $i_* (u) \circ w$. Lorsque $i$ est cohérent, le morphisme $w$ est un isomorphisme (6.4.7), et lorsque $X/T$ est localement noethérien, le complexe $\cHom^\bullet_A (E, i^* F)$ est flasque, du moins lorsque $F$ est pris pseudo-injectif, ce qui est toujours possible (7.4.19). Montrons (iii). On peut comme précédemment prendre $E$ quasilibre et borné supérieurement, et $F$ pseudo-injectif et borné inférieurement. Alors l'isomorphisme de complexes 
+$$
+\overline{\Hom}^\bullet_A (E, i^* F) \isomlong \overline{\Hom}^\bullet_A (i_! E, F)
+$$
+fournit le premier isomorphisme annoncé. Le second s'en déduit en passant à la limite projective sur les composants. Enfin (iv) résulte immédiatement de l'isomorphisme (5.18.1) en prenant $E$ plat, ce qui est possible dans chacun des cas envisagés : alors, $i_! (E)$ est plat (5.18.5).
+\vskip .3cm
+{\bf 7.7.11}. Soient $X$ un topos, $U$ un ouvert de $X$ et $Y$ le topos fermé complémentaire de $U$ (SGA4 IV 3.3). On note $j: Y \to X$ le morphisme de topos canonique. Le foncteur cohomologique (4.6.1)
+$$
+(\Rd^p j^!)_{p \in \mathbf{Z}}: A-\fsc(X) \to A\fsc(Y)
+$$
+est, comme on le voit immédiatement composant par composant, \emph{effacé} (en degrés $> 0$) \emph{par les $A$-faisceaux flasques}. Ceci permet, au moyen de résolutions flasques, de définir un foncteur dérivé droit de $j^!$ : 
+$$
+\bRd j^! : \D^+(X, A) \to \D^+(Y, A),
+$$
+et on a pour tout $A$-faisceau $F$ sur $X$ :
+$$
+\Rd^p j^! (F) \isom \mathrm{H}^p(\bRd j^! (F)) \quad (p \in \mathbf{Z}).
+$$
+\vskip .3cm
+{
+Proposition {\bf 7.7.12}. --- \it Soient $E \in \D(X, A)$ et $F \in \D(Y, A)$.
+\begin{itemize}
+    \item[(i)] Si $E \in \D^+(X, A)$, on a un isomorphisme fonctoriel
+    $$
+    \Hom_A (\bRd j_* (F), E) \isomlong \Hom_A (F, \bRd j^!(E)).
+    $$
+    \item[(ii)] Si $E \in \D^+(X, A)$ et $F \in \D^-(Y, A)$, il existe un \emph{isomorphisme} fonctoriel
+    $$
+    \bRd \cHom_A (\bRd j_*(F), E) \isomlong \bRd j_* \bRd \cHom_A (F, \bRd j^! (E)).
+    $$
+    \item[(iii)] Si l'objet final de $X$ (donc aussi celui de $Y$) est quasicompact, alors il existe pour $E \in \D^+(X, A)$ et $F \in \D^-(Y, A)$ des isomorphismes fonctoriels
+    $$
+    \bRd \overline{\Hom}_A (\bRd j_*(F, E) \isomlong \bRd \overline{\Hom}_A (F, \bRd j^! (E)))
+    $$
+    $$
+    \bRd \Hom_A (\bRd j_*(F, E) \isomlong \bRd \Hom_A (F, \bRd j^! (E))).
+    $$
+    \item[(iv)] On a un isomorphisme fonctoriel
+    $$
+    \bRd j_* (E \underline{\otimes} \bRd j^* (E)) \isomlong \bRd j_* (F) \underline{\otimes} E
+    $$
+    dans chacun des cas suivants :
+    \begin{itemize}
+        \item[a)] $E \in \D^-(X, A)$ et $F \in \D^-(Y, A)$.
+        \item[b)] $F \in \D^-_{\torf}(Y, A)$.
+        \item[c)] L'anneau $A$ est local régulier, $J$ est son idéal maximal, $E \in \D^+(X, A)$ et $F \in \D^+(Y, A)$.
+    \end{itemize}
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Le foncteur $j_*$ étant exact, le foncteur $\bRd j_*$ est défini sur $\D(Y, A)$ en entier, ce qui donne un sens à certaines des expressions de l'énoncé. L'assertion (i) se voit comme l'assertion correspondante de (7.7.10), en utilisant (4.6.3). Montrons (ii). Pour définir le morphisme de l'énoncé, on peut supposer que $F$ est quasilibre et borné supérieurement, et que $E$ est pseudo-injectif et borné inférieurement. Alors le morphisme (6.4.8.1) permet de définir un isomorphisme de complexes
+$$
+h: \cHom^\bullet_A (j_* (F), E) \to j_* \cHom^\bullet_A(F, j^! (E)).
+$$
+Le complexe $j_* (F)$ est fortement plat (6.7.1), de sorte que l'on déduit de (6.7.2 (ii)) que $\cHom^\bullet_A (j_*(F), E) \isom \bRd \cHom_A (\bRd j_* (F), E)$. Par ailleurs, on voit par adjonction et grâce au fait que 
+$$
+j_*: \mathscr{E}(Y, J) \to \mathscr{E}(X, J)
+$$
+est un foncteur exact, que $j^!(E)$ est psuedo-injectif, de sorte que l'isomorphisme $h$ répond à la question. Les isomorphismes de (iii) se déduisent du précédent, grâce à (7.4.18), en appliquant aux deux membres les foncteurs $\bRd \overline{\Gamma}(X, .)$ et $\bRd \Gamma(X, .)$ respectivement. On peut aussi définir le premier directement à partir de l'isomorphisme (6.4.8.2). Enfin, l'assertion (iv) se voit comme l'assertion analogue de (7.7.10), en utilisant cette fois (5.19.1 (i)).
+\vskip .3cm
+{
+Proposition {\bf 7.7.13}. --- \it Soit $K \in \D^+(X, A)$. On a un isomorphisme fonctoriel
+$$
+\bRd j^! (K) \isomlong j^* \bRd \cHom_A(j_*(A), K).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : On peut supposer $K$ pseudo-injectif. Alors on déduit de (6.5.1.1) (pour $i = 0$) un isomorphisme de complexes
+$$
+j^!(K) \isomlong j^* \cHom^\bullet_A (j_*(A), K),
+$$
+qui répond à la question (comme dans la preuve de (7.7.12), on utilise le fait que $j_*(A)$ est fortement plat).
+\vskip .3cm
+{
+Proposition {\bf 7.7.14}. --- \it Soient $X$ un topos, $U$ un ouvert de $X$, $Y$ le topos fermé complémentaire de $U$, $i: U \to X$ et $j: Y \to X$ les morphismes de topos canoniques . On suppose que $i$ est quasicompact. On a alors pour tout $E \in \D^+(X, A)$ des triangles exacts fonctoriels en $E$
+\[\begin{tikzcd}
+	& {\bRd j_*(j^* E)} \\
+	{\bRd i_! i^* (E)} && E
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=2-3, to=1-2]
+	\arrow[dashed, from=1-2, to=2-1]
+\end{tikzcd}\leqno{(I)}\]
+\[\begin{tikzcd}
+	& {\bRd i_*(i^* E)} \\
+	{\bRd j_* \bRd j^! (E)} && {E.}
+	\arrow[from=2-1, to=2-3]
+	\arrow[from=2-3, to=1-2]
+	\arrow["{d \circ 1}"', dashed, from=1-2, to=2-1]
+\end{tikzcd}\]
+}
+\vskip .3cm
+{\bf Preuve} : On peut pour les définir supposer $E$ pseudo-injectif. Alors, on déduit de fa\c{c}on évidente de (4.6.4) des suites exactes de complexes répondant à la question.
+\vskip .3cm
+{
+Définition {\bf 7.7.15}. --- \it Soient $X$ un topos, $U$ un ouvert de $X$, $Y$ le topos fermé complémentaire, $i: U \to X$ et $j: Y \to X$ les morphismes de topos canoniques. On pose pour tout objet $E$ de $\D^+(X, A)$ :
+$$
+\mathrm{H}^p_Y (X, E) = \Ext^p_A (j_*(A), E) \quad (p \in \mathbf{Z}).
+$$
+}
+\vskip .3cm
+{
+Proposition {\bf 7.7.16}. --- \it Sous les hypothèses de (7.7.15), on aune suite exacte illimitée
+$$
+\dots \to \mathrm{H}^p_Y (X, E) \to \mathrm{H}^p(X, E) \to \mathrm{H}^p(U, E) \to \mathrm{H}^{p+1}_Y(X, E) \to \dots.
+$$
+Si de plus l'objet final de $X$ est quasicompact, on a : 
+\begin{itemize}
+    \item[(i)] Une suite spectrale birégulière
+    $$
+    E^{p, q}_2 = \mathrm{H}^p(X, \mathrm{H}^q_Y(F)) \Rightarrow \mathrm{H}^{p+q}_Y (X, F),
+    $$
+    pour tout $A$-faisceau $F$ sur $X$.
+    \item[(ii)] Des suites exactes
+    $$
+    0 \to \varprojlim^{(1)}_A \overline{\mathrm{H}}^{i-1}_Y (X, E) \to \mathrm{H}^i_Y(X, E) \to \varprojlim_A \overline{\mathrm{H}}^{i}_Y (X, E) \to 0,
+    $$
+    pour tout objet $E$ de $\D^+(X, A)$ et tout $i \in \mathbf{Z}$.
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Compte tenu de (7.7.10. (i)), la suite exacte illimitée est la suite exacte des $\Ext^\bullet(., E)$ déduite de la suite (4.6.4)
+$$
+0 \to i_!(A) \to A \to j_* (A) \to 0.
+$$
+Compte tenu de la définition (6.5.4), la suite spectrale (i) est conséquence immédiate de (7.7.12. (ii)). Enfin, les ites exactes (ii) sont une simple traduction de (7.4.16. a)).
