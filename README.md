@@ -25,7 +25,7 @@ Grothendieck says in Récoltes et Semailles
 
 ---
 
-### State of the transcription
+### State of the edition
 - [x] Transcription
 - [ ] Proof-read and preface
 - [ ] Expert review and foreword
