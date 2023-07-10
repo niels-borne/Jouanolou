@@ -19,7 +19,7 @@ Proposition {\bf 3.1}. --- \it Étant donné un $A$-faisceau $F$ sur $X$, les as
 Définition {\bf 3.2}. --- \it Un $A$-faisceau $F$ qui vérifie les conditions équivalentes de (3.1) est appelé \emph{de type strict}.
 }
 \vskip .3cm
-Si $F$ est de type strict, nous avons vu dans l courant de la démonstration que pour tout entier $n \geq 0$, le système projectif 
+Si $F$ est de type strict, nous avons vu dans le courant de la démonstration que pour tout entier $n \geq 0$, le système projectif 
 $$
 (\text{Im}(F_m \to F_n))_{m \geq n}
 $$
@@ -32,7 +32,7 @@ Définition {\bf 3.3}. --- \it Si $F$ est un $A$-faisceau de type strict, le $A$
 Rappelons enfin que nous avons vu que l'inclusion canonique $F' \hookrightarrow F$ est un \emph{isomorphisme}.
 \vskip .3cm
 {
-Proposition {\bf 3.4}. --- \it Soit $0 \to E' \to E \to E'' \to 0$ une suite exacte de $A-\fsc(X)$. Alors:
+Proposition {\bf 3.4}. --- \it Soit $0 \to E' \to E \to E'' \to 0$ une suite exacte de $A-\fsc(X)$. Alors :
 \begin{itemize}
     \item[(i)] Si $E$ est de type strict, $E''$ est de type strict. 
     \item[(ii)] Si $E'$ et $E''$ sont de type strict, il en est de même de $E$.
@@ -85,7 +85,7 @@ de $\mathcal{E}(X, J)$. Comme les systèmes projectifs $\overline{M}, \overline{
 $$
 (\Ker \overline{u})_n = (\Coker \overline{v})_n = (\Ker \overline{v} / \text{Im} \overline{u})_n = 0,
 $$
-donc les systèmes projectifs $\Ker (\overline{u})$, $\Coker (\overline{v})$, $\Ker (\overline{v})/\text{Im} \overline{u}$ sont négligeables, d'où l'exactitude de (3.5.1). Montrons qu'il est fidèle. Soit $u: M \to N$ un morphisme de $J-\Mod_X$ tel que $\overline{u}$ définisse le morphisme nul de $A-\fsc(X)$ et montrons que $u = 0$. Dans $\mathcal{E}(X, J)$, le $A$-faisceau $\text{Im}(\overline{u})$ est négligeable ; l'assertion à prouver étant locale, on peut supposer qu'il est essentiellement nul et que $M$ et $N$ sont annulés par une puissance de $J$. Alors, comme $\text{Im}(\overline{u})$ est contenu dans le système projectif essentiellement constant $\overline{N}$, on a évidemment $(\text{Im}(\overline{u}))_n = 0$ pour $n$ assez grand. Mais, toujours pour $n$ assez grand, on a $(\overline{u})_n = 0$, d'où l'assertion.
+donc les systèmes projectifs $\Ker (\overline{u})$, $\Coker (\overline{v})$, $\Ker (\overline{v})/\text{Im} (\overline{u})$ sont négligeables, d'où l'exactitude de (3.5.1). Montrons qu'il est fidèle. Soit $u: M \to N$ un morphisme de $J-\Mod_X$ tel que $\overline{u}$ définisse le morphisme nul de $A-\fsc(X)$ et montrons que $u = 0$. Dans $\mathcal{E}(X, J)$, le $A$-faisceau $\text{Im}(\overline{u})$ est négligeable ; l'assertion à prouver étant locale, on peut supposer qu'il est essentiellement nul et que $M$ et $N$ sont annulés par une puissance de $J$. Alors, comme $\text{Im}(\overline{u})$ est contenu dans le système projectif essentiellement constant $\overline{N}$, on a évidemment $(\text{Im}(\overline{u}))_n = 0$ pour $n$ assez grand. Mais, toujours pour $n$ assez grand, on a $(\overline{u})_n = 0$, d'où l'assertion.
 
 Soit maintenant $\lambda: \overline{M} \to \overline{N}$ un morphisme de $A$-faisceaux et montrons qu'il existe un morphisme $u: M \to N$ tel que $\lambda = \overline{u}$ dans $A-\fsc(X)$. Comme on sait déjà que (3.5.1) est fidèle, il résulte de (1.7.2) que cette assertion est de nature locale. Par définition (Thèse Gabriel III 1), le morphisme $\lambda$ est la classe d'un triple $(\alpha, \beta, v)$ de $\mathcal{E}(X, J)$-morphismes (cf. diagramme)
 \[\begin{tikzcd}
@@ -125,7 +125,7 @@ $$
 et $F$ par $\overline{F}'' \times_{F''} F$, on peut de plus supposer que $F''$ est aussi essentiellement constant. Dans ce cas, $F$ l'est également, d'où l'assertion.
 \vskip .3cm
 {
-Corollaire {\bf 3.7}. --- \it La sous-catégorie pleine $\TC(X, J)^+$ de $A-\fsc(X)$ engendrée par les $A$-faisceaux isomorphes à un $A$-faisceau de la forme $\mathcal{E}_X(M)$, avec un $A_X$--Module annulé par une puissance de $J$, est \emph{exacte}.
+Corollaire {\bf 3.7}. --- \it La sous-catégorie pleine $\TC(X, J)^+$ de $A-\fsc(X)$ engendrée par les $A$-faisceaux isomorphes à un $A$-faisceau de la forme $\mathcal{E}_X(M)$, avec $M$ un $A_X$--Module annulé par une puissance de $J$, est \emph{exacte}.
 }
 \vskip .3cm
 {\bf Preuve} : Les objets de $\TC(X, J)^+$ sont ceux de $\TC(X, J)$ qui sont annulés par une puissance de l'idéal $J$.
@@ -255,7 +255,7 @@ Proposition {\bf 3.12}. --- \it Soit
 $$
 0 \to F' \to F \to F'' \to 0
 $$
-une suite exacte de $A$-faisceaux. Alors
+une suite exacte de $A$-faisceaux. Alors : 
 \begin{itemize}
     \item[(i)] Si $F'$ et $F$ sont respectivement de type strict et de type $J$-adique, alors $F''$ est de type $J$-adique. 
     \item[(ii)] Si $F$ et $F''$ sont respectivement de type strict et de type $J$-adique, alors $F'$ est de type strict.
