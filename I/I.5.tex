@@ -2,7 +2,7 @@
 \subsection*{5. Produit tensoriel.}
 \addcontentsline{toc}{subsection}{5. Produit tensoriel}
 
-On suppose sonné dans ce paragraphe un idéotope $(X, A, J)$, et on convient de poser pour tout entier $n \geq 0$
+On suppose donné dans ce paragraphe un idéotope $(X, A, J)$, et on convient de poser pour tout entier $n \geq 0$
 $$
 A_n = A/J^{n+1}.
 $$
@@ -62,7 +62,7 @@ vérifiant les propriétés suivantes.
 	\arrow["{\cTor^A_i}", from=1-1, to=1-3]
     \end{tikzcd}\]
     dans lequel $\pi$ désigne le foncteur canonique, est commutatif.
-    \item[(b)] Pour tout suite exacte $0 \to E' \to E \to E'' \to 0$ (resp. $0 \to F' \to F \to F'' \to 0$) de $\mathcal{E}$, le foncteur $\pi$ transforme les morphismes bords
+    \item[(b)] Pour tout suite exacte $0 \to E' \to E \to E'' \to 0$ (resp. $0 \to F' \to F \to F'' \to 0$) de $\mathcal{E}(X, J)$, le foncteur $\pi$ transforme les morphismes bords
     $$
     \cTor^A_{i+1}(E'', F) \to \cTor^A_i(E', F)
     $$
@@ -301,7 +301,7 @@ Proposition {\bf 5.12} (Lemme de NAKAYAMA). --- \it Soit $F$ un $A$-faisceau. Le
 \vskip .3cm
 {\bf Preuve} : On a seulement à voir que (i) entraîne (ii). Quitte à localiser, on peut supposer le système projectif
 $$
-F/FJ = (F_n/JF_n)_{n \in \mathbf{N}}
+F/JF = (F_n/JF_n)_{n \in \mathbf{N}}
 $$
 essentiellement nul. Alors il existe une application croissante $\gamma \geq \id: \mathbf{N} \to \mathbf{N}$ telle que pour tout entier $n \geq 1$ le morphisme canonique $F_{\gamma(n)}/JF_{\gamma(n)} \to F_n/JF_n$ soit nul. Autrement dit, l'image de $F_{\gamma(n)}$ par le morphisme canonique
 $$
@@ -512,7 +512,7 @@ $$
 {
 Lemme {\bf 5.16.1}. --- \it Pour tout $A$-faisceau $G$ et tout $A$-module de type fini $M$, on a 
 $$
-\cTor_i(M, G) = 0 \quad (i > \text{dp}_A(M)).
+\cTor_i(M, G) = 0 \quad (i > \mathrm{dp}_A(M)).
 $$
 }
 \vskip .3cm
@@ -548,7 +548,7 @@ de $A$-faisceaux, avec $P_i$ plat sur $i \in [0, 2r]$.
 $$
 f^*: A-\Mod_Y \to A-\Mod_X.
 $$
-On rappelle qu'on en déduit pour tout couple $(P, Q)$ de $A_{nY}$--Modules ($i$ entier $\geq 0$) et tout entier $i \geq 0$ un isomorphisme fonctoriel
+On rappelle qu'on en déduit pour tout couple $(P, Q)$ de $A_{nY}$--Modules ($n$ entier $\geq 0$) et tout entier $i \geq 0$ un isomorphisme fonctoriel
 $$
 \alpha_i: \cTor^{A_n}_i(f^* P, f^* Q) \isomlong f^* \cTor^{A_n}_i(P, Q),
 $$
