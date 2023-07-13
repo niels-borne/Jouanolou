@@ -89,13 +89,13 @@ $$
 $$
 comme objet de $\mathcal{E}(X, J)$.
 \vskip .3cm
-{\bf 6.1.2}. On a en particulier $\cExt^i_A = 0$ pour $i < 0$, et le foncteur $\cExt^\circ_A$, aussi noté de plus souvent $\cHom_A$, est exact à gauche.
+{\bf 6.1.2}. On a en particulier $\cExt^i_A = 0$ pour $i < 0$, et le foncteur $\cExt^0_A$, aussi noté de plus souvent $\cHom_A$, est exact à gauche.
 \vskip .3cm
 {
-Définition {\bf 6.1.3}. --- \it Si $E$ et $F$ sont deux $A$-faisceaux sur $X$, le $A$-faisceau $\cHom_A(E, F) = \cExt^\circ_A(E, F)$ est appelé \emph{$A$-faisceau des homomorphismes de $E$ dans $F$}.
+Définition {\bf 6.1.3}. --- \it Si $E$ et $F$ sont deux $A$-faisceaux sur $X$, le $A$-faisceau $\cHom_A(E, F) = \cExt^0_A(E, F)$ est appelé \emph{$A$-faisceau des homomorphismes de $E$ dans $F$}.
 }
 \vskip .3cm
-{\bf 6.2}. Soient $X$ un topos \emph{dont l'objet final est quasicompact} et $E$ et $F$ deux $A$-faisceaux sur $X$. On définit comme ne (6.1) des bifoncteurs cohomologiques, notés tous deux $(\overline{\Ext}^i_A)_{i \in \mathbf{Z}}$,
+{\bf 6.2}. Soient $X$ un topos \emph{dont l'objet final est quasicompact} et $E$ et $F$ deux $A$-faisceaux sur $X$. On définit comme en (6.1) des bifoncteurs cohomologiques, notés tous deux $(\overline{\Ext}^i_A)_{i \in \mathbf{Z}}$,
 \[\begin{tikzcd}
 	{\mathcal{E}(X, J)^\circ \times \mathcal{E}(X, J)} & {\mathcal{E}(\pt, J)} \\
 	{A-\fsc(X)^\circ \times A-\fsc(X)} & {A-\fsc(\pt) \subset \Pro(A-\mod)}
@@ -108,9 +108,9 @@ $$
 $$
 avec les morphismes de transition évidentes.
 
-Le bifoncteur $\overline{\Ext}^\circ_A$ est aussi noté $\overline{\Hom}$. Il est exact à gauche.
+Le bifoncteur $\overline{\Ext}^0_A$ est aussi noté $\overline{\Hom}$. Il est exact à gauche.
 
-Supposons maintenant que le topos $X$ soit cohérent (SGA4 VI 2.) Il résulte alors immédiatement du fait que le foncteur $\Gamma(X, .)$ commute aux limites inductives filtrantes que l'on a l'égalité
+Supposons maintenant que le topos $X$ soit \emph{cohérent} (SGA4 VI 2.) Il résulte alors immédiatement du fait que le foncteur $\Gamma(X, .)$ commute aux limites inductives filtrantes que l'on a l'égalité
 $$
 \overline{\Hom}_A(E, F) \isom \overline{\Gamma}(X, \cHom_A(E, F))
 \leqno{(6.2.2)}
@@ -303,7 +303,7 @@ sont des isomorphismes.
 $$
 \Ext^i_{A_m}(E_m, F_n) \to \Ext^i_{A_m}(f^* E_m, f^* F_n).
 $$
-On e déduit immédiatement un morphisme de bifoncteurs cohomologiques
+On en déduit immédiatement un morphisme de bifoncteurs cohomologiques
 $$
 f^* : \overline{\Ext}^i_A(E, F) \to \overline{\Ext}^i_A(f^* E, f^* F),
 $$
@@ -667,7 +667,7 @@ Comme (6.6.7) le système projectif $(\Gamma(U, F_p))_{p \in \mathbf{N}}$ est es
 {\bf 6.7. Relations d'orthogonalité}.
 \vskip .3cm
 {
-Définition {\bf 6.7.1}. --- \it Soit $(X, A, J)$ un idéotope. n dit qu'un $A$-faisceau sur $X$ est \emph{fortement plat} s'il est isomorphe dans $A-\fsc(X)$ à un $A$-faisceau $F = (F_n)_{n \in \mathbf{N}}$ tel que pour tout $n \in \mathbf{N}$ ele $A_{nX}$--Module $F_n$ soit plat. 
+Définition {\bf 6.7.1}. --- \it Soit $(X, A, J)$ un idéotope. On dit qu'un $A$-faisceau sur $X$ est \emph{fortement plat} s'il est isomorphe dans $A-\fsc(X)$ à un $A$-faisceau $F = (F_n)_{n \in \mathbf{N}}$ tel que pour tout $n \in \mathbf{N}$ ele $A_{nX}$--Module $F_n$ soit plat. 
 }
 \vskip .3cm
 Un $A$-faisceau fortement plat est plat (5.6). Un $A$-faisceau quasi-libre est fortement plat.
