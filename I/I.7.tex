@@ -97,7 +97,7 @@ le complexe $P$ pouvant être pris borné (resp. borné inférieurement, resp. b
 \end{tikzcd}\leqno{\underline{\otimes}}\]
 coïncidant avec (7.2.1) sur leur domaine commun de définition, et vérifiant les propriétés de commutativité et d'associativité habituelles.
 \vskip .3cm
-{\bf 7.2.5}. Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. Dans chacun des cas où nous avons défini $K \otimes L$, nous poserons
+{\bf 7.2.5}. Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. Dans chacun des cas où nous avons défini $K \underline{\otimes} L$, nous poserons
 $$
 \cTor^A_i(K, L) = \mathrm{H}^{-i}(K \underline{\otimes} L) \quad (i \in \mathbf{Z}).
 $$
@@ -134,7 +134,7 @@ Comme d'habitude, on en déduit des bifoncteurs exacts, notés $\cHom^\bullet_A:
 \end{tikzcd}\]
 qui coïncident sur leurs domaines communs de définition.
 
-Soit $\K^-(X, A)_{\ql}$ la sous-catégorie triangulée plaine de $\K^-(K, A)$ engendrée par les complexes bornés supérieurement et quasilibres en tout degré, et $\D^-(X, A)_{\ql}$ la catégorie triangulée obtenue à partir de $\K^-(X, A)_{ql}$ en inversant les quasi-isomorphismes. Comme il y a suffisamment de $A$-faisceaux quasilibres, le foncteur canonique
+Soit $\K^-(X, A)_{\ql}$ la sous-catégorie triangulée pleine de $\K^-(K, A)$ engendrée par les complexes bornés supérieurement et quasilibres en tout degré, et $\D^-(X, A)_{\ql}$ la catégorie triangulée obtenue à partir de $\K^-(X, A)_{\ql}$ en inversant les quasi-isomorphismes. Comme il y a suffisamment de $A$-faisceaux quasilibres, le foncteur canonique
 $$
 \D^-(X, A)_{\ql} \to \D^-(X, A)
 \leqno{(7.3.1)}
@@ -333,7 +333,12 @@ $$
 \end{tikzcd}\]
 On définit alors comme suit un complexe, noté $\overline{\Hom}^\bullet_A (K, L)$, d'objets de $A-\fsc(\pt)$. Pour tout $n \in \mathbf{Z}$, son $n^{\text{ème}}$ terme est
 $$
-(\overline{\Hom}^\bullet_A (K, L))^n = \bigoplus_{p \in \mathbf{Z}} \overline{\Hom}_A (\id_K, d_L).
+(\overline{\Hom}^\bullet_A (K, L))^n = \bigoplus_{p \in \mathbf{Z}} \overline{\Hom}_A (K^p, L^{p+n}).
+\leqno{(6.2)}
+$$
+(somme directe finie), et sa différentielle de degré $n$ est définie de fa\c{c}on claire par la formule
+$$
+d^n = \overline{\Hom}_A(d_K, \id_L) + (-1)^{n+1} \overline{\Hom}_A (\id_K, d_L).
 $$
 On en déduit comme d'habitude des bifoncteurs exacts, notés $\overline{\Hom}_A$,
 \[\begin{tikzcd}
@@ -373,7 +378,7 @@ Lemme {\bf 7.4.4}. --- \it Soient $K$ et $L$ deux complexes de $A$-faisceaux sur
 Alors si $K$ ou $L$ est acyclique, le complexe $\Hom^\bullet_A (K, L)$ est acyclique.
 }
 \vskip .3cm
-{\bf Preuve} : D'après (2.8), le complexe $\Hom^\bullet_A (K, L)$ est obtenu en appliquant le foncteur $\varinjlim_{n \in \mathbf{N}}$ au complexe $\overline{\Hom}^\bullet_A(K, L)$. Or ce dernier est acyclique (7.4.2) et l'hypothèse sur $L$ implique que ses composants sont directement stricts. On conclut grâce à (EGA $0_{III}$ 13.2.2). 
+{\bf Preuve} : D'après (2.8), le complexe $\Hom^\bullet_A (K, L)$ est obtenu en appliquant le foncteur $\varprojlim_{n \in \mathbf{N}}$ au complexe $\overline{\Hom}^\bullet_A(K, L)$. Or ce dernier est acyclique (7.4.2) et l'hypothèse sur $L$ implique que ses composants sont directement stricts. On conclut grâce à (EGA $0_{III}$ 13.2.2). 
 
 Comme précédemment, compte tenu de (6.6.3), le lemme (7.4.4) permet de définir un bifoncteur exact
 $$
@@ -399,7 +404,7 @@ Proposition {\bf 7.4.6}. --- \it
 $$
 \Ext^i_A (K, L) \isom \Ext^i (K, L)
 $$
-pour uniformiser les notations. La preuve de (i), semblable à celle de (7.3.5), est laissé au lecteur. Montrons (ii) dans le cas $i = 0$, le cas général s'en déduisant aussitôt. On peut supposer $K$ quasilibre et $L$ à composants flasques et directement stricts. Alors, notant $\Hom_{ht}(K, L)$ les morphismes de $K$ dans $L$ dans la catégories $\K(X, A)$, on est ramené à prouver le corollaire suivant : 
+pour uniformiser les notations. La preuve de (i), semblable à celle de (7.3.5), est laissé au lecteur. Montrons (ii) dans le cas $i = 0$, le cas général s'en déduisant aussitôt. On peut supposer $K$ quasilibre et $L$ à composants flasques et directement stricts. Alors, notant $\Hom_{\text{ht}}(K, L)$ les morphismes de $K$ dans $L$ dans la catégories $\K(X, A)$, on est ramené à prouver le corollaire suivant : 
 \vskip .3cm
 {
 Corollaire {\bf 7.4.7}. --- \it Soient $K \in \K^-(X, A)$ et $L \in \K^+(X, A)$. On suppose que $K$ est à composants quasilibres et $L$ à composants flasques et directement stricts. Alors l'application canonique
@@ -422,7 +427,7 @@ est une bijection. Désignant par $M$ le mapping-cylinder de $u$, on a un triang
 	& {\Hom^\bullet_A (M, L)(-1)} \\
 	{\Hom^\bullet_A (K, L)} && {\Hom^\bullet_A (K', L),}
 	\arrow[from=2-3, to=1-2]
-	\arrow["{d^\bullet_1}"', dashed, from=1-2, to=2-1]
+	\arrow["{d \circ 1}"', dashed, from=1-2, to=2-1]
 	\arrow["\alpha"', from=2-1, to=2-3]
 	\arrow["{\Hom^\bullet_A(u, \id)}", from=2-1, to=2-3]
 \end{tikzcd}\]
