@@ -74,11 +74,12 @@ E \to E \otimes_A u_* (B)
 $$
 déduit du morphisme évident de $A$-faisceaux $A \to u_* (B)$. Le morphisme (8.1.7) permet de définir de fa\c{c}on évidente un morphisme de bifoncteurs cohomologiques
 $$
-\Hom_B(\Ld u^* (E), F) \to \Hom_A(E, u^* (F)),
+\Hom_B(\bLd u^* (E), F) \to \Hom_A(E, u^* (F)),
 $$
 et il s'agit de voir que c'est un isomorphisme. Quitte à découper $F$ en parties positive et négative, on est ramené à le voir lorsque $F \in \D^+(X, B)$ ou $F \in \D^-(X, B)$. Dans l'hypothèse non respée, le cas où $F \in \D^+(X, B)$ se ramène, au moyen du ``way-out functor lemma'', au cas où $F$ est borné, de sorte qu'on peut pour prouver l'assertion supposer que $F \in \D^-(X, B)$. Alors, on définit comme suit un morphisme d'``adjonction''
 $$
 \bLd u^* u_* F \to F.
+\leqno{(8.1.8)}
 $$
 On choisit une résolution $A$-plate $P \to u_*(F)$, et la structure de $B$-faisceaux sur les composants de $u_*(F)$ permet d'en déduire de fa\c{c}on évidente un morphisme de complexes $u^*(P) \to F$ qui répond à la question. Dans l'hypothèse respée, le morphisme (8.1.8) se définit de même sans hypothèse de degrés sur $F$. Enfin, les morphismes composés canoniques déduits de (8.1.7) et (8.1.8) sont les identités, d'où (i). Pour montrer l'assertion (ii), on peut supposer $E$ quasilibre et $F$ flasque, ce qui implique que $u^*(E)$ et $u_*(F)$ sont respectivement quasilibre et flasque. Le lemme suivant permet alors de définir un isomorphisme de complexes
 $$
@@ -133,7 +134,7 @@ Proposition {\bf 8.1.11}. --- \it
     \end{itemize}
     \item[(iv)] Soient $E \in \D^-(X, A)$ et $F \in \D^+(X, A)$. On a un morphisme canonique fonctoriel
     $$
-    \bLd u^* \bLd \cHom_A (E, F) \to \bRd \cHom_B (\bLd u^* (E), \bLd u^*(F))
+    \bLd u^* \bRd \cHom_A (E, F) \to \bRd \cHom_B (\bLd u^* (E), \bLd u^*(F))
     $$
     lorsque $A$ est un anneau local régulier et $J$ son idéal maximal. Ce morphisme est un \emph{isomorphisme} lorsque de plus $B$ est une $A$-algèbre finis et $K = JB$.
     \item[(v)] Soient $E \in \D^-(X, A)$ et $F \in \D^+(X, A)$. Lorsque l'objet final de $X$ est quasicompact, et que l'anneau $A$ est régulier et $J$ est son idéal maximal, on a des morphismes canoniques
@@ -211,7 +212,7 @@ Proposition {\bf 8.1.16}. --- \it
 $$
 B \otimes_A f^*(E) \to f^*(B \otimes_A E),
 $$
-défini composant par composant, répond à la question. Dans la deuxième hypothèse, on peut supposer $E$ plat, et on concluera comme précédemment si on prouve que $B \otimes_A f^* (E) \isom B \underline{\otimes}_a f^* (E)$. Comme le foncteur $\bLd u^*$ est de dimension cohomologique finie à gauche, il suffit pour cela (CD début page 43), de montrer que pour tout $A$-faisceau plat $M$ sur $Y$, on a $\cTor^A_i(B, f^*(M)) = 0$ $(i \geq 1)$, ce qui est immédiat à partir de (5.17.1). Pour voir (ii), on peut dans chacun des cas considérés supposer $E$ plat, de sorte que $i_!(E)$ l'est aussi (5.18.5.(i)). 
+défini composant par composant, répond à la question. Dans la deuxième hypothèse, on peut supposer $E$ plat, et on concluera comme précédemment si on prouve que $B \otimes_A f^* (E) \isom B \underline{\otimes}_A f^* (E)$. Comme le foncteur $\bLd u^*$ est de dimension cohomologique finie à gauche, il suffit pour cela (CD début page 43), de montrer que pour tout $A$-faisceau plat $M$ sur $Y$, on a $\cTor^A_i(B, f^*(M)) = 0$ $(i \geq 1)$, ce qui est immédiat à partir de (5.17.1). Pour voir (ii), on peut dans chacun des cas considérés supposer $E$ plat, de sorte que $i_!(E)$ l'est aussi (5.18.5.(i)). 
 
 Alors, on construit, composant par composant à partir de (5.18.1), un isomorphisme de complexes
 $$
@@ -505,7 +506,7 @@ la catégorie ainsi définie :
     \item Ses objets sont les $A$-faisceaux. 
     \item Si $E$ et $F$ sont deux $A$-faisceau, un morphisme de $S^{-1}A$-faisceaux de $E$ dans $F$ est un élément de
     $$
-    \Hom_{S^-1 A}(E, F) = S^{-1} \Hom_A (E, F).
+    \Hom_{S^{-1} A}(E, F) = S^{-1} \Hom_A (E, F).
     $$
 \end{itemize}
 }
