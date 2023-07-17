@@ -132,20 +132,20 @@ Enfin, supposons que pour toute $A$-algèbre de type fini $B$ annulée par une p
 {
 Proposition {\bf 2.6}. --- \it Soient $K \in \D^-_c(X, A)$, $L \in \D^-(X, A)$ et $M \in \D^+(X, A)$. Alors, le morphisme de Cartan
 $$
-\bRd \cHom_A(K \underline{\otimes}_A L, M) \to \bRd \cHom_A(K, \bRd \cHom_A(L, M))
+\bRd \cHom_A(K \boldsymbol{\otimes}_A L, M) \to \bRd \cHom_A(K, \bRd \cHom_A(L, M))
 \leqno{(I 7.6.2)}
 $$
 est un \emph{isomorphisme}. Si de plus $X$ est noethérien, les morphismes
 $$
-\bRd \overline{\Hom}_A(K \underline{\otimes}_A L, M) \to \bRd \overline{\Hom}_A(K, \bRd \cHom_A(L, M))
+\bRd \overline{\Hom}_A(K \boldsymbol{\otimes}_A L, M) \to \bRd \overline{\Hom}_A(K, \bRd \cHom_A(L, M))
 \leqno{(I 7.6.3)}
 $$
 $$
-\bRd \Hom_A(K \underline{\otimes}_A L, M) \to \bRd \Hom_A(K, \bRd \cHom_A(L, M))
+\bRd \Hom_A(K \boldsymbol{\otimes}_A L, M) \to \bRd \Hom_A(K, \bRd \cHom_A(L, M))
 \leqno{(I 7.6.4)}
 $$
 $$
-\Hom_A(K \underline{\otimes}_A L, M) \to \Hom_A(K, \bRd \cHom_A(L, M))
+\Hom_A(K \boldsymbol{\otimes}_A L, M) \to \Hom_A(K, \bRd \cHom_A(L, M))
 \leqno{(I 7.6.5)}
 $$
 sont aussi des \emph{isomorphismes}.
@@ -153,18 +153,18 @@ sont aussi des \emph{isomorphismes}.
 \vskip .3cm
 {\bf Preuve} : La définition des trois derniers morphismes à partir du premier au moyen de (I 7.4.18) montre qu'il suffit de voir que (I 7.6.2) est un isomorphisme. On peut pour cela supposer $L$ quasilibre et $M$ flasque. Ceci dit, les foncteurs exacts
 $$
-\bRd \cHom_A(K \underline{\otimes}_A L, .) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A(L, .))
+\bRd \cHom_A(K \boldsymbol{\otimes}_A L, .) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A(L, .))
 $$
 de $\D^+(X, A)$ dans $\D^+(X, A)$ possèdent la propriété de ``décalage à droite'' ([H] I 7), ce qui permet de se ramener au cas où $M$ est de plus réduit au degré 0. Dans ce cas, fixant $K$ et $M$, les foncteurs exacts
 $$
-\bRd \cHom_A(K \underline{\otimes}_A ., M) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A()., M)
+\bRd \cHom_A(K \boldsymbol{\otimes}_A ., M) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A()., M)
 $$
 possèdent également la propriété de dácalage à droite, ce qui permet de se ramener au cas où de plus $L$ est réduit au degré 0. Enfin, un dernier argument de décalage permet de supposer que $K$ est réduit au degré 0 et que $K^0$ est un $A$-faisceau constructible. Pour montrer l'assertion dans ce dernier cas, on peut, quitte à localiser, supposer $X$ noethérien. Alors, il est immédiat que $K$ est quasi-isomorphe à un complexe quasilibre borné supérieurement, tel que pour tout $n \in \mathbf{Z}$, le $A$-faisceau $K^n$ ait ses composants constructibles. Finalement, on peut supposer $K$ et $L$ réduits au degré 0, quasilibres, que $K^0$ a des composants constructibles et que $L$ est flasque. Alors, il résulte de (I 6.3.8) que le morphisme de complexes (I 7.6.1) est un isomorphisme, d'où l'assertion.
 \vskip .3cm
 {
 Proposition {\bf 2.7}. --- \it Soient $E \in \D^-_{\parf}(X, A)$, $F \in \D^+(X, A)$ et $G \in \D(X, A)$. Le morphisme 
 $$
-m: \bRd \cHom_A(E, F) \underline{\otimes}_A G \to \bRd \cHom_A(E, F \underline{\otimes}_A G)
+m: \bRd \cHom_A(E, F) \boldsymbol{\otimes}_A G \to \bRd \cHom_A(E, F \boldsymbol{\otimes}_A G)
 \leqno{(I 7.6.9.2)}
 $$
 est un \emph{isomorphisme} dans chacun des cas suivants:
@@ -200,13 +200,13 @@ est \emph{parfait} lorsque de plus $A$ est local régulier d'idéal maximal $J$.
 \vskip .3cm
 {\bf 2.9}. Supposons maintenant pour simplifier que $A$ est local régulier d'idéal maximal $J$. Soient $E, E' \in \D^-(X, A)$ et $F, F' \in D^+(X, A)$. On suppose que $E \in \D^-_c(X, A)$. Nous allons définir un morphisme fonctoriel 
 $$
-\bRd \cHom_A(E, F) \underline{\otimes}_A \bRd \cHom_a(E', F') \to \bRd \cHom_A(E \underline{\otimes}_A E', F \underline{\otimes}_A F').
+\bRd \cHom_A(E, F) \boldsymbol{\otimes}_A \bRd \cHom_a(E', F') \to \bRd \cHom_A(E \boldsymbol{\otimes}_A E', F \boldsymbol{\otimes}_A F').
 \leqno{(2.9.1)}
 $$
 Considérons pour cela le diagramme
 \[\begin{tikzcd}
-	{\bRd \cHom_A(E, F) \underline{\otimes}_A\bRd\cHom_A(E', F')} && {\bRd \cHom_A(E \underline{\otimes}_AE', F\underline{\otimes}_AF') } \\
-	{\bRd \cHom_A(E, F \underline{\otimes}_A\bRd\cHom_A(E', F'))} && {\bRd \cHom_A(E, \bRd \cHom_A(E', F \underline{\otimes}_A F')).}
+	{\bRd \cHom_A(E, F) \boldsymbol{\otimes}_A\bRd\cHom_A(E', F')} && {\bRd \cHom_A(E \boldsymbol{\otimes}_AE', F\boldsymbol{\otimes}_AF') } \\
+	{\bRd \cHom_A(E, F \boldsymbol{\otimes}_A\bRd\cHom_A(E', F'))} && {\bRd \cHom_A(E, \bRd \cHom_A(E', F \boldsymbol{\otimes}_A F')).}
 	\arrow["{(1)}"', from=1-1, to=2-1]
 	\arrow["{(3)}"', from=1-3, to=2-3]
 	\arrow["{(2)}", from=2-1, to=2-3]
@@ -219,7 +219,7 @@ Si maintenant on a aussi $E' \in \D^-_c(X, A)$, on définit, en échangeant les 
 {
 Proposition {\bf 2.9.2}. --- \it On suppose que l'anneau $A$ est local régulier d'idéal maximal $J$. Soient $E, E' \in \D^-_{\parf}(X, A)$ et $F, F' \in \D^+(X, A)$. Alors, le morphisme canonique
 $$
-\bRd \cHom_a(E, F) \underline{\otimes}_A \bRd \cHom_a(E', F') \to \bRd \cHom_A(E \underline{\otimes}_A E', F \underline{\otimes}_A F')
+\bRd \cHom_a(E, F) \boldsymbol{\otimes}_A \bRd \cHom_a(E', F') \to \bRd \cHom_A(E \boldsymbol{\otimes}_A E', F \boldsymbol{\otimes}_A F')
 \leqno{(2.9.1)}
 $$
 est un \emph{isomorphisme}.
@@ -229,35 +229,35 @@ est un \emph{isomorphisme}.
 \vskip .3cm
 {\bf 2.10}. Supposons maintenant le topos $X$ \emph{noethérien}, et que l'anneau $A$ est local régulier d'idéal maximal $J$. Étant donné $E \in \D^b_{\parf}(X, A)$, le complexe $E$ appartient aussi à $\D^b_{\parf}(X, A)$, et le morphisme de Cartan (I 7.6.5)
 $$
-\Hom_A(\check{E} \underline{\otimes}_A E, A) \to \hom_A(\check{E}, \check{E})
+\Hom_A(\check{E} \boldsymbol{\otimes}_A E, A) \to \hom_A(\check{E}, \check{E})
 $$
 est une bijection. En particulier, l'identité de $\check{E}$ correspond à un morphisme 
 $$
-E \underline{\otimes}_A \check{E} \to A.
+E \boldsymbol{\otimes}_A \check{E} \to A.
 \leqno{(2.10.1)}
 $$
 \vskip .3cm
 {
 Proposition {\bf 2.10.2}. --- \it Soit $F \in \D^+(X, A)$. Il existe un morphisme fonctoriel en $F$
 $$
-E \underline{\otimes}_A \bRd \cHom_A (E, F) \to F,
+E \boldsymbol{\otimes}_A \bRd \cHom_A (E, F) \to F,
 $$
 qui ``coîncide'' avec (2.10.1) lorsque $F = A$. 
 }
 \vskip .3cm
 {\bf Preuve} : En tensorisant par l'identité de $E$ l'isomorphisme (2.8) on obtient un isomorphisme
 $$
-a: E \underline{\otimes}_A \check{E} \underline{\otimes}_A F \isomlong E \underline{\otimes}_A \bRd \cHom_A(E, F).
+a: E \boldsymbol{\otimes}_A \check{E} \boldsymbol{\otimes}_A F \isomlong E \boldsymbol{\otimes}_A \bRd \cHom_A(E, F).
 $$
 Par ailleurs, on définit, en tensorisant par l'identité de $F$ le morphisme (2.10.1), un morphisme
 $$
-b: E \underline{\otimes}_A \check{E} \underline{\otimes}_A F \to F.
+b: E \boldsymbol{\otimes}_A \check{E} \boldsymbol{\otimes}_A F \to F.
 $$
 Le morphisme annoncé est le composé $b \circ a^{-1}$.
 
 Lorsque $F \in \D^b_c(X, A)$, il en est de même de $\bRd \cHom_A(E, F)$, et le morphisme de Cartan
 $$
-\Hom_A\bRd \cHom_A(E, F) \underline{\otimes}_A E, F) \to \Hom_A(\bRd \cHom_A (E, F), \bRd \cHom_A(E, F))
+\Hom_A\bRd \cHom_A(E, F) \boldsymbol{\otimes}_A E, F) \to \Hom_A(\bRd \cHom_A (E, F), \bRd \cHom_A(E, F))
 $$
 est une bijection. On laisse alors au lecteur le soin de vérifier que le morphisme (2.10.2) correspond à l'identité de $\bRd \cHom_A(E, F)$ dans cette bijection.
 \vskip .3cm
@@ -270,7 +270,7 @@ $$
 \vskip .3cm
 {\bf Preuve} : On prend l'image de (2.10.2) par le morphisme de Cartan
 $$
-\Hom_A(E \underline{\otimes} \bRd \cHom_A(E, F), F) \to \Hom_A(E, \bRd \cHom_A (E, F), F).
+\Hom_A(E \boldsymbol{\otimes} \bRd \cHom_A(E, F), F) \to \Hom_A(E, \bRd \cHom_A (E, F), F).
 $$
 En particulier, pour $F = A$, on déduit de (2.10.3) un morphisme 
 $$
@@ -303,7 +303,7 @@ $$
 \bRd \cHom_A(E, E) \to A,
 \leqno{(2.11.1)}
 $$
-composée de l'isomorphisme inverse de (2.8) $\bRd \cHom_A(E, E) \isomlong \check{E} \underline{\otimes}_A E$ et du morphisme (2.10.1). Appliquant à (2.11.1) le foncteur $\mathrm{H}^\circ(X, .)$, on obtient, compte tenu de l'isomorphisme de Cartan, une application $A$-linéaire $\Hom_A(E, E) \to \Gamma(X, A)$, qui est le morphisme trace annoncé lorsque $X$ est noethérien. Dans le cas général, comme le préfaisceau
+composée de l'isomorphisme inverse de (2.8) $\bRd \cHom_A(E, E) \isomlong \check{E} \boldsymbol{\otimes}_A E$ et du morphisme (2.10.1). Appliquant à (2.11.1) le foncteur $\mathrm{H}^\circ(X, .)$, on obtient, compte tenu de l'isomorphisme de Cartan, une application $A$-linéaire $\Hom_A(E, E) \to \Gamma(X, A)$, qui est le morphisme trace annoncé lorsque $X$ est noethérien. Dans le cas général, comme le préfaisceau
 $$
 U \mapsto \mathrm{H}^0(U, A)
 $$
@@ -315,12 +315,12 @@ $$
 $$
 que nous appellerons \emph{cup-produit}. Pour cela, on se ramène comme précédemment à le définir lorsque $X$ est noethérien et les complexes $E$ et $F$ sont bornés. Dans ce cas, on dispose d'un homomorphisme canonique
 $$
-\bRd \cHom_A(E, F) \underline{\otimes}_A \bRd \cHom_A(F, E) \to A,,,
+\bRd \cHom_A(E, F) \boldsymbol{\otimes}_A \bRd \cHom_A(F, E) \to A,,,
 \leqno{(2.11.2)}
 $$
 que l'on construit comme suit. D'après (2.8), il s'agit de définir un accouplement
 $$
-\check{E} \underline{\otimes}_A F \underline{\otimes}_A \check{F} \underline{\otimes}_A E \to A.
+\check{E} \boldsymbol{\otimes}_A F \boldsymbol{\otimes}_A \check{F} \boldsymbol{\otimes}_A E \to A.
 $$
 On prend le produit tensoriel des accouplements (2.10.1) associés à $E$ et $F$ respectivement. Montrons maintenant comment déduire le cup-produit de (2.11.2). D'après l'isomorphisme de Cartan (2.6), il s'agit, étant donnés deux morphismes
 $$
@@ -330,7 +330,7 @@ et
 $$
 v: A \to \bRd \cHom_A(F, E),
 $$
-d'en définir un de $A$ dans $A$. On prend le morphisme composé de (2.11.1) et de $u \underline{\otimes}_A v$. 
+d'en définir un de $A$ dans $A$. On prend le morphisme composé de (2.11.1) et de $u \boldsymbol{\otimes}_A v$. 
 \vskip .3cm
 {
 Proposition {\bf 2.11.3}. --- \it Soient $E$ et $F \in \D_{\parf}(X, A)$.
@@ -345,7 +345,7 @@ Proposition {\bf 2.11.3}. --- \it Soient $E$ et $F \in \D_{\parf}(X, A)$.
     $$
     \item[(iii)] Étant donnés deux morphismes $u: E \to E$ et $v: F \to F$, on a : 
     $$
-    \tr(u \underline{\otimes} v) = \tr(u) \tr(v).
+    \tr(u \boldsymbol{\otimes} v) = \tr(u) \tr(v).
     $$
 \end{itemize}
 }
