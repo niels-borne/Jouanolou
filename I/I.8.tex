@@ -115,7 +115,7 @@ Proposition {\bf 8.1.11}. --- \it
     \item[(i)] Si $L$ est un $A$-faisceau plat, le $B$-faisceau $u^*(L)$ est plat. Si $E \in D^-(X, A)_{\torf}$, alors $\bLd u^*(E) \in \D^-(X, B)_{\torf}$.
     \item[(ii)] Soient $E$ et $F \in \D(X, A)$. On a un isomorphisme fonctoriel
     $$
-    \bLd u^* (E \underline{\otimes}_A F) \isomlong \bLd u^* (E) \underline{\otimes}_B \bLd u^*(F)
+    \bLd u^* (E \boldsymbol{\otimes}_A F) \isomlong \bLd u^* (E) \boldsymbol{\otimes}_B \bLd u^*(F)
     $$
     dans chacun des cas suivants:
     \begin{itemize}
@@ -124,7 +124,7 @@ Proposition {\bf 8.1.11}. --- \it
     \end{itemize}
     \item[(iii)] Soient $E \in \D(X, A)$ et $F \in \D(X, B)$. On a un isomorphisme fonctoriel
     $$
-    u_* (\bLd u^* (E) \underline{\otimes}_B F) \isomlong u_*(F) \underline{\otimes}_A E,
+    u_* (\bLd u^* (E) \boldsymbol{\otimes}_B F) \isomlong u_*(F) \boldsymbol{\otimes}_A E,
     $$
     appelé \emph{formule de projection}, dans chacun des cas suivants :
     \begin{itemize}
@@ -162,7 +162,7 @@ $$
 $$
 On prend celui déduit de fa\c{c}on évidente du morphisme d'adjonction (8.1.7) : $F \to u_* \bLd u^* (F)$. Notant $q$ le morphisme de l'énoncé, nous allons donner une description directe de $u_* (q)$. Il s'agit, compte tenu de (8.1.16.(iii)), d'un morphisme 
 $$
-B \underline{\otimes}_A \bRd \cHom_A (E, F) \to \bRd \cHom_A (E, B \underline{\otimes}_A F),
+B \boldsymbol{\otimes}_A \bRd \cHom_A (E, F) \to \bRd \cHom_A (E, B \boldsymbol{\otimes}_A F),
 \leqno{(8.1.13)}
 $$
 qui n'est autre, comme on s'en assure aisément, que (7.6.9.2). Supposons maintenant que $B$ soit une $A$-algèbre finie et que $K = JB$. Pour voir que dans ce cas le morphisme $q$ est un isomorphisme, il suffit, d'après la conservativité du foncteur $u_*$, de montrer que (8.1.13) en est un. Quitte à remplacer $B$ par une résolution finie par des $A$-modules libres de type fini, on est ramené au cas où $B = A$, et alors l'assertion est évidente. Prouvons enfin (v). Nous allons le faire pour les $\bRd \overline{\Hom}$, la construction dans l'autre cas étant analogue. Appliquant le foncteur $u_* \circ \bRd \overline{\Gamma}$ au morphisme $q$, on obtient un morphisme
@@ -212,7 +212,7 @@ Proposition {\bf 8.1.16}. --- \it
 $$
 B \otimes_A f^*(E) \to f^*(B \otimes_A E),
 $$
-défini composant par composant, répond à la question. Dans la deuxième hypothèse, on peut supposer $E$ plat, et on concluera comme précédemment si on prouve que $B \otimes_A f^* (E) \isom B \underline{\otimes}_A f^* (E)$. Comme le foncteur $\bLd u^*$ est de dimension cohomologique finie à gauche, il suffit pour cela (CD début page 43), de montrer que pour tout $A$-faisceau plat $M$ sur $Y$, on a $\cTor^A_i(B, f^*(M)) = 0$ $(i \geq 1)$, ce qui est immédiat à partir de (5.17.1). Pour voir (ii), on peut dans chacun des cas considérés supposer $E$ plat, de sorte que $i_!(E)$ l'est aussi (5.18.5.(i)). 
+défini composant par composant, répond à la question. Dans la deuxième hypothèse, on peut supposer $E$ plat, et on concluera comme précédemment si on prouve que $B \otimes_A f^* (E) \isom B \boldsymbol{\otimes}_A f^* (E)$. Comme le foncteur $\bLd u^*$ est de dimension cohomologique finie à gauche, il suffit pour cela (CD début page 43), de montrer que pour tout $A$-faisceau plat $M$ sur $Y$, on a $\cTor^A_i(B, f^*(M)) = 0$ $(i \geq 1)$, ce qui est immédiat à partir de (5.17.1). Pour voir (ii), on peut dans chacun des cas considérés supposer $E$ plat, de sorte que $i_!(E)$ l'est aussi (5.18.5.(i)). 
 
 Alors, on construit, composant par composant à partir de (5.18.1), un isomorphisme de complexes
 $$
@@ -318,7 +318,7 @@ Proposition {\bf 8.2.5}. --- \it
     $$
     \item[(ii)] Soient $E$ et $F \in \D(A_n-\Mod_X)$. On a un isomorphisme fonctoriel
     $$
-    \omega(E) \underline{\otimes} \omega(F) \isomlong \omega(E \underline{\otimes}F)
+    \omega(E) \boldsymbol{\otimes} \omega(F) \isomlong \omega(E \boldsymbol{\otimes} F)
     $$
     lorsque $E$ et $F \in \D^-(A_n-\Mod_X)$, où $E \in \D^-(A_n-\Mod_X)_{\torf}$.
     \item[(iii)] Si $E \in \D^-(A_n-\Mod_X)$ et $F \in \D^+(A_n-\Mod_X)$, on a un isomorphisme fonctoriel
@@ -387,8 +387,8 @@ $$
 {
 Proposition {\bf 8.2.10}. --- \it Soient $E$ et $F \in \D(X, A)$.
 \begin{itemize}
-    \item[(i)] Si $E$ et $F \in \D^-_0(X, A)$, alors $E \underline{\otimes}_A F \in \D^-_0(X, A)$. 
-    \item[(ii)] Si l'anneau $A$ est local régulier et $J$ est son idéal maximal, et si $E$ et $F \in \D^+_0(X, A)$, alors $E \underline{\otimes}_A F \in \D^+_0(X, A)$.
+    \item[(i)] Si $E$ et $F \in \D^-_0(X, A)$, alors $E \boldsymbol{\otimes}_A F \in \D^-_0(X, A)$. 
+    \item[(ii)] Si l'anneau $A$ est local régulier et $J$ est son idéal maximal, et si $E$ et $F \in \D^+_0(X, A)$, alors $E \boldsymbol{\otimes}_A F \in \D^+_0(X, A)$.
     \item[(iii)] On suppose que l'anneau $A$ est local régulier et que $J$ est son idéal maximal. Alors, si $E \in \D^-_0(X, A)$ et $F \in \D^+_0(x, A)$, on a
     $$
     \bRd \cHom_A(E, F) \in \D^+_0(X, A).
@@ -396,7 +396,7 @@ Proposition {\bf 8.2.10}. --- \it Soient $E$ et $F \in \D(X, A)$.
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : Montrons (i). D'après (8.1.11.(ii)), on est ramené à voir que si $L$ et $M \in \D^-_0(X, A_p)$ pour un entier $p \geq 0$, alors il en est de même pour $L \underline{\otimes}_{A_p} M$. On peut ([H] I 7.3.) supposer que $L$ et $M$ sont réduits au degré 0, et appartiennent donc à $A_p-\fsc_0(X)$. Alors l'assertion résulte de (8.2.5.(ii)). L'assertion (ii) résulte également sans peine de (8.2.6) et (8.2.5. (ii)). Montrons (iii). Grâce à (8.1.11. (iv)), on est ramené à voir l'assertion analogue dans $\D(X, A_p)$ pour tout entier $p \geq 0$. Par dévissage ([H] I 7.3.), on peut supposer que $E$ est réduit au degré 0, et alors l'assertion résulte de (8.2.6) et (8.2.5. (iii)).
+{\bf Preuve} : Montrons (i). D'après (8.1.11.(ii)), on est ramené à voir que si $L$ et $M \in \D^-_0(X, A_p)$ pour un entier $p \geq 0$, alors il en est de même pour $L \boldsymbol{\otimes}_{A_p} M$. On peut ([H] I 7.3.) supposer que $L$ et $M$ sont réduits au degré 0, et appartiennent donc à $A_p-\fsc_0(X)$. Alors l'assertion résulte de (8.2.5.(ii)). L'assertion (ii) résulte également sans peine de (8.2.6) et (8.2.5. (ii)). Montrons (iii). Grâce à (8.1.11. (iv)), on est ramené à voir l'assertion analogue dans $\D(X, A_p)$ pour tout entier $p \geq 0$. Par dévissage ([H] I 7.3.), on peut supposer que $E$ est réduit au degré 0, et alors l'assertion résulte de (8.2.6) et (8.2.5. (iii)).
 \vskip .3cm
 {
 Proposition {\bf 8.2.11}. --- \it On suppose que l'objet final de $X$ est quasicompact. Si $E \in \D^b_0(X, A)_{\torf}$ et $F \in \D^+(A_n-\Mod_X)$, on a des isomorphismes fonctoriels
@@ -422,7 +422,7 @@ Proposition {\bf 8.2.12}. --- \it On suppose que l'objet final de $X$ est quasic
 \begin{itemize}
     \item[(i)] On a un isomorphisme fonctoriel
     $$
-    \bLd \alpha^* (E) \underline{\otimes}_{A_n} \bLd \alpha^*(F) \isomlong \bLd \alpha^*(E \underline{\otimes}_A F)
+    \bLd \alpha^* (E) \boldsymbol{\otimes}_{A_n} \bLd \alpha^*(F) \isomlong \bLd \alpha^*(E \boldsymbol{\otimes}_A F)
     $$
     lorsque $E \in \D^b_0(X, A)_{\torf}$ et $F \in \D^b_0(X, A)_{\torf}$, ou bien lorsque $A$ est local régulier, $J$ est son idéal maximal, $E \in \D^b_0(X, A)$ et $F \in \D^+_0(X, A)$.
     \item[(ii)] On suppose que $A$ est local régulier et que $J$ est son idéal maximal. Si $E \in \D^-_0(X, A)$ et $F \in \D^+_0(X, A)$, on a un isomorphisme fonctoriel
@@ -431,7 +431,7 @@ Proposition {\bf 8.2.12}. --- \it On suppose que l'objet final de $X$ est quasic
     $$
     \item[(iii)] On suppose que $G \in \D^b(A_n-\Mod_X)$ et $F \in \D^b_0(X, A)_{\torf}$, ou bien que $A$ est régulier d'idéal maximal $J$, et que $G \in \D^b(A_n-\Mod_X)_{\torf}$ (resp. $\D^+(A_n-\Mod_X)$) et $F \in \D^+_0(X, A)$ (resp. $\D^b_0(X, A)$). On a alors un isomorphisme fonctoriel
     $$
-    \alpha_*(G \underline{\otimes}_{A_n} \bLd \alpha^*(F)) \isomlong \alpha_* (G) \underline{\otimes}_A F.
+    \alpha_*(G \boldsymbol{\otimes}_{A_n} \bLd \alpha^*(F)) \isomlong \alpha_* (G) \boldsymbol{\otimes}_A F.
     $$
 \end{itemize}
 }
@@ -547,4 +547,4 @@ $$
 $$
 qui induit l'identité sur les objets. Munissant alors $\D^*(X, S^{-1}A)$ des triangles qui sont isomorphes à l'image par (8.3.4) d'un triangle de $\D^*(X, A)$, et du foncteur translation précédemment défini, on constate aisément que l'on obtient ainsi une catégorie triangulée telle que le foncteur (8.3.4) soit exact. Plus précisément, on vérifie que $\D^*(X, A)$ en inversant les homothéties définies par des éléments de $S$.
 
-Ces définitions étant ainsi posées, on laisse au lecteur le soin de s'assurer que le formalisme développé dans les numéros précédents pour les $A$-faisceaux s'étend, mutatis mutandis, aux $S^{-1}A$-faisceaux. 
+Ces définitions étant ainsi posées, on laisse au lecteur le soin de s'assurer que le formalisme développé dans les numéros précédents pour les $A$-faisceaux s'étend, mutatis mutandis, aux $S^{-1}A$-faisceaux.
