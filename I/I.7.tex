@@ -59,7 +59,7 @@ tel que le composé $v \circ u$ définisse un monomorphisme de $A-\fsc(X)$. Par 
 \vskip .3cm
 {\bf 7.2}. Les propriétés générales des $A$-faisceaux plats (5.9) et (5.9.1) permettent de leur appliquer les arguments de ((CD) p.41 th.2.2.) et ((H) II 4). Ainsi, on peut définir au moyen des résolutions plates un bifoncteur dérivé du produit tensoriel
 $$
-\underline{\otimes}: \D^-(X, A) \times \D^-(X, A) \to \D^-(X, A),
+\boldsymbol{\otimes}: \D^-(X, A) \times \D^-(X, A) \to \D^-(X, A),
 \leqno{(7.2.1)}
 $$
 vérifiant les propriétés de commutativité et d'associativité habituelles.
@@ -68,18 +68,18 @@ vérifiant les propriétés de commutativité et d'associativité habituelles.
 \begin{itemize}
     \item[(i)] Il existe deux entiers $m$ et $n$ tels que l'on ait
     $$
-    \mathrm{H}^i(K \underline{\otimes} E) = 0 \quad \text{pour} \quad i \notin [m, n]
+    \mathrm{H}^i(K \boldsymbol{\otimes} E) = 0 \quad \text{pour} \quad i \notin [m, n]
     $$
     et pour tout $A$-faisceau $E$.
     \item[(ii)] Il existe un quasi-isomorphisme $u: L \to K$, avec $L$ un complexe borné et à composants plats.
 \end{itemize}
-L'équivalence se montre en paraphrasant la preuve de (SGA4 \quad). La sous-catégorie pleine de $\D^-(X, A)$ engendrée par les complexes de tor-dimension finie est une sous-catégorie triangulée, notée 
+L'équivalence se montre en paraphrasant la preuve de (SGA4 \quad). La sous-catégorie plaine de $\D^-(X, A)$ engendrée par les complexes de tor-dimension finie est une sous-catégorie triangulée, notée 
 $$
 \D^-(X, A)_{\torf}.
 $$
 Utilisant des résolutions plates bornées pour le composant de gauche, on définit un bifoncteur dérivé du produit tensoriel
 $$
-\underline{\otimes}: \D^-(X, A)_{\torf} \times \D (X, A) \to \D(X, A)
+\boldsymbol{\otimes}: \D^-(X, A)_{\torf} \times \D (X, A) \to \D(X, A)
 \leqno{(7.2.3)}
 $$
 coïncidant avec (7.2.1) sur leur domaine commun de définition.
@@ -94,12 +94,12 @@ le complexe $P$ pouvant être pris borné (resp. borné inférieurement, resp. b
 	{\D^b(X, A) \times \D^*(X, A)} & {\D^*(X, A),}
 	\arrow[from=1-1, to=1-2]
 	\arrow[from=2-1, to=2-2]
-\end{tikzcd}\leqno{\underline{\otimes}}\]
+\end{tikzcd}\leqno{\boldsymbol{\otimes}}\]
 coïncidant avec (7.2.1) sur leur domaine commun de définition, et vérifiant les propriétés de commutativité et d'associativité habituelles.
 \vskip .3cm
-{\bf 7.2.5}. Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. Dans chacun des cas où nous avons défini $K \underline{\otimes} L$, nous poserons
+{\bf 7.2.5}. Soient $K$ et $L$ deux complexes de $A$-faisceaux sur $X$. Dans chacun des cas où nous avons défini $K \boldsymbol{\otimes} L$, nous poserons
 $$
-\cTor^A_i(K, L) = \mathrm{H}^{-i}(K \underline{\otimes} L) \quad (i \in \mathbf{Z}).
+\cTor^A_i(K, L) = \mathrm{H}^{-i}(K \boldsymbol{\otimes} L) \quad (i \in \mathbf{Z}).
 $$
 Si $E$ et $F$ sont deux $A$-faisceaux, alors, notant de même les complexes de degré zéro associés, on retrouve à isomorphisme près (5.11) les bifoncteurs $\cTor^A_i(E, F)$ définis en (5.1).
 \vskip .3cm
@@ -995,22 +995,22 @@ $$
 $$
 s'interprète comme un morphisme de $\D(X, A)$
 $$
-\bRd \cHom_A(K \underline{\otimes} L, M) \to \bRd \cHom_A(K, \bRd \cHom_A(L,M)), 
+\bRd \cHom_A(K \boldsymbol{\otimes} L, M) \to \bRd \cHom_A(K, \bRd \cHom_A(L,M)), 
 \leqno{(7.6.2)}
 $$
 et on vérifie facilement que (7.6.2) ne dépend pas des résolutions choisies, et dépend fonctoriellement de $K, L$ et $M$. Contrairement à ce qui se passe pour les faisceaux de $A$--modules, le morphisme (7.6.2) \emph{n'est pas en général un isomorphisme} ; nous verrons toute-fois plus loin que c'est le cas si l'on fait des hypothèses de finitude convenables.
 
 Supposons que le topos $X$ et l'anneau $A$ soient \emph{noethériens}. Alors on déduit de (7.6.2) des morphismes fonctorieles canoniques 
 $$
-\bRd \overline{\Hom}_A(K \underline{\otimes}L, M) \to \Rd \overline{\Hom}_A(K, \bRd \cHom_A(L, M)).
+\bRd \overline{\Hom}_A(K \boldsymbol{\otimes}L, M) \to \Rd \overline{\Hom}_A(K, \bRd \cHom_A(L, M)).
 \leqno{(7.6.3)}
 $$
 $$
-\bRd \Hom_A(K \underline{\otimes}L, M) \to \Rd \Hom_A(K, \bRd \cHom_A(L, M)).
+\bRd \Hom_A(K \boldsymbol{\otimes}L, M) \to \Rd \Hom_A(K, \bRd \cHom_A(L, M)).
 \leqno{(7.6.4)}
 $$
 $$
-\Hom_A(K \underline{\otimes}L, M) \to \Hom_A(K, \bRd \cHom_A(L, M)).
+\Hom_A(K \boldsymbol{\otimes}L, M) \to \Hom_A(K, \bRd \cHom_A(L, M)).
 \leqno{(7.6.5)}
 $$
 Utilisant (7.4.18), on les obtient en appliquant respectivement les foncteurs $\bRd \overline{\Gamma}$, $\bRd \Gamma$, $\Hom_A(A, .)$ aux deux membres de (7.6.2).
@@ -1028,17 +1028,17 @@ $$
 {
 Proposition {\bf 7.6.7}. --- \it Soient $K \in \D^+(X, A)$ et $L \in \D^-(X, A)_{\torf}$. On a un morphisme fonctoriel canonique
 $$
-K \to \bRd \cHom_A (L, K \underline{\otimes} L)
+K \to \bRd \cHom_A (L, K \boldsymbol{\otimes} L)
 $$
 qui ``coïncide'' avec l'identité de $K$ lorsque $L = A$.
 }
 \vskip .3cm
-{\bf Preuve} : On peut supposer $L$ plat et borné. Choisissant alors une résolution quasilibre $L'$ de $L$ et une résolution flasque $F$ de $L \otimes L = K \underline{\otimes} L$, le morphisme annoncé est le composé de (7.6.6) et du morphisme canonique $\cHom^\bullet_A(L, K \otimes L) \to \cHom^\bullet_A(L', I)$. On laisse au lecteur le soin de voir que cela ne dépend pas des choix faits.
+{\bf Preuve} : On peut supposer $L$ plat et borné. Choisissant alors une résolution quasilibre $L'$ de $L$ et une résolution flasque $F$ de $L \otimes L = K \boldsymbol{\otimes} L$, le morphisme annoncé est le composé de (7.6.6) et du morphisme canonique $\cHom^\bullet_A(L, K \otimes L) \to \cHom^\bullet_A(L', I)$. On laisse au lecteur le soin de voir que cela ne dépend pas des choix faits.
 \vskip .3cm
 {
 Corollaire {\bf 7.6.8}. --- \it Soient $K \in \D^+(X, A)$, $L \in \D^-(X, A)_{\torf}$ et $M \in \D^+(X, A)$. On a un morphisme fonctoriel
 $$
-\Hom_A(K \underline{\otimes}L, M) \to \Hom_A(K, \bRd \cHom_A(L, M)).
+\Hom_A(K \boldsymbol{\otimes}L, M) \to \Hom_A(K, \bRd \cHom_A(L, M)).
 $$
 En particulier, on a un morphisme fonctoriel
 $$
@@ -1046,7 +1046,7 @@ $$
 $$
 }
 \vskip .3cm
-{\bf Preuve} : Soit $u: K \underline{\otimes} L \to M$. On obtient un morphisme $K \to \bRd \cHom_A (L, M)$ en composant $\bRd \cHom_A(\id_L, u)$ avec (7.6.7).
+{\bf Preuve} : Soit $u: K \boldsymbol{\otimes} L \to M$. On obtient un morphisme $K \to \bRd \cHom_A (L, M)$ en composant $\bRd \cHom_A(\id_L, u)$ avec (7.6.7).
 \vskip .3cm
 {\bf 7.6.9}. Soient $E, F, G$ trois complexes de $A$-faisceaux sur $X$. On suppose que les degrés vérifient l'une des conditions suivantes : 
 \[\begin{tikzcd}
@@ -1080,7 +1080,7 @@ Soient maintenant $E \in \D^-(X, A)$, $F \in \D^+(X, A)$, et $G \in \D(X, A)$. O
 \end{itemize}
 Nous allons alors définir un morphisme fonctoriel
 $$
-\bRd \cHom_A(E, F) \underline{\otimes}G \to \bRd \cHom_A(E, F \underline{\otimes} G).
+\bRd \cHom_A(E, F) \boldsymbol{\otimes}G \to \bRd \cHom_A(E, F \boldsymbol{\otimes} G).
 \leqno{(7.6.9.2)}
 $$
 Dans chacun des cas envisagés, le complexe $G$ admet une résolution plate et bornée inférieurement $N$. Étant donnés une résolution quasilibre $L$ de $E$ et une résolution flasque $M$ de $F$, on a (7.6.9.1) un morphisme de complexes 
@@ -1111,7 +1111,7 @@ Proposition {\bf 7.7.2}. --- \it Soient $E$ et $F \in \D(Y, A)$.
 \begin{itemize}
     \item[(i)] Lorsque $E$ et $F \in \D^-(Y, A)$, ou lorsque $A$ est un anneau local régulier et $J$ son idéal maximal, il existe un \emph{isomorphisme} canonique fonctoriel
     $$
-    f^* (E) \underline{\otimes}_A f^* (F) \isomlong f^*(E \underline{\otimes}_A F),
+    f^* (E) \boldsymbol{\otimes}_A f^* (F) \isomlong f^*(E \boldsymbol{\otimes}_A F),
     $$
     induisant, lorsque $E$ et $F$ sont des $A$-faisceaux, les morphismes (5.17.1) sur les objets de cohomologie.
     \item[(ii)] Lorsque $E \in \D^-(Y, A)$ et $F \in \D^+(Y, A)$, il existe un morphisme canonique fonctoriel
@@ -1257,7 +1257,7 @@ Proposition {\bf 7.7.10}. --- \it Soient $E \in \D(T, A)$ et $F \in \D(T', A)$.
     $$
     \item[(iv)] On a un \emph{isomorphisme} fonctoriel
     $$
-    \bRd i_! (E \underline{\otimes} i^* (F)) \isomlong \bRd i_! (E) \underline{\otimes} F
+    \bRd i_! (E \boldsymbol{\otimes} i^* (F)) \isomlong \bRd i_! (E) \boldsymbol{\otimes} F
     $$
     dans chacun des cas suivants : 
     \begin{itemize}
@@ -1320,7 +1320,7 @@ Proposition {\bf 7.7.12}. --- \it Soient $E \in \D(X, A)$ et $F \in \D(Y, A)$.
     $$
     \item[(iv)] On a un isomorphisme fonctoriel
     $$
-    \bRd j_* (E \underline{\otimes} \bRd j^* (E)) \isomlong \bRd j_* (F) \underline{\otimes} E
+    \bRd j_* (E \boldsymbol{\otimes} \bRd j^* (E)) \isomlong \bRd j_* (F) \boldsymbol{\otimes} E
     $$
     dans chacun des cas suivants :
     \begin{itemize}
