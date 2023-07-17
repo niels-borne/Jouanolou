@@ -16,12 +16,12 @@ Lorsque $f$ est une immersion fermée, on dispose d'un tel morphisme, à savoir 
 
 Lorsque $f$ est un morphisme lisse équidimensionnel de dimension $r$, il s'agit de définir pour tout $F \in \D(Y, A)$ un morphisme fonctoriel
 $$
-\bRd f_! (f^* F \underline{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)[2r]) \to F.
+\bRd f_! (f^* F \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)[2r]) \to F.
 \leqno{(2.1.2)}
 $$
-Comme $A \underline{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)$ est localement libre constructible, on définit sur le modèle de (1.1.7), mais sans hypothèse de degré sur $F$, un isomorphisme de ``projection''
+Comme $A \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)$ est localement libre constructible, on définit sur le modèle de (1.1.7), mais sans hypothèse de degré sur $F$, un isomorphisme de ``projection''
 $$
-\bRd  f_! (\mathbf{Z}_\ell(r))[2r]\underline{\otimes}_{\mathbf{Z}_\ell} F \isomlong \bRd f_! (f^* F \underline{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r))[2r],
+\bRd  f_! (\mathbf{Z}_\ell(r))[2r]\boldsymbol{\otimes}_{\mathbf{Z}_\ell} F \isomlong \bRd f_! (f^* F \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r))[2r],
 $$
 ce qui ramène à faire la construction de (2.1.2) dans le cas où $A = \mathbf{Z}_\ell = F$. Dans ce cas, comme $\Rd^i f_! = 0$ pour $i > 2d$ (1.1.8), il s'agit d'exhiber un morphisme ``trace''
 $$
@@ -72,7 +72,7 @@ $$
 f_! {\cHom}_A (E, F) \to {\cHom}_A (f_! E, f_! F),
 \leqno{(2.2.3)}
 $$
-à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.2) dans ce cas, on peut supposer $L$ quasilibre et $M$ flasque, de sorte que ${\cHom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.3) fournit par fonctorialité un morphisme de complexes
+à partir des morphismes analogues dans la catégorie des $A$--Modules. Pour définir (2.2.2) dans ce cas, on peut supposer $L$ quasilibre et $M$ flasque, de sorte que ${\cHom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.3) fournit par fonctorialité un morphisme de complexes
 $$
 f_! {\cHom}^{\bullet}_A (L, M) \to {\cHom}^{\bullet}_A (f_! L, f_! M).
 \leqno{(2.2.4)}
@@ -90,7 +90,7 @@ $$
 f_* {\cHom}_A (E, F) \to {\cHom}_A (f_* E, f_* F),
 \leqno{(2.2.6)}
 $$
-à partir des morphismes analogues dans la catégorie des $A$-Modules. Pour définir (2.2.5), on peut supposer $L$ quasilibre et $M$ flasque, de sorte que ${\cHom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.6) fournit par fonctorialité un morphisme de complexes
+à partir des morphismes analogues dans la catégorie des $A$--Modules. Pour définir (2.2.5), on peut supposer $L$ quasilibre et $M$ flasque, de sorte que ${\cHom}^{\bullet}_A(L, M)$ est flasque. Le morphisme (2.2.6) fournit par fonctorialité un morphisme de complexes
 $$
 f_* {\cHom}_A (L, M) \to {\cHom}^{\bullet}_A (f_* L, f_* M).
 \leqno{(2.2.7)}
@@ -135,11 +135,11 @@ que l'en en déduit est un \emph{isomorphisme}.
 \vskip .3cm
 Explicitons (2.3.2). Comme $D_K(F) \in \D^b_c(X, \mathbf{Z}_\ell)$, le morphisme (I 7.6.5)
 $$
-\Hom_{\mathbf{Z}_\ell}(\D_K (F) \underline{\otimes} F, K) \to \Hom_{\mathbf{Z}_\ell}(\D_K(F), \D_K(F))
+\Hom_{\mathbf{Z}_\ell}(\D_K (F) \boldsymbol{\otimes} F, K) \to \Hom_{\mathbf{Z}_\ell}(\D_K(F), \D_K(F))
 $$
 est un isomorphisme (II 2.6). L'image inverse de l'identité de $\D_K(F)$ définit un morphisme
 $$
-F \underline{\otimes} \D_K(F) \to K.
+F \boldsymbol{\otimes} \D_K(F) \to K.
 $$
 Comme $F \in \D^b_c(X, \mathbf{Z}_\ell)$, une nouvelle application de l'isomorphisme de Cartan permet d'en déduire le morphisme (2.3.2) annoncé.
 \vskip .3cm
@@ -189,7 +189,7 @@ Proposition {\bf 2.3.3}. --- \it Soient $X$ un schéma noethérien de caractéri
 Lemme {\bf 2.3.4}. --- \it Si $F \in \D^+_c(X, \mathbf{Z}_\ell)$, alors $\bRd f^!(F) \in \D^+_c(T, \mathbf{Z}_\ell)$.
 }
 \vskip .3cm
-On se ramène à le voir lorsque $F$ est un $\mathbf{Z}_\ell$-faisceau constructible. Alors cela résulte de la fa\c{c}on habituelle (SGA5 VI) du lemme de Shih, et de l'énoncé analogue pour les $\mathbf{Z}/\ell^{n+1}\mathbf{Z}$-Modules constructibles $(n \in \mathbf{N})$ et pour les $\mathbf{Z}_\ell[T]$-Modules constructibles. 
+On se ramène à le voir lorsque $F$ est un $\mathbf{Z}_\ell$-faisceau constructible. Alors cela résulte de la fa\c{c}on habituelle (SGA5 VI) du lemme de Shih, et de l'énoncé analogue pour les $\mathbf{Z}/\ell^{n+1}\mathbf{Z}$--Modules constructibles $(n \in \mathbf{N})$ et pour les $\mathbf{Z}_\ell[T]$--Modules constructibles. 
 Comme les hypothèses de (II 2.5 (iii)) sont réalisées (SGA5 I 3.3.1) il résulte du lemme que 
 $$
 \bRd {\cHom}_{\mathbf{Z}_\ell}(E, \bRd f^! (\mathbf{Z}_\ell)) \in \D^+_c(T, \mathbf{Z}_\ell).
@@ -231,16 +231,16 @@ Alors
 \begin{itemize}
     \item[a)] Il existe un isomorphisme canonique
     $$
-    p^* K_X \underline{\otimes} q^* K_Y \isomlong K_{X \times_S Y}.
+    p^* K_X \boldsymbol{\otimes} q^* K_Y \isomlong K_{X \times_S Y}.
     $$
     \item[b)] Pour $F \in \D^b_c(X, \mathbf{Z}_\ell)$ et $G \in \D^b_c(X, \mathbf{Z}_\ell)$, il existe un isomorphisme canonique fonctoriel
     $$
-    p^* \D_X(F) \underline{\otimes} q^* \D_Y(G) \isomlong D_{X \times_S Y}(p^* F \underline{\otimes}q^* G).
+    p^* \D_X(F) \boldsymbol{\otimes} q^* \D_Y(G) \isomlong D_{X \times_S Y}(p^* F \boldsymbol{\otimes}q^* G).
     $$
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : L'énoncé est une paraphrase de (SGA5 III 3.1). Le fait que $K_X$, $K_Y$ et $K_{X \times_S Y}$ soient dualisants résulte, sur le modèle de la preuve de (2.3.3), de (SGA5 I App.7.5). Utilisant (II 2.13.9), et diverses compatibilités évidentes, les assertions a) et b) résultent par simple passage à la limite des assertions correspondantes (SGA5 III 3.1) pour les $(\mathbf{Z}/\ell^{n+1}\mathbf{Z})$-Modules $(n \in \mathbf{N})$.
+{\bf Preuve} : L'énoncé est une paraphrase de (SGA5 III 3.1). Le fait que $K_X$, $K_Y$ et $K_{X \times_S Y}$ soient dualisants résulte, sur le modèle de la preuve de (2.3.3), de (SGA5 I App.7.5). Utilisant (II 2.13.9), et diverses compatibilités évidentes, les assertions a) et b) résultent par simple passage à la limite des assertions correspondantes (SGA5 III 3.1) pour les $(\mathbf{Z}/\ell^{n+1}\mathbf{Z})$--Modules $(n \in \mathbf{N})$.
 
 Avant d'énoncer la proposition suivante, précisons quelques définitions et notations de (I 8.3). Soit $X$ un schéma noethérien. On définit la catégorie, notée 
 $$
@@ -290,7 +290,7 @@ Proposition {\bf 2.4.1}. --- \it Soient $F \in \D^b_c (X, \mathbf{Z}_\ell)$, $G 
 \begin{itemize}
     \item[a)] Il existe un isomorphisme canonique fonctoriel
     $$
-    \bRd {\cHom}_{\mathbf{Z}_\ell}(p^* F, q^* G) \isomlong p^* \D_X(F) \underline{\otimes} q^* G.
+    \bRd {\cHom}_{\mathbf{Z}_\ell}(p^* F, q^* G) \isomlong p^* \D_X(F) \boldsymbol{\otimes} q^* G.
     $$
     \item[b)] Il existe un accouplement parfait canonique
     $$
@@ -332,4 +332,4 @@ $$
 Théorème {\bf 2.4.4} (Lefschetz-Verdier). --- \it Le diagramme (2.4.3) ci-dessus est commutatif. 
 }
 \vskip .3cm
-{\bf Preuve} : Utilisant les notations de (II 2.13.9), il suffit de voir que pour tout $n \in \mathbf{N}$, le diagramme déduit de (2.4.3) après application du foncteur $\bLd (\alpha_n)^*$ est commutatif. Comme le foncteur $\bLd (\alpha_n)^*$ commute à toutes les opérations usuelles, l'assertion résulte donc de (SGA 5 III 3.3) pour les $(\mathbf{Z}/\ell^{n+1}\mathbf{Z})$-Modules $(n \in \mathbf{N})$.
+{\bf Preuve} : Utilisant les notations de (II 2.13.9), il suffit de voir que pour tout $n \in \mathbf{N}$, le diagramme déduit de (2.4.3) après application du foncteur $\bLd (\alpha_n)^*$ est commutatif. Comme le foncteur $\bLd (\alpha_n)^*$ commute à toutes les opérations usuelles, l'assertion résulte donc de (SGA 5 III 3.3) pour les $(\mathbf{Z}/\ell^{n+1}\mathbf{Z})$--Modules $(n \in \mathbf{N})$.
