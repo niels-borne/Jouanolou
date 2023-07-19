@@ -41,7 +41,7 @@ Proposition {\bf 1.5}. --- \it
     T \mapsto A-\fscn(T)
     $$
     où $T$ parcourt les objets de $X$, est un \emph{champ}.
-    \item[(ii)] Notant $J-\adn(X)$ la sous-catégorie pleine de $\mathbf{E}(X, J)$ engendrée par les $A$-faisceaux $J$-adiques constructibles, le foncteur canonique
+    \item[(ii)] Notant $J-\adn(X)$ la sous-catégorie pleine de $\mathscr{E}(X, J)$ engendrée par les $A$-faisceaux $J$-adiques constructibles, le foncteur canonique
     $$
     J-\adn(X) \to A-\fscn(X)
     $$
@@ -58,7 +58,7 @@ Lemme {\bf 1.6}. --- \it Pour tout $A$-faisceau constructible $E$ et tout entier
 \vskip .3cm
 Il suffit de voir (1.4) qu'il est constructible. Or, notant $u: J^{n+1} \to A$ le morphisme de $A$-faisceaux canonique, on a un isomorphisme
 $$
-\cTor^A_\ell(A_n, E) \isom \Ker(u \otimes_A \id_E),
+\cTor^A_1(A_n, E) \isom \Ker(u \otimes_A \id_E),
 $$
 d'où le lemme, car $J^{n+1} \otimes_A E$ est constructible, comme on voit aisément en se ramenant au cas où $E$ est $J$-adique constructible. 
 
@@ -68,7 +68,7 @@ $$
 $$
 une suite exacte de $A-\fsc(X)$, avec $E$ et $G$ constructibles, et montrons que $F$ l'est également. Pour cela, il suffit (1.2) de voir que pour tout entier $r \geq 0$, le $A$-faisceau $F \otimes_A A_r$ est de type constant associé à un $A_r$--Module constructible. Or on a une suite exacte
 $$
-\cTor^A_\ell (A_r, G) \to A_r \otimes_A E \to A_r \otimes_A F \to A_r \otimes_A G \to 0,
+\cTor^A_1 (A_r, G) \to A_r \otimes_A E \to A_r \otimes_A F \to A_r \otimes_A G \to 0,
 $$
 dan laquelle tous les termes, excepté éventuellement $A_r \otimes_A F$, sont de type constant et constructibles. Compte tenu du fait qu'un $A_r$--Module qui est extension de $A_r$--Modules constructibles est lui-même constructible, l'assertion résulte alors de (I 3.6). Il nous reste enfin à voir que la catégorie $A-\fscn(X)$ est noethérien lorsque $X$ est noethérien. Il suffit de le voir pour la catégorie équivalente $J-\adn(X)$, ce qui n'est autre que (SGA V 5.2.3.).
 \vskip .3cm
@@ -217,13 +217,13 @@ $$
 $$
 Il résulte aisément de (EGA $0_I$ 7.2.9. et 7.8.2.) que ce fncteur est une \emph{équivalence de catégories}, un foncteur quasi-inverse étant d'ailleurs fourni par la limite projective.
 
-Si maintenant $a: \to \to X$ est un point du topos $X$, il est clair que le foncteur fibre défini par $a$
+Si maintenant $a: \pt \to X$ est un point du topos $X$, il est clair que le foncteur fibre défini par $a$
 $$
 A-\fsc(X) \to A-\fsc(\pt)
 $$
 envoie $A-\fscn(X)$ dans $A-\fscn(\pt)$, d'où grâce à l'équivalence (1.12.2) un foncteur exact, appelé encore foncteur fibre associé à $a$,
 $$
-\epsilon_a: A-\fscn(X) \to \hat{A}-\modn,
+\mathscr{E}_a: A-\fscn(X) \to \hat{A}-\modn,
 \leqno{(1.12.3)}
 $$
 qui est obtenu de fa\c{c}on précise en composant le foncteur fibre ordinaire et le foncteur limite projective $A-\fscn(\pt) \to \hat{A}-\modn$.
@@ -233,7 +233,7 @@ Rappelons enfin (SGA4 VI \quad) qu'un topos localement noethérien à suffisamen
 {
 Proposition {\bf 1.12.4}. --- \it La collection des foncteurs fibres
 $$
-\epsilon_a; A-\fscn(X) \to \hat{A}-\modn,
+\mathscr{E}_a: A-\fscn(X) \to \hat{A}-\modn,
 $$
 où a parcourt les points du topos $X$, est \emph{conservative}. En particulier, pour qu'une suite de $A$-faisceaux constructiles
 $$
@@ -242,7 +242,7 @@ F' \xlongrightarrow{u} F \xlongrightarrow{v} F''
 $$
 soit exacte, il faut et il suffit que les suites correspondantes 
 $$
-\epsilon_a(F') \xlongrightarrow{\epsilon_a(u)} \epsilon_a(F) \xlongrightarrow{\epsilon_a(v)} \epsilon_a(F'')
+\mathscr{E}_a(F') \xlongrightarrow{\mathscr{E}_a(u)} \mathscr{E}_a(F) \xlongrightarrow{\mathscr{E}_a(v)} \mathscr{E}_a(F'')
 \leqno{(S_a)}
 $$
 soient exactes.
@@ -270,7 +270,7 @@ $$
 i_!: A-\fscn(T) \to A-\fscn(T').
 \leqno{(1.13.1)}
 $$
-Enfin, étant donné un ouvert $U$ d'un topos localement noethérien et $Y$ le topos (également localement noethérien)fermé complémentaire de $U$, si on note $j: Y \to X$ le morphisme de topos canonique, le foncteur exact $j_*$ induit un foncteur exact
+Enfin, étant donné un ouvert $U$ d'un topos localement noethérien et $Y$ le topos (également localement noethérien) fermé complémentaire de $U$, si on note $j: Y \to X$ le morphisme de topos canonique, le foncteur exact $j_*$ induit un foncteur exact
 $$
 j_*: A-\fscn(Y) \to A-\fscn(X).
 \leqno{(1.13.2)}
@@ -398,7 +398,7 @@ p: M \to \varinjlim_i \Hom(G_i, M)
 $$
 soit $B$-linéaire, lorsque l'on munit le second membre de la structure de $B$--Module déduite de fa\c{c}on évidente de celle de $M$. Autrement dit, un $(B, G)$--Module n'est autre qu'un $B$--Module sur le topos $\B_G$.
 
-Le topos $\B_G$ est localement noethérien (cf SGA4 VI 1.33.) et n'admet (à isomorphisme près) qu'un seul point, à savoir le foncteur qui associe à tout $G$-ensemble $M$ l'ensemble sous-jacent.
+Le topos $\B_G$ est localement noethérien (cf. SGA4 VI 1.33.) et n'admet (à isomorphisme près) qu'un seul point, à savoir le foncteur qui associe à tout $G$-ensemble $M$ l'ensemble sous-jacent.
 
 Étant données maintenant un topos connexe $X$ (non nécessairement localement noethérien) et un point
 $$
@@ -449,16 +449,16 @@ $$
 {
 Proposition {\bf 1.20.4}. --- \it 
 \begin{itemize}
-    \item[(i)] soient $X$ un topos localement noethérien connexe et $a$ un point de $X$. On a une \emph{équivalence} canonique, définie à isomorphisme près,
+    \item[(i)] Soient $X$ un topos localement noethérien connexe et $a$ un point de $X$. On a une \emph{équivalence} canonique, définie à isomorphisme près,
     $$
     A-\fsct(X) \xlongrightarrow{\omega_X} A-\fsct(\B_{\pi_1(X, a)}) = A-\fscn(\B_{\pi_1(X, a)}).
     $$
     Le foncteur fibre défini par $a$ (1.12.3)
     $$
-    E_a: A-\fsct(X) \to \hat{A}-\modn 
+    \mathscr{E}_a: A-\fsct(X) \to \hat{A}-\modn 
     $$
     est \emph{conservatif}.
-    \item[(ii)] Soient $X$ et $Y$ eux topos localement noethériens, et $f: X \to Y$ un morphisme. Pour tout $A$-faisceau constant tordu constructible $F$ sur $Y$, le $A$-faisceau $f^*(F)$ est constant tordu constructible. Supposons maintenant que $X$ et $Y$ soient connexes, choisissons un point $a$ de $X$ et posons $b = f \circ a$. Alors le diagramme
+    \item[(ii)] Soient $X$ et $Y$ deux topos localement noethériens, et $f: X \to Y$ un morphisme. Pour tout $A$-faisceau constant tordu constructible $F$ sur $Y$, le $A$-faisceau $f^*(F)$ est constant tordu constructible. Supposons maintenant que $X$ et $Y$ soient connexes, choisissons un point $a$ de $X$ et posons $b = f \circ a$. Alors le diagramme
     \[\begin{tikzcd}
 	{A-\fsct(Y)} && {A-\fsct(\B_{\pi_1(Y, b)})} \\
 	{A-\fsct(X)} && {A-\fsct(\B_{\pi_1(X, a)})} & {,}
@@ -536,7 +536,7 @@ forment une famille \emph{conservative}.
 \vskip .3cm
 Comme ces foncteurs sont exacts, il s'agit de voir que si un $A$--Module $M$ vérifie $(j_m)^*(M) = 0$ pour tout $m$, alors $M = 0$. Nous allons voir cette assertion par récurrence sur $q$, le cas où $q = 1$ étant évident. Nous allons pour cela noter $V_m$ l'ouvert de $U_m$ dont $Y_m$ est le complémentaire, et $i_m: V_m \to U_{m}$, $k_m: V_m \to X$ et $l_m: U_m \to X$ les morphismes canoniques. L'hypothèse de récurrence appliquée au topos fermé $K_m$ complémentaire de $U_m$ dans $X$ montre que pour tout $m$ le morphisme canonique
 $$
-(1_m)_! (M | U_m) \to M
+(l_m)_! (M | U_m) \to M
 $$
 est un isomorphisme. Par ailleurs le fait que $(j_m)^*(M) = 0$ implique que le morphisme canonique
 $$
