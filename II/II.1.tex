@@ -592,7 +592,7 @@ Proposition {\bf 1.24}. --- \it Soient $X$ un topos localement noethérien, et $
     $$
     et
     $$
-    \epsilon_a({\cTor}^A_p(E, F)) \isomlong \Tor^{\hat{A}}_p(\epsilon_a(E), \epsilon_a(F)).
+    \mathscr{E}_a({\cTor}^A_p(E, F)) \isomlong \Tor^{\hat{A}}_p(\mathscr{E}_a(E), \mathscr{E}_a(F)).
     \leqno{(1.24.2)}
     $$
     De plus, lorsque $X$ est le topos étale d'un schéma localement noethérien, notant $M$ et $N$ les $\hat{A}$--Modules de type fini munis d'une opération continue de $\pi_1(X, a)$ correspondant à $E$ et $F$ (1.20.5), les $A$-faisceaux
@@ -748,11 +748,11 @@ $$
 $$
 défini par $a$ associe au $A$-faisceau $\cExt^p_A(E, F)$ le système projectif
 $$
-(\varprojlim_{m \geq n}\Ext^p_{A_m}(M/J^{m+1}M, N/J^{n+1}N))_{n \in \mathbf{N}},
+(\varinjlim_{m \geq n}\Ext^p_{A_m}(M/J^{m+1}M, N/J^{n+1}N))_{n \in \mathbf{N}},
 $$
 et il suffit, vu la conservativité du foncteur fibre (habituel) défini par $a$ sur les $A$--Modules localement constants, de vérifier que ce dernier est de type $J$-adique. Avec les notations de l preuve de (1.24.(i)), on a dans $A-\fsc(\pt)$ un isomorphisme canonique
 $$
-\cExt^p_A(\mathbf{M}, \mathbf{N}) \isom \mathrm{H}^p \cHom^\bullet_A(\mathbf{P}, \mathbf{N}),
+\cExt^p_A(\mathbf{M}, \mathbf{N}) \isom \mathrm{H}^p (\cHom^\bullet_A(\mathbf{P}, \mathbf{N})),
 \leqno{(1.26.3)}
 $$
 défini grâce à (I 7.3.11). Mais (SGA5 VI 1.3.3) les composants de $\cHom^\bullet_A(\mathbf{P}, \mathbf{N})$ sont $J$-adiques constructibles, d'où aussitôt l'assertion.
@@ -776,7 +776,7 @@ et on conclut par le lemme de Nakayama (I 5.12). Pour prouver (iv), nous allons 
 \end{tikzcd}\]
 est un isomorphisme. Posant pour tout entier $i \geq 0$
 $$
-T^i(M) = \varprojlim_{q \geq p}\cExt^i_{A_q}(E_q, M),
+T^i(M) = \varinjlim_{q \geq p}\cExt^i_{A_q}(E_q, M),
 $$
 il est clair qu'on obtient un foncteur cohomologique de la catégorie des $A$--Modules annulés par une puissance de $J$ dans elle-même. De plus, les hypothèses faites assurent que lorsque $M$ est constructible, les $A$--Modules $T^i(M)$ sont constructibles. Rappelons enfin qu'avec ces notations, le $A$-faisceau $\cExt^i_A(E, F)$ est identique au système projectif
 $$
