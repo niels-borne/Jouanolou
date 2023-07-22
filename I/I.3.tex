@@ -122,10 +122,37 @@ on voit sans peine que
 $$
 (\varprojlim_m F_m) | T \isom M,
 $$
+et par suite $\varprojlim_m (F_m)$ est un objet de $J-\Mod_X$. On aura terminé si on preuve que $u_F$ définit un isomorphisme de $A-\fsc(X)$. C'est immédiat si $F = \mathscr{E}_X(M)$ ; dans le cas général, l'assertion étant locale (1.7), on peut supposer donné un isomorphisme
+$$
+i: F \isomlong \mathscr{E}_X(M) \quad \text{de} \quad A-\fsc(X)
+$$
+et alors l'assertion résulte de la commutativité du diagramme
+\[\begin{tikzcd}
+	{\overline{G}} && {\mathscr{E}_X(M) = G} \\
+	{\overline{F}} && F
+	\arrow["\sim"', from=1-1, to=1-3]
+	\arrow["{u_G}", from=1-1, to=1-3]
+	\arrow["{u_F}", from=2-1, to=2-3]
+	\arrow["{\overline{i}}", from=2-1, to=1-1]
+	\arrow["\sim"', from=2-1, to=1-1]
+	\arrow["i"', from=2-3, to=1-3]
+	\arrow["\sim", from=2-3, to=1-3]
+\end{tikzcd}\]
+dans $A-\fsc(X)$.
 
-%%%%%%%%% page 16 is missing here %%%%%%%%%%%%%%%%%%%%%%
-
-et $F$ par $\overline{F}'' \times_{F''} F$, on peut de plus supposer que $F''$ est aussi essentiellement constant. Dans ce cas, $F$ l'est également, d'où l'assertion.
+Montrons maintenant que $\TC(X, J)$ est stable par extension dans $A-\fsc(X)$. On se ramène immédiatement à voir que si 
+$$
+0 \to F' \xlongrightarrow{\alpha} F \xlongrightarrow{\beta} F'' \to 0
+$$
+est une suite exacte de $\mathscr{E}(X, J)$, avec $F'$ et $F''$ définissant des objets de $\TC(X, J)$, il en est de même pour $F$. L'assertion étant locale d'après l'équivalence (i) $\Leftrightarrow$ (iii), on peut supposer que 
+$$
+F' \isom \mathscr{E}_X(M') \quad \text{et} \quad F'' \isom \mathscr{E}_X(M'')
+$$
+dans $A-\fsc(X)$, avec $M'$ et $M''$ annulés par une puissance de $J$. Avec les notations utilisés dans la preuve de 2), on a $\overline{F}' \isom \overline{M}'$ et le morphisme canonique $u_{F'}: \overline{F}' \to F'$ est à noyau et conoyau négligeables et, quitte à localiser, on peut les supposer essentiellement nuls. Dans ce cas, le $A$-faisceau $\Ker(u_{F'})$ vérifie, puisque $\overline{F}'$ est essentiellement constant,
+$$
+(\Ker u_{F'})_n = 0 \quad \text{pour}~n~\text{assez grand}.
+$$
+En particulier, $\text{Im}(u_{F'})$ est essentiellement constant. Quitte à remplacer $F''$ par $F/\text{Im}(\alpha \circ u_{F'})$, on peut donc supposer que $F'$ est essentiellement constant. Ceci dit, quitte à remplacer $F''$ par $\overline{F}''$ et $F$ par $\overline{F}'' \times_{F''} F$, on peut de plus supposer que $F''$ est aussi essentiellement constant. Dans ce cas, $F$ l'est également, d'où l'assertion.
 \vskip .3cm
 {
 Corollaire {\bf 3.7}. --- \it La sous-catégorie pleine $\TC(X, J)^+$ de $A-\fsc(X)$ engendrée par les $A$-faisceaux isomorphes à un $A$-faisceau de la forme $\mathcal{E}_X(M)$, avec $M$ un $A_X$--Module annulé par une puissance de $J$, est \emph{exacte}.
