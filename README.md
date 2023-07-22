@@ -30,6 +30,9 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Proof-read and preface
 - [ ] Expert review and foreword
 - [ ] Preprint
+
+
+### Table de matières
       
 #### I. Catégorie des faisceaux sur un idéotope
   ##### 1. [Généralités](https://github.com/carmonamateo/Jouanolou/blob/main/I/I.1.tex)
