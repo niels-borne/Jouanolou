@@ -53,7 +53,7 @@ On définit ainsi de fa\c{c}on claire un foncteur additif
 $$
 J-\Mod(X) \to \mathcal{E}(X, J),
 $$
-d'où, en composant avec a projection canonique, un foncteur additif
+d'où, en composant avec la projection canonique, un foncteur additif
 $$
 \mathcal{E}_X: J-\Mod(X) \to A-\fsc(X).
 \leqno{(3.5.1)}
@@ -95,17 +95,17 @@ Soit maintenant $\lambda: \overline{M} \to \overline{N}$ un morphisme de $A$-fai
 	\arrow["v", from=2-1, to=1-3]
 	\arrow["\alpha", from=2-1, to=1-1]
 \end{tikzcd}\]
-avec $\alpha$ un monomorphisme, $\beta$ un épimorphisme et $\Coker(\alpha)$ et $\Ker (\alpha)$ négligeables. D'après le caractère local de l'assertion à démontrer, on peut supposer qu'ils sont essentiellement nuls, et que $M$ et $N$ sont annulés par une puissance de $J$. Comme précédemment, on a alors $(\Ker \beta)_n = 0$ pour $n$ assez grand ; de plus, comme $\overline{M}$ est strict, $\alpha$ est un isomorphisme. On vérifie aussitôt que pour $n$ assez grand, le morphisme
+avec $\alpha$ un monomorphisme, $\beta$ un épimorphisme et $\Coker(\alpha)$ et $\Ker (\beta)$ négligeables. D'après le caractère local de l'assertion à démontrer, on peut supposer qu'ils sont essentiellement nuls, et que $M$ et $N$ sont annulés par une puissance de $J$. Comme précédemment, on a alors $(\Ker \beta)_n = 0$ pour $n$ assez grand ; de plus, comme $\overline{M}$ est strict, $\alpha$ est un isomorphisme. On vérifie aussitôt que pour $n$ assez grand, le morphisme
 $$
-(\beta \circ v \circ \alpha^{-1})_n (\overline{M})_n = M \to N = (\overline{N})_n
+(\beta \circ v \circ \alpha^{-1})_n : (\overline{M})_n = M \to N = (\overline{N})_n
 $$
-ne dépend pas de $n$. Désignant par $u$ la valeur commune, on voit alors sans peine que $A = \overline{u}$. La peine fidélité de (3.5.1) montre que la catégorie $\TC (X, J)$ est stable par noyaux et conoyaux dans $A-\fsc(X)$. Nous verrons la stabilité par extensions après avoir prouvé la deuxième partie.
+ne dépend pas de $n$. Désignant par $u$ la valeur commune, on voit alors sans peine que $\lambda = \overline{u}$. La peine fidélité de (3.5.1) montre que la catégorie $\TC (X, J)$ est stable par noyaux et conoyaux dans $A-\fsc(X)$. Nous verrons la stabilité par extensions après avoir prouvé la deuxième partie.
 
 2) Il est clair que (i) $\Rightarrow$ (ii) $\Rightarrow$ (iii). Montrons que (iii) $\Rightarrow$ (i). Faisons d'abord quelques préliminaires. Étant donné un $A$-faisceau $F$ on définit un nouveau $A$-faisceau $\overline{F}$ par
 $$
 (\overline{F})_n = (\varprojlim_m (F_m))/J^{n+1}(\varprojlim_m(F_m)),
 $$
-avec les morphismes de transition évidents. De plus, on a, de fa\c{c}on évident un $\mathcal{E}(X, J)$-morphisme fonctoriel en $F$
+avec les morphismes de transition évidents. De plus, on a, de fa\c{c}on évidente un $\mathcal{E}(X, J)$-morphisme fonctoriel en $F$
 $$
 u_F : \overline{F} \to F.
 $$
@@ -122,6 +122,9 @@ on voit sans peine que
 $$
 (\varprojlim_m F_m) | T \isom M,
 $$
+
+%%%%%%%%% page 16 is missing here %%%%%%%%%%%%%%%%%%%%%%
+
 et $F$ par $\overline{F}'' \times_{F''} F$, on peut de plus supposer que $F''$ est aussi essentiellement constant. Dans ce cas, $F$ l'est également, d'où l'assertion.
 \vskip .3cm
 {
@@ -166,12 +169,12 @@ Proposition {\bf 3.9}. --- \it Soient $E$ et $F$ deux $A$-faisceaux sur $X$.
 $$
 v_i: E|T_i \to F|T_i
 $$
-vérifiant $\varphi_{T_i}(v_i) = a|T_i$. D'après l'injectivité es applications $\varphi_{T_i \times T_j}$, les morphismes $v_i$ se recollent en un morphisme $v$ de $\mathcal{E}(X, J)$ vérifiant $\varphi_X(v) = a$ localement, donc aussi globalement (1.7.2).
+vérifiant $\varphi_{T_i}(v_i) = a|T_i$. D'après l'injectivité des applications $\varphi_{T_i \times T_j}$, les morphismes $v_i$ se recollent en un morphisme $v$ de $\mathcal{E}(X, J)$ vérifiant $\varphi_X(v) = a$ localement, donc aussi globalement (1.7.2).
 \vskip .3cm
 {
 Corollaire {\bf 3.9.1}. --- \it Le foncteur 
 $$
-J-\adn(X) \to \TJ-\ad(X)
+J-\ad(X) \to \TJ-\ad(X)
 $$
 induit par (3.8.1) est une \emph{équivalence de catégories}.
 }
@@ -190,7 +193,7 @@ au-dessus de $X$ est un \emph{champ}, autrement dit on a les propriétés suivan
     sur $X$ est un \emph{faisceau}.
     \item[(ii)] Soit $(U_i \to e_X)_{i \in I}$ un recouvrement de l'objet final $e_X$ de $X$. Pour tout couple $(i, j)$ d'éléments de $I$ (resp. tout triple $(i, j, k)$), on pose
     $$
-    U_{ij} = U_i \times U_k \quad \text{(resp.}~U_{ijk} = U_i \times U_j \times U_k).
+    U_{ij} = U_i \times U_j \quad \text{(resp.}~U_{ijk} = U_i \times U_j \times U_k).
     $$
 \end{itemize}
 Supposons donné pour tout $i \in I$ un $A$-faisceau de type $J$-adique $F_i$ sur $U_i$ et pour tout couple $(i, j)$ d'éléments de $I$ un isomorphisme
@@ -208,7 +211,7 @@ $$
 $$
 tels que pour tout couple $(i, j)$ d'éléments de $I$ on ait
 $$
-\theta_j \circ \theta_i = \theta_i \quad \text{sur} \quad U_{ij}.
+\theta_j \circ \theta_{ji} = \theta_i \quad \text{sur} \quad U_{ij}.
 $$
 }
 \vskip .3cm
