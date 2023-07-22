@@ -31,6 +31,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review and foreword
 - [ ] Preprint
 
+---
 
 ### Table de matières
       
