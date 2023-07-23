@@ -9,7 +9,7 @@ Soit $X$ un topos localement noethérien.
 Définition {\bf 2.1}. --- \it On dit qu'un complexe $E$ de $A$-faisceaux sur $X$ est \emph{à cohomologie constructible} (resp. \emph{constante tordue constructible}) si tous ses objets de cohomologie sont des $A$-faisceaux constructibles (resp. constants tordus constructibles). 
 }
 \vskip .3cm
-La sous-catégorie $A-\fscn(X)$ étant exacte dans $A-\fsc(X)$ (1.5.(iii)), les sous-catégories plaines
+La sous-catégorie $A-\fscn(X)$ étant exacte dans $A-\fsc(X)$ (1.5.(iii)), les sous-catégories pleines
 $$
 \K^*_c(X, A) \quad \text{et} \quad \D^*_c(X, A) \quad (* = \emptyset, + -~\text{ou}~b)
 $$
@@ -43,6 +43,7 @@ De plus la catégorie $\D_{\parf}(X, A)$ (resp. $\D_{\text{coh}}(X, A)$) est obt
 $$
 \D^b_{\parf}(X, A) = (\D^b_t(X, A))_{\text{torf}}
 $$
+et
 $$
 \D^b_{\text{coh}}(X, A) = (\D^b_t(X, A)).
 $$
@@ -115,15 +116,15 @@ Si de plus l'anneau $A$ est local régulier d'idéal maximal $J$, le bifoncteur 
 {
 Proposition {\bf 2.5}. --- \it Le bifoncteur $\bRd \cHom_A$ induit des bifoncteurs
 \begin{itemize}
-    \item[(i)] $(\D^-_t(X, A))^\bullet \times \D^+_\lambda(X, A) \to \D^+_\lambda(X, A)$ \quad $(\lambda = c$~ou~$t)$.
+    \item[(i)] $(\D^-_t(X, A))^\circ \times \D^+_\lambda(X, A) \to \D^+_\lambda(X, A)$ \quad $(\lambda = c$~ou~$t)$.
 \end{itemize}
 Lorsque $A$ est local régulier d'idéal maximal $J$, il induit des bifoncteurs exacts
 \begin{itemize}
-    \item[(ii)] $(\D^b_t(X, A))^\bullet \times \D^b_\lambda(X, A) \to \D^b_\lambda(X, A)$ \quad $(\lambda = \emptyset, c$~ou~$t)$.
+    \item[(ii)] $(\D^b_t(X, A))^\circ \times \D^b_\lambda(X, A) \to \D^b_\lambda(X, A)$ \quad $(\lambda = \emptyset, c$~ou~$t)$.
 \end{itemize}
 Enfin, supposons que pour toute $A$-algèbre de type fini $B$ annulée par une puissance de $J$, et tout couple $(M, N)$ de $B$--Modules constructibles, les $B$--Modules $\cExt^p_B(M, N)$ $(p \in \mathbf{N})$ soient constructibles. Alors, le bifoncteur $\bRd \cHom_A$ induit un bifoncteur
 \begin{itemize}
-    \item[(iii)] $(\D^-_c(X, A))^\bullet \times \D^+_c(X, A) \to \D^+_c(X, A)$.
+    \item[(iii)] $(\D^-_c(X, A))^\circ \times \D^+_c(X, A) \to \D^+_c(X, A)$.
 \end{itemize}
 }
 \vskip .3cm
@@ -157,7 +158,7 @@ $$
 $$
 de $\D^+(X, A)$ dans $\D^+(X, A)$ possèdent la propriété de ``décalage à droite'' ([H] I 7), ce qui permet de se ramener au cas où $M$ est de plus réduit au degré 0. Dans ce cas, fixant $K$ et $M$, les foncteurs exacts
 $$
-\bRd \cHom_A(K \boldsymbol{\otimes}_A ., M) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A()., M)
+\bRd \cHom_A(K \boldsymbol{\otimes}_A ., M) \quad \text{et} \quad \bRd \cHom_A(K, \bRd \cHom_A(., M))
 $$
 possèdent également la propriété de dácalage à droite, ce qui permet de se ramener au cas où de plus $L$ est réduit au degré 0. Enfin, un dernier argument de décalage permet de supposer que $K$ est réduit au degré 0 et que $K^0$ est un $A$-faisceau constructible. Pour montrer l'assertion dans ce dernier cas, on peut, quitte à localiser, supposer $X$ noethérien. Alors, il est immédiat que $K$ est quasi-isomorphe à un complexe quasilibre borné supérieurement, tel que pour tout $n \in \mathbf{Z}$, le $A$-faisceau $K^n$ ait ses composants constructibles. Finalement, on peut supposer $K$ et $L$ réduits au degré 0, quasilibres, que $K^0$ a des composants constructibles et que $L$ est flasque. Alors, il résulte de (I 6.3.8) que le morphisme de complexes (I 7.6.1) est un isomorphisme, d'où l'assertion.
 \vskip .3cm
@@ -225,7 +226,7 @@ $$
 est un \emph{isomorphisme}.
 }
 \vskip .3cm
-{\bf Preuve} : D'après (2.7), les flèches (1) et (2) du diagramme ci-dessus [?] 
+{\bf Preuve} : D'après (2.7), les flèches (1) et (2) du diagramme ci-dessus [sont des isomorphismes.] 
 \vskip .3cm
 {\bf 2.10}. Supposons maintenant le topos $X$ \emph{noethérien}, et que l'anneau $A$ est local régulier d'idéal maximal $J$. Étant donné $E \in \D^b_{\parf}(X, A)$, le complexe $E$ appartient aussi à $\D^b_{\parf}(X, A)$, et le morphisme de Cartan (I 7.6.5)
 $$
@@ -315,7 +316,7 @@ $$
 $$
 que nous appellerons \emph{cup-produit}. Pour cela, on se ramène comme précédemment à le définir lorsque $X$ est noethérien et les complexes $E$ et $F$ sont bornés. Dans ce cas, on dispose d'un homomorphisme canonique
 $$
-\bRd \cHom_A(E, F) \boldsymbol{\otimes}_A \bRd \cHom_A(F, E) \to A,,,
+\bRd \cHom_A(E, F) \boldsymbol{\otimes}_A \bRd \cHom_A(F, E) \to A,
 \leqno{(2.11.2)}
 $$
 que l'on construit comme suit. D'après (2.8), il s'agit de définir un accouplement
@@ -413,7 +414,9 @@ Proposition {\bf 2.12.3}. --- \it Soient $X$ un topos, $U$ un ouvert de $X$ et $
 {\bf Preuve} : Les assertions (i) et (ii) se voient comme les assertions analogues de (2.12.2), en utilisant (I 5.19.1 (ii)) pour la deuxième.Quant à (iii), elle résulte, compte tenu de l'isomorphisme (I 7.7.13) de (2.5 (iii)).
 
 \vskip .3cm
-{\bf 2.13. Changement d'anneau}. Soient $X$ un topos localement noethérien, $A$ et $B$ deux anneaux commutatifs unifères noethériens, $J$ et $K$ deux idéaux de $A$ et $B$ respectivement et $u: A \to B$ un morphisme d'anneaux unifères, tel que $u(J) \subset K$. On utilise par ailleurs librement les notations de (I 8.1).
+{\bf 2.13. Changement d'anneau}. 
+
+Soient $X$ un topos localement noethérien, $A$ et $B$ deux anneaux commutatifs unifères noethériens, $J$ et $K$ deux idéaux de $A$ et $B$ respectivement et $u: A \to B$ un morphisme d'anneaux unifères, tel que $u(J) \subset K$. On utilise par ailleurs librement les notations de (I 8.1).
 \vskip .3cm
 {
 Proposition {\bf 2.13.1}. --- \it 
