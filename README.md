@@ -10,18 +10,6 @@
 
 This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under Grothendieck, was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, and J. L. Verdier. <br>
 
-<!-- An important precedent of the thesis was the Seminar SGA5 (1965/66), where we can read (Exposé III Intro):
-> Faute de disposer d'une bonne catégorie dérivée de faisceaux $\ell$-adiques (la thèse de Jouanolou n'ayant malheuresement pas été publiée), nous travaillons systématiquemnt avec des coefficients de torsion (première aux caractéristiques résiduelles).
-
-J.-P. Jouanolou redacted the talks (SGA5):
-> V. Systèmes projectifs J-adiques, par J.-P. Jouanolou <br>
-> VI. Cohomologie $\ell$-adique, par J.-P. Jouanolou <br>
-> VII. Cohomologie de quelques schémas classiques et théorie cohomologique des classes de Chern, par J.-P. Jouanolou
-
-> ''Je devrais pourtant mettre à part J. P. Jouanolou, qui a fini par rédiger trois exposés consécutifs du séminaire, développant des notions et techniques dont il allait avoir un besoin direct et immédiat pour son propre travail de thèse.'' Récoltes et Semailles
-
-Grothendieck says in Récoltes et Semailles
-> De toutes façons, c’est aujourd’hui encore le seul texte au monde qui présente la théorie des coefficients $\ell$-adiques, version catégories dérivées — et un texte introuvable par dessus le marché, pour mettre la joie à son comble. -->
 
 ---
 
@@ -31,7 +19,7 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review and foreword
 - [ ] Preprint
 
-Typeset in LaTeX, this project was carried out under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with the volunteers:
+Typeset in LaTeX, this project was carried out under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers:
 
 - Bruno Kahn
 - Fan Xuanrui
