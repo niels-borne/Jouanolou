@@ -31,6 +31,13 @@ Grothendieck says in Récoltes et Semailles
 - [ ] Expert review and foreword
 - [ ] Preprint
 
+Typeset in LaTeX, this project was carried out under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with the volunteers:
+
+- Bruno Kahn
+- Fan Xuanrui
+
+_This edition is provisional. Remarks, comments, and corrections are welcome._
+
 ---
 
 ### Table de matières
