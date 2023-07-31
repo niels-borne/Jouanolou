@@ -35,7 +35,7 @@ en posant
 $$
 (\cTor^A_i(u, v))_n = \cTor^{A_n}_i(u_n, v_n).
 $$
-Mieux, on peut, grâce à (CE p.119, Remarque), définit des morphismes bords composant par composant et munir ainsi la collection des $\cTor^A_i$ d'une structure de bifoncteur cohomologique
+Mieux, on peut, grâce à (CE p.119, Remarque), définir des morphismes bords composant par composant et munir ainsi la collection des $\cTor^A_i$ d'une structure de bifoncteur cohomologique
 $$
 \mathscr{E}(X, J) \times \mathscr{E}(X, J) \to \mathscr{E}(X, J).
 $$
@@ -62,7 +62,7 @@ vérifiant les propriétés suivantes.
 	\arrow["{\cTor^A_i}", from=1-1, to=1-3]
     \end{tikzcd}\]
     dans lequel $\pi$ désigne le foncteur canonique, est commutatif.
-    \item[(b)] Pour tout suite exacte $0 \to E' \to E \to E'' \to 0$ (resp. $0 \to F' \to F \to F'' \to 0$) de $\mathcal{E}(X, J)$, le foncteur $\pi$ transforme les morphismes bords
+    \item[(b)] Pour tout suite exacte $0 \to E' \to to E'' \to 0$ (resp. $0 \to F' \to F \to F'' \to 0$) de $\mathcal{E}(X, J)$, le foncteur $\pi$ transforme les morphismes bords
     $$
     \cTor^A_{i+1}(E'', F) \to \cTor^A_i(E', F)
     $$
@@ -307,7 +307,11 @@ essentiellement nul. Alors il existe une application croissante $\gamma \geq \id
 $$
 F_{\gamma(n)} \to F_n
 $$
-est contenue dans $JF_n$. On en déduit par récurrence que pour tout entier $r \geq 1$, l'image du morphisme canonique 
+est contenue dans $JF_n$. On en déduit par récurrence que pour tout entier $r \geq 1$, l'image du morphisme canonique
+$$
+F_{\gamma^{r}(n)} \to F_n
+$$
+est contenue dans $J^r F_n$. En particulier, comme $J^{n+1} F_n=0$, le morphisme canonique
 $$
 F_{\gamma^{n+1}(n)} \to F_n
 $$
@@ -316,7 +320,7 @@ est nul, donc $F$ est essentiellement nul.
 À partir de maintenant et jusqu'à mention expresse du contraire nous allons supposer que $A$ est \emph{noethérien} et que $J$ est un idéal \emph{maximal} de $A$.
 \vskip .3cm
 {
-Proposition {\bf 5.13}. --- \it Soit $(X, A, J)$ un idéotope, avec $A$ un anneau noethérien et $J$ un idéal maximal de $A$. Les assertions suivantes pour un $A$-faisceau $F$ sont équivalentes :
+Proposition {\bf 5.13}. --- \it Soit $(X, A, J)$ un idéotope, avec $A$ un anneau noethérien et $J$ un idéal maximal de $A$. Les assertions suivantes pour un $A$-faisceau $F$ sont équivalentes~:
 \begin{itemize}
     \item[(i)] $\cTor_1(A/J, F) = 0$. 
     \item[(ii)] Pour tout $A$--module de type fini $M$, on a 
@@ -331,9 +335,9 @@ Proposition {\bf 5.13}. --- \it Soit $(X, A, J)$ un idéotope, avec $A$ un annea
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : La catégorie des $A$-faisceaux ne changeant pas si on remplace $A$ par $A_j$, nous pouvons supposer $A$ local d'idéal maximal $J$.
+{\bf Preuve} : La catégorie des $A$-faisceaux ne changeant pas si on remplace $A$ par $A_J$, nous pouvons supposer $A$ local d'idéal maximal $J$.
 
-Il est clair que (ii) et (iii) impliquent chacun (i). Montrons que (i) $\Rightarrow$ (ii). Tout d'abord, utilisant une résolution de $M$ par des $A$--modules libres de type fini, on voit par récurrence qu'il suffit de montrer que $\cTor_1(M, F) =  0$, pour tout $A$--module de type fini $M$. Nous allons voir ce dernier point par récurrence croissante sur la dimension de $M$. Si dim$(M) = 0$, alors $M$ admet une filtration finie par des $A$--modules isomorphes à $A/J$ et l'assertion résulte de (i) par récurrence sur la longueur, grâce à la suite exacte des $\cTor$. Dans le cas général, $M$ admet (Bourbaki Alg. Comm. IV 4.1) une filtration finie dont les quotients consécutifs sont isomorphes à des $A$--modules de la forme $A/P$, où $P$ est un idéal premier de $A$, de sorte que l'on peut supposer que $M$ est de cette forme. Si $P = J$, c'est terminé. Sinon, il existe un élément $a$ non nul de $P/J$, d'où une suite exacte
+Il est clair que (ii) et (iii) impliquent chacun (i). Montrons que (i) $\Rightarrow$ (ii). Tout d'abord, utilisant une résolution de $M$ par des $A$--modules libres de type fini, on voit par récurrence qu'il suffit de montrer que $\cTor_1(M, F) =  0$, pour tout $A$--module de type fini $M$. Nous allons voir ce dernier point par récurrence croissante sur la dimension de $M$. Si dim$(M) = 0$, alors $M$ admet une filtration finie par des $A$--modules isomorphes à $A/J$ et l'assertion résulte de (i) par récurrence sur la longueur, grâce à la suite exacte des $\cTor$. Dans le cas général, $M$ admet (Bourbaki Alg. Comm. IV 4.1) une filtration finie dont les quotients consécutifs sont isomorphes à des $A$--modules de la forme $A/P$, où $P$ est un idéal premier de $A$, de sorte que l'on peut supposer que $M$ est de cette forme. Si $P = J$, c'est terminé. Sinon, il existe un élément $a$ non nul de $J/P$, d'où une suite exacte
 $$
 0 \to A/P \xlongrightarrow{a} A/P \to A/P+aA \to 0.
 $$
@@ -367,7 +371,7 @@ sont exactes. Or on peut pour le voir remplacer $P_n$ par $P_n/JP_n$, et alors c
 Lemme {\bf 5.13.2}. --- \it Soient $F$ et $G$ deux $A$-faisceaux. On suppose que $F$ vérifie (i) et que $JG = 0$. Alors $\cTor_1(F, G) = 0$. 
 }
 \vskip .3cm
-Soit $0 \to M \to L \to G \to 0$ une suite exacte de $A$-faisceaux, avec $L$ plat. Il est clair que $JL \to M$. On en déduit un diagramme commutatif et exact :
+Soit $0 \to M \to L \to G \to 0$ une suite exacte de $A$-faisceaux, avec $L$ plat. Il est clair que $JL \subset M$. On en déduit un diagramme commutatif et exact :
 \[\begin{tikzcd}
 	& 0 & 0 \\
 	& JL & JL \\
@@ -423,7 +427,7 @@ $$
 0 \to F \otimes J \to F \to F/JF \to 0
 \leqno{(U)}
 $$
-est exacte, et il en est de même de la colonne centrale de (D') qui se déduit de (U) par tensorisation par le $A$-faisceau plat $L$. Par ailleurs, la ligne du bas de (D') est exacte d'après le lemme (5.13.1) appliqué à la ligne correspondante de (D). L'assertion (5.13.2) résulte alors de (D') en appliquant le lemme du serpent au diagramme défini par la colonne de gauche et celle du centre : on obtient ainsi que la suite canonique 
+est exacte, et il en est de même de la colonne centrale de (D') qui se déduit de (U) par tensorisation par le $A$-faisceau plat $L$. Par ailleurs, la ligne du bas de (D') est exacte d'après le lemme (5.13.1) appliqué à la ligne correspondante de (D). L'assertion (5.13.2) résulte alors de (D') en appliquant le lemme du serpent au diagramme défini par la colonne de gauche et celle du centre~: on obtient ainsi que la suite canonique 
 $$
 0 \to F \otimes M \to F \otimes L \to F \otimes G \to 0
 $$
@@ -433,7 +437,7 @@ On achève la preuve de (iii) comme suit. Il est clair que $G$ admet une résolu
 $$
 \cTor_i(F, L/JL) = 0 \quad  (i \geq 1)
 $$
-pour tout $A$-faisceau plat. Or la considération des deux suites spectrales (5.11)
+pour tout $A$-faisceau plat $L$. Or la considération des deux suites spectrales (5.11)
 \[\begin{tikzcd}
 	{\cTor_i(F, \cTor_j(A/J, L))} & {\cTor_{i+j}(F, A/J, L)} \\
 	{\cTor_i(L, \cTor_j(A/J, F))} & {\cTor_{i+j}(F, A/J, L)}
@@ -450,7 +454,7 @@ d'où le résultat désiré grâce à l'implication (i) $\Rightarrow$ (ii).
 Définition {\bf 5.14}. --- \it Un $A$-faisceau vérifiant les conditions équivalentes de (5.13) sera dit \emph{presque plat}.
 }
 \vskip .3cm
-{\bf Remarque 5.15}. Lorsque $A$ est un anneau de valuation discrète d'idéal maximal $J$, alors, désignant par $u$ une uniformisante locale de $A$, on voit facilement, par application de la suite exacte des or à la suite exacte canonique $0 \to A \xlongrightarrow{xu} A \to A/J \to 0$ que les $A$-faisceaux presque plats sont ceux qui sont \emph{sans torsion}, i.e. ceux pour lesquels la multiplication par un élément de $A$ est un monomorphisme.
+{\bf Remarque 5.15}. Lorsque $A$ est un anneau de valuation discrète d'idéal maximal $J$, alors, désignant par $u$ une uniformisante locale de $A$, on voit facilement, par application de la suite exacte des $\cTor$ à la suite exacte canonique $0 \to A \xlongrightarrow{xu} A \to A/J \to 0$ que les $A$-faisceaux presque plats sont ceux qui sont \emph{sans torsion}, i.e. ceux pour lesquels la multiplication par un élément de $A$ est un monomorphisme.
 \vskip .3cm
 {
 Proposition {\bf 5.15}. --- \it 
@@ -489,7 +493,7 @@ et un nouvel examen de (5.15.2) montre que
 $$
 (A/J) \otimes \cTor_1(E, F) = 0,
 $$
-d'où $\cTor_1(E, F) = 0$ par le lemme de Nakayama. Nous allons maintenant voir le fait que $\cTor_i(E, f) = 0$ $(i \geq 1)$ par récurrence croissante sur l'entier $i \geq 1$. Supposons donc la vraie pour $i$ et montrons qu'elle est vraie pour $i + 1$. Soit pour cela
+d'où $\cTor_1(E, F) = 0$ par le lemme de Nakayama. Nous allons maintenant voir le fait que $\cTor_i(E, F) = 0$ $(i \geq 1)$ par récurrence croissante sur l'entier $i \geq 1$. Supposons donc la vraie pour $i$ et montrons qu'elle est vraie pour $i + 1$. Soit pour cela
 $$
 0 \to F' \to L \to F \to 0
 \leqno{(S)}
@@ -516,9 +520,9 @@ $$
 $$
 }
 \vskip .3cm
-Pour le voir, on utilise (5.11), en prenant une résolution plate de $M$ définie par une résolution de longueur $\text{dp}_A(M)$ du $M$--module $M$ par des $A$--modules libres de type fini.
+Pour le voir, on utilise (5.11), en prenant une résolution plate de $M$ définie par une résolution de longueur $\text{dp}_A(M)$ du $A$--module $M$ par des $A$--modules libres de type fini.
 
-Le lemme montre que pour tout $A$-faisceau $F$ et toute suite exact
+Le lemme montre que pour tout $A$-faisceau $F$ et toute suite exacte
 $$
 0\to Z_r \to L_{r-1} \to L_{r-2} \to \dots \to L_1 \to L_0 \to F \to 0,
 $$
@@ -536,7 +540,7 @@ grâce à (5.15.2). L'assertion analogue lorsque $F$ est presque plat se voit de
 {
 Corollaire {\bf 5.16.1}. --- \it Sous les hypothèses de (5.16), il existe pour tout $A$-faisceau $F$ sur $X$ une suite exacte
 $$
-0 \to P_{2r} \to P_{2r-1} \to \dots \to P_{1} P_{0} \to F \to 0
+0 \to P_{2r} \to P_{2r-1} \to \dots \to P_{1}\to P_{0} \to F \to 0
 $$
 de $A$-faisceaux, avec $P_i$ plat sur $i \in [0, 2r]$.
 }
@@ -552,7 +556,7 @@ On rappelle qu'on en déduit pour tout couple $(P, Q)$ de $A_{nY}$--Modules ($n$
 $$
 \alpha_i: \cTor^{A_n}_i(f^* P, f^* Q) \isomlong f^* \cTor^{A_n}_i(P, Q),
 $$
-et que la collection des $\alpha_i$ définit un isomorphisme de foncteurs cohomologiques de $A_n-\Mod_X$. Appliquant ces isomorphismes aux composants des systèmes projectifs, on en déduit sans peine un isomorphisme analogue de bifoncteurs cohomologiques de $\mathcal{E}(Y, J)$ dans $\mathcal{E}(X, J)$. Enfin, un passage au quotient immédiat fournit un \emph{isomorphisme de bifoncteurs cohomologiques} de $A-\fsc(Y)$ dans $A-\fsc(X)$ :
+et que la collection des $\alpha_i$ définit un isomorphisme de foncteurs cohomologiques de $A_n-\Mod_X$. Appliquant ces isomorphismes aux composants des systèmes projectifs, on en déduit sans peine un isomorphisme analogue de bifoncteurs cohomologiques de $\mathcal{E}(Y, J)$ dans $\mathcal{E}(X, J)$. Enfin, un passage au quotient immédiat fournit un \emph{isomorphisme de bifoncteurs cohomologiques} de $A-\fsc(Y)$ dans $A-\fsc(X)$~:
 $$
 (\cTor_i(f^*E, f^* F) \isomlong f^* \cTor_i(E, F))_{i \in \mathbf{N}}.
 \leqno{(5.17.1)}
@@ -562,11 +566,11 @@ $$
 Proposition {\bf 5.17.2}. --- \it Pour tout $A$-faisceau quasilibre (5.7) $L$ sur $Y$, le $A$-faisceau $f^*(L)$ est quasilibre.
 }
 \vskip .3cm
-{\bf Preuve} : L'assertion résultera du fait, appliqué aux composants de $L$, que si $B$ est un anneau et $H$ un faisceau d'ensembles sur $Y$, alors $f^*(B_H) \isom G_{f^* (H)}$. Faute de référence, montrons comment on voit ce dernier point. Si $M$ est un $B_X$--Module, on a la suite d'isomorphismes
+{\bf Preuve} : L'assertion résultera du fait, appliqué aux composants de $L$, que si $B$ est un anneau et $H$ un faisceau d'ensembles sur $Y$, alors $f^*(B_H) \isom B_{f^* (H)}$. Faute de référence, montrons comment on voit ce dernier point. Si $M$ est un $B_X$--Module, on a la suite d'isomorphismes
 \[\begin{tikzcd}
 	{(1)} && {\Hom_B(f^*(B_H), M) \isom \Hom_B(B_H, f_*(M))} \\
 	{(2)} && {\Hom_B(B_H, f_*(M)) \isom \Hom_{\Ens}(H, f_*(M))} \\
-	{(3)} && {\Hom_{\Ens}(H, f_*(M)) \isom \Hom_{\Ens}(f_*(H), M)} \\
+	{(3)} && {\Hom_{\Ens}(H, f_*(M)) \isom \Hom_{\Ens}(f^*(H), M)} \\
 	{(4)} && {\Hom_{\Ens}(f^*(H), M) \isom \Hom_B(B_{f_*(H)}, M),}
 \end{tikzcd}\]
 les isomorphismes d'ordre impair provenant de la formule d'adjonction entre $f_*$ et $f^*$, et ceux d'ordre pair traduisant les définitions respectives de $B_H$ et $B_{f^*(H)}$. L'égalité annoncée en résulte aussitôt. 
