@@ -18,6 +18,7 @@ This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under 
 - [ ] Proof-read and preface
 - [ ] Expert review and foreword
 - [ ] Preprint
+- [ ] Releases
 
 Typeset in LaTeX, this project was carried out under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers:
 
