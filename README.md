@@ -20,7 +20,7 @@ This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under 
 - [ ] Preprint
 - [ ] Releases
 
-Typeset in LaTeX, this project was carried out under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers:
+This project is conducted with the _authorization of J.-P. Jouanolou_ and was typeset in LaTeX under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers:
 
 - Bruno Kahn
 - Fan Xuanrui
