@@ -38,7 +38,7 @@ Proposition {\bf 1.5}. --- \it
 \begin{itemize}
     \item[(i)] La propriété pour un $A$-faisceau d'être constructible est stable par restriction à un objet du topos, de nature locale, et la catégorie fibrée
     $$
-    T \mapsto A-\fscn(T)
+    T \mapsto A-\fscn(T),
     $$
     où $T$ parcourt les objets de $X$, est un \emph{champ}.
     \item[(ii)] Notant $J-\adn(X)$ la sous-catégorie pleine de $\mathscr{E}(X, J)$ engendrée par les $A$-faisceaux $J$-adiques constructibles, le foncteur canonique
@@ -103,7 +103,7 @@ On se ramène pour le voir au cas où $u$ est un monomorphisme de $\mathcal{E}(X
 Montrons maintenant l'assertion (i) $\Rightarrow$ (ii) de la proposition.
 \vskip .3cm
 {
-Lemme {\bf 1.9}. --- \it Un objet noethérien $F$ de $A-\fsc(X)$ est de type strict (i.e. vérifie la condition de Mittag-Leffler).
+Lemme {\bf 1.9}. --- \it Un objet noethérien $F$ de $A-\fsc(\pt)$ est de type strict (i.e. vérifie la condition de Mittag-Leffler).
 }
 \vskip .3cm
 Il est clair qu'il suffit de montrer la même assertion pour les $A$-faisceaux $F \otimes_A A_r$, qui sont également noethériens, de sorte que l'on est ramené au cas où $F$ est annulé par une puissance de $J$. Puis, utilisant la filtration (finie) de $F$ définie par les puissances de l'idéal $J$, on se ramène au cas où $F$ est annulé par $J$, et enfin au cas où $F$ est un système projectif de $(A/J)$-espaces vectoriels. Soit $n_\circ \geq 0$ un entier, et montrons que la suite décroissante 
@@ -430,7 +430,7 @@ B-\Modlc(X) \xlongrightarrow{\approx} \B-\Mod(\B_{\pi_1(X, a)}),
 $$
 où $B-\Modlc(X)$ désigne la catégorie des $B$--Modules localement constants sur $X$.
 
-i $f: X \to Y$ est un morphisme de topos, le morphisme composé $b = f \circ a$ est un point de $Y$, et on définit fonctoriellement en les données, un morphisme de pro-groupes
+Si $f: X \to Y$ est un morphisme de topos, le morphisme composé $b = f \circ a$ est un point de $Y$, et on définit fonctoriellement en les données, un morphisme de pro-groupes
 $$
 \pi_1(f): \pi_1(X, a) \to \pi_1(Y, b)
 $$
@@ -565,10 +565,10 @@ $$
 le morphisme composé de $k_!$ et $j_*$. On s'assure aisément qu'il ne dépend pas (à isomorphisme près) de $U$, ce qui permet d'ôter ce dernier des notations. Le foncteur $i_!$ ainsi défini est exact et transforme $A$-faisceau constructible en $A$-faisceau constructible.
 \vskip .3cm
 {
-Proposition {\bf 1.23}. --- \it Soient $X$ un topos noethérien et $F$ un $A$-faisceau constructible sur $X$. Il existe dans $\mathbf{E}(X, J)$, donc aussi dans $A-\fsc(X)$, une filtration finie de $F$ dont les quotients consécutifs sont de la forme $i_!(G)$, où $i: Y \to X$ est le morphisme structural d'un sous-topos localement fermé $(U, Y)$ de $X$, et $G$ un $A$-faisceau constant tordu constructible sur $Y$. Lorsque $X$ est le topos étale d'un schéma noethérien, noté de même, on peut prendre pour sous-topos localement fermés de $X$ les topos étales de schémas réduits associés à des parties localement fermées irréductibles de $X$. 
+Proposition {\bf 1.23}. --- \it Soient $X$ un topos noethérien et $F$ un $A$-faisceau constructible sur $X$. Il existe dans $\mathscr{E}(X, J)$, donc aussi dans $A-\fsc(X)$, une filtration finie de $F$ dont les quotients consécutifs sont de la forme $i_!(G)$, où $i: Y \to X$ est le morphisme structural d'un sous-topos localement fermé $(U, Y)$ de $X$, et $G$ un $A$-faisceau constant tordu constructible sur $Y$. Lorsque $X$ est le topos étale d'un schéma noethérien, noté de même, on peut prendre pour sous-topos localement fermés de $X$ les topos étales de schémas réduits associés à des parties localement fermées irréductibles de $X$. 
 }
 \vskip .3cm
-{\bf Preuve} : Par récurrence noethérienne, on est ramené à prouver l'assertion en la supposant vraie pour out sous-topos fermé de $X$, différent de $X$. L'argument de la preuve de (SGA4 IX 2.5.), de nature formelle, s'applique aux topos généraux et montre, compte tenu de (1.21), qu'il existe un ouvert non vide $U$ de $X$ tel que $F U$ soit constant tordu constructible. Notons alors $Y$ le topos fermé complémentaire de $U$, et $i: U \to X$ et $j: Y \to X$ les morphismes de topos canoniques. On a alors (I 4.6.4.(i)) une suite exacte de $\mathbf{E}(X, J)$
+{\bf Preuve} : Par récurrence noethérienne, on est ramené à prouver l'assertion en la supposant vraie pour out sous-topos fermé de $X$, différent de $X$. L'argument de la preuve de (SGA4 IX 2.5.), de nature formelle, s'applique aux topos généraux et montre, compte tenu de (1.21), qu'il existe un ouvert non vide $U$ de $X$ tel que $F U$ soit constant tordu constructible. Notons alors $Y$ le topos fermé complémentaire de $U$, et $i: U \to X$ et $j: Y \to X$ les morphismes de topos canoniques. On a alors (I 4.6.4.(i)) une suite exacte de $\mathscr{E}(X, J)$
 $$
 0 \to i_!(F | U) \to F \to j_* (F | Y) \to 0.
 $$
@@ -607,7 +607,7 @@ Proposition {\bf 1.24}. --- \it Soient $X$ un topos localement noethérien, et $
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : Supposons tout d'abord que $E$ et $F$ sont constants tordus constructibles, et montrons que les $A$-faisceaux ${\cTor}^A_p(E, F)$ le sont également. On peut pour cela supposer $E$ et $F$ $J$-adiques constants tordus constructibles. Pour tout entier $p$, la définition de ${\cTor}^A_p(E, F)$ (I 5.1) montre que ce $A$-faisceau a des composants localement constants constructibles, de sorte qu'il suffit (1.16) de voir qu'il est de type $J$-adique. On peut supposer $X$ connexe; soit alors $a$ un point de $X$. Posant alors $M = \epsilon_a(E)$ et $N = \epsilon_a(F)$, foncteur fibre 
+{\bf Preuve} : Supposons tout d'abord que $E$ et $F$ sont constants tordus constructibles, et montrons que les $A$-faisceaux ${\cTor}^A_p(E, F)$ le sont également. On peut pour cela supposer $E$ et $F$ $J$-adiques constants tordus constructibles. Pour tout entier $p$, la définition de ${\cTor}^A_p(E, F)$ (I 5.1) montre que ce $A$-faisceau a des composants localement constants constructibles, de sorte qu'il suffit (1.16) de voir qu'il est de type $J$-adique. On peut supposer $X$ connexe; soit alors $a$ un point de $X$. Posant alors $M = \mathscr{E}_a(E)$ et $N = \mathscr{E}_a(F)$, foncteur fibre 
 $$
 \mathcal{E}(X, J) \to \mathcal{E}(\pt, J)
 $$
@@ -625,7 +625,7 @@ $$
 $$
 il résulte de (4.1.4) que $\mathbf{P} \to \mathbf{M}$ est une résolution quasilibre de $\mathbf{M}$. Par suite (I 5.11.(i)), on a dans $A-\fsc(\pt)$ un isomorphisme canonique
 $$
-{\cTor}^A_p(\mathbf{M}, \mathbf{N}) \isom \mathrm{H}^p(\mathbf{P} \otimes_A \mathbf{N}).
+{\cTor}^A_p(\mathbf{M}, \mathbf{N}) \isom \mathrm{H}_p(\mathbf{P} \otimes_A \mathbf{N}).
 \leqno{(1.24.3)}
 $$
 Mais les composants du complexe $\mathbf{P} \otimes_A N$ sont des $A$-faisceaux $J$-adiques constructibles, donc ses objets de cohomologie sont des $A$-faisceaux constructibles (1.5.(iii)), d'où l'assertion. Par ailleurs, le foncteur limite projective
@@ -690,7 +690,7 @@ par récurrence croissante sur la dimension de $M$. Lorsque dim$(M) = 0$, $M$ es
 $$
 \cTor^A_i(E', F) \to \cTor^A_i(E, F) \to \cTor^A_i(E'', F) \quad (i \geq 1),
 $$
-qui montre , compte tenu de ce que $E'$ est annulé par une puissance de $J$, qu'il suffit de prouver l'assertion pour $E''$. Mais prof$(M'') > 0$ et par suite il existe un élément $u$ de $J$ tel que la multiplication par $u$ soit un monomorphisme de $E''$. On en déduit pour tout $i \geq 1$ une suite exacte
+qui montre, compte tenu de ce que $E'$ est annulé par une puissance de $J$, qu'il suffit de prouver l'assertion pour $E''$. Mais prof$(M'') > 0$ et par suite il existe un élément $u$ de $J$ tel que la multiplication par $u$ soit un monomorphisme de $E''$. On en déduit pour tout $i \geq 1$ une suite exacte
 $$
 \cTor^A_i(E'', F) \xlongrightarrow{u} \cTor^A_i(E'', F) \to \cTor^A_i(E''/uE'', F).
 $$
@@ -717,7 +717,7 @@ Proposition {\bf 1.26}. --- \it Soient $X$ un topos localement noethérien, et $
     \leqno{(1.26.1)}
     $$
     $$
-    \epsilon_a \cExt^p_A(E, F) \isomlong \cExt^p_A(\epsilon_aE, \epsilon_a F).
+    \mathscr{E}_a \cExt^p_A(E, F) \isomlong \cExt^p_A(\mathscr{E}_aE, \mathscr{E}_a F).
     \leqno{(1.26.2)}
     $$
     De plus, lorsque $X$ est le topos étale d'un schéma localement noethérien, notant $M$ et $N$ les $\hat{A}$--modules de type fini munis d'une opération continue  de $\pi_1(X, a)$ correspondant à $E$ et $F$ (1.20.5), les $A$-faisceaux
@@ -744,7 +744,7 @@ Proposition {\bf 1.26}. --- \it Soient $X$ un topos localement noethérien, et $
 \vskip .3cm
 {\bf Preuve} : Montrons (i). Comme le $A$-faisceau $\cExt^p_A(E, F)$ a des composants localement constants constructibles, il suffit pour voir qu'il est constant tordu constructible, de montrer qu'il est de type $J$-adique (1.16). On peut supposer $X$ connexe; soit alors $a$ un point de $X$. Posant $M = \epsilon_a(E)$ et $N = \epsilon_a(F)$, le foncteur fibre
 $$
-\mathcal{E}(X, J) \to \mathcal{\pt, J}
+\mathcal{E}(X, J) \to \mathcal{E}(\pt, J)
 $$
 défini par $a$ associe au $A$-faisceau $\cExt^p_A(E, F)$ le système projectif
 $$
