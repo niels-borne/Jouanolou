@@ -3,7 +3,6 @@
 \addcontentsline{toc}{subsection}{2. Conditions de finitude dans les catégories dérivées}
 
 Soit $X$ un topos localement noethérien.
-
 \vskip .3cm
 {
 Définition {\bf 2.1}. --- \it On dit qu'un complexe $E$ de $A$-faisceaux sur $X$ est \emph{à cohomologie constructible} (resp. \emph{constante tordue constructible}) si tous ses objets de cohomologie sont des $A$-faisceaux constructibles (resp. constants tordus constructibles). 
@@ -13,7 +12,7 @@ La sous-catégorie $A-\fscn(X)$ étant exacte dans $A-\fsc(X)$ (1.5.(iii)), les 
 $$
 \K^*_c(X, A) \quad \text{et} \quad \D^*_c(X, A) \quad (* = \emptyset, + -~\text{ou}~b)
 $$
-de $\K^*(X, A)$ et $\D^*(X, A)$ respectivement engendrées par les complexes à cohomologie constructible sont des sus-catégories triangulées; de plus, $\D^*_c(X, A)$ s'obtient par inversion des quasi-isomorphismes à partir de $\K^*_c(X, A)$. De même, on définit des catégories triangulées
+de $\K^*(X, A)$ et $\D^*(X, A)$ respectivement engendrées par les complexes à cohomologie constructible sont des sous-catégories triangulées; de plus, $\D^*_c(X, A)$ s'obtient par inversion des quasi-isomorphismes à partir de $\K^*_c(X, A)$. De même, on définit des catégories triangulées
 $$
 \K^*_t(X, A) \quad \text{et} \quad \D^*_t(X, A) \quad (* = \emptyset, + -~\text{ou}~b)
 $$
@@ -111,7 +110,7 @@ Si de plus l'anneau $A$ est local régulier d'idéal maximal $J$, le bifoncteur 
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : Notons respectivement $E$ et $F$ les complexes à droite et à gauche dans le premier membre. Pour (i), (iii) et (v), on se ramène au moyen du ``way-out functor lemma'' (H I 7.1) au cas où $E$ et sont réduits au degré 0, et alors on conclut par (1.24.(i)). Pour (ii), on se ramène par qay-out functor lemma au cas où $F$ est borné et alors, compte tenu de ce que $E$ est detor-dimension finie, l'assertion est conséquence de (i). Enfin, la partie (iv) résulte de (iii) et du fait que le produit tensoriel dérivé de deux complexes de tor-dimension finie est lui-même de tor-dimension finie.
+{\bf Preuve} : Notons respectivement $E$ et $F$ les complexes à droite et à gauche dans le premier membre. Pour (i), (iii) et (v), on se ramène au moyen du ``way-out functor lemma'' (H I 7.1) au cas où $E$ et sont réduits au degré 0, et alors on conclut par (1.24.(i)). Pour (ii), on se ramène par way-out functor lemma au cas où $F$ est borné et alors, compte tenu de ce que $E$ est de tor-dimension finie, l'assertion est conséquence de (i). Enfin, la partie (iv) résulte de (iii) et du fait que le produit tensoriel dérivé de deux complexes de tor-dimension finie est lui-même de tor-dimension finie.
 \vskip .3cm
 {
 Proposition {\bf 2.5}. --- \it Le bifoncteur $\bRd \cHom_A$ induit des bifoncteurs
@@ -230,7 +229,7 @@ est un \emph{isomorphisme}.
 \vskip .3cm
 {\bf 2.10}. Supposons maintenant le topos $X$ \emph{noethérien}, et que l'anneau $A$ est local régulier d'idéal maximal $J$. Étant donné $E \in \D^b_{\parf}(X, A)$, le complexe $E$ appartient aussi à $\D^b_{\parf}(X, A)$, et le morphisme de Cartan (I 7.6.5)
 $$
-\Hom_A(\check{E} \boldsymbol{\otimes}_A E, A) \to \hom_A(\check{E}, \check{E})
+\Hom_A(\check{E} \boldsymbol{\otimes}_A E, A) \to \Hom_A(\check{E}, \check{E})
 $$
 est une bijection. En particulier, l'identité de $\check{E}$ correspond à un morphisme 
 $$
@@ -312,7 +311,7 @@ est un faisceau (I 3.9), les morphismes traces précédemment définis sur les o
 
 Plus généralement, étant donnés $E$ et $F \in \D_{\parf}(X, A)$, un accouplement
 $$
-( , ): \Hom_A(E, F) \otimes_{\mathrm{H}^0(X, A)}\Hom_A(F, E) \to \mathrm{H}^0(X, A). 
+(\quad , \quad): \Hom_A(E, F) \otimes_{\mathrm{H}^0(X, A)}\Hom_A(F, E) \to \mathrm{H}^0(X, A). 
 $$
 que nous appellerons \emph{cup-produit}. Pour cela, on se ramène comme précédemment à le définir lorsque $X$ est noethérien et les complexes $E$ et $F$ sont bornés. Dans ce cas, on dispose d'un homomorphisme canonique
 $$
@@ -406,7 +405,7 @@ Proposition {\bf 2.12.3}. --- \it Soient $X$ un topos, $U$ un ouvert de $X$ et $
     $$
     \item[(iii)] On suppose que pour toute $A$-algèbre de type fini $B$ annulée par une puissance de $J$, et tout couple $(M, N)$ de $B$--Modules constructibles les $B$--Modules $\cExt^p_B(M, N)$ $(p \in \mathbf{N})$ soient constructibles. Alors le foncteur $\bRd j^!$ (I 7.7.11) induit un foncteur exact
     $$
-    \bRd j^!: \D^+_c(X, A) \to \D^*_c(Y, A).
+    \bRd j^!: \D^+_c(X, A) \to \D^+_c(Y, A).
     $$    
 \end{itemize}
 }
@@ -459,7 +458,7 @@ $$
 $$
 pour un $r \in \mathbf{N}$. Montrons (ii), dans le cas constructible par exemple. Si $E$ est un $B$-faisceau $J$-adique constructible, ses composants sont des $A$--Modules constructibles ($B$ est une $A$-algèbre finie), donc il est aussi constructible en tant que $A$-faisceau ; d'où l'assertion.
 
-Dans la suite de numéro, nous noterons pour tout entier $n \geq 0$
+Dans la suite du numéro, nous noterons pour tout entier $n \geq 0$
 $$
 u_n: A \to (A/J^{n+1})
 $$
@@ -537,7 +536,7 @@ $$
 $$
 }
 \vskip .3cm
-En effet, étant donné un entier $p \geq 0$, le complexe $\bLd u^*_p(N)$ a sa cohomologie concentré en degrés $\leq 0$. Comme $\mathrm{H}^i(X, G) = 0$ $(i \geq d+1)$ pour tout $A_p$-faisceau $G$, on a une suite spectrale birégulière 
+En effet, étant donné un entier $p \geq 0$, le complexe $\bLd u^*_p(N)$ a sa cohomologie concentré en degrés $\leq 0$. Comme $\mathrm{H}^i(X, G) = 0$ \quad $(i \geq d+1)$ pour tout $A_p$-faisceau $G$, on a une suite spectrale birégulière 
 $$
 \mathrm{H}^i(X, \Ld u^j_p(N)) \Rightarrow \hat{H}^{i+j}(N)_p
 $$
@@ -547,7 +546,7 @@ Montrons maintenant (2.13.3). Nous allons le voir par récurrence croissante sur
 $$
 \text{dim}_A(M) =~\text{dim}_A(A/\ann(M)), 
 $$
-appelé dimension de $M$. si dim$_A(M) = 0$, le $A$-faisceau $M$ est annulé par une puissance de $J$, donc il existe un entier $n \geq 0$ tel que $M$ soit défini par un $A_n$--Module constructible. Soit alors $P$ une résolution à gauche de $M$ par des $A_n$--Modules de la forme $i_!(A_n)$, où $i: T \to e_X$ désigne l'unique morphisme d'un objet noethérien de $X$ dans l'objet final. Grâce à (2.13.4), on a une suite spectrale birégulière
+appelé dimension de $M$. Si dim$_A(M) = 0$, le $A$-faisceau $M$ est annulé par une puissance de $J$, donc il existe un entier $n \geq 0$ tel que $M$ soit défini par un $A_n$--Module constructible. Soit alors $P$ une résolution à gauche de $M$ par des $A_n$--Modules de la forme $i_!(A_n)$, où $i: T \to e_X$ désigne l'unique morphisme d'un objet noethérien de $X$ dans l'objet final. Grâce à (2.13.4), on a une suite spectrale birégulière
 $$
 E^{p, q}_1 = \widehat{\Ext}^q_A(A, p^p) \Rightarrow \widehat{\Ext}^{p+q}_A(A, M),
 $$
@@ -736,7 +735,7 @@ sont des isomorphismes de $\hat{A}$--modules.
 \vskip .3cm
 {\bf Preuve} : Par définition des foncteurs $\bLd \alpha^*_n$, on a 
 $$
-\Ext^i_{A_n} (\bLd \alpha^*_n(E), \bLd \alpha^*_n(F)) ``='' \Ext^i_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F)).
+\Ext^i_{A_n} (\bLd \alpha^*_n(E), \bLd \alpha^*_n(F)) \text{``=''} \Ext^i_{A_n}(\bLd u^*_n(E), \bLd u^*_n(F)).
 $$
 \vskip .3cm
 {\bf Remarques 2.13.10}. La proposition (2.13.9) ramène en pratique l'étude ces complexes de $A$-faisceaux à cohomologie constructible à celle des complexes de $A_n$--Modules constructibles $(n \geq 0)$, et sera de ce fait un instrument privilégié pour obtenir, à partir d'énoncés sur les $A_n$--Modules, les énoncés correspondants pour les $A$-faisceaux.
