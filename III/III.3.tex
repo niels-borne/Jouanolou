@@ -68,7 +68,7 @@ $$
 Nous allons maintenant déduire de (3.3) une \emph{équation fonctionnelle} pou les fonctions $L$, du moins si $X$ est projectif sur $\mathbf{F}_p$.
 \vskip .3cm
 {
-Définition {\bf 3.5}. --- \it Soient $g: X \to \mathbf{F}_p$ un schéma de type fini sur $\mathbf{F}_p$, et $\overline{X} = X \times_{\mathbf{F}_p} \overline{\mathbf{F}}_p$- Pour tout $E \in \D^b_c(X, \mathbf{Q}_\ell)$, on pose  
+Définition {\bf 3.5}. --- \it Soient $g: X \to \mathbf{F}_p$ un schéma de type fini sur $\mathbf{F}_p$, et $\overline{X} = X \times_{\mathbf{F}_p} \overline{\mathbf{F}}_p$. Pour tout $E \in \D^b_c(X, \mathbf{Q}_\ell)$, on pose  
 $$
 \chi(E) = \rang (\bRd g_! E) = \sum_{i \in \mathbf{Z}} (-1)^i [\mathrm{H}^i_c (\overline{X}, \overline{E}):\mathbf{Q}_\ell],
 $$
@@ -136,7 +136,7 @@ $$
 Bien entendu, la formule (3.6) ne présente d'intérêt en pratique que si l'on dispose d'une expression simple pour $\D_X(E)$. Nous allons maintenant donner des cas où il en est ainsi.
 \vskip .3cm
 {
-Proposition {\bf 3.9}. --- \it On suppose $X$ quasiprojectif, lisse et purement de dimension $n$ sur $\mathbf{F}_p$. Posant pour tout $E \in \D^b_c(S, \mathbf{Q}_\ell)$
+Proposition {\bf 3.9}. --- \it On suppose $X$ quasiprojectif, lisse et purement de dimension $n$ sur $\mathbf{F}_p$. Posant pour tout $E \in \D^b_c(X, \mathbf{Q}_\ell)$
 $$
 E^V = {\cHom}^{\bullet}_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell),
 $$
@@ -160,7 +160,7 @@ $$
 $$
 }
 \vskip .3cm
-Il s'agit de voir que si $F \in \mathbf{Z}_\ell-\fsct(X)$ et $G \in \mathbf{Z}_\ell-\fscn(X)$, les $\mathbf{Z}_\ell$-faisceaux $\Ext^j_{\mathbf{Z}_\ell}(F, G)$ $(j \geq 1)$ sont annulés par une puissance de $\ell$. D'après (I 6.4.2) et (II 1.2.1), on peut, quitte à se restreindre à des parties localement fermées convenables de $X$, supposer que $G \in \mathbf{Z}_\ell-\fsct(X)$. Alors, compte tenu de (II 1.26), l'assertion résulte de l'assertion analogue, bien connue, pour les $\mathbf{Z}_\ell$--Modules de type fini. Montrons (ii). 
+Il s'agit de voir que si $F \in \mathbf{Z}_\ell-\fsct(X)$ et $G \in \mathbf{Z}_\ell-\fscn(X)$, les $\mathbf{Z}_\ell$-faisceaux $\cExt^j_{\mathbf{Z}_\ell}(F, G)$ $(j \geq 1)$ sont annulés par une puissance de $\ell$. D'après (I 6.4.2) et (II 1.2.1), on peut, quitte à se restreindre à des parties localement fermées convenables de $X$, supposer que $G \in \mathbf{Z}_\ell-\fsct(X)$. Alors, compte tenu de (II 1.26), l'assertion résulte de l'assertion analogue, bien connue, pour les $\mathbf{Z}_\ell$--Modules de type fini. Montrons (ii). 
 
 Il s'agit de voir que
 $$
@@ -217,8 +217,8 @@ $$
 \vskip .3cm
 {\bf Remarque 3.13}. Sous les hypothèses de (3.9), l'existence d'un tel entier $p$ est assurée dans les cas suivants
 \begin{enumerate}
-    \item[cas~(i)] $E \isomlong \mathbf{Q}_\ell(m)$ \quad pour un $m \in \mathbf{Z}$, et alors $p = -2m$.
-    \item[cas~(ii)] $M \isomlong \mathbf{Q}_\ell(m)$ \quad pour un $m \in \mathbf{Z}$, et alors $p = -2m$.
+    \item[cas~(i)] $E \isomlong \mathbf{Q}_\ell(m)$ \quad pour un $m \in \mathbf{Z}$, et alors $\rho = -2m$.
+    \item[cas~(ii)] $M \isomlong \mathbf{Q}_\ell(m)$ \quad pour un $m \in \mathbf{Z}$, et alors $\rho = -2m$.
 \end{enumerate}
 (Pour ce dernier cas, il est immédiat que
 $$
@@ -231,7 +231,7 @@ Proposition {\bf 3.14}. --- \it Soient $X$ un schéma projectif et lisse puremen
 $$
 \D_X(E) \isomlong E(m),
 $$
-et on pose $q= p^m$. Alors, on a, l'égalité
+et on pose $q= p^m$. Alors, on a l'égalité
 $$
 \delta(E)^2 = q^{\chi(E)}.
 $$
