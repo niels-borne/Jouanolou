@@ -107,7 +107,7 @@ L_{\D_X(E)}(t) = (-t)^{-\chi(E)} \delta(E) L_E(t^{-1}).
 $$
 }
 \vskip .3cm
-{\bf Preuve} : Le second membre a un sens d'après (3.3). Posons $S = \Spec$ et $\D_S = \bRd {\cHom}_{\mathbf{Q}_\ell}(. , \mathbf{Q}_\ell)$. D'après (2.3.2 a)), on a 
+{\bf Preuve} : Le second membre a un sens d'après (3.3). Posons $S = \Spec \mathbf{F}_p $ et $\D_S = \bRd {\cHom}_{\mathbf{Q}_\ell}(. , \mathbf{Q}_\ell)$. D'après (2.3.2 a)), on a 
 $$
 \bRd g_* (\D_X E) \isomlong \D_S \bRd g_* (E),
 $$
@@ -124,7 +124,7 @@ L_{\D_S(F)}(t) = (-t)^{\chi(F)} \delta(F) L_F(t^{-1}).
 $$
 }
 \vskip .3cm
-D'après les propriétés d'additivité et de multiplicativité (3.5.1) et (3.5.2), on peut supposer que $F \in \mathbf{Q}_\ell-\fscn (S)$. Alors $F$ correspond (SGA5 VII 1.4.2) à un $\mathbf{Q}_\ell$-espace vectoriel de dimension fini $V$ muni d'une opération continue $f_V$ du Frobenius, et le $\mathbf{Q}_\ell$-faisceau $\D_S (F) = {\cHom}_{\mathbf{Q}_\ell}(F, \mathbf{Q}_\ell)$ correspond (II 1.26) au $\mathbf{Q}_\ell$-espace vectoriel $V^{\nu}$ muni de l'opération continue $(f^{\nu}_V)^{-1}$ du Frobenius. Il suffit alors de montrer que, étant donnés un corps $K$, un $K$-espace vectoriel de dimension finie $V$ et un automorphisme $u$ de $V$, on a l'identité
+D'après les propriétés d'additivité et de multiplicativité (3.5.1) et (3.5.2), on peut supposer que $F \in \mathbf{Q}_\ell-\fscn (S)$. Alors $F$ correspond (SGA5 VII 1.4.2) à un $\mathbf{Q}_\ell$-espace vectoriel de dimension finie $V$ muni d'une opération continue $f_V$ du Frobenius, et le $\mathbf{Q}_\ell$-faisceau $\D_S (F) = {\cHom}_{\mathbf{Q}_\ell}(F, \mathbf{Q}_\ell)$ correspond (II 1.26) au $\mathbf{Q}_\ell$-espace vectoriel $V^{\vee}$ muni de l'opération continue $(f^{\vee}_V)^{-1}$ du Frobenius. Il suffit alors de montrer que, étant donnés un corps $K$, un $K$-espace vectoriel de dimension finie $V$ et un automorphisme $u$ de $V$, on a l'identité
 $$
 1/\det(1 - u^{-1} t) = (-t)^{-\text{dim}(V)} \det(u)/\det(1 - ut^{-1})
 \leqno{(3.8)}
@@ -138,11 +138,11 @@ Bien entendu, la formule (3.6) ne présente d'intérêt en pratique que si l'on 
 {
 Proposition {\bf 3.9}. --- \it On suppose $X$ quasiprojectif, lisse et purement de dimension $n$ sur $\mathbf{F}_p$. Posant pour tout $E \in \D^b_c(X, \mathbf{Q}_\ell)$
 $$
-E^V = {\cHom}^{\bullet}_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell),
+E^\vee = {\cHom}^{\bullet}_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell),
 $$
 on a un isomorphisme
 $$
-\D_X(E) \isom E^V (n) [2n]
+\D_X(E) \isom E^\vee (n) [2n]
 $$
 dans chacun des cas suivants
 \begin{enumerate}
@@ -154,7 +154,7 @@ dans chacun des cas suivants
 {\bf Preuve} : Comme $\D_X(E) = \bRd {{\cHom}}_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell(n))[2n]$, le cas (i) résulte du lemme suivant.
 \vskip .3cm
 {
-Lemme {\bf 3.9.1}. --- \it Étant donnés un schéma noethérien $X$, $F \in \mathbf{Q}_\ell-\fsct(X)$ et $G \in \mathbf{Q}_\ell-\fscn(U)$, on a:
+Lemme {\bf 3.9.1}. --- \it Étant donnés un schéma noethérien $X$, $F \in \mathbf{Q}_\ell-\fsct(X)$ et $G \in \mathbf{Q}_\ell-\fscn(X)$, on a:
 $$
 {\cExt}^j_{\mathbf{Q}_\ell}(F, G) = 0 \quad (j \geq 1).
 $$
@@ -168,12 +168,12 @@ P^j = {\cExt}^j_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell(1)) = 0 \quad (j \geq 1).
 $$
 Comme $M$ est constante tordu constructible, il résulte du cas (i) que $P^j | U = 0$. Il nous suffit donc de voir que pour tout point fermé $x$ de $Y = X - U$ et tout point géométrique $\overline{x}$ au-dessus de $x$, on a $P^j_x = 0$. Le pendant pour les $\mathbf{Q}_\ell$-faisceaux de la variante (SGA5 I 4.6.2) du théorème de dualité locale fournit un accouplement parfait
 $$
-{\cExt}^j_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell(1)) \times \bH^{2-j}_{\overline{x}}(E) \to \mathbf{Q}_{\ell'}
+{\cExt}^j_{\mathbf{Q}_\ell}(E, \mathbf{Q}_\ell(1)) \times \bH^{2-j}_{\overline{x}}(E) \to \mathbf{Q}_{\ell},
 \leqno{(3.9.2)}
 $$
 avec (SGA5 I 4.5.1)
 $$
-\bH^{2-j}_{\overline{x}} = (\bH^{2-j}_x(E))_{\overline{x}}.
+\bH^{2-j}_{\overline{x}}(E) = (\bH^{2-j}_x(E))_{\overline{x}}.
 $$
 Comme le morphisme d'adjonction canonique
 $$
@@ -187,7 +187,7 @@ d'où aussitôt le résultat annoncé.
 
 Ceci dit, lorsque $X$ est projectif sur $\mathbf{F}_\ell$, la formule (3.6) prend la forme
 $$
-L_{\check{E}}(p^{-n} t) = (-1)^{- \chi (E)} \delta(E) L_E (t^{-1}),
+L_{E^\vee}(p^{-n} t) = (-1)^{- \chi (E)} \delta(E) L_E (t^{-1}),
 \leqno{(3.10)}
 $$
 dans chacun des cas de (3.9). Compte tenu de (3.2 a)), cela résulte du lemme suivant.
@@ -203,7 +203,7 @@ D'après les propriétés de multiplicativité (3.2 a)), on peut pour le voir su
 
 Supposons maintenant qu'on ait de plus un isomorphisme
 $$
-\check{E} \isomlong E(\rho) \quad \text{pour un}~\rho \in \mathbf{Z}.
+E^\vee \isomlong E(\rho) \quad \text{pour un}~\rho \in \mathbf{Z}.
 $$
 Alors la formule (3.10) prend la forme
 $$
@@ -211,7 +211,7 @@ L_E (p^{-n-\rho}t) = (-t)^{-\chi(E)}\delta(E) L_E(t^{-1}),
 $$
 ou encore, après avoir posé $q = n + \rho$ et fait le changement de variable $t \mapsto t^{-1}$,
 $$
-L_E(1/qt) = (-t)^{\chi{E}}\delta(E)L_E(t).
+L_E(1/qt) = (-t)^{\chi(E)}\delta(E)L_E(t).
 \leqno{(3.12)}
 $$
 \vskip .3cm
@@ -222,7 +222,7 @@ $$
 \end{enumerate}
 (Pour ce dernier cas, il est immédiat que
 $$
-i_*(M^\nu) \isom (i_*(M))^\nu. \quad )
+i_*(M^\vee) \isom (i_*(M))^\vee. \quad )
 $$
 Explicitons enfin une relation importante entre les entiers $\chi(E)$ et $\delta(E)$.
 \vskip .3cm
