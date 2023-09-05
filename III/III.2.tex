@@ -316,14 +316,20 @@ Supposons maintenant que $X$ et $Y$ soient \emph{propres} sur $S$, et soient $F 
 
 Donnons-nous de plus deux familles $\phi$ et $\psi$ de supports sur $X \times_S Y$. On construit alors comme suit un diagramme
 \[\begin{tikzcd}
-	& {\mathrm{H}^0_\phi(X \times_S Y, \bRd {\cHom}(p^* F, \bRd q^! G)) \times \mathrm{H}^0_\psi(X \times_S Y, \bRd {\cHom}(q^* G, \bRd p^! F))} \\
-	{\Hom(\bRd f_* F, \bRd g_* G) \times \Hom(\bRd g_* G, \bRd f_* F)} && {\mathrm{H}^0_{\phi \cap \psi}(X \times_S Y, K_{X \times_S Y})} \\
-	& {\mathrm{H}^0(S, \mathbf{Z}_\ell)}
-	\arrow["{(b)}", from=1-2, to=2-3]
-	\arrow["{(d)}", from=2-3, to=3-2]
-	\arrow["{(a)}"', from=1-2, to=2-1]
-	\arrow["{(c)}"', from=2-1, to=3-2]
-\end{tikzcd}\leqno{(2.4.3)}\]
+    & \phantom{XXXXX}
+    \mathclap{\mathrm{H}^0_\phi(X \times_S Y, \bRd {\cHom}(p^* F, \bRd q^! G)) \times \mathrm{H}^0_\psi(X \times_S Y, \bRd {\cHom}(q^* G, \bRd p^! F))}
+    \phantom{XXXXX}\\
+    \phantom{XXXXX}
+    \mathclap{\Hom(\bRd f_* F, \bRd g_* G) \times \Hom(\bRd g_* G, \bRd f_* F)}
+    \phantom{XXXXX}
+    && {\mathrm{H}^0_{\phi \cap \psi}(X \times_S Y, K_{X \times_S Y})} \\
+    & {\mathrm{H}^0(S, \mathbf{Z}_\ell)}
+    \arrow["{(b)}", from=1-2, to=2-3]
+    \arrow["{(d)}", from=2-3, to=3-2]
+    \arrow["{(a)}"', from=1-2, to=2-1]
+    \arrow["{(c)}"', from=2-1, to=3-2]
+  \end{tikzcd}\leqno{(2.4.3)}
+\]
 Compte tenu de l'isomorphisme (2.4.2 (ii)), la flèche (a) n'est autre que la restriction du support. La flèche (b) résulte sans peine de l'accouplement (2.4.1 b)). La flèche (c) est le cup-produit défini en (II 2.11). Enfin, la flèche s'obtient immédiatement à partir du morphisme trace
 $$
 \bRd h_* (K_{X \times_S Y}) \to \mathbf{Z}_\ell.
