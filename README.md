@@ -15,12 +15,11 @@ This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under 
 
 ### State of the edition
 - [x] Transcription
-- [ ] Proof-read and preface
-- [ ] Expert review and foreword
+- [x] Proof-read and preface
 - [ ] Preprint
 - [ ] Releases
 
-This project is conducted with the _authorization of J.-P. Jouanolou_ and was typeset in LaTeX under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers:
+This project was conducted with the _authorization of J.-P. Jouanolou_ and was typeset in LaTeX under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers:
 
 - Bruno Kahn
 - Fan Xuanrui
