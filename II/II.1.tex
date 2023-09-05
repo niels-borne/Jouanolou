@@ -46,7 +46,7 @@ Proposition {\bf 1.5}. --- \it
     J-\adn(X) \to A-\fscn(X)
     $$
     induit par (I 3.8.2) est une \emph{équivalence de catégories}.
-    \item[(iii)] La catégorie $A-\fscn(X)$ est une sous-catégorie \emph{exacte} (i.e. stable par noyaux, conoyaux et extensions) de $A-\fsc(X)$. De plus, lorsque $X$ est noethérien, les objets de $A-\fscn(X)$ \emph{noethériens} (dans $A-\fscn(X)$).
+    \item[(iii)] La catégorie $A-\fscn(X)$ est une sous-catégorie \emph{exacte} (i.e. stable par noyaux, conoyaux et extensions) de $A-\fsc(X)$. De plus, lorsque $X$ est noethérien, les objets de $A-\fscn(X)$ sont \emph{noethériens} (dans $A-\fscn(X)$).
 \end{itemize}
 }
 \vskip .3cm
@@ -70,7 +70,7 @@ une suite exacte de $A-\fsc(X)$, avec $E$ et $G$ constructibles, et montrons que
 $$
 \cTor^A_1 (A_r, G) \to A_r \otimes_A E \to A_r \otimes_A F \to A_r \otimes_A G \to 0,
 $$
-dan laquelle tous les termes, excepté éventuellement $A_r \otimes_A F$, sont de type constant et constructibles. Compte tenu du fait qu'un $A_r$--Module qui est extension de $A_r$--Modules constructibles est lui-même constructible, l'assertion résulte alors de (I 3.6). Il nous reste enfin à voir que la catégorie $A-\fscn(X)$ est noethérien lorsque $X$ est noethérien. Il suffit de le voir pour la catégorie équivalente $J-\adn(X)$, ce qui n'est autre que (SGA V 5.2.3.).
+dans laquelle tous les termes, excepté éventuellement $A_r \otimes_A F$, sont de type constant et constructibles. Compte tenu du fait qu'un $A_r$--Module qui est extension de $A_r$--Modules constructibles est lui-même constructible, l'assertion résulte alors de (I 3.6). Il nous reste enfin à voir que la catégorie $A-\fscn(X)$ est noethérien lorsque $X$ est noethérien. Il suffit de le voir pour la catégorie équivalente $J-\adn(X)$, ce qui n'est autre que (SGA V 5.2.3.).
 \vskip .3cm
 {
 Corollaire {\bf 1.6}. --- \it Notant $J-\Modn(X)$ la sous-catégorie abélienne épaisse de $A-\Mod_X$ engendrée par les $A$--Modules constructibles et localement annulés par une puissance de $J$, le foncteur
@@ -92,13 +92,13 @@ Proposition {\bf 1.7}. --- \it On suppose que l'idéal $J$ est maximal. Alors le
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : Montrons d'abord que (ii) $\Rightarrow$ (i). Comme la catégorie $A-\fscn(\pt)$ est noethérienne (1.5.(iii)), il suffit de montrer que tout sous-$A$-faisceau $E$ de $F$ est constructible. On se ramène immédiatement pour le voir au cas où $F$ est $J$-adique constructible et $E$ est un sous-système projectif de $E$. Mais alors les composants de $F$, donc aussi ceux de $E$, sont des $A$--modules artiniens, de sorte que $E$ vérifie la condition de Mittag-Leffler. Dans ces conditions, l'assertion résulte du lemme suivant, valable sans hypothèses spéciale sur le topos $X$ et le couple $(A, J)$, autre que celles de l'introduction.
+{\bf Preuve} : Montrons d'abord que (ii) $\Rightarrow$ (i). Comme la catégorie $A-\fscn(\pt)$ est noethérienne (1.5.(iii)), il suffit de montrer que tout sous-$A$-faisceau $E$ de $F$ est constructible. On se ramène immédiatement pour le voir au cas où $F$ est $J$-adique constructible et $E$ est un sous-système projectif de $F$. Mais alors les composants de $F$, donc aussi ceux de $E$, sont des $A$--modules artiniens, de sorte que $E$ vérifie la condition de Mittag-Leffler. Dans ces conditions, l'assertion résulte du lemme suivant, valable sans hypothèse spéciale sur le topos $X$ et le couple $(A, J)$, autre que celles de l'introduction.
 \vskip .3cm
 {
 Lemme {\bf 1.8}. --- \it Soit $u: E \to F$ un monomorphisme de $A$-faisceaux. On suppose que $F$ est constructible et que $E$ est de type strict. Alors $E$ est constructible.
 }
 \vskip .3cm
-On se ramène pour le voir au cas où $u$ est un monomorphisme de $\mathcal{E}(X, J)$ et $F$ est $J$-adique constructible, puis, quitte à remplacer $E$ par le $A$-faisceau strict associé, [?] strict. Alors le $A$-faisceau $G = \Coker(u)$ est $J$-adique (cf. le preuve de SGA5 V 3.2.4. (i)), et constructible, car ses composants sont des quotients des composants de $F$. Mais alors $E$, noyau du morphisme canonique $F \to G$, est constructible par (1.5.(iii)).
+On se ramène pour le voir au cas où $u$ est un monomorphisme de $\mathcal{E}(X, J)$ et $F$ est $J$-adique constructible, puis, quitte à remplacer $E$ par le $A$-faisceau strict associé, au cas où $E$ est strict. Alors le $A$-faisceau $G = \Coker(u)$ est $J$-adique (cf. le preuve de SGA5 V 3.2.4. (i)), et constructible, car ses composants sont des quotients des composants de $F$. Mais alors $E$, noyau du morphisme canonique $F \to G$, est constructible par (1.5.(iii)).
 
 Montrons maintenant l'assertion (i) $\Rightarrow$ (ii) de la proposition.
 \vskip .3cm
@@ -106,16 +106,16 @@ Montrons maintenant l'assertion (i) $\Rightarrow$ (ii) de la proposition.
 Lemme {\bf 1.9}. --- \it Un objet noethérien $F$ de $A-\fsc(\pt)$ est de type strict (i.e. vérifie la condition de Mittag-Leffler).
 }
 \vskip .3cm
-Il est clair qu'il suffit de montrer la même assertion pour les $A$-faisceaux $F \otimes_A A_r$, qui sont également noethériens, de sorte que l'on est ramené au cas où $F$ est annulé par une puissance de $J$. Puis, utilisant la filtration (finie) de $F$ définie par les puissances de l'idéal $J$, on se ramène au cas où $F$ est annulé par $J$, et enfin au cas où $F$ est un système projectif de $(A/J)$-espaces vectoriels. Soit $n_\circ \geq 0$ un entier, et montrons que la suite décroissante 
+Il est clair qu'il suffit de montrer la même assertion pour les $A$-faisceaux $F \otimes_A A_r$, qui sont également noethériens, de sorte que l'on est ramené au cas où $F$ est annulé par une puissance de $J$. Puis, utilisant la filtration (finie) de $F$ définie par les puissances de l'idéal $J$, on se ramène au cas où $F$ est annulé par $J$, et enfin au cas où $F$ est un système projectif de $(A/J)$-espaces vectoriels. Soit $n_0 \geq 0$ un entier, et montrons que la suite décroissante 
 $$
-\text{Im}(F_n \to F_{n_\circ})_{n \geq n_\circ}
+\text{Im}(F_n \to F_{n_0})_{n \geq n_0}
 $$
 de $(A/J)$-espaces vectoriels est stationnaire. Posant 
 $$
 K_n = 
 \begin{cases}
-0 \quad (n < n_\circ) \\
-\text{Im}(F_n \to F_{n_\circ}) \quad (n \geq n_\circ),
+0 \quad (n < n_0) \\
+\text{Im}(F_n \to F_{n_0}) \quad (n \geq n_0),
 \end{cases}
 $$
 on définit, avec les morphismes de transition évidents, un $A$-faisceau quotient de $F$, donc noethérien. On est finalement ramené à voir qu'un $A$-faisceau noethérien $(V_p)_{p \in \mathbf{N}}$, dont les composants sont des $(A/J)$-espaces vectoriels et les morphismes de transition sont des monomorphismes, est essentiellement constant. Raisonnons par l'absurde, et supposons qu'il existe une infinité (dénombrable) de $V_p$ distincts. Quitte à renuméroter, on peut supposer que $V_i \neq V_j$ si $i \neq j$. Désignons alors, pour tout $i \geq 0$, par $X_i$ un supplémentaire de $V_{i + 1}$ dans $V_i$, et choisissons un élément non nul $e_i$ de $x_i$. On définit un sous-$A$-faisceau $W$ de $V = (V_p)_{p \in \mathbf{N}}$ en posant
@@ -124,36 +124,36 @@ W_p = \bigoplus^\infty_{i = p} k e_i \quad (k = A/J),
 $$
 avec les morphismes de transitions évidents. Nous allons voir que le $A$-faisceau ainsi défini n'est pas noethérien, ce qui donnera la contradiction annoncée. Pour tout entier $p \geq 0$, notons $M_p$ le sous-espace vectoriel de $W_0$ ayant pour base les éléments
 $$
-e_{2^n - r} \quad (n, r \geq 0, 0 \leq r \leq p).
+e_{2^n - r} \quad (n, r \geq 0,\;\; 0 \leq r \leq p).
 $$
-Il est immédiat que pour tout couple $(p, q)$ d'entiers positifs distincts, on a $M_p \cap W_i \neq M_q \cap W_i$ pour tout entier $i \geq 0$. Considérant alors pour tout entier $p \geq 0$ le système projectif, noté $(M_p \cap W)$ défini par
+Il est immédiat que pour tout couple $(p, q)$ d'entiers positifs distincts, on a $M_p \cap W_i \neq M_q \cap W_i$ pour tout entier $i \geq 0$. Considérant alors pour tout entier $p \geq 0$ le système projectif, noté $(M_p \cap W)_\cdot$ défini par
 $$
 (M_p \cap W)_n = M_p \cap W_n \quad (n \geq 0)
 $$
-avec les morphismes de transition évidents, on aune suite croissante
+avec les morphismes de transition évidents, on a une suite croissante
 $$
-(M_\circ \cap W) \subset (M_1 \cap W) \subset \dots \subset (M_p \cap W) \subset \dots 
+(M_0 \cap W)_\cdot \subset (M_1 \cap W)_\cdot \subset \dots \subset (M_p \cap W)_\cdot \subset \dots 
 $$
 de sous-$A$-faisceaux de $W$. Le lemme suivant entraîne qu'elle n'est pas stationnaire.
 \vskip .3cm
 {
 Lemme {\bf 1.10}. --- \it Soit $V = (V_n)_{n \in \mathbf{N}}$ un système projectif d'objets d'une catégorie abélienne $C$, dont les morphismes de transition sont des monomorphismes. Pour tout sous-objet $X$ de $V_0$, on pose
 $$
-(X \cap V) = (X \cap V_n)_{n \in \mathbf{N}}.
+(X \cap V)_\cdot = (X \cap V_n)_{n \in \mathbf{N}}.
 $$
-Si $L$ et $M$ sont deux sous-objets de $V_{0'}$ avec $L \subset M$, les assertions suivantes sont équivalentes.
+Si $L$ et $M$ sont deux sous-objets de $V_{0}$, avec $L \subset M$, les assertions suivantes sont équivalentes.
 \begin{itemize}
-    \item[(i)] $(M \cap W)/(L \cap W)$ est essentiellement nul. 
+    \item[(i)] $(M \cap W)_\cdot/(L \cap W)_\cdot$ est essentiellement nul. 
     \item[(ii)] Il existe un entier $p \geq 0$ tel que $M \cap V_p = L \cap V_p$.
 \end{itemize}
-Lorsque (i) et (ii) sont satisfaites, on a $M \cap V_p = L \cap V_p$ pour $q$ assez grand.
+Lorsque (i) et (ii) sont satisfaites, on a $M \cap V_q = L \cap V_q$ pour $q$ assez grand.
 }
 \vskip .3cm
 Il est clair que (ii) $\Rightarrow$ (i). Inversement, si (i) est vérifiée, il existe un entier $p \geq 0$ tel que le morphisme canonique
 $$
 (M \cap V_p)/(L \cap V_p) \to M/L
 $$
-soit nul. Autrement dit , $M \cap V_p \subset L$, d'où $M \cap _p \subset L \cap V_p$. L'inclusion en sens opposée étant évidente, l'assertion en résulte. 
+soit nul. Autrement dit , $M \cap V_p \subset L$, d'où $M \cap V_p \subset L \cap V_p$. L'inclusion en sens opposée étant évidente, l'assertion en résulte. 
 
 Achevons la preuve de l'assertion (ii) $\Rightarrow$ (i) de (1.7). Il s'agit de voir (1.2) que pour tout entier $r \geq 0$, le $A$-faisceau $F \otimes_A A_r$ est de type constant associé à un $A_r$--Module constructible, ce qui permet de se ramener au cas où $F$ est annulé par une puissance de $J$. Utilisant la filtration de $F$ définie par les puissances de $J$, on peut même supposer que $F$ est annulé par $J$. Finalement, utilisant (1.9), on a à montrer que si un système projectif strict de $(A/J)$-espaces vectoriels est noethérien en tant que $A$-faisceau, alors il est essentiellement constant et sa limite projective est un $(A/J)$-espace vectoriel de dimension finie. Cela se voit immédiatement par l'absurde, et est laissé en exercice au lecteur.
 
@@ -163,7 +163,7 @@ J'ignore s'il est toujours vrai qu'un $A$-faisceau noethérien est constructible
 Proposition {\bf 1.11}. --- \it On suppose que $X$ soit le topos étale d'un schéma de Jacobson noté de même. Soit $F$ un $A$-faisceau sur $X$. Les assertions suivantes sont équivalentes:
 \begin{itemize}
     \item[(i)] $F$ est noethérien et constructible.
-    \item[(ii)] Il existe un nombre fin de points fermés $(x_i,\dots, x_d)$ de $X$ et pour tout $i \in [1, d]$ un $A$-faisceau $F_i$ noethérien et constructible sur le topos ponctuel tels que, notant $j_{x_i}: x_i \to x$ les immersions canoniques, on ait 
+    \item[(ii)] Il existe un nombre fini de points fermés $(x_i,\dots, x_d)$ de $X$ et pour tout $i \in [1, d]$ un $A$-faisceau $F_i$ noethérien et constructible sur le topos ponctuel tels que, notant $j_{x_i}: x_i \to X$ les immersions canoniques, on ait 
     $$
     F \isom \bigoplus_{1 \leq i \leq d} (j_{x_i})_*(F_i).
     $$
@@ -172,9 +172,9 @@ Proposition {\bf 1.11}. --- \it On suppose que $X$ soit le topos étale d'un sch
 \vskip .3cm
 {\bf Preuve} : Pour voir que (ii) $\Rightarrow$ (i), il suffit de voir que les $A$-faisceaux $(j_{x_i})_*(F_i)$ sont constructibles et noethériens. Le caractère constructible se voit en se ramenant au cas où $F_i$ est $J$-adique constructible, en utilisant l'exactitude du foncteur $(j_{x_i})_*$.
 
-Le caractère noethérien résulte immédiatement de l'adjonction naturelle entre les foncteurs $(j_{x_i})^*$ et $(j_{x_i})_*$. Montrons que (i) $\Rightarrow$ (ii). On peut supposer que $F = (F_n)_{n \in \mathbf{N}}$ est $J$-adique constructible, et nous allons alors voir qu'il n'existe qu'un nombre fini $(x_1, \dots, x_d)$ de points fermés de $X$ tels que $(F_0)_{x_i} \neq 0$. Notons pour tout point fermé $x$ de $X$ par $j_x: X \to X$ l'immersion fermée canonique. Pour tout famille finie $Y = (x_1, \dot, x_m)$ de points fermés de $X$, l'inclusion $Y \to X$ définit un épimorphisme canonique
+Le caractère noethérien résulte immédiatement de l'adjonction naturelle entre les foncteurs $(j_{x_i})^*$ et $(j_{x_i})_*$. Montrons que (i) $\Rightarrow$ (ii). On peut supposer que $F = (F_n)_{n \in \mathbf{N}}$ est $J$-adique constructible, et nous allons alors voir qu'il n'existe qu'un nombre fini $(x_1, \dots, x_d)$ de points fermés de $X$ tels que $(F_0)_{x_i} \neq 0$. Notons pour tout point fermé $x$ de $X$ par $j_x: x \to X$ l'immersion fermée canonique. Pour tout famille finie $Y = (x_1, \cdots, x_m)$ de points fermés de $X$, l'inclusion $Y \to X$ définit un épimorphisme canonique
 $$
-f_0 \to \bigoplus_{1 \leq i \leq m} (j_{x_i})_* (j_{x_i})^*(F_0).
+F_0 \to \bigoplus_{1 \leq i \leq m} (j_{x_i})_* (j_{x_i})^*(F_0).
 $$
 Supposons alors qu'il existe une infinité dénombrable $(x_i)_{i \in \mathbf{N}}$ de points fermés de $X$, avec $F_{x_i} \neq 0$. Définissant un $A$-faisceau $G$ par
 $$
@@ -188,7 +188,7 @@ du $A$-faisceau constant $\overline{F}_0$ défini par $F_0$ sur $G$. Il s'ensuit
 $$
 (F^q G)_n = 
 \begin{cases}
-    G_n \quad (n \leq p) \\
+    G_n \quad (n \leq q) \\
     \bigoplus_{0 \leq i \leq q} (j_{x_i})_*(j_{x_i})^*(F_0) \quad (n > q),
 \end{cases}
 $$
@@ -196,9 +196,7 @@ avec les morphismes de transition évidents. Ceci dit, soient donc $(x_1, \dots,
 $$
 F \isom \bigoplus_{1 \leq i \leq d} (j_{x_i})_*(j_{x_i})^*(F),
 $$
-de sorte qu'il suffira de prouver que pour tout $i \in (1, d)$ le $A$-faisceau $(j_{x_i})^*(F)$ est constructible et noethérien. Qu'il soit constructible est évident; comme $F$ est noethérien, son facteur direct $(j_{x_i})_*(j_{x_i})^*(F)$ l'est également, de sorte que le caractère noethérien de $(j_{x_i})^*(F)$ se voit en utilisant l'adjonction naturelle entre $(j_{x_i})_*$ et $(j_{x_i})^*$. Montrons donc que $F | U = 0$. Comme $F/JF \isom \overline{F}_ 0$, il suffit, d'après le lemme de Nakayama (I 5.12.) de voir que $F_0 | U = 0$.
-
-En effet, comme $X$ est un schéma de Jacobson, il existerait sinon (SGA4 VIII 3.13.) un point fermé $x$ de $X$ contenu dans $U$ tel que $(j_x)^*(F_0) \neq 0$.
+de sorte qu'il suffira de prouver que pour tout $i \in (1, d)$ le $A$-faisceau $(j_{x_i})^*(F)$ est constructible et noethérien. Qu'il soit constructible est évident; comme $F$ est noethérien, son facteur direct $(j_{x_i})_*(j_{x_i})^*(F)$ l'est également, de sorte que le caractère noethérien de $(j_{x_i})^*(F)$ se voit en utilisant l'adjonction naturelle entre $(j_{x_i})_*$ et $(j_{x_i})^*$. Montrons donc que $F | U = 0$. Comme $F/JF \isom \overline{F}_ 0$, il suffit, d'après le lemme de Nakayama (I 5.12.) de voir que $F_0 | U = 0$. En effet, comme $X$ est un schéma de Jacobson, il existerait sinon (SGA4 VIII 3.13.) un point fermé $x$ de $X$ contenu dans $U$ tel que $(j_x)^*(F_0) \neq 0$.
 
 \vskip .3cm
 {\bf 1.12}. Notant $\hat{A}$ le complété de $A$ pour la topologie $J$-adique, on définit un foncteur exact et pleinement fidèle (EGA $0_I$ 7.8.2)
@@ -277,7 +275,7 @@ j_*: A-\fscn(Y) \to A-\fscn(X).
 $$
 \vskip .3cm
 {
-Définition {\bf 1.14}. --- \it On dit qu'un $A$-faisceau $J$-adique constructible (1.1) sur $X$. $F = (F_n)_{n \in \mathbf{N}}$ est \emph{constant tordu} (resp. par abus de langage, \emph{localement libre}), si pour tout entier $n \geq 0$, le $A_n$--Module $F_n$ est localement constant (resp. localement libre). On dit qu'un $A$-faisceau sur $X$ est \emph{constant tordu constructible} (resp. \emph{localement libre constructible}) s'il est isomorphe dans $A-\fsc(X)$ à un $A$-faisceau $J$-adique constructible constant tordu (resp. localement libre). On note
+Définition {\bf 1.14}. --- \it On dit qu'un $A$-faisceau $J$-adique constructible (1.1) sur $X$ $F = (F_n)_{n \in \mathbf{N}}$ est \emph{constant tordu} (resp. par abus de langage, \emph{localement libre}), si pour tout entier $n \geq 0$, le $A_n$--Module $F_n$ est localement constant (resp. localement libre). On dit qu'un $A$-faisceau sur $X$ est \emph{constant tordu constructible} (resp. \emph{localement libre constructible}) s'il est isomorphe dans $A-\fsc(X)$ à un $A$-faisceau $J$-adique constructible constant tordu (resp. localement libre). On note
 $$
 A-\fsct(X)
 $$
@@ -290,7 +288,7 @@ Nous allons maintenant énoncer pour les $A$-faisceaux constants tordus construc
 Proposition {\bf 1.15}. --- \it Soit $F$ un $A$-faisceau sur $X$. Les assertions suivantes sont équivalentes.
 \begin{itemize}
     \item[(i)] $F$ est un $A$-faisceau constant tordu constructible (resp. localement libre constructible). 
-    \item[(ii)] $F$ est de type strict et, notant $F'$ le $A$-faisceau strict associé à $F$, il existe localement une application croissante $\gamma \geq \id: \mathbf{N} \to \mathbf{N}$ telle que $\chi_\gamma(F')$ soit $F$-adique constructible constant tordu (resp. localement libre).
+    \item[(ii)] $F$ est de type strict et, notant $F'$ le $A$-faisceau strict associé à $F$, il existe localement une application croissante $\gamma \geq \id: \mathbf{N} \to \mathbf{N}$ telle que $\chi_\gamma(F')$ soit $J$-adique constructible constant tordu (resp. localement libre).
     \item[(iii)] Pour tout entier $r \geq 0$, le $A$-faisceau $F \otimes_A A_r$ est de type fini constant associé à un $A_r$--Module localement constant constructible (resp. localement libre constructible).
 \end{itemize}
 }
@@ -314,7 +312,7 @@ Proposition {\bf 1.17}. --- \it
     J-\adt(X) \to A-\fsct(X)
     $$
     induit par (I 3.8.2) est une équivalence de catégories.
-    \item[(iii)] La catégories $A-\fsct(X)$ est une sous-catégories \emph{exacte} de $A-\fsc(X)$. De plus, lorsque $X$ n'a qu'un nombre fini de composantes connexes (par exemple, est noethérien), les objets de $A-\fsc(X)$ sont noethériens (dans $A-\fsct(X)$).
+    \item[(iii)] La catégories $A-\fsct(X)$ est une sous-catégorie \emph{exacte} de $A-\fsc(X)$. De plus, lorsque $X$ n'a qu'un nombre fini de composantes connexes (par exemple, est noethérien), les objets de $A-\fsc(X)$ sont noethériens (dans $A-\fsct(X)$).
 \end{itemize}
 }
 \vskip .3cm
@@ -331,7 +329,7 @@ induit par (I 3.5.1.) définit une équivalence avec la sous-catégorie abélien
 {
 Proposition {\bf 1.19}. --- \it 
 \begin{itemize}
-    \item[(i)] Soit $0 \to L' \xlongrightarrow{u} L \xlongrightarrow{v} L'' \to 0$ une suite exacte de $\mathcal{E}(X, J)$. Si $L$ et $L''$ (resp. $L'$ et $L''$) sont $J$-adiques localement constructibles, il en est de même de $L'$ (resp. $L$).
+    \item[(i)] Soit $0 \to L' \xlongrightarrow{u} L \xlongrightarrow{v} L'' \to 0$ une suite exacte de $\mathcal{E}(X, J)$. Si $L$ et $L''$ (resp. $L'$ et $L''$) sont $J$-adiques localement libres constructibles, il en est de même de $L'$ (resp. $L$).
     \item[(ii)] Soit $0 \to L' \xlongrightarrow{u} L \xlongrightarrow{v} L'' \to 0$ une suite exacte de $A-\fsc(X)$. Si $L$ et $L''$ (resp. $L'$ et $L''$) sont des $A$-faisceaux localement libres constructibles, il en est de même de $L'$ (resp. $L$).
 \end{itemize}
 }
@@ -340,23 +338,23 @@ Proposition {\bf 1.19}. --- \it
 \[\begin{tikzcd}
 	& {L'_{n+1}/J^{n+1}L'_{n+1}} && {L_{n+1}/J^{n+1}L_{n+1}} && {L''_{n+1}/J^{n+1}L''_{n+1}} & 0 \\
 	0 & {L'_n} && {L_n} && {L''_n} & {0,}
-	\arrow["{\lambda \mu}", from=1-4, to=2-4]
+	\arrow["{\mu}","{\sim}"', from=1-4, to=2-4]
 	\arrow["\lambda", from=1-2, to=2-2]
 	\arrow["{\overline{u}_{n+1}}", from=1-2, to=1-4]
-	\arrow["{u_n}"', from=2-2, to=2-4]
+	\arrow["{u_n}", from=2-2, to=2-4]
 	\arrow[from=2-1, to=2-2]
 	\arrow["{\overline{v}_{n+1}}", from=1-4, to=1-6]
 	\arrow["{v_n}", from=2-4, to=2-6]
-	\arrow["\nu", from=1-6, to=2-6]
+	\arrow["\nu", "{\sim}"', from=1-6, to=2-6]
 	\arrow[from=2-6, to=2-7]
 	\arrow[from=1-6, to=1-7]
 \end{tikzcd}\]
-dans lequel les flèches verticales sont déduites de fa\c{c}on évidente des morphismes de transition. Comme $L''_{n+1}$ est un $A_{n+1}$--Module localement libre, $\overline{u}_{n+1}$ est un monomorphisme, donc $\lambda$ est un isomorphismes d'où l'assertion. Montrons maintenant (ii), et tout d'abord l'assertion non respés. On peut supposer (1.17.(ii)) que $L$
+dans lequel les flèches verticales sont déduites de fa\c{c}on évidente des morphismes de transition. Comme $L''_{n+1}$ est un $A_{n+1}$--Module localement libre, $\overline{u}_{n+1}$ est un monomorphisme, donc $\lambda$ est un isomorphisme d'où l'assertion. Montrons maintenant (ii), et tout d'abord l'assertion non respée. On peut supposer (1.17.(ii)) que $L$
  et $L''$ sont $J$-adiques localement libres constructibles et que $v$ est l'image d'un morphisme de $\mathcal{E}(X, J)$; alors l'assertion résulte de (i) non respée. Prouvons maintenant l'assertion respée. Comme elle est de nature locale (1.17.(i)), on peut supposer $X$ noethérien, et bien sûr $L''$ $J$-adique localement libre constructible. Alors il existe une application croissante $\gamma \geq \id: \mathbf{N} \to \mathbf{N}$ telle que $v$ e¿soit l'image d'un morphisme 
  $$
  \chi_\gamma(L) \to L''
  $$
- de $\mathcal{E}(X, J)$, qui, comme $v$ est un épimorphisme et $L''$ est strict, est un épimorphisme. On est ainsi ramené au cas où $X$ est noethérien, la suite exacte en question est l'image d'une suite exacte de $\mathcal{E}(X, J)$, et $L''$ est $J$-adique localement libre constructible. Comme $L'$ et $L''$ vérifient la condition de Mittag-Leffler, il en est de même de $L$ (EGA $0_III$ 13.2.1.); quitte à remplacer $L$ par le système projectif strict associé, on peut donc supposer $L$ strict. Alors (SGA5 V 3.1.3.) $L'$ est strict. Par suite, il existe une application croissante $\gamma\geq \id: \mathbf{N} \to \mathbf{N}$ telle que $\chi_\gamma(L')$ soit $J$-adique localement libre constructible. Comme les composants de $L''$ sont localement libres, la suite
+ de $\mathcal{E}(X, J)$, qui, comme $v$ est un épimorphisme et $L''$ est strict, est un épimorphisme. On est ainsi ramené au cas où $X$ est noethérien, la suite exacte en question est l'image d'une suite exacte de $\mathcal{E}(X, J)$, et $L''$ est $J$-adique localement libre constructible. Comme $L'$ et $L''$ vérifient la condition de Mittag-Leffler, il en est de même de $L$ (EGA $0_{III}$ 13.2.1.); quitte à remplacer $L$ par le système projectif strict associé, on peut donc supposer $L$ strict. Alors (SGA5 V 3.1.3.) $L'$ est strict. Par suite, il existe une application croissante $\gamma\geq \id: \mathbf{N} \to \mathbf{N}$ telle que $\chi_\gamma(L')$ soit $J$-adique localement libre constructible. Comme les composants de $L''$ sont localement libres, la suite
  $$
  0 \to \chi_\gamma(L') \xlongrightarrow{\chi_\gamma(u)} \chi_\gamma(L) \xlongrightarrow{\chi_\gamma(v)} \chi_\gamma(L'') \to 0
  $$
@@ -524,7 +522,7 @@ Proposition {\bf 1.21}. --- \it Soient $X$ un topos localement noethérien et $F
 \end{itemize}
 }
 \vskip .3cm
-{\bf Preuve} : Il est évident que (ii) $\Rightarrow$ (iii). Pour voir que (i) $\Rightarrow$ (ii), on peut supposer $X$ noethérien et $F$ $J$-adique constructible, et alors (SGA5 V 5.1.6) le gradué strict $\grs(F)$ est un $\gr_J(A)$--Module constructible. D'après la structure des Modules constructibles sur un topos noethérien (SGA4 VI \quad), le topos $X$ admet un recouvrement fini par des sous-topos localement fermés au-dessus desquels l'image réciproque de $\grs(F)$ est un $\gr_J(A)$--Module localement constant constructible. Au dessus de ces sous-topos localement fermés, les composants de $\grs(F)$ sont localement constants constructibles, et par suite $F$ est $J$-adique constant tordu constructible. Montrons que (iii) $\Rightarrow$ (i). Comme l'assertion est locale, on peut supposer que $X$ est est noethérien et réunion finie de sous-topos localement fermés $Z_i = (U_i, Y_i)$ $(1 \leq i \leq q)$ au-dessus desquels $F$ est constant tordu constructible. En particulier, les $F | Z_i$ vérifiant la condition de Mittag-Leffler, et il résulte sas peine du lemme suivant que $F$ la vérifie également.
+{\bf Preuve} : Il est évident que (ii) $\Rightarrow$ (iii). Pour voir que (i) $\Rightarrow$ (ii), on peut supposer $X$ noethérien et $F$ $J$-adique constructible, et alors (SGA5 V 5.1.6) le gradué strict $\grs(F)$ est un $\gr_J(A)$--Module constructible. D'après la structure des Modules constructibles sur un topos noethérien (SGA4 VI \quad), le topos $X$ admet un recouvrement fini par des sous-topos localement fermés au-dessus desquels l'image réciproque de $\grs(F)$ est un $\gr_J(A)$--Module localement constant constructible. Au dessus de ces sous-topos localement fermés, les composants de $\grs(F)$ sont localement constants constructibles, et par suite $F$ est $J$-adique constant tordu constructible. Montrons que (iii) $\Rightarrow$ (i). Comme l'assertion est locale, on peut supposer que $X$ est noethérien et réunion finie de sous-topos localement fermés $Z_i = (U_i, Y_i)$ $(1 \leq i \leq q)$ au-dessus desquels $F$ est constant tordu constructible. En particulier, les $F | Z_i$ vérifiant la condition de Mittag-Leffler, et il résulte sans peine du lemme suivant que $F$ la vérifie également.
 \vskip .3cm
 {
 Proposition {\bf 1.22}. --- \it Si un topos $X$ est réunion d'un nombre fini de sous-topos localement fermés $Z_m = (U_m, Y_m)$ $(1 \leq m \leq q)$, alors, notant $j_m: Y_m \to X$ les morphismes de topos canoniques, les foncteurs
@@ -544,7 +542,7 @@ $$
 $$
 est également un isomorphisme. Il est donc de même du morphisme canonique $(k_m)_!(M | V_m) \to M$, et par suite (SGA4 IV 2.6)
 $$
-M \isom M \otimes_A (K_m)_! (A).
+M \isom M \otimes_A (k_m)_! (A).
 $$
 Par récurrence, on en déduit que 
 $$
@@ -556,7 +554,7 @@ $$
 $$
 d'où l'assertion, puisque par hypothèse le produit des $V_m$ est vide.
 
-Sachant que $F$ vérifie la condition de Mittag-Leffler, on peut, quitte à le remplacer par le système projectif strict associé, supposer qu'il est strict. Alors (1.15.(ii)), il existe pour tout $i$ une application croissante $\gamma_i \geq \id: \mathbf{N} \to \mathbf{N}$ telle que $\chi_\gamma(F | Z_i)$ soit $J$-adique constructible. Posant $\gamma = \sup(\gamma)$, on voit que $\chi_\gamma(F)$ est $J$-adique, en utilisant (1.22), et constructible, d'où l'assertion.
+Sachant que $F$ vérifie la condition de Mittag-Leffler, on peut, quitte à le remplacer par le système projectif strict associé, supposer qu'il est strict. Alors (1.15.(ii)), il existe pour tout $i$ une application croissante $\gamma_i \geq \id: \mathbf{N} \to \mathbf{N}$ telle que $\chi_\gamma(F | Z_i)$ soit $J$-adique constructible. Posant $\gamma = \sup(\gamma_i)$, on voit que $\chi_\gamma(F)$ est $J$-adique, en utilisant (1.22), et constructible, d'où l'assertion.
 
 Dans l'énoncé suivant, étant donné un sous-topos localement fermé $(U, Y)$ d'un topos localement noethérien $X$, et $i: Y \to X$, $j: Y \to U$, $k: U \to X$ les morphismes de topos canoniques, nous noterons $i_!$ le foncteur
 $$
@@ -569,6 +567,7 @@ Proposition {\bf 1.23}. --- \it Soient $X$ un topos noethérien et $F$ un $A$-fa
 }
 \vskip .3cm
 {\bf Preuve} : Par récurrence noethérienne, on est ramené à prouver l'assertion en la supposant vraie pour out sous-topos fermé de $X$, différent de $X$. L'argument de la preuve de (SGA4 IX 2.5.), de nature formelle, s'applique aux topos généraux et montre, compte tenu de (1.21), qu'il existe un ouvert non vide $U$ de $X$ tel que $F U$ soit constant tordu constructible. Notons alors $Y$ le topos fermé complémentaire de $U$, et $i: U \to X$ et $j: Y \to X$ les morphismes de topos canoniques. On a alors (I 4.6.4.(i)) une suite exacte de $\mathscr{E}(X, J)$
+
 $$
 0 \to i_!(F | U) \to F \to j_* (F | Y) \to 0.
 $$
@@ -577,7 +576,7 @@ L'assertion étant vraie sur $Y$ pour $F | Y$, par hypothèse de récurrence, on
 {
 Proposition {\bf 1.24}. --- \it Soient $X$ un topos localement noethérien, et $E$ et $F$ deux $A$-faisceaux sur $X$.
 \begin{itemize}
-    \item[(i)] Si $E$ et $T$ sont constructibles (resp. constants tordus constructibles), les $A$-faisceaux
+    \item[(i)] Si $E$ et $F$ sont constructibles (resp. constants tordus constructibles), les $A$-faisceaux
     $$
     {\cTor}^A_p(E, F) \quad (p \in \mathbf{Z})
     $$
@@ -615,9 +614,9 @@ défini par $a$ associe au $A$-faisceau ${\cTor}^A_p(E, F)$ le système projecti
 $$
 (\Tor^{A_n}_p(M/J^{n+1}M, N/J^{n+1}N))_{n \in \mathbf{N}},
 $$
-et il suffit, vu la conservativité du foncteur libre (habituel) défini par $a$ sur les $A$--Modules localement constants, de vérifier que ce dernier est de type $J$-adique. Choisissons pour cela une résolution libre de type fini
+et il suffit, vu la conservativité du foncteur fibre (habituel) défini par $a$ sur les $A$--Modules localement constants, de vérifier que ce dernier est de type $J$-adique. Choisissons pour cela une résolution libre de type fini
 $$
-p \to M
+P \to M
 $$
 du $\hat{A}$--Module $M$. Convenant de poser pour tout $\hat{A}$--Module de type fini $L$
 $$
@@ -647,7 +646,7 @@ $$
 On peut supposer $X$ noethérien, et il s'agit alors de voir que les systèmes projectifs $\cTor^A_p(E, F)$ $(p \geq r+1)$ sont essentiellement nuls. Grâce à (1.22), il suffit de vérifier cette assertion au-dessus des sous-topos localement fermés de $X$ sur lesquels $E$ et $F$ sont constants tordus constructibles. On est ainsi ramené au cas où $E$ et $F$sont constants tordus constructibles. Supposant de plus $X$ connexe et choisissant un point $a$ de $X$, l'assertion résulte alors de (1.24.2) et du fait que $\hat{A}$ est régulier de dimension $r$ (EGA $0_{IV}$ 17.3.8.1).
 \vskip .3cm
 {
-Proposition {\bf 1.25}. --- \it Soient $X$ un topos localement noethérien et $E$ un $A$-faisceau constructible (resp. constant tordu constructible) sur $X$.
+	Proposition {\bf 1.25}.\footnote{Pour les assertions respées, $J$ doit être supposé maximal.} --- \it Soient $X$ un topos localement noethérien et $E$ un $A$-faisceau constructible (resp. constant tordu constructible) sur $X$.
 \begin{itemize}
     \item[(i)] Les assertions suivantes sont équivalentes :
     \begin{itemize}
@@ -750,20 +749,20 @@ défini par $a$ associe au $A$-faisceau $\cExt^p_A(E, F)$ le système projectif
 $$
 (\varinjlim_{m \geq n}\Ext^p_{A_m}(M/J^{m+1}M, N/J^{n+1}N))_{n \in \mathbf{N}},
 $$
-et il suffit, vu la conservativité du foncteur fibre (habituel) défini par $a$ sur les $A$--Modules localement constants, de vérifier que ce dernier est de type $J$-adique. Avec les notations de l preuve de (1.24.(i)), on a dans $A-\fsc(\pt)$ un isomorphisme canonique
+et il suffit, vu la conservativité du foncteur fibre (habituel) défini par $a$ sur les $A$--Modules localement constants, de vérifier que ce dernier est de type $J$-adique. Avec les notations de la preuve de (1.24.(i)), on a dans $A-\fsc(\pt)$ un isomorphisme canonique
 $$
 \cExt^p_A(\mathbf{M}, \mathbf{N}) \isom \mathrm{H}^p (\cHom^\bullet_A(\mathbf{P}, \mathbf{N})),
 \leqno{(1.26.3)}
 $$
 défini grâce à (I 7.3.11). Mais (SGA5 VI 1.3.3) les composants de $\cHom^\bullet_A(\mathbf{P}, \mathbf{N})$ sont $J$-adiques constructibles, d'où aussitôt l'assertion.
 
-Les assertions restantes de la partie (i) se montrent à partir de là en calquant la preuve des assertions analogues de (1.24). Montrons (ii). D'après (1.21), on peut supposer que $F$ est également constant tordu constructible, et alors (ii) résulte de (i). Pour voir (iii), on peut supposer que $X$ est connexe. Choisissant alors un point $a$ de $X$, nous allons raisonner par récurrence croissante sur la dimension du $\hat{A}$--module de type fini $M$ associé à $E$. Si dim$(M) = 0$, le $A$-faisceau $E$ est défini par un $A$-Module localement constant constructible annulé par une puissance de $J$, que, quitte à localiser, on peut même supposer constant. Alors, toute résolution de longueur $r$ du $A$-faisceau $E$. On conclut dans ce cas grâce à (I 7.3.11). Supposons maintenant l'assertion vraie lorsque dim$(M) = d \geq 0$ et montrons qu'elle est vraie pour dim$(M) = d+1$. Le sous-$\hat{A}$--module $M'$ de $M$ formé des éléments annulés par une puissance de l'idéal $J$ correspond au plus grand sous-$A$-faisceau constant tordu constructible $E'$ de $E$ annulé par une puissance de $J$. Posons $E' = E/E'$ et $M'' = M/M'$. Le $\hat{A}$--module $M''$ correspond à $E''$ et on a une suite exacte
+Les assertions restantes de la partie (i) se montrent à partir de là en calquant la preuve des assertions analogues de (1.24). Montrons (ii). D'après (1.21), on peut supposer que $F$ est également constant tordu constructible, et alors (ii) résulte de (i). Pour voir (iii), on peut supposer que $X$ est connexe. Choisissant alors un point $a$ de $X$, nous allons raisonner par récurrence croissante sur la dimension du $\hat{A}$--module de type fini $M$ associé à $E$. Si dim$(M) = 0$, le $A$-faisceau $E$ est défini par un $A$-Module localement constant constructible annulé par une puissance de $J$, que, quitte à localiser, on peut même supposer constant. Alors, toute résolution de longueur $r$ de $M$ par des $\hat{A}$-modules libres de type fini définit une résolution localement libre constructible et de longueur $r$ du $A$-faisceau $E$. On conclut dans ce cas grâce à (I 7.3.11). Supposons maintenant l'assertion vraie lorsque dim$(M) = d \geq 0$ et montrons qu'elle est vraie pour dim$(M) = d+1$. Le sous-$\hat{A}$--module $M'$ de $M$ formé des éléments annulés par une puissance de l'idéal $J$ correspond au plus grand sous-$A$-faisceau constant tordu constructible $E'$ de $E$ annulé par une puissance de $J$. Posons $E'' = E/E'$ et $M'' = M/M'$. Le $\hat{A}$--module $M''$ correspond à $E''$ et on a une suite exacte
 $$
 \cExt^p_A(E'', F) \to \cExt^p_A(E, F) \to \cExt^p_A(E', F) \quad (p \in \mathbf{Z}),
 $$
 qui montre, compte tenu de ce que $E'$ est annulé par une puissance de $J$, qu'il suffit de prouver l'assertion pour $E''$. Mais prof$(M'') > 0$, de sorte qu'il existe un élément $u$ de $J$ tel que la multiplication par $u$ définisse un monomorphisme de $E''$. On en déduit pour tout $p \in \mathbf{Z}$ une suite exacte
 $$
-\cExt^p_A(E'', F) \xlongrightarrow{xu} \cExt^p_A(E'', F) \xlongrightarrow{\gamma} \cExt^{p+1}_A(E''/uE'', F).
+\cExt^p_A(E'', F) \xlongrightarrow{\times u} \cExt^p_A(E'', F) \xlongrightarrow{\delta} \cExt^{p+1}_A(E''/uE'', F).
 $$
 L'hypothèse de récurrence implique alors que 
 $$
@@ -782,7 +781,7 @@ il est clair qu'on obtient un foncteur cohomologique de la catégorie des $A$--M
 $$
 (T^i(F_n))_{n \in \mathbf{N}}.
 $$
-Pour voir [?] $F$ est $J$-adique. Alors, compte tenu de lemme d'Artin-Rees (SGA5 V 4.2.6) et du lemme de Shih (SGA5 V A3.2), il suffit de montrer que pour tout entier $m \geq 0$, le $\gr_J(A)$--Module
+Pour voir l'assertion dans ce cas, on peut supposer que $F$ est $J$-adique. Alors, compte tenu de lemme d'Artin-Rees (SGA5 V 4.2.6) et du lemme de Shih (SGA5 V A3.2), il suffit de montrer que pour tout entier $m \geq 0$, le $\gr_J(A)$--Module
 $$
 T^m(\grs(F)) \isom \cExt^m_{A_0}(E_0, \grs(F)),
 $$
@@ -828,7 +827,7 @@ Nous allons maintenant nous intéresser à quelques propriétés particulières 
 Proposition {\bf 1.28}. --- \it On suppose que $A$ est un anneau de valuation discrète et que $J$ est son idéal maximal. Étant donné un $A$-faisceau constructible $F$ sur $X$, les assertions suivantes sont équivalentes:
 \begin{itemize}
     \item[(i)] $F$ est plat. 
-    \item[(ii)] $F$ est sas torsion, i.e. pour tout élément $a$ de $A$, l'homothétie 
+    \item[(ii)] $F$ est sans torsion, i.e. pour tout élément $a$ de $A$, l'homothétie 
     $$
     a_F: F \to F
     $$
@@ -881,9 +880,9 @@ de $A-\fscn(X)$, avec $L$ et $L'$ deux $A$-faisceaux \emph{constructibles et pla
     Des arguments catégoriques généraux montrent que $\alpha$ est un monomorphisme et $\beta$ un épimorphisme; de plus, $P$ est constructible, et plat puisque $\alpha$ est un monomorphisme. On remarquera qu'on a seulement utilisé que $X$ est localement noethérien, et que l'argument montre plus généralement que, sans hypothèse sur $A$, $F$ est quotient d'un $A$-faisceau constructible et sans torsion.
     \item[c)] Passons au cas général. La catégorie $A-\fscn(X)$ (resp. $-\fsct(X)$) est noethérien (1.5.(iii) resp. 1.17.(iii)); par suite, $u$ désignant une uniformisante locale de $A$, la famille de sous-$A$-faisceaux constructibles (resp. constants tordus constructibles)
     $$
-    u^{n^{F = \Ker(F \xlongrightarrow{u^n} F)}}
+    _{u^{n}} F = \Ker(F \xlongrightarrow{u^n} F)
     $$
-    admet un plus grand élément, soit $u^{d^F}$, dans $A-\fsc(X)$. Le $A$-faisceau $M = u^dF$ est sans torsion et $F/u^dF$ est isomorphe au $A$-faisceau associé   à un $(A/u^dA)$--Module constructible (resp. localement constant constructible). D'après b) (resp a)), il existe un épimorphisme
+    admet un plus grand élément, soit $_{u^{d}} F$, dans $A-\fsc(X)$. Le $A$-faisceau $M = u^dF$ est sans torsion et $F/u^dF$ est isomorphe au $A$-faisceau associé   à un $(A/u^dA)$--Module constructible (resp. localement constant constructible). D'après b) (resp a)), il existe un épimorphisme
     $$
     \gamma: P \to F/u^dF,
     $$
