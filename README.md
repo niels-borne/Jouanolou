@@ -1,7 +1,7 @@
 ## Catégories Dérivées en Cohomologie $\ell$-adique, J.-P. Jouanolou
 
 <p align="center">
-  <a href="https://github.com/carmonamateo/Jouanolou/raw/main/CDCAJ.pdf" target="_blank">[PDF]</a>
+  <a href="" target="_blank">[PDF]</a>
 </p>
 
 ---
