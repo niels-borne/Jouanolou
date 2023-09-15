@@ -1,0 +1,555 @@
+ \documentclass[12pt,twoside]{report} %openright
+	\usepackage[utf8]{inputenc}
+ 	\usepackage[greek,english]{babel}
+    \usepackage{yfonts}
+	\usepackage{latexsym}
+	\usepackage{amsmath}
+	\usepackage{amssymb}
+	\usepackage{amsthm}
+	\usepackage{stmaryrd}
+	\usepackage{pb-diagram}
+	\usepackage{amscd}
+	\usepackage{mathrsfs}
+	\usepackage{enumerate}
+	\usepackage{color}
+	\usepackage{cite}
+	\usepackage{graphicx}
+	\usepackage[all]{xy}
+	
+	 \usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=[RGB]{61,82,62},
+    filecolor=[RGB]{61,82,62},      
+    urlcolor=[RGB]{61,82,62},
+}
+	\usepackage{graphicx}
+\graphicspath{ {./images/} }
+	
+	\usepackage{fixltx2e}
+	\usepackage{extarrows}
+	\usepackage{datetime}
+	\usepackage{mathtools}
+    \usepackage{remreset}
+    \usepackage{afterpage}
+    \usepackage{verbatim}
+    \usepackage{cleveref}
+    \usepackage{csquotes}
+    \usepackage{etoc}
+
+\usepackage{pdflscape}
+	
+	\usepackage[urw-garamond]{mathdesign}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+    \usepackage{frcursive}
+	\usepackage{float}
+	\usepackage[12pt]{moresize}
+	\usepackage{titlesec}
+	\usepackage[twoside,top=1.5in,bottom=1.5in,left=1in,right=1.3in,headheight=16pt,headsep=30pt,footskip=40pt]{geometry}
+
+	\linespread{1.25}
+%	\linespread{1.05}
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{quiver}[2021/01/11 quiver]
+
+% `tikz-cd` is necessary to draw commutative diagrams.
+\RequirePackage{tikz-cd}
+% `amssymb` is necessary for `\lrcorner` and `\ulcorner`.
+\RequirePackage{amssymb}
+% `calc` is necessary to draw curved arrows.
+\usetikzlibrary{calc}
+% `pathmorphing` is necessary to draw squiggly arrows.
+\usetikzlibrary{decorations.pathmorphing}
+
+% A TikZ style for curved arrows of a fixed height, due to AndréC.
+\tikzset{curve/.style={settings={#1},to path={(\tikztostart)
+    .. controls ($(\tikztostart)!\pv{pos}!(\tikztotarget)!\pv{height}!270:(\tikztotarget)$)
+    and ($(\tikztostart)!1-\pv{pos}!(\tikztotarget)!\pv{height}!270:(\tikztotarget)$)
+    .. (\tikztotarget)\tikztonodes}},
+    settings/.code={\tikzset{quiver/.cd,#1}
+        \def\pv##1{\pgfkeysvalueof{/tikz/quiver/##1}}},
+    quiver/.cd,pos/.initial=0.35,height/.initial=0}
+
+% TikZ arrowhead/tail styles.
+\tikzset{tail reversed/.code={\pgfsetarrowsstart{tikzcd to}}}
+\tikzset{2tail/.code={\pgfsetarrowsstart{Implies[reversed]}}}
+\tikzset{2tail reversed/.code={\pgfsetarrowsstart{Implies}}}
+% TikZ arrow styles.
+\tikzset{no body/.style={/tikz/dash pattern=on 0 off 1mm}}
+
+	% use osf for figures in math mode
+	\DeclareSymbolFont{digits}{\encodingdefault}{\rmdefault}{m}{n}
+	\SetSymbolFont{digits}{normal}{\encodingdefault}{\rmdefault}{m}{n}
+	\DeclareMathSymbol{0}{\mathalpha}{digits}{"30}
+	\DeclareMathSymbol{1}{\mathalpha}{digits}{"31}
+	\DeclareMathSymbol{2}{\mathalpha}{digits}{"32}
+	\DeclareMathSymbol{3}{\mathalpha}{digits}{"33}
+	\DeclareMathSymbol{4}{\mathalpha}{digits}{"34}
+	\DeclareMathSymbol{5}{\mathalpha}{digits}{"35}
+	\DeclareMathSymbol{6}{\mathalpha}{digits}{"36}
+	\DeclareMathSymbol{7}{\mathalpha}{digits}{"37}
+	\DeclareMathSymbol{8}{\mathalpha}{digits}{"38}
+	\DeclareMathSymbol{9}{\mathalpha}{digits}{"39}
+	% helvetica for sans in math
+	\DeclareMathAlphabet{\mathsf}{\encodingdefault}{phv}{m}{n}
+	%\usepackage{showkeys}
+	%\usepackage{showframe}
+	\usepackage{fancyhdr}
+	%\fancyhead[CO]{\rightmark}
+	\fancyhead[CO]{}
+	%\fancyhead[CE]{\leftmark}
+	\fancyhead[CE]{}
+	\fancyhead[RE]{}
+	\fancyhead[LO]{}
+	\fancyhead[RO]{}
+	\fancyhead[LE]{}
+	\cfoot{\thepage}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\titleformat\section{\normalfont\Large\centerline{\hss\rule{1.3in}{.01in}\hss}}{\thesection}{1em}{}
+    \titleformat{\chapter}[display]{}{\huge\filcenter { \thechapter}}{12pt}{\large \filcenter}
+
+\newcommand\hmmax{0}
+\newcommand\bmmax{0}
+
+\hypersetup{% 
+  pdftitle={\emph{Catégories Dérivées en Cohomologie $\ell$-adique}, J.-P. Jouanolou. (Ed.) M. Carmona et al},
+  pdfauthor={Alexander Grothendieck},
+  pdflang={fr}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand*\isommap{%
+  \xrightarrow{\raisebox{-0.2 em}{\smash{\ensuremath{\sim}}}}%
+}
+
+\newcommand*\isomlong{%
+  \xlongrightarrow{\raisebox{-0.2 em}{\smash{\ensuremath{\sim}}}}%
+}
+	% letters
+	\newcommand{\PP}{\mathbf{P}}
+%	\newcommand{\RR}{\mathbf{R}}
+	\renewcommand{\AA}{\mathbf{A}}
+	\newcommand{\ZZ}{\mathbf{Z}}
+    \newcommand{\Q}{\mathbf{Q}}
+	%\newcommand{\NN}{\mathbf{N}}	
+	%\newcommand{\QQ}{\mathbb{Q}}	
+	\newcommand{\QQ}{\mathbf{Q}}	
+	\newcommand{\Aa}{\mathscr{A}}	
+	\newcommand{\Kk}{\mathscr{K}}	
+	%\newcommand{\BB}{\mathbb{B}}	
+	\newcommand{\FF}{\mathbf{F}}	
+	\newcommand{\Hh}{\mathscr{H}}	
+	\newcommand{\Xx}{\mathscr{X}}	
+	\newcommand{\Gg}{\mathscr{G}}	
+	\newcommand{\GG}{\mathbf{G}}	
+	\newcommand{\Ee}{\mathscr{E}}	
+	\newcommand{\Ll}{\mathscr{L}}	
+	\newcommand{\Mm}{\mathscr{M}}	
+	\newcommand{\mm}{\mathfrak{m}} %{\mathfrak{m}}	
+    \newcommand{\pp}{\wp}	
+	\newcommand{\Ff}{\mathscr{F}}	
+	\newcommand{\Oo}{\mathscr{O}}	
+	\newcommand{\Cc}{\mathscr{C}}	
+	\newcommand{\CC}{\mathbf{C}}
+    
+    \newcommand{\bfGr}{\mathbf{Gr}}
+    \newcommand{\bfFl}{\mathbf{Fl}}
+    \newcommand{\bfCart}{\mathbf{Cart}}
+    
+	\newcommand{\bari}{\bar\imath}
+	\newcommand{\barj}{\bar\jmath}
+	%\newcommand{\u1}{\underline{1}}
+	
+
+	
+ 
+    %%%%%
+    \def\Z{\Bbb Z}
+    \def\gT{{\textfrak T}}
+    \def\gG{{\textfrak G}}
+    \def\gS{{\textfrak S}}
+    \def\gA{{\textfrak A}}
+	\def\gP{{\textfrak P}}
+	\def\cD{{\cal D}}
+	\def\cA{{\cal A}}
+	\def\cB{{\cal B}}
+	\def\cC{{\cal C}}
+	\def\cP{{\cal P}}
+	\def\cQ{{\cal Q}}
+	\def\cN{{\cal N}}
+	\def\cM{{\cal M}}
+	\def\cU{{\cal U}}
+	\def\cG{{\cal G}}
+	\def\cH{{\cal H}}
+	\def\cJ{{\cal J}}
+	\def\cE{{\cal E}}
+	\def\cT{{\cal T}}
+	\def\gn{{g,\nu}}
+	\def\GG{{{\rm I}\!\Gamma}}
+    
+    \def\spc{{\qquad\qquad\qquad\qquad}}
+	\def\C{\Bbb C}
+	%\def\N{\Bbb N}
+	\def\O{\Bbb O}
+	\def\M{\Bbb M}
+	\def\P{\Bbb P}
+	\def\E{{\Bbb E}}
+	\def\F{{\Bbb F}}
+	\def\Q{\Bbb Q}
+	\def\glq{{{\rm Gal}(\overline\Q/\Q)}}
+	\def\R{\Bbb R}
+	\def\U{\Bbb U}
+
+	\renewcommand{\P}{\mathbb{P}}
+    
+	% operators
+	\renewcommand{\bar}{\overline}
+	\newcommand{\et}{{\rm\acute{e}t}}
+	\newcommand{\an}{{\rm an}}
+	\newcommand{\ket}{{\rm k\et}}
+	\newcommand{\fet}{{\rm f\et}}
+	\newcommand{\Et}{{\acute{E}t}}
+	\DeclareMathOperator{\Gal}{Gal}
+	\DeclareMathOperator{\Sh}{Sh}
+	\DeclareMathOperator{\gr}{gr}
+	\DeclareMathOperator{\ev}{ev}
+	\DeclareMathOperator{\Img}{Im}
+	\DeclareMathOperator{\cone}{cone}
+	\DeclareMathOperator{\Star}{Star}
+	\DeclareMathOperator{\coker}{coker}
+	\DeclareMathOperator{\chara}{char}
+	\DeclareMathOperator{\Hom}{Hom}
+	\DeclareMathOperator{\Hhom}{{\mathscr{H}om}}
+	\DeclareMathOperator{\Ext}{Ext}
+	\DeclareMathOperator{\Tor}{Tor}
+	\DeclareMathOperator{\Frac}{Frac}
+	\DeclareMathOperator{\Eext}{\Ee{}xt}
+	\DeclareMathOperator{\rank}{rank}
+	\DeclareMathOperator{\Spec}{Spec}
+	\DeclareMathOperator{\Gr}{Gr}
+	\DeclareMathOperator{\Proj}{Proj}
+	\DeclareMathOperator{\Pic}{Pic}
+	\DeclareMathOperator{\Cl}{Cl}
+	\DeclareMathOperator{\height}{ht}
+	\DeclareMathOperator{\Div}{Div}
+	\DeclareMathOperator{\codim}{codim}
+	\DeclareMathOperator{\Def}{Def}
+	\DeclareMathOperator{\Inf}{Inf}
+	\DeclareMathOperator{\Set}{Set}
+	\DeclareMathOperator{\Ab}{Ab}
+	\DeclareMathOperator{\colim}{colim}
+	\DeclareMathOperator{\Art}{Art}
+	\DeclareMathOperator{\ass}{ass}
+	\DeclareMathOperator{\supp}{supp}
+	\DeclareMathOperator{\ArtFk}{Art^F_k}
+	\DeclareMathOperator{\ArtFW}{Art^F_W}
+	\DeclareMathOperator{\Tube}{Tube}
+	\DeclareMathOperator{\Swan}{Swan}
+    \DeclareMathOperator{\B}{B}
+    \DeclareMathOperator{\Sch}{Sch}
+    \DeclareMathOperator{\Mor}{Mor}
+    \DeclareMathOperator{\Cart}{Cart}
+    \DeclareMathOperator{\CART}{CART}
+    \DeclareMathOperator{\Arr}{Arr}
+    \DeclareMathOperator{\Ob}{Ob}
+    \DeclareMathOperator{\MOR}{MOR}
+    \DeclareMathOperator{\HH}{H}
+    \DeclareMathOperator{\RR}{R}
+    %\DeclareMathOperator{\Htp}{Htp}
+    \DeclareMathOperator{\Aut}{Aut}
+    \DeclareMathOperator{\Mod}{Mod}
+    \DeclareMathOperator{\Fl}{Fl}
+    \DeclareMathOperator{\Id}{Id}
+    \DeclareMathOperator{\End}{End}
+    \DeclareMathOperator{\Card}{Card}
+    \DeclareMathOperator{\Ens}{Ens}
+    \DeclareMathOperator{\Bil}{Bil}
+    \DeclareMathOperator{\Cat}{Cat}
+    \DeclareMathOperator{\Diag}{Diag}
+     \DeclareMathOperator{\Diagcomm}{Diagcomm}
+     \DeclareMathOperator{\pr}{pr}
+     \DeclareMathOperator{\inj}{inj}
+     \DeclareMathOperator{\Rev}{Rev}
+     \DeclareMathOperator{\Ker}{Ker}
+     \DeclareMathOperator{\Coker}{Coker}
+     \DeclareMathOperator{\Oub}{Oub}
+     \DeclareMathOperator{\Top}{Top}
+     \DeclareMathOperator{\Topcomp}{Topcomp}
+     \DeclareMathOperator{\diag}{diag}
+     \DeclareMathOperator{\Coim}{Coim}
+     \DeclareMathOperator{\Codiag}{Codiag}
+    \DeclareMathOperator{\D}{D}
+    \DeclareMathOperator{\K}{K}
+    \DeclareMathOperator{\Ld}{\mathrel{L}}
+    \DeclareMathOperator{\Rd}{\mathrel{R}}
+    %\DeclareMathOperator{\cHom}{\mathcal{H}\text{om}}
+    %\DeclareMathOperator*{\bRd}{\mathbf{\textbf{R}}}
+    \DeclareMathOperator*{\bRd}{\mathrm{\mathbf{R}}} 
+    \DeclareMathOperator*{\bLd}{\mathrm{\mathbf{L}}}
+    %\DeclareMathOperator*{\bH}{\mathbf{\textbf{H}}}
+    %\newcommand{\bH}[1]{\mathbf{\textbf{H}}^{#1}}
+    %\newcommand{\bH}[1]{\boldsymbol{\mathrm{H}}^{#1}}
+    \DeclareMathOperator{\bH}{\mathbf{H}}
+    \DeclareMathOperator{\id}{id}
+    \DeclareMathOperator{\Tr}{Tr}
+    \DeclareMathOperator{\fscn}{fscn}
+    \DeclareMathOperator{\fsct}{fsct}
+    \DeclareMathOperator{\fsc}{fsc}
+    \DeclareMathOperator{\rang}{rang}
+    \DeclareMathOperator{\Elc}{Elc}
+    \DeclareMathOperator{\Res}{Res}
+    \DeclareMathOperator{\adt}{adt}
+    \DeclareMathOperator{\adn}{adn}
+    \DeclareMathOperator{\pt}{pt}
+    \DeclareMathOperator{\grs}{grs}
+    %\DeclareMathOperator{\gr}{gr}
+    \DeclareMathOperator{\modn}{modn}
+    \DeclareMathOperator{\parf}{parf}
+    \DeclareMathOperator{\coh}{coh}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\ad}{ad}
+    \DeclareMathOperator{\dimtops}{dimtops}
+    %\DeclareMathOperator{\dp}{dp}
+    \DeclareMathOperator{\ql}{ql}
+    \DeclareMathOperator{\fl}{fl}
+    %\DeclareMathOperator{\ht}{ht}
+    \DeclareMathOperator{\pre}{pre}
+    \DeclareMathOperator{\prefsc}{prefsc}
+    \DeclareMathOperator{\TC}{TC}
+    \DeclareMathOperator{\TJ}{TJ}
+    \DeclareMathOperator{\can}{can}
+    \DeclareMathOperator{\Pro}{Pro}
+    \DeclareMathOperator{\Ass}{Ass}
+    \DeclareMathOperator{\ext}{ext}
+    \DeclareMathOperator{\ann}{ann}
+    \DeclareMathOperator{\torf}{torf}
+    \DeclareMathOperator{\Modn}{Modn}
+    \DeclareMathOperator{\Modt}{Modt}
+    \DeclareMathOperator{\Modlc}{Modlc}
+
+	% symbols
+
+ \newcommand{\cHom}{\mathrel{\mathscr{H}\mkern-2mu\text{\upshape om}}}
+ \newcommand{\cTor}{\mathrel{\mathscr{T}\mkern-2mu\text{\upshape or}}}
+ \newcommand{\cExt}{\mathrel{\mathscr{E}\mkern-2mu\text{\upshape xt}}}
+	
+	\newcommand{\isom}{\simeq}
+	\newcommand{\xto}{\xrightarrow}
+	\newcommand{\dual}{\vee}
+	%\newcommand{\pt}{{pt}}
+	\renewcommand{\phi}{\varphi}
+	\renewcommand{\emptyset}{\varnothing}
+	\renewcommand{\epsilon}{\varepsilon}
+	\renewcommand{\tilde}{\widetilde}
+	\newcommand{\sto}{{\xto{}}}
+	\renewcommand{\to}{\longrightarrow}
+	\newcommand{\und}{\underline}
+	\newcommand{\indown}{\mathrel{\rotatebox[origin=c]{-90}{$\in$}}}
+
+	% comments
+	%\newcommand{\comment}[1]{\textcolor{blue}{[#1]}}
+
+	% stacks project references
+	\newcommand{\stacks}[1]{\cite[\href{http://stacks.math.columbia.edu/tag/#1}{Tag #1}]{stacks-project}}
+
+	% environments
+	\theoremstyle{plain}
+		\newtheorem{lemma}{Lemma}[section]
+		\newtheorem{corollary}[lemma]{Corollary}
+		\newtheorem{proposition}[lemma]{Proposition}
+		\newtheorem{theorem}[lemma]{Theorem}
+		\newtheorem*{theorem*}{Theorem}
+		\newtheorem*{corollary*}{Corollary}
+		\newtheorem{conjecture}{Conjecture}
+	\theoremstyle{definition}
+		\newtheorem{definition}[lemma]{Definition}
+		\newtheorem{example}[lemma]{Example}
+		\newtheorem{remark}[lemma]{Remark}
+		\newtheorem{construction}[lemma]{Construction}
+        
+        \def\rinto{\HorizontalMap\rthooka-\empty-\rhla}%%
+		\def\linto{\HorizontalMap\lhla-\empty-\lthooka}%%
+		\def\dinto{\VerticalMap\dthookb|\empty|\dhla}%%
+		\def\uinto{\VerticalMap\uhla|\empty|\uthookb}%%
+        
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newcommand*{\toccontents}{\@starttoc{toc}}
+\makeatother
+
+\makeatletter
+\@addtoreset{footnote}{section}
+\makeatother
+
+
+\begin{document}
+\setcounter{tocdepth}{2}
+\sloppy
+
+
+\newgeometry{left=1.5in,right=1.5in, bottom=1.5in}
+
+
+\thispagestyle{empty}
+\vfill
+\vfill
+\noindent\makebox[\linewidth]{\rule{4in}{0.01in}}
+\vfill
+\centerline{{\Huge Catégories Dérivées en}} 
+\vskip0.5em
+\centerline{{\Huge Cohomologie $\ell$-adique}}
+\vskip1em
+\centerline{{\Large par}}
+\vskip1em
+\centerline{{\Large Jean-Pierre JOUANOLOU}}
+\vfill
+\noindent\makebox[\linewidth]{\rule{4in}{0.01in}}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=10pt,color=DarkKhaki]
+        ([shift={(-0.5\pgflinewidth,-0.5\pgflinewidth)}]current page.north west)
+        rectangle
+        ([shift={(0.5\pgflinewidth,0.5\pgflinewidth)}]current page.south east);
+\end{tikzpicture}
+
+
+
+
+
+
+\newpage 
+\thispagestyle{empty}
+\vfill
+\vfill
+\centerline{N$^\circ$ d'enregistrement}
+\vskip0.5em
+\centerline{au C.N.R.S}
+\vskip0.5em
+\centerline{A.0.3374}
+\vskip4em
+\centerline{{THÈSE DE DOCTORAT D'ÉTAT}}
+\vskip0.5em
+\centerline{{ès SCIENCES MATHÉMATIQUES}}
+\vskip0.5em
+\centerline{{présentée}}
+\vskip0.5em
+\centerline{{À LA FACULTÉ DES SCIENCES DE PARIS}}
+\vskip2em
+\centerline{{par}}
+\vskip2em
+\centerline{{M. JOUANOLOU Jean-Pierre}}
+\vskip1em
+\centerline{{pour obtenir le grade Docteur ès-Sciences}}
+\vfill
+\centerline{{\bf Sujet de thèse : {\Large Catégories Dérivées en Cohomologie $\ell$-adique}}} 
+\vskip0.5em
+\centerline{{soutenue le : 3 Juillet 1969 devant la Commission d'examen}} 
+\vfill
+\centerline{{MM. SAMUEL \quad Président}} 
+\vskip2em
+\centerline{{GROTHENDIECK}} 
+\vskip0.5em
+\centerline{{\qquad\qquad\qquad\qquad VERDIER \qquad\qquad Examinateurs}} 
+\vskip0.5em
+\centerline{{DIXMIER}} 
+\vfill
+\vfill
+\vfill
+
+\newpage
+\mbox{}
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{NOTICE TO THE READER}
+\label{ch:pref}
+\section*{}
+
+This thesis, under Grothendieck, was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, and J. L. Verdier. 
+
+An important precursor to the thesis was the Seminar SGA5 (1965/66), during which J. P. Jouanolou delivered three consecutive exposés. These exposés elaborated on key concepts and techniques that would directly influence his own thesis work. In Exposé III Intro, we find the following statement:
+\begin{quote}
+    ``\emph{Faute de disposer d'une bonne catégorie dérivée de faisceaux $\ell$-adiques (la thèse de Jouanolou n'ayant malheureusement pas été publiée), nous travaillons systématiquement avec des coefficients de torsion (première aux caractéristiques résiduelles).}''
+\end{quote}
+The thesis holds significant historical value as it reflects, in some sense, a language and an approach developed during Grothendieck's active years. In the 1980s, he wrote in ``Récoltes et Semailles'':
+\begin{quote}
+    ``\emph{De toutes façons, c'est aujourd'hui encore le seul texte au monde qui présente la théorie des coefficients $\ell$-adiques, version catégories dérivées --- et un texte introuvable par dessus le marché, pour mettre la joie à son comble.}''
+\end{quote}
+This project, involving the transcription of J.-P. Jouanolou's thesis, was conducted with his authorization. It was typeset in \LaTeX{} under the direction of Mateo Carmona, with the collaboration of Niels Borne, along with volunteers. The transcription aims to be as faithful as possible to the original. Its edition is considered provisional, and we welcome any remarks, comments, and corrections. For more details about the project, please visit \\
+\url{https://github.com/carmonamateo/Jouanolou}
+
+\begin{flushright}
+Mateo Carmona \\ 
+mateo.carmona@csg.igrothendieck.org \\
+Coordinator of the ``Centre of Grothendieck Studies (CSG)''
+\end{flushright}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\renewcommand{\contentsname}{TABLE DE MATIÈRES}
+\tableofcontents\thispagestyle{empty}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{./chI/I1.tex}
+\input{./chI/I2.tex}
+\input{./chI/I3.tex}
+\input{./chI/I4.tex}
+\input{./chI/I5.tex}
+\input{./chI/I6.tex}
+\input{./chI/I7.tex}
+\input{./chI/I8.tex}
+
+\input{./chII/II1.tex}
+\input{./chII/II2.tex}
+
+\input{./chIII/III1.tex}
+\input{./chIII/III2.tex}
+\input{./chIII/III3.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\newpage
+%\thispagestyle{empty}
+\mbox{}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[line width=10pt,color=DarkKhaki]
+        ([shift={(-0.5\pgflinewidth,-0.5\pgflinewidth)}]current page.north west)
+        rectangle
+        ([shift={(0.5\pgflinewidth,0.5\pgflinewidth)}]current page.south east);
+\end{tikzpicture}
+
+
+
+\end{document}
+
+
+
+
+%End
