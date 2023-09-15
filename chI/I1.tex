@@ -1,0 +1,155 @@
+%Begin
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{\S \space I. --- CATÉGORIES DES FAISCEAUX SUR UN IDÉOTOPE}\thispagestyle{empty}
+\addcontentsline{toc}{section}{I. Catégorie des faisceaux sur un idéotope}
+\label{ch:1}
+\section*{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{1. Généralités.}
+\addcontentsline{toc}{subsection}{1. Généralités}
+
+\vskip .3cm
+{
+Définition {\bf 1.1}. --- \it On appelle \emph{idéotope} un triple $(X, A, J)$ formé d'un topos $X$, d'un anneau commutatif unifère $A$ et d'un idéal propre $J$ de $A$.
+}
+\vskip .3cm
+On suppose donné dans la suite du paragraphe un idéotope $(X, A, J)$. On note $A-\Mod_X$ la catégorie des faisceaux de $A_X$-Modules et 
+$$
+\underline{\Hom}(\mathbf{N}^\circ, A-\Mod_X)
+$$
+la catégorie abélienne des systèmes projectifs indexés par $\mathbf{N}$ de $A_X$-Modules.
+\vskip .3cm
+{
+Définition {\bf 1.2}. --- \it On appelle $(A, J)$-\emph{faisceau} sur $X$, ou s'il n'y a pas de confusion possible $A$-\emph{faisceau} sur $X$, un système projectif
+$$
+F = (F_n, u_{m, n})_{(m, n) \in \mathbf{N} \times \mathbf{N}, m \geq n}
+$$
+de $A_X$-Modules, vérifiant
+$$
+J^{n + 1} F_n = 0
+$$
+pour tout entier $n \geq 0$. On note $\mathcal{E}(X, J)$ la sous-catégorie, abélienne, pleine de $\underline{\Hom}(\mathbf{N}^\circ, A-\Mod_X)$ engendrée par les $A$-faisceaux.
+}
+\vskip .3cm
+Pour des raisons qui apparaîtront par la suite, la catégorie $\mathcal{E}(X, J)$ ne mérite pas le nom de catégorie des $A$-faisceaux sur $X$; c'est seulement une catégorie quotient de la précédente que nous baptiserons ainsi. Aussi, pour éviter le risque de confusion, nous arrivera-t-il, étant donnés deux $A$-faisceaux $E$ et $F$, de noter
+$$
+\Hom_a(E, F)
+$$
+($a$ pour anodin) l'ensemble des $\mathcal{E}(X, J)$-morphismes de $E$ dans $F$.
+
+Notons pour tout objet $T$ de $X$ par $\mathbf{T}$, ou même $T$ s'il n'y a pas de confusion possible, le topos $X/T$. Le foncteur restriction pour les faisceaux de $A$-Modules induit de fa\c{c}on évidente un foncteur restriction
+$$
+\mathcal{E}(X, J) \to \mathcal{E}(T, J)
+$$
+$$
+E \mapsto E | T.
+$$
+\vskip .3cm
+{
+Proposition-définition {\bf 1.4}. --- \it Soit $E = (E_n)_{n \in \mathbf{N}}$ un $A$-faisceau sur $X$:
+\begin{enumerate}
+    \item[1)] On dit que $E$ est \emph{essentiellement nul} s'il est nul en tant que pro-objet, ce qui revient à dire que pour tout entier $n \geq 0$, il existe un entier $p \geq 0$ tel que le morphisme de transition
+    $$
+    E_{n + p} \to E_n
+    $$
+    soit nul.
+    \item[2)] On dit que $E$ est \emph{négligeable} s'il vérifie l'une des relations équivalentes suivantes~:
+    \begin{enumerate}
+        \item[(i)] Il existe un recouvrement $(T_i \to e_X)_{i \in I}$ de l'objet final $e_X$ de $X$ tel que les $A$-faisceaux $E|T_i$ soient essentiellement nuls.
+        \item[(ii)] Idem, mais en supposant de plus que les $T_i$ sont des ouverts de $X$.
+    \end{enumerate}
+\end{enumerate}
+}
+\vskip .3cm
+{\bf Preuve}: Pour voir l'équivalence de (i) et (ii), il suffit d'observer que pour tout $i \in I$, le faisceau image $U_i$ de $T_i$ par le morphisme canonique $T_i \to e_X$ est tel que le morphisme restriction
+$$
+\mathbf{U}_i \to \mathbf{T}_i
+$$
+soit fidèle.
+
+Il est clair que lorsque l'objet final de $X$ est quasicompact (SGA4 VI 1.1), il revient au même pour un $A$-faisceau de dire qu'il est essentiellement nul ou qu'il est négligeable. Il est par ailleurs immédiat que la sous-catégorie pleine
+$$
+N(X, J) \quad \text{(ou plus simplement}~N_X)
+\leqno{(1.4.1)}
+$$
+de $\mathcal{E}(X, J)$ engendré par les $A$-faisceaux négligeables est \emph{épaisse} dans $\mathcal{E}(X, J)$.
+\vskip .3cm
+{
+Définition {\bf 1.5}. --- \it Soit $(X, A, J)$ un idéotope. On appelle \emph{catégorie} des $(A, J)$-\emph{faisceaux} (ou $A$-faisceaux s'il n'y a pas de confusion possible) sur $X$ et on note
+$$
+(A, J)-\fsc(X) \quad \text{(ou plus simplement}~A-\fsc(X))
+$$
+la catégorie abélienne quotient (thèse Gabriel III.1)
+$$
+\mathcal{E}(X, J)/N_X.
+$$
+}
+\vskip .3cm
+{\bf 1.6}. Soit $T$ un objet de $X$. Il est clair que le foncteur restriction (1.3) est exact et envoie $N_X$ dans $N_T$, d'où par passage au quotient un foncteur exact, appelé encore \emph{restriction},
+$$
+r_{T, X}: A-\fsc(X) \to A-\fsc(T).
+\leqno{(1.6.1)}
+$$
+Soient maintenant $T$ et $T'$ deux objets de $X$ et $f: T \to T'$ un morphisme. Se pla\c{c}ant dans le topos $\mathbf{T}'$, on déduit de (1.6.1) un foncteur exact
+$$
+f^*: A-\fsc(T') \to A-\fsc(T),
+\leqno{(1.6.2)}
+$$
+vérifiant les propriétés de transitivité habituelles.
+
+Ces remarques étant faites, nous utiliserons dans la suite sans plus d'explications le langage local pour les $A$-faisceaux.
+\vskip .3cm
+{
+Proposition {\bf 1.7}. --- \it Les propriétés suivantes sont de nature locale pour la topologie de $X$. 
+\begin{enumerate}
+    \item[(i)] La propriété pour un $A$-faisceau d'être nul, i.e. isomorphe au système projectif nul.
+    \item[(ii)] La propriété pour une suite
+    $$
+    E' \xlongrightarrow{u} E \xlongrightarrow{v} E''
+    $$
+    de $A$-faisceaux d'être exacte.
+    \item[(iii)] La propriété pour un morphisme $u: E \to F$ de $A$-faisceaux d'être un monomorphisme (resp. un épimorphisme, resp. un isomorphisme).
+    \item[(iv)] La propriété pour deux morphismes $u, v: E \rightrightarrows F$ d'être égaux.
+\end{enumerate}
+}
+\vskip .3cm
+{\bf Preuve} : L'assertion (i) est immédiate. On en déduit (ii) en l'appliquant successivement à $\text{Im}(v \circ u)$ et à $\Ker(v)/\text{Im}(u)$. L'assertion (iii) est un cas particulier de (ii). Enfin (iv) s'obtient en appliquant (i) à $\text{Im}(v-u)$.
+\vskip .3cm
+{
+Corollaire {\bf 1.7.1}. --- \it Soient $T$ et $T'$ deux objets de $X$ et $f: T \to T'$ un épimorphisme. Le foncteur
+$$
+f^*: A-\fsc(T') \to A-\fsc(T)
+$$
+est fidèle.
+}
+\vskip .3cm
+{\bf Preuve}: Appliquer 1.7 (i) au topos $\mathbf{T}'$.
+\vskip .3cm
+{
+Corollaire {\bf 1.7.2}. --- \it Soient $E$ et $F$ deux $A$-faisceaux sur $X$. Lorsque $T$ parcourt les objets de $X$, le préfaisceau
+$$
+T \mapsto \Hom(E|T, F|T)
+$$
+est séparé.
+}
+\vskip .3cm
+{\bf Preuve}: Simple traduction de 1.7 (iv).
+\vskip .3cm
+{\bf Remarque 1.7.3}. En général, le préfaisceau précédent n'est pas un faisceau. Nous verrons toutefois qu'il en est ainsi, à peu de choses près, lorsque le topos $X$ est noethérien (SGA4 VI 2.11), ou lorsque $E$ est de type $J$-adique (3).
+
+
+
+
+
+
+
+
+%End

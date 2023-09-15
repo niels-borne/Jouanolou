@@ -1,0 +1,388 @@
+%Begin
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{\S \space III. --- APPLICATIONS AUX SCHÉMAS}\thispagestyle{empty}
+\addcontentsline{toc}{section}{III. Applications aux schémas}
+\label{ch:3}
+\section*{}
+
+Le texte qui suit ayant un caractère essentiellement provisoire (cf. l'appendice basé sur une construction de \emph{Deligne}), nous ferons toutes les hypothèses simplificatrices qui nous paraîtront nécessaires pour la clarté de l'exposé.
+
+Soit $\ell$ un nombre premier. On fixe comme précédemment un anneau noethérien $A$ et un idéal propre $J$ de $A$. On suppose de plus que $A$ est une $\mathbf{Z}_{\ell}$-algèbre et que $J$ contient $\ell A$. Pour simplifier (cf. supra), tous les schémas considérés sont \emph{noethériens}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{1. Opérations externes.}
+\addcontentsline{toc}{subsection}{1. Opérations externes}
+
+\vskip .3cm
+{\bf 1.1}. Soient $X$ et $Y$ deux schémas noethériens, et $f: X \to Y$ un morphisme séparé de type fini. On définit comme suit un foncteur exact
+$$
+\bRd f_!: \D(X, A) \to \D(Y, A),
+\leqno{(1.1.1)}
+$$
+appelé \emph{image directe à supports propres}. D'après Nagata et Mumford il existe une factorisation
+\[\begin{tikzcd}
+	X && Z \\
+	& Y & {,}
+	\arrow["q", from=1-3, to=2-2]
+	\arrow["f"', from=1-1, to=2-2]
+	\arrow["i", hook, from=1-1, to=1-3]
+\end{tikzcd}\]
+où $i$ est une immersion ouverte et $q$ un morphisme propre. On pose alors
+$$
+\bRd f_! = \bRd q_* \circ \bRd i_!.
+$$
+On vérifie, grâce à la technique de factorisation de \emph{Lichtenbaum} (SGA4 XVIII \quad), que le résultat ne dépend pas, à isomorphisme près, de la factorisation choisie.
+
+La même technique de factorisation montre que si $g: Y \to Z$ est un autre morphisme séparé de type fini, on a un isomorphisme
+$$
+\bRd (g \circ f)_! \isomlong \bRd g_! \circ \bRd f_!,
+\leqno{(1.1.2)}
+$$
+avec la condition de cocycles habituelle pour un triple de morphismes.
+\vskip .3cm
+{
+Définition {\bf 1.1.3}. --- \it Si $E$ est un $A$-faisceau sur $X$ (resp. un objet de $\D(X, A)$), on pose pour tout $p \in \mathbf{Z}$
+$$
+\Rd^pf_!(E) = \mathrm{H}^p(\bRd f_!(E)).
+$$
+}
+\vskip .3cm
+On obtient ainsi un foncteur cohomologique qui n'est pas en général (sauf bien sûr si le morphisme $f$ est propre) le foncteur cohomologique dérivé de $\Rd^\circ f_!$.
+
+\vskip .3cm
+{\bf 1.1.4}. Il est clair que si $F = (F_n)_{n \in \mathbf{N}}$ est un $A$-faisceau, on a pour tout $p \in \mathbf{Z}$
+$$
+\Rd^p f_! (F) = (\Rd^p f_! (F_n))_{n \in \mathbf{N}}.
+$$
+\vskip .3cm
+{
+Proposition {\bf 1.1.5}. --- \it Soit
+\[\begin{tikzcd}
+	{X'} && X \\
+	{Y'} && Y
+	\arrow["f", from=1-3, to=2-3]
+	\arrow["g"', from=2-1, to=2-3]
+	\arrow["{g'}", from=1-1, to=1-3]
+	\arrow["{f'}"', from=1-1, to=2-1]
+\end{tikzcd}\]
+un carré cartésien de schémas noethériens.
+\begin{enumerate}
+    \item[(i)] ({\bf Théorème de changement de base propre}) Si $f$ (donc $f'$) est séparé de type fini, on a pour tout $E \in \D^+(X, A)$ un isomorphisme canonique fonctoriel
+    $$
+    g^* \bRd f_! (E) \isomlong \bRd f'_! (g')^* (E).
+    $$
+    \item[(ii)] ({\bf Théorème de changement de base lisse}) Si $\ell$ est premier aux caractéristiques résiduelles de $Y$ et $g$ est lisse, on a pour tout $E \in \D^+(X, A)$ un isomorphisme canonique fonctoriel
+    $$
+    g^* \bRd f_* (E) \isomlong \bRd (f')_* (g')^* (E).
+    $$
+\end{enumerate}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons (ii). Utilisant l'adjonction entre image directe et image réciproque (I 7.7.6), on construit comme dans (SGA4 XVII) (voir aussi SGA4 XII 4), un morphisme fonctoriel
+$$
+g^* \bRd f_* (E) \to \bRd (f')_* (g')^* (E).
+$$
+Pour voir que c'est un isomorphisme, on se ramène par ``way-out functor lemma'' au cas où $E$ est de degré 0, et il suffit alors de montrer que les morphismes 
+$$
+g^* \Rd^i f_* (E) \to \Rd^i (f')_*(g')^* (E) \quad (i \in \mathbf{N})
+$$
+correspondants de $\mathcal{E}(X, J)$ sont des isomorphismes. Cela se voit sur les composants, grâce au théorème de changement de base lisse sur les $A_n$--Modules (SGA4 XII 1.1). Montrons (i). On construit tout d'abord un morphisme fonctoriel
+$$
+g^* \bRd f_! (E) \to \bRd (f')_! (g')^* (E),
+\leqno{(1.1.6)}
+$$
+en paraphrasant la construction faite pour les $A_n$--Modules (SGA4 XVII \quad). Pour cela, choisissant une factorisation $f = q \circ i$, avec $i$ une immersion ouverte et $q$ un morphisme propre, on se ramène à faire la construction lorsque $f$ est propre, ou bien est une immersion ouverte; on vérifie ensuite de f\c{c}on standard que le résultat ne dépend pas de la factorisation choisie. Lorsque $f$ est une immersion ouverte, les morphismes analogues pour les $A_n$--Modules $(n \in \mathbf{N})$ définissent de fa\c{c}on évidente un isomorphisme $g^* f_! \isomlong (f')_! (g')^*$ de foncteurs exacts
+$$
+\mathcal{E}(X, J) \to \mathcal{E}(Y', J),
+$$
+d'où par passage au quotient, un isomorphisme de foncteurs exacts
+$$
+A-\fsc(X) \to A-\fsc(Y'),
+$$
+qui fournit à son tour un isomorphisme de foncteurs exacts
+\[\begin{tikzcd}
+	{\D(X, A)} && {\D(Y', A).}
+	\arrow[""{name=0, anchor=center, inner sep=0}, "{g^* \circ f_!}", curve={height=-12pt}, from=1-1, to=1-3]
+	\arrow[""{name=1, anchor=center, inner sep=0}, "{(f')_! \circ (g')^*}"', curve={height=12pt}, from=1-1, to=1-3]
+	\arrow["\sim", shorten <=3pt, shorten >=3pt, from=0, to=1]
+\end{tikzcd}\]
+Lorsque $f$ est un morphisme propre, on utilise la même construction que pour (ii). Pour montrer enfin que le morphisme (1.1.6) ainsi construit est un isomorphisme, on se ramène au cas où $E$ est de degré 0, et alors l'assertion résulte, comme pour (ii), de l'assertion analogue pour les $A_n$--Modules (SGA4 XVII \quad).
+\vskip .3cm
+{
+Proposition {\bf 1.1.7} (Formule de projection). --- \it Soient $f: X \to Y$ un morphisme séparé de type fini entre schémas noethériens, $E \in \D^-(X, A)$ et $F \in \D^-(X, A)$. On a un isomorphisme canonique fonctoriel
+\[\begin{tikzcd}
+	{\bRd f_! (E \boldsymbol{\otimes}f^* (F)) } & {\bRd f_! (E) \boldsymbol{\otimes} F. }
+	\arrow["\sim"', from=1-2, to=1-1]
+\end{tikzcd}\]
+}
+\vskip .3cm
+{\bf Preuve} : Nous utiliserons le lemme suivant.
+\vskip .3cm
+{
+Lemme {\bf 1.1.8}. --- \it Si $d$ est un entier majorant la dimension des fibres de $f$, on a pour tout $A$-faisceau $M$ sur $X$
+$$
+\Rd^if_! (M) = 0 \quad (i > 2d).
+$$
+}
+\vskip .3cm
+(Résulte immédiatement de l'assertion analogue pour les composants de $M$).
+
+Choisissant une compactification de $f$, on se ramène à montrer (1.1.7) successivement lorsque $f$ est une immersion ouverte, ou un morphisme propre. Dans le premier cas, ce n'est autre que (I 7.7.10.(iv)). Dans le second cas, on définit un morphisme 
+$$
+\bRd f_* (E) \boldsymbol{\otimes} F \to \bRd f_* (E \boldsymbol{\otimes} f^* F)
+\leqno{(1.1.9)}
+$$
+sur le modèle de (J.L. Verdier: The Lefschetz fixed point formula in étale cohomology, in ``Conference on local fields held at Driebergen'' preuve de 3.2), en se ramenant à $F$ plat et $E$ $f_*$-acyclique (ce qui est possible grâce à 1.1.8). Enfin, pour voir que (1.1.9) est un isomorphisme, on se ramène par les dévissages habituels au cas où $E$ et $F$ sont réduits au degré 0 et $F$ plat, et alors l'assertion résulte de la formule de projection pour les $A_n$--Modules $(n \in \mathbf{N})$, appliquée aux composants de $E$ et $F$.
+\vskip .3cm
+{
+Proposition {\bf 1.1.10} (Formule de Künneth). --- \it Considérons un diagramme cartésien de schémas noethériens
+\[\begin{tikzcd}
+	& {X \times_Z Y} \\
+	X && Y \\
+	& Z & {,}
+	\arrow["p"', from=1-2, to=2-1]
+	\arrow["q", from=1-2, to=2-3]
+	\arrow["g", from=2-3, to=3-2]
+	\arrow["f"', from=2-1, to=3-2]
+\end{tikzcd}\]
+et posons $h = f \circ p = g \circ q$. Si $E \in \D^-(X, A)$ et $F \in D^-(Y, A)$, on a un isomorphisme canonique fonctoriel
+$$
+\bRd f_! (E) \boldsymbol{\otimes} \bRd g_! (F) \isomlong \bRd h_! (p^* E \boldsymbol{\otimes}q^* F).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Formellement la même que celle de l'assertion correspondante pour les faisceaux de $A_n$--Modules $(n \in \mathbf{N})$ (SGA4 XVII). De (1.1.7) appliqué à $f$, on déduit un isomorphisme
+$$
+\bRd f_! (E) \boldsymbol{\otimes} \bRd g_! (F) \isomlong \bRd f_! (E \boldsymbol{\otimes}f^* \bRd g_! (F)).
+\leqno{(1.1.10.1)}
+$$
+Le théorème de changement de base propre pour $f$ (1.1.5.(i)) montre que 
+$$
+f^* \bRd g_! (F) \isomlong \bRd p_! q^* (F). 
+\leqno{(1.1.10.2)}
+$$
+Comparant avec (1.1.10.1), on a donc
+$$
+\bRd f_! (E) \boldsymbol{\otimes} \bRd g_! (F) \isomlong \bRd f_! (E \boldsymbol{\otimes} \bRd p_! q^* (F)).
+$$
+La formule de projection (1.1.7) pour le morphism $p$ montre que
+$$
+E \boldsymbol{\otimes} \bRd p_! q^* (F) \isomlong \bRd p_! (p^* E \boldsymbol{\otimes} q^* F),
+$$
+d'où
+$$
+\bRd f_!(E \boldsymbol{\otimes} \bRd p_!q^* (F)) \isomlong \bRd f_! \bRd p_! (p^* E \boldsymbol{\otimes} q^* F),
+$$
+et le résultat annoncé puisque $f \circ p = h$.
+\vskip .3cm
+{
+Proposition {\bf 1.1.11}. --- \it Soient $X$ et $Y$ deux schémas noethériens, $f: X \to Y$ un morphisme séparé de type fini, et $E \in \D(X, A)$.
+\begin{itemize}
+    \item[(i)] Si $E \in \D_c(X, A)$, alors $\bRd f_! (E) \in \D_c(Y, A)$.
+    \item[(ii)] Si $E \in \D^-(X, A)_{\text{torf}}$, alors $\bRd f_! (E) \in \D^-(Y, A)_{\text{torf}}$.
+    \item[(iii)] Supposons que $f$ soit propre et lisse, et que $\ell$ soit premier aux caractéristiques résiduelles de $Y$. Alors:
+    \[\begin{tikzcd}
+	{E \in \D_t(X, A)} && {\bRd f_!(E) \in \D_t(Y, A).} \\
+	{E \in \D_{\text{parf}}(X, A)} && {\bRd f_!(E) \in \D_{\text{parf}}(Y, A).}
+	\arrow[shorten <=10pt, shorten >=10pt, Rightarrow, from=1-1, to=1-3]
+	\arrow[shorten <=9pt, shorten >=9pt, Rightarrow, from=2-1, to=2-3]
+    \end{tikzcd}\]
+\end{itemize}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons (i). Grâce à (1.1.8), on peut supposer $E$ de degré 0 associé à un $A$-faisceau $J$-adique constructible. Alors, l'assertion est essentiellement (SGA5 VI 2.2.2). Pour la première partie de (iii), on est ramène de même à voir que si $E$ est un $A$-faisceau $J$-adique constant tordu constructible, les $A$-faisceaux $\Rd^p f_* (E)$ $(p \in \mathbf{N})$ sont constants tordus constructibles. Cela se voit comme (SGA5 V 2.2.2), en utilisant le lemme de SHIH (SGA5 V A 3.2) et la stabilité des catégories des faisceaux abéliens localement constants constructibles par images directes supérieures (SGA4 XVI 2.2). L'assertion (ii) résulte sans peine de (1.1.7), et on en déduit aussitôt la deuxième partie de (iii) (compte tenu de la première).
+\vskip .3cm
+{\bf 1.2}. Soient $X$ et $Y$ deux schémas noethériens de caractéristique résiduelles premières à $\ell$, et $f: X \to Y$ un morphisme quasiprojectif. On suppose que $Y$ admet un Module inversible ample. On définit alors comme suit un foncteur exact
+$$
+\bRd f^!: \D^+(Y, A) \to \D^+(X, A).
+\leqno{(1.2.1)}
+$$
+D'après (EGA II 5.3.3), il existe une factorisation
+\[\begin{tikzcd}
+	X && {{\mathbb P}^r_Y} \\
+	& Y & {,}
+	\arrow["f"', from=1-1, to=2-2]
+	\arrow["q", from=1-3, to=2-2]
+	\arrow["j", hook, from=1-1, to=1-3]
+\end{tikzcd}\]
+avec $j$ une immersion. On en déduit aussitôt une factorisation
+\[\begin{tikzcd}
+	X && U \\
+	& Y & {,}
+	\arrow["f"', from=1-1, to=2-2]
+	\arrow["p", from=1-3, to=2-2]
+	\arrow["i", hook, from=1-1, to=1-3]
+\end{tikzcd}\]
+où $i$ est une immersion fermée et $p$ un morphisme lisse équidimensionel de dimension $r$. Avec les notations de (SGA5 VI 1.3.4), on pose alors pour tout $F \in \D^+(X, A)$
+$$
+\bRd f^!(F) = \bRd i^! (p^* F \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r))[2r],
+$$
+où le foncteur $\bRd i^!$ a été défini en (I 7.7.11). Pour avoir que cette définition ne dépend pas, à isomorphisme près, des choix faits, on est ramené, grâce à la technique de factorisation de \emph{Lichtenbaum}, à prouver le théorème de \emph{pureté cohomologique} suivant.
+\vskip .3cm
+{
+Proposition {\bf 1.2.3}. --- \it Soient $S$, $X$, $Y$ trois schémas noethériens de caractéristique résiduelles premières à $\ell$, et
+\[\begin{tikzcd}
+	Y && X \\
+	& S
+	\arrow["f", from=1-3, to=2-2]
+	\arrow["g"', from=1-1, to=2-2]
+	\arrow["j", hook, from=1-1, to=1-3]
+\end{tikzcd}\]
+un $S$-couple lisse (SGA4 XVI 3.1) purement de codimension $d$. Pour tout $F \in \D^+(S, A)$, on a un isomorphisme canonique fonctoriel (classe fondamentale locale)
+\[\begin{tikzcd}
+	{\bRd j^!(f^* F)} && {g^* (F) \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell (-d)[-2d].}
+	\arrow["\sim"', from=1-3, to=1-1]
+\end{tikzcd}\leqno{(1.2.3.1)}\]
+}
+\vskip .3cm
+{\bf Preuve} : Par (I 7.7.12), il s'agit de définir un morphisme
+$$
+\bRd j_* (g^* F \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(-d)[-2d]) \to f^* F,
+$$
+soit, d'après la formule de projection (I 7.7.12 (iv)),
+$$
+f^* F \boldsymbol{\otimes}_{\mathbf{Z}_\ell} \bRd j_* (\mathbf{Z}_\ell(-d)[-2d]) \to f^* F.
+$$
+On est ainsi ramené à définir (1.2.3.1) dans le cas où $A = \mathbf{Z}_\ell = F$. Il s'agit alors d'exhiber un morphisme
+$$
+\mathbf{Z}_\ell \to \bRd j^! (\mathbf{Z}_\ell (d))[2d].
+$$
+Mais on sait, d'après l'assertion analogue (SGA4 VI 3) pour les composantes, que
+$$
+\Rd^sj^! (\mathbf{Z}_\ell (d)) = 0 \quad \text{pour}~s<2d,
+$$
+de sorte qu'il suffit d'exhiber un morphisme de $\mathbf{Z}_\ell$-faisceaux
+$$
+\mathbf{Z}_\ell \to \Rd^{2d}j^!(\mathbf{Z}_\ell(d)).
+$$
+On prend le système projectif des morphismes classes fondamentales correspondants
+$$
+\mathbf{Z}/\ell^{n + 1} \mathbf{Z} \to \Rd^{2d}j^!(\boldsymbol{\mu}^{\otimes d}_{\ell^{n + 1}}).
+$$
+Enfin, pour voir que (1.2.3.1) est un isomorphisme, on peut supposer que $F$ est réduit au degré 0, associé à un $A$-faisceau noté de même.
+Alors, l'assertion résulte du théorème de pureté cohomologique pour les $A_n$--Modules $(n \in \mathbf{N})$, appliqué aux composants de $F$.
+\vskip .3cm
+{\bf Notation 1.2.4}. Si $F$ est un $A$-faisceau sur $Y$ (resp. un objet de $\D^+(Y, A)$), on pose pour tout $p \in \mathbf{Z}$
+$$
+\Rd^p f^! (F) = \mathrm{H}^p(\bRd f^! F).
+$$
+\vskip .3cm
+{\bf 1.2.5}. Si $X, Y, Z$ sont trois schémas noethériens admettant des Modules inversibles amples, et $f: X \to Y$ et $g: Y \to Z$ deux morphismes quasiprojectifs, on a un isomorphisme
+$$
+\bRd (g \circ f)^! \isomlong \bRd g^! \circ \bRd f^!,
+$$
+avec la condition de cocycles habituelle pour un triple de tels morphismes. 
+
+Cela se voit, comme dans le cas usuel des faisceaux abéliens de torsion, par la méthode de factorisation de Lichtenbaum.
+\vskip .3cm
+{
+Proposition {\bf 1.2.5} (Formule d'induction). --- \it Sous les hypothèses préliminaires de (1.2), soient $E \in \D^-_c (Y, A)$ et $F \in \D^+(X, A)$. On a un isomorphisme canonique fonctoriel
+$$
+\bRd f^! \bRd {\cHom}_A (E, F) \isomlong \bRd{\cHom}_A(f^* E, \bRd f^! F).
+$$
+}
+\vskip .3cm
+{\bf Preuve} : Si $f$ est une immersion fermée, on a (I 7.7.13) un isomorphisme
+$$
+\bRd f^! \bRd{\cHom}_A (E, F) \isomlong f^* \bRd{\cHom}_A (f_* A, \bRd{\cHom}_A(E, F)),
+$$
+soit, d'après l'isomorphisme de Cartan ($E$ et $f_* A$ sont à cohomologie constructible)
+$$
+\bRd f^! \bRd{\cHom}_A (E, F) \isomlong f^* \bRd{\cHom}_A (E, \bRd{\cHom}_A(f_* A, F)).
+$$
+Utilisant à nouveau (I 7.7.3), on a 
+$$
+\bRd f^! \bRd{\cHom}_A (E, F) \isomlong f^* \bRd{\cHom}_A (E, f^* \bRd f^! F),
+$$
+d'où, d'après l'adjonction entre $f^*$ et $f_*$ (I 7.7.6)
+\[\begin{tikzcd}
+	{\bRd f^! \bRd{\cHom}_A (E, F) } && {f^*f_* \bRd{\cHom}_A (f^* E, \bRd f^! F)} \\
+	{} && {\bRd{\cHom}_A(f^* E, \bRd f^! F).}
+	\arrow["\sim", from=1-1, to=1-3]
+	\arrow["\sim"{pos=0.7}, shorten <=44pt, shorten >=9pt, from=2-1, to=2-3]
+\end{tikzcd}\]
+Lorsque $f$ est lisse et équidimensionnel de dimension $r$, on a 
+$$
+\bRd f^! \bRd{\cHom}_A (E, F) \isomlong f^* \bRd{\cHom}_A (E, F) \boldsymbol{\otimes}_{\mathbf{Z}_\ell}\mathbf{Z}_\ell(r)[2r];
+$$
+de (I 7.7.2 (ii)), on déduit alors aussitôt un morphisme ``canonique''
+$$
+\bRd f^! \bRd{\cHom}_A (E, F) \to \bRd{\cHom}_A(f^* E, \bRd f^! F).
+$$
+Pour voir que c'est un isomorphisme, on peut supposer que $E$ et $F$ sont réduits au degré 0 et que $\mathrm{H}^0(E)$ est un $A$-faisceau constructible. Il s'agit alors de voir que les morphismes canoniques
+$$
+f^* {\cExt}^p_A (E, F) \to {\cExt}^p_A(f^* E, f^*F)
+\leqno{(\text{I}~6.4.1.1)}
+$$
+sont des isomorphismes~; vu leur définition, cela est conséquence immédiate de l'assertion analogue pour les $A_n$--Modules (SGA4 XVIII). Enfin, dans le cas général, on choisit une factorisation $f = p \circ i$ du type (1.2.2). Des deux cas précédents, on déduit des isomorphismes 
+$$
+\bRd f^! \bRd{\cHom}_A (E, F) \isomlong \bRd p^! \bRd i^! \bRd{\cHom}_A (E, F) \isomlong \bRd p^! \bRd{\cHom}_A (i^* E, \bRd i^! F)
+$$
+$$
+\isomlong \bRd{\cHom}_A (p^* i^* E, \bRd p^! \bRd i^! F) \isomlong \bRd{\cHom}_A (f^* E, \bRd f^! F).
+$$
+On assure ensuite, comme d'habitude, que l'isomorphisme composé ne dépend pas de la factorisation choisie.
+\vskip .3cm
+{\bf 1.3}. Soient $u: A \to B$ une $A$-algèbre et $K$ un idéal de $B$ tel que $u(J) \subset K$. On utilise dans l'énoncé suivant les notations de (I 8). 
+\vskip .3cm
+{
+Proposition {\bf 1.3.1}. --- \it Soit $f: X \to Y$ un morphisme séparé de type fini entre schémas noethériens.
+\begin{enumerate}
+    \item[1)] Soit $E \in \D(X, A)$. On a un isomorphisme canonique
+    $$
+    \bLd u^* \bRd f_! (E) \isomlong \bRd f_! \bLd u^* (E),
+    $$
+    lorsque $E \in \D^{-}(X, A)$, ou lorsque $A$ est local régulier et $J$ est son idéal maximal.
+    \item[2)] Pla\c{c}ons-nous maintenant dans le cas où $Y$ admet un Module inversible ample. On suppose de plus que $\ell$ est premier aux caractéristiques résiduelles de $Y$, que l'anneau $A$ est local régulier et que $J$ est son idéal maximal. Alors pour tout $F \in \D^+(Y, A)$, on a un morphisme canonique fonctoriel
+    $$
+    \bLd u^* \bRd f^! (F) \isomlong \bRd f^! \bLd u^* (F),
+    $$
+    qui est un \emph{isomorphisme} lorsque $B$ est une $A$-algèbre finie et $K = JB$.
+\end{enumerate}
+}
+\vskip .3cm
+{\bf Preuve} : Montrons 1), et définissons d'abord un morphisme 
+$$
+\bLd u^* \bRd f_! (E) \to \bRd f_! \bRd u^* (E).
+\leqno{(1.3.1.1)}
+$$
+D'après (I. 8.1.6), il suffit dans chacun des cas considérés de définir un morphisme
+$$
+\bRd f_! (E) \to u_* \bRd f_! \bLd u^*(E).
+\leqno{(1.3.1.2)}
+$$
+Mais il est immédiat que $u_* \bRd f_! \isom \bRd f_! u_*$, de sorte que l'on définit (1.3.1.2) en appliquant le foncteur $\bRd f_!$ au morphisme d'adjonction (I 8.1.7)
+$$
+E \to u_* \bLd u^* (E).
+$$
+Pour voir que (1.3.1.1) est un isomorphisme, on se ramène, par le way-out functor lemme, au cas où $E \in \D^-(X, A)$. Alors, grâce à la conservativité du foncteur $u_*$, il s'agit de montrer que le morphisme canonique
+$$
+B \boldsymbol{\otimes}_A \bRd f_! (E) \to \bRd f_!(B \boldsymbol{\otimes}_A E)
+$$
+est un isomorphisme, ce qui résulte de (1.1.7). Montrons 2). Pour définir un morphisme
+$$
+\bLd  u^* \bRd f^! (F) \to \bRd f^! \bLd  u^*(F),
+\leqno{(1.3.1.3)}
+$$
+on se ramène encore, grâce à (I 8.1.6), à définir un morphisme
+$$
+\bRd f^! (F) \to u_* \bRd f^! \bLd  u^*(F).
+\leqno{(1.3.1.4)}
+$$
+On a évidemment $u_* \bRd f^! \isom \bRd f^!u_*$; on prend pour (1.3.1.4) l'image par $\bRd f^!$ du morphisme d'adjonction (I 8.1.7). Pour voir que (1.3.1.3) est un isomorphisme, on se ramène, après avoir choisi une ``lissification'' (1.2.2), à le faire successivement pour une immersion fermée et un morphisme lisse équidimensionnel. Dans le premier cas, ce n'est autre que (I 8.1.16 (iii)). Dans le second, on se ramène aussitôt à (I 8.1.16 (i)).
+
+
+
+
+
+
+
+
+% End
