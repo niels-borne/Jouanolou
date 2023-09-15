@@ -32,8 +32,8 @@ jobs:
       - name: Set variables
         id: vars
         run: |
-          echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-          echo "SHA8=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
+          echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_STATE
+          echo "SHA8=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_STATE
 
       - name: Download artifacts
         uses: actions/download-artifact@v2
