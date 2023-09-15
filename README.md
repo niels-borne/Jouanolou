@@ -11,6 +11,7 @@
 This [thesis](https://www.genealogy.math.ndsu.nodak.edu/id.php?id=90399), under Grothendieck, was defended on July 3, 1969, at IHP (Paris), in front of a jury chaired by P. Samuel, with examiners J. Dixmier, A. Grothendieck, and J. L. Verdier. <br>
 
 
+
 ---
 
 ### State of the edition
