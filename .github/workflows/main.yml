@@ -14,8 +14,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Compile LaTeX
-        run: xelatex -interaction=nonstopmode main.tex
+      - name: Compile LaTeX with pdfLaTeX
+        run: pdflatex -interaction=nonstopmode main.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v2
@@ -29,16 +29,16 @@ jobs:
     needs: [build]
 
     steps:
-      - name: Set variables
-        id: vars
-        run: |
-          echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
-          echo "SHA8=$(echo ${GITHUB_SHA} | cut -c1-8)" >> $GITHUB_ENV
-
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
           name: pdf_file
+
+      - name: Set variables
+        id: vars
+        run: |
+          echo "::set-output name=date::$(date +'%Y-%m-%d')"
+          echo "::set-output name=sha8::$(echo ${GITHUB_SHA} | cut -c1-8)"
 
       - name: Create release
         uses: actions/create-release@v1
@@ -46,8 +46,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: main-${{ env.DATE }}-${{ env.SHA8 }}
-          release_name: Automatic build (version ${{ env.DATE }})
+          tag_name: main-${{ steps.vars.outputs.date }}-${{ steps.vars.outputs.sha8 }}
+          release_name: Automatic build (version ${{ steps.vars.outputs.date }})
           draft: false
           prerelease: false
 
@@ -58,5 +58,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./main.pdf
-          asset_name: main-${{ env.DATE }}-${{ env.SHA8 }}.pdf
+          asset_name: main.pdf
           asset_content_type: application/pdf
