@@ -1,4 +1,29 @@
-deploy:
+name: Build and Deploy LaTeX PDF
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: docker://blang/latex:ubuntu
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Compile LaTeX
+        run: xelatex -interaction=nonstopmode main.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdf_file
+          path: main.pdf
+
+  deploy:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: [build]
