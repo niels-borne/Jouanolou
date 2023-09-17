@@ -15,11 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Compile LaTeX
-        run: |
-          lualatex -interaction=nonstopmode main.tex
-          bibtex main
-          lualatex -interaction=nonstopmode main.tex
-          lualatex -interaction=nonstopmode main.tex
+        run: xelatex -interaction=nonstopmode main.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v2
