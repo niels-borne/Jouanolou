@@ -16,10 +16,10 @@ jobs:
 
       - name: Compile LaTeX
         run: |
-          pdflatex -interaction=nonstopmode main.tex
+          lualatex -interaction=nonstopmode main.tex
           bibtex main
-          pdflatex -interaction=nonstopmode main.tex
-          pdflatex -interaction=nonstopmode main.tex
+          lualatex -interaction=nonstopmode main.tex
+          lualatex -interaction=nonstopmode main.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v2
